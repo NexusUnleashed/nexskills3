@@ -90,7 +90,13 @@ const ClassSelector = ({ classList, profession, handleClassSelector }) => {
       >
         <MenuItem value={"all"}>{"All"}</MenuItem>
         {classList.map((profession, i) => (
-          <MenuItem value={profession.toLowerCase()} key={i}>
+          <MenuItem
+            disabled={
+              ["Occultist", "Dragon"].indexOf(profession) > -1 ? false : true
+            }
+            value={profession.toLowerCase()}
+            key={i}
+          >
             {profession}
           </MenuItem>
         ))}

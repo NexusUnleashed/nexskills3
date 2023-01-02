@@ -84,13 +84,11 @@ sortedSkills = sortedSkills.sort((a, b) => {
 
 function App() {
   return (
-    <div style={{ backgroundColor: "black", height: "100%" }}>
-      <Dashboard
-        theme={darkTheme}
-        debugSkills={sortedSkills}
-        classList={classList}
-      />
-    </div>
+    <Dashboard
+      theme={darkTheme}
+      debugSkills={sortedSkills}
+      classList={classList}
+    />
   );
 }
 
