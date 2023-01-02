@@ -20,6 +20,7 @@ import {
 } from "@mui/material";
 
 const ListItem = ({ skill, index, handleListItemClick, selectedIndex }) => {
+  console.log(skill);
   return (
     <ListItemButton
       selected={selectedIndex === index}
@@ -114,6 +115,7 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const handleListItemClick = (event, index, id) => {
+    globalThis.tester = skills.find((e) => e.id === id);
     setSkill(skills.find((e) => e.id === id));
     setSelectedIndex(index);
   };
@@ -134,10 +136,16 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
       console.log(db);
       globalThis.dbTest = db;
       setDb(db);
-      setSkills(await db.find({}));
+      const tempSkills = await db.find({});
+      setSkills({
+        ...tempSkills,
+        firstPerson: new RegExp(tempSkills.firstPerson.pattern),
+        secondPerson: new RegExp(tempSkills.secondPerson.pattern),
+        thirdPerson: new RegExp(tempSkills.thirdPerson.pattern),
+      });
       setLoaded(true);
     };
-    //connect();
+    connect();
     console.log("mongo render");
   }, [loaded]);
 
