@@ -137,7 +137,10 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box component="div" sx={{ display: "flex" }}>
+      <Box
+        component="div"
+        sx={{ backgroundColor: "black", height: "100%", display: "flex" }}
+      >
         <Box
           sx={{
             border: "1px grey solid",
