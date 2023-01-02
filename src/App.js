@@ -62,7 +62,7 @@ const darkTheme = createTheme({
   },
 });
 
-const sortedSkills = globalThis.nexSkills.skills.sort((a, b) => {
+let sortedSkills = globalThis.nexSkills.skills.sort((a, b) => {
   if (a.profession > b.profession) {
     return -1;
   }
@@ -86,7 +86,7 @@ function App() {
   return (
     <Dashboard
       theme={darkTheme}
-      debugSkills={globalThis.nexSkills.skills}
+      debugSkills={sortedSkills}
       classList={classList}
     />
   );
