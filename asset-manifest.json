@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nexskill/static/css/main.09119c7a.css",
-    "main.js": "/nexskill/static/js/main.b61e08ca.js",
+    "main.js": "/nexskill/static/js/main.7a78a9f5.js",
     "static/js/787.428295c9.chunk.js": "/nexskill/static/js/787.428295c9.chunk.js",
     "index.html": "/nexskill/index.html",
     "main.09119c7a.css.map": "/nexskill/static/css/main.09119c7a.css.map",
-    "main.b61e08ca.js.map": "/nexskill/static/js/main.b61e08ca.js.map",
+    "main.7a78a9f5.js.map": "/nexskill/static/js/main.7a78a9f5.js.map",
     "787.428295c9.chunk.js.map": "/nexskill/static/js/787.428295c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.09119c7a.css",
-    "static/js/main.b61e08ca.js"
+    "static/js/main.7a78a9f5.js"
   ]
 }
