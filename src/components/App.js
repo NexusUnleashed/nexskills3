@@ -1,6 +1,6 @@
-import "./styles/App.css";
+import "../styles/App.css";
 import Dashboard from "./Dashboard";
-import { classList } from "./base/nexSkills";
+import { classList } from "../base/nexSkills";
 import { createTheme } from "@mui/material";
 
 const darkTheme = createTheme({
