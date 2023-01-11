@@ -279,7 +279,7 @@ const skills = [
     length: 3.0,
   },
   {
-    id: "harrytick",
+    id: "harryTick",
     fullName: "Harry tick",
     firstPerson:
       /^(?<target>.+?) is tormented by horrific visions from the Plane of Chaos\.$/,
