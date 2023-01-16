@@ -1,5 +1,7 @@
 /* global eventStream, GMCP, nexGui */
 
+import { startUp } from "./mongo";
+
 export const classList = [
   "Alchemist",
   "Apostate",
@@ -386,6 +388,10 @@ const checkSkills = (text) => {
   }
 
   if (result) {
+    console.log({
+      matches: result,
+      skill: skill,
+    });
     eventStream.raiseEvent("nexSkillMatch", {
       matches: result,
       skill: skill,
@@ -408,7 +414,8 @@ if (typeof eventStream !== "undefined") {
   eventStream.registerEvent("nexSkillMatch", nexGuiMsgReplacement);
 }
 
-globalThis.nexSkills = {
+export const nexSkills = {
   skills: skills,
   checkSkills: checkSkills,
+  startUp: startUp,
 };

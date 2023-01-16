@@ -2,6 +2,7 @@ import "../styles/App.css";
 import Dashboard from "./Dashboard";
 import { classList } from "../base/nexSkills";
 import { createTheme } from "@mui/material";
+import { nexSkills } from "../base/nexSkills";
 
 const darkTheme = createTheme({
   palette: {
@@ -62,7 +63,7 @@ const darkTheme = createTheme({
   },
 });
 
-let sortedSkills = globalThis.nexSkills.skills.sort((a, b) => {
+let sortedSkills = nexSkills.skills.sort((a, b) => {
   if (a.profession > b.profession) {
     return -1;
   }
