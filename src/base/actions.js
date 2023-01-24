@@ -1,4 +1,5 @@
-export const skills = [
+export const actions = [
+  //#region Occultist
   {
     id: "warp",
     fullName: "Warp",
@@ -13,6 +14,7 @@ export const skills = [
     tags: [],
     length: 3.0,
   },
+  //#endregion
   {
     id: "gut",
     fullName: "Gut",

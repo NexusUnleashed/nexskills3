@@ -1,7 +1,7 @@
 /* global eventStream, GMCP, nexGui */
 
 import { startUp } from "./mongo";
-import { skills } from "./skills";
+import { actions } from "./actions";
 import { npcs } from "./npcs";
 
 export const classList = [
@@ -42,8 +42,8 @@ const checkSkillsOld = (line) => {
   const text = line;
   let result = false;
 
-  for (let i = 0; i < skills.length; i++) {
-    const element = skills[i];
+  for (let i = 0; i < actions.length; i++) {
+    const element = actions[i];
     const checks = [];
     if (
       element.profession === GMCP.Char.Status.class.toLowerCase() ||
@@ -61,10 +61,10 @@ const checkSkillsOld = (line) => {
     }
 
     if (result) {
-      result.groups.skill = element.id;
+      result.groups.action = element.id;
       eventStream.raiseEvent("nexSkillMatch", {
         matches: result,
-        skill: element,
+        action: element,
       });
       break;
     }
@@ -75,39 +75,36 @@ const checkSkillsOld = (line) => {
 
 const checkSkills = (text) => {
   let result = false;
-  let skill = false;
+  let action = false;
 
-  for (let i = 0; i < skills.length; i++) {
-    skill = skills[i];
-    if (GMCP.Char.Status.class.toLowerCase().indexOf(skill.profession) > -1) {
-      result = text.match(skill.firstPerson);
+  for (let i = 0; i < actions.length; i++) {
+    action = actions[i];
+    if (GMCP.Char.Status.class.toLowerCase().indexOf(action.profession) > -1) {
+      result = text.match(action.firstPerson);
       if (result) {
-        result.groups.user = "self";
+        action.user = "self";
+        action.target = result.groups.target;
         break;
       }
     }
 
-    result = text.match(skill.secondPerson);
+    result = text.match(action.secondPerson);
     if (result) {
-      result.groups.target = "self";
+      action.user = result.groups.user;
+      action.target = "self";
       break;
     }
 
-    result = text.match(skill.thirdPerson);
+    result = text.match(action.thirdPerson);
     if (result) {
+      action.user = result.groups.user;
+      action.target = result.groups.target;
       break;
     }
   }
 
   if (result) {
-    console.log({
-      matches: result,
-      skill: skill,
-    });
-    eventStream.raiseEvent("nexSkillMatch", {
-      matches: result,
-      skill: skill,
-    });
+    eventStream.raiseEvent("nexSkillMatch", action);
   }
 
   if (!result) {
@@ -118,45 +115,36 @@ const checkSkills = (text) => {
 
 const checkNpcs = (text) => {
   let result = false;
-  let skill = false;
+  let action = false;
 
   for (let i = 0; i < npcs.length; i++) {
-    skill = skills[i];
+    action = npcs[i];
 
-    result = text.match(skill.firstPerson);
+    result = text.match(action.firstPerson);
     if (result) {
-      result.groups.target = "self";
-      result.groups.user ??= skill.npc;
+      action.target = "self";
+      if (result.groups?.user) {
+        action.user = result.groups.user;
+      }
       break;
     }
 
-    result = text.match(skill.thirdPerson);
+    result = text.match(action.thirdPerson);
     if (result) {
-      result.groups.user ??= skill.npc;
+      action.target = result.groups.target;
       break;
     }
   }
 
   if (result) {
-    console.log({
-      matches: result,
-      skill: skill,
-    });
-    eventStream.raiseEvent("nexSkillMatch", {
-      matches: result,
-      skill: skill,
-    });
+    eventStream.raiseEvent("nexSkillMatch", action);
   }
 
   return result ? result : false;
 };
 
-const nexGuiMsgReplacement = ({ matches, skill }) => {
-  nexGui.msg.actionMsg(
-    matches.groups.user || "Self",
-    skill.id || skill.tags,
-    matches.groups.target || "Self"
-  );
+const nexGuiMsgReplacement = (action) => {
+  nexGui.msg.actionMsg(action.user, action.id || action.tags, action.target);
 };
 
 if (typeof eventStream !== "undefined") {
@@ -168,9 +156,11 @@ if (typeof eventStream !== "undefined") {
 }
 
 export const nexSkills = {
-  skills: skills,
+  actions: actions,
   npcs: npcs,
   checkSkills: checkSkills,
   checkNpcs: checkNpcs,
   startUp: startUp,
 };
+
+globalThis.nexSkills = nexSkills;

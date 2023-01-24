@@ -1,6 +1,6 @@
 export const npcs = [
   {
-    npc: "a muscular angelic razer",
+    user: "a muscular angelic razer",
     areaId: 123,
     areaName: "Nur",
     firstPerson:
@@ -11,7 +11,7 @@ export const npcs = [
     length: 3.0,
   },
   {
-    npc: "a huge rat",
+    user: "a huge rat",
     areaId: [338],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
@@ -22,7 +22,7 @@ export const npcs = [
     length: 4.0,
   },
   {
-    npc: "a huge rat",
+    user: "a huge rat",
     areaId: [338],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
@@ -33,7 +33,7 @@ export const npcs = [
     length: 4.0,
   },
   {
-    npc: "a huge rat",
+    user: "a huge rat",
     areaId: [338],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
@@ -43,6 +43,339 @@ export const npcs = [
     tags: ["damage", "loki", "torntendons", "clumsiness"],
     length: 4.0,
   },
+
+  {
+    user: "an angel spearbearer",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^In a trained motion, an angel spearbearer drives the pointy end of his spear into both of your shoulders with two well-placed jabs\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "an angel spearbearer",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^With force and precision, an angel spearbearer drives his spear into your torso, impaling you frightfully\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "web"],
+    length: 2,
+  },
+  {
+    user: "an angel spearbearer",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^Flipping his spear around in a trained motion, an angel spearbearer hits you on the side of the head with the weapon's blunt end\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stun"],
+    length: 2,
+  },
+  {
+    user: "an angel spearbearer",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^Wielding his spear in one hand and lifting it above his head, an angel spearbearer chants ancient words before throwing the sizzling spear at you as coruscating energy crackles along the weapon's surface\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stun"],
+    length: 2,
+  },
+  {
+    user: "an angel spearbearer",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^Spinning his spear in one hand, an angel spearbearer ducks down low and jabs his spear between your legs before twisting it, causing you to fall to the ground\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "prone", "brokenleftleg"],
+    length: 2,
+  },
+  {
+    user: "an angel spearbearer",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A look of sheer determination clear on his face, an angel spearbearer sweeps his spear in a wide arc with practiced control\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "prone"],
+    length: 2,
+  },
+  {
+    user: "a vanguard angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A vanguard angel points his radiant sword directly at you, a bolt of pure energy bursting forth and slamming into your chest\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "a vanguard angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A vanguard angel whirls his fiery sword in a controlled arc that slices you from shoulder to sternum\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "an inquisitor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^An inquisitor angel raises her palm and sends a wave of energy to slam painfully into you\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "an inquisitor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^Pivoting in a tight circle, an inquisitor angel transforms her wings into a fiery blaze that sweeps relentlessly through the room, engulfing you in flames\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "burning"],
+    length: 2,
+  },
+  {
+    user: "a watcher angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A watcher angel turns his burning, sightless gaze in your direction, causing searing agony to erupt throughout your body\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "a watcher angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A watcher angel turns his burning, sightless gaze in your direction, causing searing agony to erupt throughout your body\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "a muscular angelic razer",
+    areaId: [398],
+    areaName: "Fifth Circle of Nur",
+    firstPerson:
+      /^Closing with you briskly, a muscular angelic razer punches out with his sheathed sword, winding you with a hefty blow to the stomach. Stepping back unhurriedly, he pulls the sword from its scabbard and slashes at you twice in quick succession\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "a muscular angelic razer",
+    areaId: [398],
+    areaName: "Fifth Circle of Nur",
+    firstPerson:
+      /^A muscular angelic razer's wings flare powerfully, sending him colliding into you with his shoulder. The impact tosses you to the ground like a rag doll, and you can do naught but watch as his hands move in a blur, liberating from its sheath a bastard sword, and guiding it through the air to slice painfully into your exposed form\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "prone"],
+    length: 2,
+  },
+  {
+    user: "a solemn angel",
+    areaId: [397],
+    areaName: "Sixth Circle of Nur",
+    firstPerson: false,
+    //^\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "prone"],
+    length: 2,
+  },
+  {
+    user: "a Migri warrior",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^A Migri warrior's eyes narrow as he grasps his longsword with both hands and raises it over his head before bringing it down across your chest\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "a Migri warrior",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^In a skillful display of swordsmanship, a Migri warrior slashes diagonally across your body before striking you again with a jab through your belly\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "a Migri warrior",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^A Migri warrior bares his teeth and lunges at you with his longsword, the blade easily sliding into your body\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "a Migri warrior",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^A Migri warrior strikes you in the face with the hilt of his sword\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "Begath, the Migri mage",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^Begath, the Migri mage blows gently over his fingertips, causing them to turn blue and frost over before reaching towards you and sending several ice spikes in your direction\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "a gigantic angler fish",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A gigantic angler fish rapidly lunges towards you, its razor-sharp teeth snapping shut on your arm\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
+  },
+  {
+    user: "a gigantic angler fish",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A gigantic angler fish throws itself at you, clamping its sickening jaw tight around your throat\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "blackout"],
+    length: 2.0,
+  },
+  {
+    //TODO Identical pattern
+    user: "a burly troll guard",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A burly troll guard screams with rage and drives his spear deep into your chest\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 4.0,
+  },
+  {
+    //TODO Identical pattern
+    user: "a burly troll guard",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A look of absolute rage takes over a burly troll guard as he lunges at you, sinking his abnormally sharp teeth deep into your throat\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 4.0,
+  },
+  {
+    //TODO Identical pattern
+    user: "a sturdy troll woman",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A sturdy troll woman screams with rage and drives her spear deep into your chest\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 4.0,
+  },
+  {
+    //TODO Identical pattern
+    user: "a sturdy troll woman",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A look of absolute rage takes over a sturdy troll woman as she lunges at you, sinking her abnormally sharp teeth deep into your throat\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 4.0,
+  },
+  {
+    user: "a sturdy troll woman",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A sturdy troll woman lowers her head and charges at you, slamming powerfully into your abdomen\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stun"],
+    length: 4.0,
+  },
+  {
+    user: "Rinaga",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^His trusty shovel held firmly in both hands, Rinaga batters you powerfully around the head with it\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 3.0,
+  },
+  {
+    user: "Rinaga",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^Rinaga swings a red-hot poker at you with considerable force, slamming it powerfully into the side of your head\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 3.0,
+  },
+  {
+    user: "Rinaga",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^Using his shovel with outstanding accuracy, Rinaga scoops a pile of burning coals from his fire and launches them at you\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "burning"],
+    length: 3.0,
+  },
 ];
-//Hissing with rage, a huge rat swipes a claw across your knees. loki, damage
-//Snarling as he leaps at your legs, a huge rat rips and tears into your flesh, his mouth filling with blood and saliva. torntendons, damage
