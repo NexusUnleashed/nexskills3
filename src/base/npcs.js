@@ -1,14 +1,25 @@
 export const npcs = [
   {
-    user: "a muscular angelic razer",
-    areaId: 123,
-    areaName: "Nur",
+    user: "a rajamala slaver",
+    areaId: [337],
+    areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^Taking a brisk step backwards, a muscular angelic razer glares piercingly at you with unseeing eyes, his movements filled with contempt. Without warning, pain flares in your consciousness, radiating from your cranium to fill your body with rending agony\.$/,
+      /^Moving with astonishing speed, a rajamala slaver unleashes the power of his feline claws against your skin\.$/,
     secondPerson: false,
     thirdPerson: false,
-    tags: [],
-    length: 3.0,
+    tags: ["damage", "loki"],
+    length: 4.0,
+  },
+  {
+    user: "a rajamala slaver",
+    areaId: [337],
+    areaName: "the fathomless expanse of the World Tree",
+    firstPerson:
+      /^A rajamala slaver uses his massive bulk to slam your body to the ground\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "brokenleftleg", "brokenrightleg", "prone"],
+    length: 4.0,
   },
   {
     user: "a huge rat",
