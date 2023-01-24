@@ -287,6 +287,28 @@ export const npcs = [
     length: 2.0,
   },
   {
+    user: "a gigantic angler fish",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A gigantic angler fish hurls itself at you in a vicious frontal attack, connecting painfully with your chest\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stun"],
+    length: 2.0,
+  },
+  {
+    user: "a burly troll guard",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A burly troll guard batters you with an overhead blow\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 4.0,
+  },
+  {
     //TODO Identical pattern
     user: "a burly troll guard",
     areaId: [260],
