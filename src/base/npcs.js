@@ -444,6 +444,28 @@ export const npcs = [
     user: "a burly troll guard",
     areaId: [260],
     areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A burly troll guard lowers his head and charges at you, slamming powerfully into your abdomen\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stun"],
+    length: 4.0,
+  },
+  {
+    user: "a burly troll guard",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
+    firstPerson:
+      /^A burly troll guard lowers his head and charges at you, slamming powerfully into your abdomen\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stun"],
+    length: 4.0,
+  },
+  {
+    user: "a burly troll guard",
+    areaId: [260],
+    areaName: "the Caverns of Riagath",
     firstPerson: /^A burly troll guard batters you with an overhead blow\.$/,
     secondPerson: false,
     thirdPerson: false,
