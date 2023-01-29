@@ -459,7 +459,7 @@ export const npcs = [
       /^A burly troll guard screams with rage and drives his spear deep into your chest\.$/,
     secondPerson: false,
     thirdPerson: false,
-    tags: ["damage"],
+    tags: ["damage", "balance"],
     length: 4.0,
   },
   {
@@ -483,7 +483,7 @@ export const npcs = [
       /^A sturdy troll woman screams with rage and drives her spear deep into your chest\.$/,
     secondPerson: false,
     thirdPerson: false,
-    tags: ["damage"],
+    tags: ["damage", "balance"],
     length: 4.0,
   },
   {
