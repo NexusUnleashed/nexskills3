@@ -137,6 +137,17 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
+      /^The form of a vanguard angel shifts abruptly to an incorporeal mist which passes through your body, leaving abject terror and searing agony in his wake, before regaining physicality on the other side\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "blackout", "heal"],
+    length: 2,
+  },
+  {
+    user: "a vanguard angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
       /^A vanguard angel points his radiant sword directly at you, a bolt of pure energy bursting forth and slamming into your chest\.$/,
     secondPerson: false,
     thirdPerson: false,
@@ -262,6 +273,17 @@ export const npcs = [
     secondPerson: false,
     thirdPerson: false,
     tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "a muscular angelic razer",
+    areaId: [398],
+    areaName: "Fifth Circle of Nur",
+    firstPerson:
+      /^Taking a brisk step backwards, a muscular angelic razer glares piercingly at you with unseeing eyes, his movements filled with contempt\. Without warning, pain flares in your consciousness, radiating from your cranium to fill your body with rending agony\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stupidity"],
     length: 2,
   },
   {
