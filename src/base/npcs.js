@@ -564,4 +564,159 @@ export const npcs = [
     tags: ["damage", "burning"],
     length: 3.0,
   },
+  {
+    user: "a Vertani guard",
+    areaId: [145],
+    areaName: "Tir Murann",
+    firstPerson:
+      /^A Vertani guard sideswipes your ankle with the blunt end of his weapon, the force of the blow causing you to tumble to the ground\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "prone"],
+    length: 2.5,
+  },
+  {
+    user: "a Vertani guard",
+    areaId: [145],
+    areaName: "Tir Murann",
+    firstPerson:
+      /^A Vertani guard jabs forward with a powerful blow, skewering through your ribs\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "an energetic turtle",
+    areaId: [335],
+    areaName: "Grukai Swamp",
+    firstPerson:
+      /^An energetic red turtle slams his body into your leg, shattering it in the process.\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "brokenleftleg"], //TODO random leg
+    length: 1.5,
+  },
+  {
+    user: "a sinister glubber",
+    areaId: [335],
+    areaName: "Grukai Swamp",
+    firstPerson:
+      /^A sinister glubber claws viciously at your arm, severing the joints\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "brokenleftarm"], //TODO random arm
+    length: 1.5,
+  },
+  {
+    user: "a sinister glubber",
+    areaId: [335],
+    areaName: "Grukai Swamp",
+    firstPerson:
+      /^A sinister glubber claws viciously at your leg, severing the joints\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "brokenleftleg"], //TODO random leg
+    length: 1.5,
+  },
+  {
+    user: "a sinister glubber",
+    areaId: [335],
+    areaName: "Grukai Swamp",
+    firstPerson:
+      /^A sinister glubber scrapes his nails across your eyes, leaving you unable to see\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "blindness"],
+    length: 1.5,
+  },
+  {
+    user: "a sinister glubber",
+    areaId: [335],
+    areaName: "Grukai Swamp",
+    firstPerson:
+      /^Staring intensely at you, a sinister glubber causes his scales to fly off his body and into yours, painfully piercing the skin\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "voyria"],
+    length: 1.5,
+  },
+  {
+    user: "a tentacled polyp",
+    areaId: [335],
+    areaName: "Grukai Swamp",
+    firstPerson:
+      /^Flinging his rope-like tentacles around, a tentacled polyp hits you firmly in the chest, leaving a number of noticeable lacerations\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 11.0,
+  },
+  {
+    user: "a tentacled polyp",
+    areaId: [335],
+    areaName: "Grukai Swamp",
+    firstPerson:
+      /^Waving his appendages before your face, a tentacled polyp leaves a number of deep lacerations and manages to leave you transfixed\.$/,
+    //A tentacled polyp attempts to transfix you, but succeeds only in curing your blindness.
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 11.0,
+  },
+  {
+    user: "a tentacled polyp",
+    areaId: [335],
+    areaName: "Grukai Swamp",
+    firstPerson:
+      /^A tentacled polyp quickly stabs you with his bizarre limbs, leaving a number of deep cuts\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 11.0,
+  },
+  {
+    user: "a tentacled polyp",
+    areaId: [335],
+    areaName: "Grukai Swamp",
+    firstPerson:
+      /^Wrapping his tentacles around your legs, a tentacled polyp causes you to come crashing to the floor, your legs entangled with his bizarre appendages\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "prone", "webbed"],
+    length: 11.0,
+  },
+  {
+    user: "a heavily armoured warrior sylphid beetle",
+    areaId: [343],
+    areaName: "Battlesite of Mourning Pass",
+    firstPerson:
+      /^Rearing back on his hind legs, a heavily armoured warrior sylphid beetle lifts his head and spits a glob of saliva at your face\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "a heavily armoured warrior sylphid beetle",
+    areaId: [343],
+    areaName: "Battlesite of Mourning Pass",
+    firstPerson:
+      /^A heavily armoured warrior sylphid beetle snaps at you with his serrated pincers, tearing off chunks of bloody flesh\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "a queen sylphid beetle",
+    areaId: [343],
+    areaName: "Battlesite of Mourning Pass",
+    firstPerson:
+      /^Raising and extending the spines on her quiff, a queen sylphid beetle smacks them into your body, piercing your skin\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "voyria"],
+    length: 2.5,
+  },
 ];
