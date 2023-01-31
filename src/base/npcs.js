@@ -192,6 +192,28 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
+      /^Gliding effortlessly through your defences, an expulsor angel smashes her buckler into your extremities with dreadful force\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "brokenleftleg"], // TODO Random limb
+    length: 2,
+  },
+  {
+    user: "an expulsor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^With a snap, an expulsor angel's wings solidify into a stone-like substance. She effortlessly sweeps them forward, slamming them unrelentingly into your vulnerable form\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stun"],
+    length: 2,
+  },
+  {
+    user: "an expulsor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
       /^An expulsor angel slams her buckler into your sternum with brutal force\.$/,
     secondPerson: false,
     thirdPerson: false,
@@ -236,6 +258,17 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
+      /^An inquisitor angel tilts her head slightly to the side and immediately a multitude of bleeding wounds open up on your body\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "an inquisitor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
       /^An inquisitor angel raises her palm and sends a wave of energy to slam painfully into you\.$/,
     secondPerson: false,
     thirdPerson: false,
@@ -258,6 +291,28 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
+      /^A watcher angel opens his mouth and speaks a single word. The sound of a multitude blasts forth, slamming relentlessly into you in a blast of power\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "undeaf", "confusion", "dementia"],
+    length: 2,
+  },
+  {
+    user: "a watcher angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A watcher angel walks calmly forward, his form turning into ethereal mist between one step and the next. You convulse helplessly in agony as the luminous gas enters your body in a haze of fiery retribution\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "burning"],
+    length: 2,
+  },
+  {
+    user: "a watcher angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
       /^A watcher angel turns his burning, sightless gaze in your direction, causing searing agony to erupt throughout your body\.$/,
     secondPerson: false,
     thirdPerson: false,
@@ -269,7 +324,7 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
-      /^A watcher angel turns his burning, sightless gaze in your direction, causing searing agony to erupt throughout your body\.$/,
+      /^Reaching forward, a watcher angel calmly lays his hands on you resulting in agonizing, burning pain\.$/,
     secondPerson: false,
     thirdPerson: false,
     tags: ["damage"],
