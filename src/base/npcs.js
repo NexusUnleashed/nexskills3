@@ -65,7 +65,28 @@ export const npcs = [
     tags: ["damage", "loki", "torntendons", "clumsiness"],
     length: 4.0,
   },
-
+  {
+    user: "an elder angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^An elder angel's eyes gleam as you are butchered with a wicked blow\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "an elder angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^You almost collapse in pain as an elder angel smashes you with a bone crunching blow\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
   {
     user: "an angel spearbearer",
     areaId: [401],
