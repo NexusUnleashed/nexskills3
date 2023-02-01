@@ -258,6 +258,17 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
+      /^An inquisitor angel opens her mouth and speaks a single word. The sound of a multitude blasts forth, slamming relentlessly into you in a blast of power\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "undeaf", "confusion", "dementia"],
+    length: 2,
+  },
+  {
+    user: "an inquisitor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
       /^An inquisitor angel tilts her head slightly to the side and immediately a multitude of bleeding wounds open up on your body\.$/,
     secondPerson: false,
     thirdPerson: false,
