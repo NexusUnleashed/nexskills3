@@ -145,7 +145,7 @@ const checkNpcs = (text) => {
   }
 
   if (result) {
-    eventStream.raiseEvent("nexSkillMatch", action);
+    eventStream.raiseEvent("nexSkillNPCMatch", action);
   }
 
   return result ? result : false;
