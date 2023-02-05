@@ -73,6 +73,14 @@ const checkSkillsOld = (line) => {
   return result ? result : false;
 };
 
+export const nextLine = () => {
+  const nextLine =
+    nexusclient.current_block[
+      nexusclient.current_block.indexOf(nexusclient.current_line) + 1
+    ];
+  return nextLine.parsed_line ? nextLine.parsed_line.text() : "";
+};
+
 const checkSkills = (text) => {
   let result = false;
   let action = false;
@@ -142,18 +150,6 @@ const checkNpcs = (text) => {
 
   return result ? result : false;
 };
-
-const nexGuiMsgReplacement = (action) => {
-  nexGui.msg.actionMsg(action.user, action.id || action.tags, action.target);
-};
-
-if (typeof eventStream !== "undefined") {
-  eventStream.removeListener("nexSkillMatch", "nexGuiMsgReplacement");
-  eventStream.registerEvent("nexSkillMatch", nexGuiMsgReplacement);
-
-  eventStream.removeListener("nexSkillMatch", "nexGuiMsgReplacement");
-  eventStream.registerEvent("nexSkillMatch", nexGuiMsgReplacement);
-}
 
 export const nexSkills = {
   actions: actions,
