@@ -65,7 +65,28 @@ export const npcs = [
     tags: ["damage", "loki", "torntendons", "clumsiness"],
     length: 4.0,
   },
-
+  {
+    user: "an elder angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^An elder angel's eyes gleam as you are butchered with a wicked blow\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "an elder angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^You almost collapse in pain as an elder angel smashes you with a bone crunching blow\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
   {
     user: "an angel spearbearer",
     areaId: [401],
@@ -137,6 +158,17 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
+      /^The form of a vanguard angel shifts abruptly to an incorporeal mist which passes through your body, leaving abject terror and searing agony in his wake, before regaining physicality on the other side\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "blackout", "heal"],
+    length: 2,
+  },
+  {
+    user: "a vanguard angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
       /^A vanguard angel points his radiant sword directly at you, a bolt of pure energy bursting forth and slamming into your chest\.$/,
     secondPerson: false,
     thirdPerson: false,
@@ -174,6 +206,28 @@ export const npcs = [
     secondPerson: false,
     thirdPerson: false,
     tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "an expulsor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^Gliding effortlessly through your defences, an expulsor angel smashes her buckler into your extremities with dreadful force\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "brokenleftleg"], // TODO Random limb
+    length: 2,
+  },
+  {
+    user: "an expulsor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^With a snap, an expulsor angel's wings solidify into a stone-like substance. She effortlessly sweeps them forward, slamming them unrelentingly into your vulnerable form\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stun"],
     length: 2,
   },
   {
@@ -225,6 +279,28 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
+      /^An inquisitor angel opens her mouth and speaks a single word. The sound of a multitude blasts forth, slamming relentlessly into you in a blast of power\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "undeaf", "confusion", "dementia"],
+    length: 2,
+  },
+  {
+    user: "an inquisitor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^An inquisitor angel tilts her head slightly to the side and immediately a multitude of bleeding wounds open up on your body\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "an inquisitor angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
       /^An inquisitor angel raises her palm and sends a wave of energy to slam painfully into you\.$/,
     secondPerson: false,
     thirdPerson: false,
@@ -247,10 +323,21 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
-      /^A watcher angel turns his burning, sightless gaze in your direction, causing searing agony to erupt throughout your body\.$/,
+      /^A watcher angel opens his mouth and speaks a single word. The sound of a multitude blasts forth, slamming relentlessly into you in a blast of power\.$/,
     secondPerson: false,
     thirdPerson: false,
-    tags: ["damage"],
+    tags: ["damage", "undeaf", "confusion", "dementia"],
+    length: 2,
+  },
+  {
+    user: "a watcher angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A watcher angel walks calmly forward, his form turning into ethereal mist between one step and the next. You convulse helplessly in agony as the luminous gas enters your body in a haze of fiery retribution\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "burning"],
     length: 2,
   },
   {
@@ -262,6 +349,28 @@ export const npcs = [
     secondPerson: false,
     thirdPerson: false,
     tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "a watcher angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^Reaching forward, a watcher angel calmly lays his hands on you resulting in agonizing, burning pain\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "a muscular angelic razer",
+    areaId: [398],
+    areaName: "Fifth Circle of Nur",
+    firstPerson:
+      /^Taking a brisk step backwards, a muscular angelic razer glares piercingly at you with unseeing eyes, his movements filled with contempt\. Without warning, pain flares in your consciousness, radiating from your cranium to fill your body with rending agony\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "stupidity"],
     length: 2,
   },
   {
@@ -391,6 +500,94 @@ export const npcs = [
     areaName: "Judgement Mountain",
     firstPerson:
       /^A Migri warrior strikes you in the face with the hilt of his sword\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "an undead minion",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^An undead minion leaps forward and rips through your flesh with his teeth, leaving a gaping wound\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.7,
+  },
+  {
+    user: "an undead minion",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^Running between your legs, an undead minion strikes your knee with his tail, throwing you off balance\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["off-balance"],
+    length: 2.7,
+  },
+  {
+    user: "an undead minion",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^Rearing back and then leaping, an undead minion strikes your chest, causing you to fall to the ground\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "prone"],
+    length: 2.7,
+  },
+  {
+    user: "Dakk, leader of the Migri",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^Dakk, leader of the Migri ducks his head and thrusts his blade towards you, jabbing it deep within your chest cavity and striking an artery. The blood pours from your body with each pump of your heart, covering the ground with blood\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
+  },
+  {
+    user: "Dakk, leader of the Migri",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^Muttering an incantation, Dakk, leader of the Migri summons flames from his fingertips before balling them up and hurling the fireball towards you\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "burning"],
+    length: 2.0,
+  },
+  {
+    user: "Dakk, leader of the Migri",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^Slashing his blade across your chest, Dakk, leader of the Migri cuts a piece of flesh from your body before striking you with the hilt of his sword, knocking you to the ground\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "prone"],
+    length: 2.0,
+  },
+  {
+    user: "Begath, the Migri mage",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^Begath, the Migri mage snaps both of his fingers. Instantly, flames erupt from the floor and travel towards you, enveloping your body\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    tags: ["damage", "burning"],
+    length: 2.5,
+  },
+  {
+    user: "Begath, the Migri mage",
+    areaId: [257],
+    areaName: "Judgement Mountain",
+    firstPerson:
+      /^Begath, the Migri mage reaches towards the ground with an outstretched hand. Pulling up, he forces several large rocks from the ground and then hurls them in your direction, pummeling you\.$/,
     secondPerson: false,
     thirdPerson: false,
     tags: ["damage"],
