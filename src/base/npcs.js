@@ -1119,6 +1119,16 @@ export const npcs = [
     areaId: [145],
     areaName: "Tir Murann",
     firstPerson:
+      /^You gnash your teeth as a scimitar-wielding Vertani soldier brings the butt of his scimitar down on your head, splitting your skull\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
+    user: "a scimitar-wielding Vertani soldier",
+    areaId: [145],
+    areaName: "Tir Murann",
+    firstPerson:
       /^Lunging at you, a scimitar-wielding Vertani soldier slams his gigantic head into yours. You are stunned from the blow\.$/,
     thirdPerson: false,
     tags: ["damage", "stun"],
