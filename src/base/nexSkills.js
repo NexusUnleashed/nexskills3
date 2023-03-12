@@ -73,10 +73,10 @@ const checkSkillsOld = (line) => {
   return result ? result : false;
 };
 
-export const nextLine = () => {
+export const nextLine = (num = 1) => {
   const nextLine =
     nexusclient.current_block[
-      nexusclient.current_block.indexOf(nexusclient.current_line) + 1
+      nexusclient.current_block.indexOf(nexusclient.current_line) + num
     ];
   return nextLine.parsed_line ? nextLine.parsed_line.text() : "";
 };
@@ -87,7 +87,7 @@ const checkSkills = (text) => {
 
   for (let i = 0; i < actions.length; i++) {
     action = actions[i];
-    if (GMCP.Char.Status.class.toLowerCase().indexOf(action.profession) > -1) {
+    if (action.profession.indexOf(GMCP.Char.Status.class.toLowerCase()) > -1) {
       result = text.match(action.firstPerson);
       if (result) {
         action.user = "self";
@@ -124,6 +124,9 @@ const checkSkills = (text) => {
 const checkNpcs = (text) => {
   let result = false;
   let action = false;
+
+  //TODO add area and/or areaid check here to limit
+  // the number of regex checks to the area.
 
   for (let i = 0; i < npcs.length; i++) {
     action = npcs[i];
