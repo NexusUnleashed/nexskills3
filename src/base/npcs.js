@@ -96,7 +96,7 @@ export const npcs = [
     firstPerson:
       /^With force and precision, an angel spearbearer drives his spear into your torso, impaling you frightfully\.$/,
     thirdPerson: false,
-    tags: ["damage", "web"],
+    tags: ["damage", "webbed"],
     length: 2,
   },
   {
@@ -396,7 +396,7 @@ export const npcs = [
     firstPerson:
       /^Looking down on you with primal ire, a solemn angel jerks her hand up, causing shafts of light to burst through the ground, impaling you in place\.$/,
     thirdPerson: false,
-    tags: ["damage", "impale"],
+    tags: ["damage", "impaled"],
     length: 2,
   },
   {
