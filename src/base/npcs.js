@@ -145,7 +145,7 @@ export const npcs = [
     areaName: "First Circle of Nur",
     firstPerson:
       /^The form of a vanguard angel shifts abruptly to an incorporeal mist which passes through your body, leaving abject terror and searing agony in his wake, before regaining physicality on the other side\.$/,
-    thirdPerson: false,
+    thirdPerson: /^The form of a vanguard angel shifts abruptly to an incorporeal mist which passes through (?<target>.+?)'s convulsing body before regaining physicality on the other side\.$/,
     tags: ["damage", "blackout", "heal"],
     length: 2,
   },
