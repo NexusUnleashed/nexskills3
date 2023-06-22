@@ -27,10 +27,10 @@ export const classList = [
   "Shaman",
   "Sylvan",
   "Unnamable",
-  "Air Elemental Lord",
-  "Earth Elemental Lord",
-  "Fire Elemental Lord",
-  "Water Elemental Lord",
+  "Air elemental lord",
+  "Earth elemental lord",
+  "Fire elemental lord",
+  "Water elemental lord",
 ];
 
 //You can use another Battlerage ability again. Available abilities: Overwhelm
@@ -87,7 +87,7 @@ const checkSkills = (text) => {
 
   for (let i = 0; i < actions.length; i++) {
     action = actions[i];
-    if (action.profession.indexOf(GMCP.Char.Status.class.toLowerCase()) > -1) {
+    if (GMCP.Char.Status.class.toLowerCase().includes(action.profession)) {
       result = text.match(action.firstPerson);
       if (result) {
         action.user = "self";

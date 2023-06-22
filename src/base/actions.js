@@ -100,10 +100,10 @@ export const actions = [
     id: "incantation",
     fullName: "Incantation",
     firstPerson:
-      /^Drawing from the well of your puissance, you invoke a dramatic chant in the dragon tongue. Your voice resonates with each word, culminating in a wave of magical energy that you bend to your will and thrust towards (?<target>.+), bombarding \w+ with the ancient power\.$/,
+      /^Drawing from the well of your puissance, you invoke a dramatic chant in the dragon tongue\. Your voice resonates with each word, culminating in a wave of magical energy that you bend to your will and thrust towards (?<target>.+), bombarding \w+ with the ancient power\.$/,
     secondPerson: false,
     thirdPerson:
-      /^A resonant vibration emanates from (?<user>\w+) as \w+ invokes a rumbling, sonorous chant in the dragon tongue. As the sound increases, (?<target>.+?) jerks violently, \w+ body wracked by an unseen force\.$/,
+      /^A resonant vibration emanates from (?<user>\w+) as \w+ invokes a rumbling, sonorous chant in the dragon tongue\. As the sound increases, (?<target>.+?) jerks violently, \w+ body wracked by an unseen force\.$/,
     profession: ["dragon"],
     skill: "dragoncraft",
     balance: "equilibrium",
@@ -311,7 +311,8 @@ export const actions = [
     fullName: "Epitaph Serpent",
     firstPerson: false,
     secondPerson: false,
-    thirdPerson: /^(?<user>\w+) traces a writhing logograph in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
+    thirdPerson:
+      /^(?<user>\w+) traces a writhing logograph in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     profession: ["pariah"],
     skill: "memorium",
     balance: "balance",
@@ -324,7 +325,8 @@ export const actions = [
     fullName: "Epitaph Skein",
     firstPerson: false,
     secondPerson: false,
-    thirdPerson: /^(?<user>\w+) traces a logograph shaped like a skein in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
+    thirdPerson:
+      /^(?<user>\w+) traces a logograph shaped like a skein in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     profession: ["pariah"],
     skill: "memorium",
     balance: "balance",
@@ -337,7 +339,8 @@ export const actions = [
     fullName: "Epitaph Sun",
     firstPerson: false,
     secondPerson: false,
-    thirdPerson: /^(?<user>\w+) traces a logograph shaped like a sunburst in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
+    thirdPerson:
+      /^(?<user>\w+) traces a logograph shaped like a sunburst in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     profession: ["pariah"],
     skill: "memorium",
     balance: "balance",
@@ -350,12 +353,13 @@ export const actions = [
     fullName: "Epitaph Fissure",
     firstPerson: false,
     secondPerson: false,
-    thirdPerson: /^Crimson fire trails the knife of (?<user>\w+) as \w+ slashes \w+ knife through the air before (?<target>.+?), a jagged logograph hanging in its passing\.$/,
+    thirdPerson:
+      /^Crimson fire trails the knife of (?<user>\w+) as \w+ slashes \w+ knife through the air before (?<target>.+?), a jagged logograph hanging in its passing\.$/,
     profession: ["pariah"],
     skill: "memorium",
     balance: "balance",
     multiLine: 1,
-    tags: ['raze'],
+    tags: ["raze"],
     length: 2.2,
   },
   //#endregion
