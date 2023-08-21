@@ -60,6 +60,56 @@ export const npcs = [
     length: 4.0,
   },
   {
+    user: "a translucent butterfly",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a viridescent tinge. Discharging the vivid energy, he sends a toxic blast to impact with you\.$/,
+    thirdPerson: false,
+    tags: ["damage", "loki"],
+    length: 2,
+  },
+  {
+    user: "a translucent butterfly",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a bright violet tinge. Discharging the vivid energy, he sends a blast of power to impact with you\.$/,
+    thirdPerson: false,
+    tags: ["damage", "transfix??? (fix this)"],
+    length: 4,
+  },
+  {
+    user: "a translucent butterfly",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A translucent butterfly beats his wings rapidly and his translucent body turns ghostly white. Discharging the pale energy, he sends a blast of power to impact with you\.$/,
+    thirdPerson: false,
+    tags: ["damage", "paralysis"],
+    length: 4,
+  },
+  {
+    user: "a translucent butterfly",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a bright crimson tinge. Discharging the blazing energy, he sends a blast of power to impact with you\.$/,
+    thirdPerson: false,
+    tags: ["damage", "burning"],
+    length: 4,
+  },
+  {
+    user: "a translucent butterfly",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a dark amber tinge. Discharging the crackling energy, he sends a blast of power to impact with you\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 4,
+  },
+  {
     user: "an elder angel",
     areaId: [401],
     areaName: "First Circle of Nur",
@@ -145,7 +195,8 @@ export const npcs = [
     areaName: "First Circle of Nur",
     firstPerson:
       /^The form of a vanguard angel shifts abruptly to an incorporeal mist which passes through your body, leaving abject terror and searing agony in his wake, before regaining physicality on the other side\.$/,
-    thirdPerson: /^The form of a vanguard angel shifts abruptly to an incorporeal mist which passes through (?<target>.+?)'s convulsing body before regaining physicality on the other side\.$/,
+    thirdPerson:
+      /^The form of a vanguard angel shifts abruptly to an incorporeal mist which passes through (?<target>.+?)'s convulsing body before regaining physicality on the other side\.$/,
     tags: ["damage", "blackout", "heal"],
     length: 2,
   },
