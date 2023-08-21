@@ -64,7 +64,7 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
-      /^An elder angel's eyes gleam as you are butchered with a wicked blow\.$/,
+      /^An elder angel flicks his fingers in your direction and you are consumed by pure agony\.$/,
     thirdPerson: false,
     tags: ["damage"],
     length: 2,
@@ -74,9 +74,9 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
-      /^You almost collapse in pain as an elder angel smashes you with a bone crunching blow\.$/,
+      /^An elder angel sweeps his wings forward in a fiery wave, sending a cascade of fire to consume the area\.$/,
     thirdPerson: false,
-    tags: ["damage"],
+    tags: ["damage", "burning"],
     length: 2,
   },
   {
