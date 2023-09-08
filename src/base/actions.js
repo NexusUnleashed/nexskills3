@@ -11,7 +11,7 @@ export const actions = [
     profession: ["occultist"],
     skill: "occultism",
     balance: "equilibrium",
-    tags: [],
+    tags: ["damage"],
     length: 3.0,
   },
   {
