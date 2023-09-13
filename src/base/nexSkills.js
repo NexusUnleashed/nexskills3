@@ -1,8 +1,36 @@
 /* global eventStream, GMCP, nexGui */
 
 import { startUp } from "./mongo";
-import { actions } from "./actions";
-import { npcs } from "./npcs";
+
+import { actions as occultist } from "./skills/occultist";
+import { actions as dragon } from "./skills/dragon";
+import { actions as depthswalker } from "./skills/depthswalker";
+import { actions as pariah } from "./skills/occultist";
+import { actions as psion } from "./skills/psion";
+
+import { npcs as battlesite } from "./areas/battlesite";
+import { npcs as judgementMountain } from "./areas/judgementMountain";
+import { npcs as grukaiSwamp } from "./areas/grukaiSwamp";
+import { npcs as istarion } from "./areas/istarion";
+import { npcs as nur } from "./areas/nur";
+import { npcs as riagath } from "./areas/riagath";
+import { npcs as tirMuran } from "./areas/tirMuran";
+import { npcs as tuar } from "./areas/tuar";
+import { npcs as yggdrasil } from "./areas/yggdrasil";
+
+const npcs = [
+  ...battlesite,
+  ...judgementMountain,
+  ...grukaiSwamp,
+  ...istarion,
+  ...nur,
+  ...riagath,
+  ...tirMuran,
+  ...tuar,
+  ...yggdrasil,
+];
+
+const actions = [...occultist, ...dragon, ...depthswalker, ...pariah, ...psion];
 
 export const classList = [
   "Alchemist",
@@ -76,7 +104,7 @@ const checkSkillsOld = (line) => {
 export const nextLine = (num = 1) => {
   const nextLine =
     nexusclient.current_block[
-    nexusclient.current_block.indexOf(nexusclient.current_line) + num
+      nexusclient.current_block.indexOf(nexusclient.current_line) + num
     ];
   return nextLine.parsed_line ? nextLine.parsed_line.text() : "";
 };
@@ -125,11 +153,13 @@ const checkNpcs = (text) => {
   let result = false;
   let action = false;
 
-  //TODO add area and/or areaid check here to limit
-  // the number of regex checks to the area.
+  const areaNpcs = npcs.filter((e) => e.areaId.includes(GMCP.Location.areaid));
+  if (areaNpcs.length === 0) {
+    return false;
+  }
 
-  for (let i = 0; i < npcs.length; i++) {
-    action = npcs[i];
+  for (let i = 0; i < areaNpcs.length; i++) {
+    action = areaNpcs[i];
 
     result = text.match(action.firstPerson);
     if (result) {
@@ -233,8 +263,9 @@ const actionMsg = (who = "", what = "", subject = "") => {
     ) {
       let damage = document.createElement("span");
       damage.style.color = "grey";
-      damage.textContent = `${GMCP.Target.HP ? GMCP.Target.hpChange + "%" : ""
-        }`;
+      damage.textContent = `${
+        GMCP.Target.HP ? GMCP.Target.hpChange + "%" : ""
+      }`;
       whatHTML.appendChild(
         Object.assign(document.createElement("span"), {
           style: "color:white",
@@ -323,8 +354,9 @@ const npcAttackMsg = (who = "", what = "", subject = "") => {
 
     whatHTML.appendChild(
       Object.assign(document.createElement("span"), {
-        style: `color:${nexSys.prompt.affAbbrev[attack]?.fg || ""
-          }; background: ${nexSys.prompt.affAbbrev[attack]?.bg || ""}`,
+        style: `color:${
+          nexSys.prompt.affAbbrev[attack]?.fg || ""
+        }; background: ${nexSys.prompt.affAbbrev[attack]?.bg || ""}`,
         textContent:
           attack === "damage"
             ? nexSys.prompt.vars.diffhp.text || "-0%"
@@ -363,6 +395,7 @@ const npcAttackMsg = (who = "", what = "", subject = "") => {
 export const nexSkills = {
   actions: actions,
   npcs: npcs,
+
   actionMsg: actionMsg,
   npcAttackMsg: npcAttackMsg,
   checkSkills: checkSkills,
