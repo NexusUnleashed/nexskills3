@@ -1,19 +1,21 @@
+import { GMCP } from "./GMCP";
+const action = {
+  id: "dragonblaze",
+  fullName: "Dragonblaze",
+  firstPerson:
+    /^You breathe a long torrent of flame at (?<target>.+?), igniting \w+ skin\.$/,
+  secondPerson: false,
+  thirdPerson: false,
+  profession: ["dragon"],
+  skill: "attainment",
+  balance: "battlerage",
+  tags: ["battlerage"],
+  length: 3.0,
+  user: "Khaseem",
+  target: "a malevolent hydra",
+};
 /*
-{
-    id: "dragonblaze",
-    fullName: "Dragonblaze",
-    firstPerson:
-      /^You breathe a long torrent of flame at (?<target>.+?), igniting \w+ skin\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    tags: ["battlerage"],
-    length: 3.0,
-    user: "Khaseem",
-    target: "a malevolent hydra",
-  }
+  	Self	       [Incantation]: 4x (30%)	        (40%) A burly troll guard
 */
 const crits = [
   ["a CRITICAL", "2x"],
@@ -77,6 +79,44 @@ const checkCrit = () => {
   return dmg;
 };
 
+const addBanding = (content, banding, fg) => {
+  const segment = document.createElement("span");
+  const leftBand = document.createElement("span");
+  leftBand.style.color = fg || "white";
+  leftBand.textContent = banding[0];
+  segment.appendChild(leftBand);
+
+  segment.appendChild(content);
+
+  const rightBand = document.createElement("span");
+  rightBand.style.color = fg || "white";
+  rightBand.textContent = banding[1];
+  segment.appendChild(rightBand);
+
+  return segment;
+};
+const getCrit = () => {
+  const crit = document.createElement("span");
+  crit.style.color = "white";
+  crit.textContent = `: Hit `; //`: ${checkCrit()}`;
+  return crit;
+};
+
+const getDamageDone = () => {
+  const damage = document.createElement("span");
+  damage.style.color = "grey";
+  damage.textContent = `${GMCP.Target.HP ? GMCP.Target.hpChange + "%" : ""}`;
+
+  return addBanding(damage, ["(", ")"]);
+};
+
+const getNpcHealth = () => {
+  const hp = document.createElement("span");
+  hp.style.color = "grey"; //`${nexGui.colors.gradient(parseInt(GMCP.Target.HP))}`;
+  hp.textContent = `${GMCP.Target.HP ? GMCP.Target.HP : " "}`;
+  return addBanding(hp, ["(", ") "]);
+};
+
 const getSegment = (size) => {
   const segment = document.createElement("div");
   segment.style.display = "table-cell";
@@ -84,17 +124,42 @@ const getSegment = (size) => {
 
   return segment;
 };
+
+const getName = (name) => {
+  const formattedName = document.createElement("span");
+  formattedName.style.color = "grey";
+  formattedName.textContent = name;
+
+  return formattedName;
+};
+
 const getBuffer = (width) => {
   const segment = getSegment(width);
   segment.appendChild(document.createElement("span"));
   return segment;
 };
 
-const getName = (width, name) => {
-  const segment = getSegment(width);
+const getUser = (width, name) => {
+  const user = getSegment(width);
+  user.appendChild(getName(name));
+  return user;
 };
 
-const mainWindowMsg = () => {
+const getAction = (width, action) => {
+  const segment = getSegment(width);
+  segment.appendChild() + segment.appendChild(getCrit());
+  segment.appendChild(getDamageDone());
+  return segment;
+};
+
+const getTarget = (width, name) => {
+  const target = getSegment(width);
+  target.appendChild(getNpcHealth());
+  target.appendChild(getName(name));
+  return target;
+};
+
+export const mainWindowMsg = () => {
   const line = document.createElement("div");
   line.style.width = "calc(100% - 15ch)";
   line.style.display = "inline-table";
@@ -104,11 +169,12 @@ const mainWindowMsg = () => {
   line.appendChild(msg);
 
   msg.appendChild(getBuffer("5%"));
-  msg.appendChild(getName("30%", subject));
-  msg.appendChild(getAction("35%", action));
-  msg.appendChild(getName("", target));
+  msg.appendChild(getUser("30%", action.user));
+  msg.appendChild(getAction("35%", action.fullName));
+  msg.appendChild(getTarget("", action.target));
 
-  return line;
+  console.log(line.outerHTML);
+  return line.outerHTML;
 };
 export const actionMsg = (who = "", what = "", subject = "") => {
   let line = document.createElement("div");

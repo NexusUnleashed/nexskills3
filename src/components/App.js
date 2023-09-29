@@ -1,9 +1,11 @@
 import "../styles/App.css";
+import { mainWindowMsg } from "../base/messages";
 import Dashboard from "./Dashboard";
 import { classList } from "../base/nexSkills";
 import { createTheme } from "@mui/material";
 import { nexSkills } from "../base/nexSkills";
 
+mainWindowMsg();
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -63,7 +65,7 @@ const darkTheme = createTheme({
   },
 });
 
-let sortedSkills = nexSkills.skills.sort((a, b) => {
+let sortedSkills = nexSkills.actions.sort((a, b) => {
   if (a.profession > b.profession) {
     return -1;
   }
@@ -85,11 +87,14 @@ sortedSkills = sortedSkills.sort((a, b) => {
 
 function App() {
   return (
-    <Dashboard
-      theme={darkTheme}
-      debugSkills={sortedSkills}
-      classList={classList}
-    />
+    <div>
+      <div dangerouslySetInnerHTML={{ __html: mainWindowMsg() }} />
+      <Dashboard
+        theme={darkTheme}
+        debugSkills={sortedSkills}
+        classList={classList}
+      />
+    </div>
   );
 }
 
