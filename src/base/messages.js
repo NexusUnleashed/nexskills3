@@ -133,26 +133,35 @@ const getName = (name) => {
   return formattedName;
 };
 
-const getBuffer = (width) => {
+const getAction = (fullName) => {
+  const formattedAction = document.createElement("span");
+  formattedAction.style.color = "grey";
+  formattedAction.textContent = fullName;
+
+  return formattedAction;
+};
+
+const bufferSegment = (width) => {
   const segment = getSegment(width);
   segment.appendChild(document.createElement("span"));
   return segment;
 };
 
-const getUser = (width, name) => {
+const userSegment = (width, name) => {
   const user = getSegment(width);
   user.appendChild(getName(name));
   return user;
 };
 
-const getAction = (width, action) => {
+const actionSegment = (width, fullName) => {
   const segment = getSegment(width);
-  segment.appendChild() + segment.appendChild(getCrit());
+  segment.appendChild(getAction(fullName));
+  segment.appendChild(getCrit());
   segment.appendChild(getDamageDone());
   return segment;
 };
 
-const getTarget = (width, name) => {
+const targetSegment = (width, name) => {
   const target = getSegment(width);
   target.appendChild(getNpcHealth());
   target.appendChild(getName(name));
@@ -168,10 +177,10 @@ export const mainWindowMsg = () => {
   msg.style.display = "table-row";
   line.appendChild(msg);
 
-  msg.appendChild(getBuffer("5%"));
-  msg.appendChild(getUser("30%", action.user));
-  msg.appendChild(getAction("35%", action.fullName));
-  msg.appendChild(getTarget("", action.target));
+  msg.appendChild(bufferSegment("5%"));
+  msg.appendChild(userSegment("30%", action.user));
+  msg.appendChild(actionSegment("35%", action.fullName));
+  msg.appendChild(targetSegment("", action.target));
 
   console.log(line.outerHTML);
   return line.outerHTML;
