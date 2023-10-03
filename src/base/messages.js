@@ -1,5 +1,6 @@
-import { GMCP } from "./GMCP";
-const action = {
+/* global GMCP, nexSys*/
+//import { GMCP } from "./GMCP";
+export const action = {
   id: "dragonblaze",
   fullName: "Dragonblaze",
   firstPerson:
@@ -13,6 +14,17 @@ const action = {
   length: 3.0,
   user: "Khaseem",
   target: "a malevolent hydra",
+};
+export const npcAction = {
+  user: "an inquisitor angel",
+  crowdMapId: [401],
+  areaName: "First Circle of Nur",
+  firstPerson:
+    /^An inquisitor angel opens her mouth and speaks a single word. The sound of a multitude blasts forth, slamming relentlessly into you in a blast of power\.$/,
+  thirdPerson: false,
+  tags: ["damage", "undeaf", "confusion", "dementia"],
+  length: 2,
+  target: "Khaseem",
 };
 /*
   	Self	       [Incantation]: 4x (30%)	        (40%) A burly troll guard
@@ -113,7 +125,7 @@ const getDamageDone = () => {
 const getNpcHealth = () => {
   const hp = document.createElement("span");
   hp.style.color = "grey"; //`${nexGui.colors.gradient(parseInt(GMCP.Target.HP))}`;
-  hp.textContent = `${GMCP.Target.HP ? GMCP.Target.HP : " "}`;
+  hp.textContent = `${GMCP.Target.HP ? GMCP.Target.HP : "?%"}`;
   return addBanding(hp, ["(", ") "]);
 };
 
@@ -133,12 +145,13 @@ const getName = (name) => {
   return formattedName;
 };
 
-const getAction = (fullName) => {
+const getAction = (action) => {
   const formattedAction = document.createElement("span");
-  formattedAction.style.color = "grey";
-  formattedAction.textContent = fullName;
+  formattedAction.style.color =
+    action.skill === "attainment" ? "yellow" : "orange";
+  formattedAction.textContent = action.fullName;
 
-  return formattedAction;
+  return addBanding(formattedAction, ["[", "]"]);
 };
 
 const bufferSegment = (width) => {
@@ -147,28 +160,58 @@ const bufferSegment = (width) => {
   return segment;
 };
 
-const userSegment = (width, name) => {
+const userSegment = (width, action) => {
   const user = getSegment(width);
-  user.appendChild(getName(name));
+  user.appendChild(getName(action.user));
   return user;
 };
 
-const actionSegment = (width, fullName) => {
+const actionSegment = (width, action) => {
   const segment = getSegment(width);
-  segment.appendChild(getAction(fullName));
+  segment.appendChild(getAction(action));
   segment.appendChild(getCrit());
   segment.appendChild(getDamageDone());
   return segment;
 };
 
-const targetSegment = (width, name) => {
+const npcActionSegment = (width, action) => {
+  const segment = getSegment(width);
+  for (let i = 0; i < action.tags.length; i++) {
+    const attack = action.tags[i];
+    console.log(attack);
+    if (i > 0) {
+      const spacer = document.createElement("span");
+      spacer.style.color = "grey";
+      spacer.textContent = ", ";
+      segment.appendChild(spacer);
+    }
+
+    const attackMsg = document.createElement("span");
+    const attackStyle = nexSys.prompt.affAbbrev[attack] || {
+      fg: "grey",
+      bg: "",
+    };
+    attackMsg.style.color = attackStyle.fg;
+    attackMsg.style.backgroundColor = attackStyle.bg;
+    attackMsg.textContent =
+      attack === "damage"
+        ? nexSys.prompt.vars.diffhp.text || "-0%"
+        : globalThis._.capitalize(attack);
+    segment.appendChild(attackMsg);
+  }
+  return addBanding(segment, ["\u00AB", "\u00BB"], "red");
+};
+
+const targetSegment = (width, action) => {
   const target = getSegment(width);
-  target.appendChild(getNpcHealth());
-  target.appendChild(getName(name));
+  if (1 === 1) {
+    target.appendChild(getNpcHealth());
+  }
+  target.appendChild(getName(action.target));
   return target;
 };
 
-export const mainWindowMsg = () => {
+export const mainWindowActionMsg = (action) => {
   const line = document.createElement("div");
   line.style.width = "calc(100% - 15ch)";
   line.style.display = "inline-table";
@@ -178,9 +221,13 @@ export const mainWindowMsg = () => {
   line.appendChild(msg);
 
   msg.appendChild(bufferSegment("5%"));
-  msg.appendChild(userSegment("30%", action.user));
-  msg.appendChild(actionSegment("35%", action.fullName));
-  msg.appendChild(targetSegment("", action.target));
+  msg.appendChild(userSegment("30%", action));
+  if (action.crowdMapId) {
+    msg.appendChild(npcActionSegment("35%", action));
+  } else {
+    msg.appendChild(actionSegment("35%", action));
+  }
+  msg.appendChild(targetSegment("", action));
 
   console.log(line.outerHTML);
   return line.outerHTML;

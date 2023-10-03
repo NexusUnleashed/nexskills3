@@ -1,11 +1,10 @@
 import "../styles/App.css";
-import { mainWindowMsg } from "../base/messages";
+import { mainWindowActionMsg, action, npcAction } from "../base/messages";
 import Dashboard from "./Dashboard";
 import { classList } from "../base/nexSkills";
 import { createTheme } from "@mui/material";
 import { nexSkills } from "../base/nexSkills";
 
-mainWindowMsg();
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -88,7 +87,10 @@ sortedSkills = sortedSkills.sort((a, b) => {
 function App() {
   return (
     <div>
-      <div dangerouslySetInnerHTML={{ __html: mainWindowMsg() }} />
+      <div dangerouslySetInnerHTML={{ __html: mainWindowActionMsg(action) }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: mainWindowActionMsg(npcAction) }}
+      />
       <Dashboard
         theme={darkTheme}
         debugSkills={sortedSkills}

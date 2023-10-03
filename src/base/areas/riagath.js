@@ -1,7 +1,7 @@
 export const npcs = [
   {
     user: "a gigantic angler fish",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A gigantic angler fish rapidly lunges towards you, its razor-sharp teeth snapping shut on your arm\.$/,
@@ -11,7 +11,7 @@ export const npcs = [
   },
   {
     user: "a gigantic angler fish",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A gigantic angler fish throws itself at you, clamping its sickening jaw tight around your throat\.$/,
@@ -21,7 +21,7 @@ export const npcs = [
   },
   {
     user: "a gigantic angler fish",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A gigantic angler fish hurls itself at you in a vicious frontal attack, connecting painfully with your chest\.$/,
@@ -31,7 +31,7 @@ export const npcs = [
   },
   {
     user: "a burly troll guard",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A burly troll guard lowers his head and charges at you, slamming powerfully into your abdomen\.$/,
@@ -41,7 +41,7 @@ export const npcs = [
   },
   {
     user: "a burly troll guard",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A burly troll guard lowers his head and charges at you, slamming powerfully into your abdomen\.$/,
@@ -51,7 +51,7 @@ export const npcs = [
   },
   {
     user: "a burly troll guard",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson: /^A burly troll guard batters you with an overhead blow\.$/,
     thirdPerson: false,
@@ -61,7 +61,7 @@ export const npcs = [
   {
     //TODO Identical pattern
     user: "a burly troll guard",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A burly troll guard screams with rage and drives his spear deep into your chest\.$/,
@@ -72,7 +72,7 @@ export const npcs = [
   {
     //TODO Identical pattern
     user: "a burly troll guard",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A look of absolute rage takes over a burly troll guard as he lunges at you, sinking his abnormally sharp teeth deep into your throat\.$/,
@@ -83,7 +83,7 @@ export const npcs = [
   {
     //TODO Identical pattern
     user: "a sturdy troll woman",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A sturdy troll woman screams with rage and drives her spear deep into your chest\.$/,
@@ -94,7 +94,7 @@ export const npcs = [
   {
     //TODO Identical pattern
     user: "a sturdy troll woman",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A look of absolute rage takes over a sturdy troll woman as she lunges at you, sinking her abnormally sharp teeth deep into your throat\.$/,
@@ -104,7 +104,7 @@ export const npcs = [
   },
   {
     user: "a sturdy troll woman",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^A sturdy troll woman lowers her head and charges at you, slamming powerfully into your abdomen\.$/,
@@ -114,7 +114,7 @@ export const npcs = [
   },
   {
     user: "Rinaga",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^His trusty shovel held firmly in both hands, Rinaga batters you powerfully around the head with it\.$/,
@@ -124,7 +124,7 @@ export const npcs = [
   },
   {
     user: "Rinaga",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^Rinaga swings a red-hot poker at you with considerable force, slamming it powerfully into the side of your head\.$/,
@@ -134,7 +134,7 @@ export const npcs = [
   },
   {
     user: "Rinaga",
-    areaId: [260],
+    crowdMapId: [260],
     areaName: "the Caverns of Riagath",
     firstPerson:
       /^Using his shovel with outstanding accuracy, Rinaga scoops a pile of burning coals from his fire and launches them at you\.$/,
