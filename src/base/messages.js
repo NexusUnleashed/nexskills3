@@ -26,6 +26,7 @@ export const npcAction = {
   length: 2,
   target: "Khaseem",
 };
+// nexSys.prompt.cureColors.bloodroot = {fg: "", bg: ""}
 /*
   	Self	       [Incantation]: 4x (30%)	        (40%) A burly troll guard
 */
@@ -178,7 +179,7 @@ const npcActionSegment = (width, action) => {
   const segment = getSegment(width);
   for (let i = 0; i < action.tags.length; i++) {
     const attack = action.tags[i];
-    console.log(attack);
+
     if (i > 0) {
       const spacer = document.createElement("span");
       spacer.style.color = "grey";
@@ -229,9 +230,25 @@ export const mainWindowActionMsg = (action) => {
   }
   msg.appendChild(targetSegment("", action));
 
-  console.log(line.outerHTML);
   return line.outerHTML;
 };
+
+export const mainWindowUserMsg = (user, action) => {
+  const line = document.createElement("div");
+  line.style.width = "calc(100% - 15ch)";
+  line.style.display = "inline-table";
+
+  const msg = document.createElement("div");
+  msg.style.display = "table-row";
+  line.appendChild(msg);
+
+  msg.appendChild(bufferSegment("5%"));
+  msg.appendChild(userSegment("30%", action));
+  msg.appendChild(actionSegment("35%", action));
+
+  return line.outerHTML;
+};
+
 export const actionMsg = (who = "", what = "", subject = "") => {
   let line = document.createElement("div");
   line.style.width = "calc(100% - 15ch)";
