@@ -1,7 +1,7 @@
 export const npcs = [
   {
     user: "an energetic turtle",
-    crowdMapId: [335],
+    areaId: [335],
     areaName: "Grukai Swamp",
     firstPerson:
       /^An energetic red turtle slams his body into your leg, shattering it in the process.\.$/,
@@ -11,7 +11,7 @@ export const npcs = [
   },
   {
     user: "a sinister glubber",
-    crowdMapId: [335],
+    areaId: [335],
     areaName: "Grukai Swamp",
     firstPerson:
       /^A sinister glubber claws viciously at your arm, severing the joints\.$/,
@@ -21,7 +21,7 @@ export const npcs = [
   },
   {
     user: "a sinister glubber",
-    crowdMapId: [335],
+    areaId: [335],
     areaName: "Grukai Swamp",
     firstPerson:
       /^A sinister glubber claws viciously at your leg, severing the joints\.$/,
@@ -31,7 +31,7 @@ export const npcs = [
   },
   {
     user: "a sinister glubber",
-    crowdMapId: [335],
+    areaId: [335],
     areaName: "Grukai Swamp",
     firstPerson:
       /^A sinister glubber scrapes his nails across your eyes, leaving you unable to see\.$/,
@@ -41,7 +41,7 @@ export const npcs = [
   },
   {
     user: "a sinister glubber",
-    crowdMapId: [335],
+    areaId: [335],
     areaName: "Grukai Swamp",
     firstPerson:
       /^Staring intensely at you, a sinister glubber causes his scales to fly off his body and into yours, painfully piercing the skin\.$/,
@@ -51,7 +51,7 @@ export const npcs = [
   },
   {
     user: "a tentacled polyp",
-    crowdMapId: [335],
+    areaId: [335],
     areaName: "Grukai Swamp",
     firstPerson:
       /^Flinging his rope-like tentacles around, a tentacled polyp hits you firmly in the chest, leaving a number of noticeable lacerations\.$/,
@@ -61,7 +61,7 @@ export const npcs = [
   },
   {
     user: "a tentacled polyp",
-    crowdMapId: [335],
+    areaId: [335],
     areaName: "Grukai Swamp",
     firstPerson:
       /^Waving his appendages before your face, a tentacled polyp leaves a number of deep lacerations and manages to leave you transfixed\.$/,
@@ -72,7 +72,7 @@ export const npcs = [
   },
   {
     user: "a tentacled polyp",
-    crowdMapId: [335],
+    areaId: [335],
     areaName: "Grukai Swamp",
     firstPerson:
       /^A tentacled polyp quickly stabs you with his bizarre limbs, leaving a number of deep cuts\.$/,
@@ -82,7 +82,7 @@ export const npcs = [
   },
   {
     user: "a tentacled polyp",
-    crowdMapId: [335],
+    areaId: [335],
     areaName: "Grukai Swamp",
     firstPerson:
       /^Wrapping his tentacles around your legs, a tentacled polyp causes you to come crashing to the floor, your legs entangled with his bizarre appendages\.$/,
