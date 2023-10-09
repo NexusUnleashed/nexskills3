@@ -7,6 +7,7 @@ import { actions as dragon } from "./skills/dragon";
 import { actions as depthswalker } from "./skills/depthswalker";
 import { actions as pariah } from "./skills/occultist";
 import { actions as psion } from "./skills/psion";
+import { actions as tattoos } from "./skills/tattoos";
 
 import { npcs as battlesite } from "./areas/battlesite";
 import { npcs as judgementMountain } from "./areas/judgementMountain";
@@ -104,7 +105,7 @@ const checkSkillsOld = (line) => {
 export const nextLine = (num = 1) => {
   const nextLine =
     nexusclient.current_block[
-      nexusclient.current_block.indexOf(nexusclient.current_line) + num
+    nexusclient.current_block.indexOf(nexusclient.current_line) + num
     ];
   return nextLine.parsed_line ? nextLine.parsed_line.text() : "";
 };
