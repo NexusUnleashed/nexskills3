@@ -2,12 +2,13 @@
 
 import { startUp } from "./mongo";
 
-import { actions as occultist } from "./skills/occultist";
-import { actions as dragon } from "./skills/dragon";
-import { actions as depthswalker } from "./skills/depthswalker";
-import { actions as pariah } from "./skills/occultist";
-import { actions as psion } from "./skills/psion";
-import { actions as tattoos } from "./skills/tattoos";
+import { actions as occultist } from "./professions/occultist";
+import { actions as dragon } from "./professions/dragon";
+import { actions as depthswalker } from "./professions/depthswalker";
+import { actions as pariah } from "./professions/occultist";
+import { actions as psion } from "./professions/psion";
+import { actions as tattoos } from "./general/tattoos";
+import { actions as curing } from "./general/curing";
 
 import { npcs as battlesite } from "./areas/battlesite";
 import { npcs as judgementMountain } from "./areas/judgementMountain";
@@ -105,7 +106,7 @@ const checkSkillsOld = (line) => {
 export const nextLine = (num = 1) => {
   const nextLine =
     nexusclient.current_block[
-    nexusclient.current_block.indexOf(nexusclient.current_line) + num
+      nexusclient.current_block.indexOf(nexusclient.current_line) + num
     ];
   return nextLine.parsed_line ? nextLine.parsed_line.text() : "";
 };
