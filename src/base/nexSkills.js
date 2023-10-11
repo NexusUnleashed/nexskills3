@@ -5,7 +5,7 @@ import { startUp } from "./mongo";
 import { actions as occultist } from "./skills/occultist";
 import { actions as dragon } from "./skills/dragon";
 import { actions as depthswalker } from "./skills/depthswalker";
-import { actions as pariah } from "./skills/occultist";
+import { actions as pariah } from "./skills/pariah";
 import { actions as psion } from "./skills/psion";
 import { actions as tattoos } from "./skills/tattoos";
 
