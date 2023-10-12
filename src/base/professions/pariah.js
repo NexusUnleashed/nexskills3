@@ -1,3 +1,4 @@
+/*global GMCP */
 export const actions = [
   //#region Pariah
   {
@@ -13,6 +14,7 @@ export const actions = [
     multiLine: 0,
     tags: ["raze"],
     length: 2.2,
+    reaction() { }
   },
   {
     id: "serpent",
@@ -87,8 +89,8 @@ export const actions = [
     length: 2.2,
   },
   {
-    id: "scales",
-    fullName: "Epitaph Scales",
+    id: "scorpion",
+    fullName: "Epitaph Scorpion",
     firstPerson: false,
     secondPerson: false,
     thirdPerson:

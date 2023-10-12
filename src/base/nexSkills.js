@@ -2,11 +2,12 @@
 
 import { startUp } from "./mongo";
 
-import { actions as occultist } from "./professions/occultist";
-import { actions as dragon } from "./professions/dragon";
 import { actions as depthswalker } from "./professions/depthswalker";
-import { actions as pariah } from "./professions/occultist";
+import { actions as dragon } from "./professions/dragon";
+import { actions as occultist } from "./professions/occultist";
+import { actions as pariah } from "./professions/pariah";
 import { actions as psion } from "./professions/psion";
+
 import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
 
@@ -32,7 +33,7 @@ const npcs = [
   ...yggdrasil,
 ];
 
-const actions = [...occultist, ...dragon, ...depthswalker, ...pariah, ...psion];
+const actions = [...dragon, ...depthswalker, ...occultist, ...pariah, ...psion, ...tattoos, ...curing];
 
 export const classList = [
   "Alchemist",
@@ -103,14 +104,6 @@ const checkSkillsOld = (line) => {
   return result ? result : false;
 };
 
-export const nextLine = (num = 1) => {
-  const nextLine =
-    nexusclient.current_block[
-    nexusclient.current_block.indexOf(nexusclient.current_line) + num
-    ];
-  return nextLine.parsed_line ? nextLine.parsed_line.text() : "";
-};
-
 const checkSkills = (text) => {
   let result = false;
   let action = false;
@@ -142,13 +135,18 @@ const checkSkills = (text) => {
   }
 
   if (result) {
+    action.args = result;
+    if (action.reaction) {
+      action.reaction();
+    }
     eventStream.raiseEvent("nexSkillMatch", action);
   }
 
   if (!result) {
     return checkNpcs(text);
   }
-  return result;
+  //return result;
+  return action;
 };
 
 const checkNpcs = (text) => {
@@ -180,6 +178,7 @@ const checkNpcs = (text) => {
   }
 
   if (result) {
+    action.args = result;
     eventStream.raiseEvent("nexSkillNpcMatch", action);
   }
 

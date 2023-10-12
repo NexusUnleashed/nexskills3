@@ -28,6 +28,36 @@ export const actions = [
     length: 3.0,
   },
   {
+    id: "dragoncurse",
+    fullName: "Dragoncurse",
+    firstPerson:
+      false,
+    secondPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) draws himself up to his full height, staring imperiously down at (?<target>.+?)\.$/,
+    profession: ["dragon"],
+    skill: "dragoncraft",
+    balance: "equilibrium",
+    tags: [],
+    length: 4.0,
+    multiline: 0
+  },
+  {
+    id: "rend",
+    fullName: "Rend",
+    firstPerson:
+      false,
+    secondPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) draws himself up to his full height, staring imperiously down at (?<target>.+?)\.$/,
+    profession: ["dragon"],
+    skill: "dragoncraft",
+    balance: "balance",
+    tags: [],
+    length: 2.5,
+    multiline: 0
+  },
+  {
     id: "glaciate",
     fullName: "Glaciate",
     firstPerson:
