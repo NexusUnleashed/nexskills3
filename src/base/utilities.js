@@ -23,3 +23,22 @@ export const prevLine = (txt) => {
     const line = prevLine.parsed_line ? prevLine.parsed_line.text() : "";
     return line.includees(txt);
 };
+
+export const addAction = (action) => {
+    const res = {
+        id: "",
+        fullName: "",
+        firstPerson: false,
+        secondPerson: false,
+        thirdPerson: false,
+        profession: [],
+        skill: "",
+        balance: "",
+        multiLine: 0,
+        tags: [],
+        length: 0,
+        reaction() { }
+    };
+    res = { ...res, ...action };
+    return res;
+};

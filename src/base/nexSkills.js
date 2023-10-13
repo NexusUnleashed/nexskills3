@@ -6,6 +6,7 @@ import { actions as depthswalker } from "./professions/depthswalker";
 import { actions as dragon } from "./professions/dragon";
 import { actions as occultist } from "./professions/occultist";
 import { actions as pariah } from "./professions/pariah";
+import { actions as priest } from "./professions/priest";
 import { actions as psion } from "./professions/psion";
 
 import { actions as tattoos } from "./general/tattoos";
@@ -33,7 +34,7 @@ const npcs = [
   ...yggdrasil,
 ];
 
-const actions = [...dragon, ...depthswalker, ...occultist, ...pariah, ...psion, ...tattoos, ...curing];
+const actions = [...dragon, ...depthswalker, ...occultist, ...pariah, ...priest, ...psion, ...tattoos, ...curing];
 
 export const classList = [
   "Alchemist",
