@@ -1,4 +1,5 @@
 export const actions = [
+  //#region Dragoncraft
   {
     id: "gut",
     fullName: "Gut",
@@ -84,6 +85,21 @@ export const actions = [
     multiline: 0,
   },
   {
+    id: "tailsmash",
+    fullName: "Tailsmash",
+    firstPerson:
+      /^You flick your tail at (?<target>.+?), dismissively brushing aside the paltry shield protecting \w+\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["dragon"],
+    skill: "dragoncraft",
+    balance: "balance",
+    tags: ["raze"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region Attainment
+  {
     id: "glaciate",
     fullName: "Glaciate",
     firstPerson:
@@ -93,7 +109,7 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage", "stun"],
+    tags: ["stun"],
     length: 3.0,
   },
   {
@@ -106,7 +122,7 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["raze"],
     length: 3.0,
   },
   {
@@ -119,21 +135,8 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["damage"],
     length: 3.0,
-  },
-  {
-    id: "tailsmash",
-    fullName: "Tailsmash",
-    firstPerson:
-      /^You flick your tail at (?<target>.+?), dismissively brushing aside the paltry shield protecting \w+\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["dragon"],
-    skill: "dragoncraft",
-    balance: "balance",
-    tags: [],
-    length: 2.0,
   },
   {
     id: "ague",
@@ -145,7 +148,7 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["clumsy"],
     length: 3.0,
   },
   {
@@ -158,7 +161,7 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["damage"],
     length: 3.0,
   },
   {
@@ -170,7 +173,7 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["damage"],
     length: 3.0,
   },
   {
@@ -183,7 +186,7 @@ export const actions = [
     profession: ["black dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["damage"],
     length: 3.0,
   },
   {
@@ -196,7 +199,7 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["damage"],
     length: 3.0,
   },
   {
@@ -209,7 +212,7 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["damage"],
     length: 3.0,
   },
   {
@@ -222,7 +225,7 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["inhibit"],
     length: 3.0,
   },
   {
@@ -235,7 +238,7 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["damage"],
     length: 3.0,
   },
   {
@@ -248,7 +251,7 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["recklessness"],
     length: 3.0,
   },
   {
@@ -261,7 +264,7 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["damage"],
     length: 3.0,
   },
   {
@@ -274,7 +277,8 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["battlerage"],
+    tags: ["raze"],
     length: 3.0,
   },
+  //#endregion
 ];
