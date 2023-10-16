@@ -11,6 +11,7 @@ import { actions as psion } from "./professions/psion";
 
 import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
+import { actions as general } from "./general/general";
 
 import { npcs as battlesite } from "./areas/battlesite";
 import { npcs as judgementMountain } from "./areas/judgementMountain";
@@ -34,7 +35,17 @@ const npcs = [
   ...yggdrasil,
 ];
 
-const actions = [...dragon, ...depthswalker, ...occultist, ...pariah, ...priest, ...psion, ...tattoos, ...curing];
+const actions = [
+  ...dragon,
+  ...depthswalker,
+  ...occultist,
+  ...pariah,
+  ...priest,
+  ...psion,
+  ...tattoos,
+  ...curing,
+  ...general,
+];
 
 export const classList = [
   "Alchemist",
@@ -111,7 +122,10 @@ const checkSkills = (text) => {
 
   for (let i = 0; i < actions.length; i++) {
     action = actions[i];
-    if (GMCP.Char.Status.class.toLowerCase().includes(action.profession)) {
+    if (
+      action.profession.includes(GMCP.Char.Status.class.toLowerCase()) ||
+      action.profession.includes("general")
+    ) {
       result = text.match(action.firstPerson);
       if (result) {
         action.user = "self";
