@@ -118,6 +118,7 @@ export const npcs = [
     thirdPerson: false,
     tags: ["damage", "prone", "brokenleftleg"],
     length: 2,
+    reaction() {},
   },
   {
     user: "an angel spearbearer",
