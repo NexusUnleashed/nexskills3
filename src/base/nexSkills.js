@@ -4,10 +4,14 @@ import { startUp } from "./mongo";
 
 import { actions as depthswalker } from "./professions/depthswalker";
 import { actions as dragon } from "./professions/dragon";
+import { actions as infernal } from "./professions/infernal";
+import { actions as jester } from "./professions/jester";
 import { actions as occultist } from "./professions/occultist";
 import { actions as pariah } from "./professions/pariah";
 import { actions as priest } from "./professions/priest";
 import { actions as psion } from "./professions/psion";
+import { actions as runewarden } from "./professions/runewarden";
+import { actions as weaponmastery } from "./professions/weaponmastery";
 
 import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
@@ -36,12 +40,17 @@ const npcs = [
 ];
 
 const actions = [
-  ...dragon,
   ...depthswalker,
+  ...dragon,
+  ...infernal,
+  ...jester,
   ...occultist,
   ...pariah,
   ...priest,
   ...psion,
+  ...runewarden,
+  ...weaponmastery,
+
   ...tattoos,
   ...curing,
   ...general,
@@ -129,7 +138,7 @@ const checkSkills = (text) => {
       result = text.match(action.firstPerson);
       if (result) {
         action.user = "self";
-        action.target = result.groups.target;
+        action.target = result.groups?.target || false;
         break;
       }
     }
@@ -144,7 +153,7 @@ const checkSkills = (text) => {
     result = text.match(action.thirdPerson);
     if (result) {
       action.user = result.groups.user;
-      action.target = result.groups.target;
+      action.target = result.groups?.target || false;
       break;
     }
   }
@@ -152,7 +161,7 @@ const checkSkills = (text) => {
   if (result) {
     action.args = result;
     if (action.reaction) {
-      action.reaction();
+      action.reaction(action);
     }
     eventStream.raiseEvent("nexSkillMatch", action);
   }
