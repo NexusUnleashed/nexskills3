@@ -179,3 +179,10 @@ export const actions = [
 //Mizik unscrews the lid from a small stone jar, holding it at eye level as a thick red smoke pours from the open mouth.
 //Mizik carefully unscrews the lid of a small stone jar, tapping a leaf-bladed ritual knife against the open mouth and letting the life's blood upon the blade drip inside.
 //Mizik withdraws a small stone jar from a pouch at his waist, tipping a few drops of the contents onto a leaf-bladed ritual knife.
+
+/*
+10:23:51.707 Amranu raises his right hand, and snaps his fingers.
+10:23:51.707 A great black cloud of buzzing humming darkness rises up, descending upon Tikal all at once in a wave of stinging death.
+10:23:51.707 Amranu traces a logograph shaped like a scarab in the air before Tikal, the blood upon his knife bursting into arcane flame as it hangs in the wake of the blade's passage.
+10:23:51.707 As the logograph becomes fully formed it leaps from the air to Tikal, ethereal legs scrabbling as it burrows into his body and vanishes without a trace.
+*/
