@@ -80,3 +80,6 @@ export const actions = [
     length: 3.0,
   },
 ];
+
+
+//Archaeon tosses a tarot card at Proficy and as it reaches him, a huge mass of rope bursts out of it, entrapping and hindering him.
