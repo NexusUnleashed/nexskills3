@@ -70,6 +70,17 @@ export const npcs = [
     length: 2,
   },
   {
+    user: "an elder angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^As an elder angel reaches forward and grasps your wrist, burning pain quickly consumes your body\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+
+  {
     user: "an angel spearbearer",
     areaId: [401],
     areaName: "First Circle of Nur",
