@@ -81,6 +81,37 @@ export const npcs = [
     length: 2.5,
   },
   {
+    user: "a Vertani guard",
+    areaId: [145],
+    areaName: "Tir Murann",
+    firstPerson:
+      /^A Vertani guard sideswipes your ankle with the blunt end of his weapon, the force of the blow causing you to tumble to the ground\.$/,
+    thirdPerson: false,
+    tags: ["damage", "prone"],
+    length: 2.5,
+  },
+  {
+    user: "a Vertani guard",
+    areaId: [145],
+    areaName: "Tir Murann",
+    firstPerson:
+      /^A Vertani guard vaults towards you with surprising speed, bringing the bladed side of his weapon bearing down on you\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+    multiLine: 1,
+  },
+  {
+    user: "a Vertani guard",
+    areaId: [145],
+    areaName: "Tir Murann",
+    firstPerson:
+      /^A Vertani guard jabs forward with a powerful blow, skewering through your ribs\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.5,
+  },
+  {
     user: "a scimitar-wielding Vertani soldier",
     areaId: [145],
     areaName: "Tir Murann",
@@ -200,5 +231,36 @@ export const npcs = [
     tags: ["damage"],
     length: 2.0,
     multiLine: 1,
+  },
+  {
+    user: "Rakrr, the Vertani swordsmaster",
+    areaId: [145],
+    areaName: "Tir Murann",
+    firstPerson:
+      /^In one quick motion, Rakrr, the Vertani swordsmaster flicks his cloak towards you as a distraction\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
+    multiLine: 1,
+  },
+  {
+    user: "Rakrr, the Vertani swordsmaster",
+    areaId: [145],
+    areaName: "Tir Murann",
+    firstPerson:
+      /^Rakrr, the Vertani swordsmaster lunges forward, viciously plunging his sword into your chest, missing your heart by mere inches\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
+  },
+  {
+    user: "Rakrr, the Vertani swordsmaster",
+    areaId: [145],
+    areaName: "Tir Murann",
+    firstPerson:
+      /^Rakrr, the Vertani swordsmaster quickly swings his twin swords into your gut, raining a flurry of merciless slashes at you\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
   },
 ];
