@@ -63,4 +63,11 @@ export const actions = [
 20:13:36.078 Antoninus misses Archaeon with Matsuhama's morningstar.
 20:13:36.078 Antoninus whips Matsuhama's morningstar toward the left leg of Archaeon.
 20:13:36.078 Antoninus misses Archaeon with Matsuhama's morningstar.
+
+
+10:59:25.048 Antoninus whips Matsuhama's morningstar toward the left leg of Archaeon.
+10:59:25.048 The attack rebounds back onto Antoninus!
+10:59:25.048 Antoninus whips Matsuhama's morningstar toward the left leg of Archaeon.
+10:59:25.048 The attack rebounds back onto Antoninus!
+
 */
