@@ -138,7 +138,8 @@ const checkSkills = (text) => {
       result = text.match(action.firstPerson);
       if (result) {
         action.user = "self";
-        action.target = result.groups?.target || false;
+        action.target = result.groups.target || false;
+        action.info = result.groups.info || false;
         break;
       }
     }
@@ -147,13 +148,15 @@ const checkSkills = (text) => {
     if (result) {
       action.user = result.groups.user;
       action.target = "self";
+      action.info = result.groups.info || false;
       break;
     }
 
     result = text.match(action.thirdPerson);
     if (result) {
       action.user = result.groups.user;
-      action.target = result.groups?.target || false;
+      action.target = result.groups.target || false;
+      action.info = result.groups.info || false;
       break;
     }
   }

@@ -4,7 +4,8 @@ export const actions = [
     fullName: "Warp",
     firstPerson:
       /^You reach out and clench a fist before (?<target>.+?), who screams and doubles over in agony as \w+ skin suddenly bubbles with gangrenous growths\.$/,
-    secondPerson: false,
+    secondPerson:
+      /^(?<user>\w+?) reaches out and clenches a fist before you\. You scream and double over in agony as your skin bubbles with gangrenous growths\.$/,
     thirdPerson:
       /^(?<user>\w+?) reaches out and clenches a fist before (?<target>.+?), who screams and doubles over in agony as \w+ skin suddenly bubbles with gangrenous growths\.$/,
     profession: ["occultist"],
@@ -14,11 +15,104 @@ export const actions = [
     length: 3.0,
   },
   {
+    id: "instill",
+    fullName: "Instill",
+    firstPerson:
+      /^You make a sharp gesture toward (?<target>\w+?), disrupting \w+ aura with the (?<info>\w+?) affliction\.$/,
+    secondPerson: /^(?<user>\w+?) makes a quick, sharp gesture toward you\.$/,
+    thirdPerson: /^(?<user>\w+?) gestures sharply at (?<target>\w+?)\.$/,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    tags: ["info"],
+    length: 2.5,
+  },
+  {
+    id: "attend",
+    fullName: "Attend",
+    firstPerson:
+      /^Focusing your will, you exert your aura at (?<target>\w+?) and snap your fingers, forcing \w+ to pay attention to you\.$/,
+    secondPerson:
+      /^(?<user>\w+?) glows with an emerald hue and snaps \w+ fingers at you\.$/,
+    thirdPerson:
+      /^(?<user>\w+?) glows with an emerald hue and snaps \w+ fingers at (?<target>\w+?)\.$/,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    tags: [],
+    length: 2.5,
+  },
+  {
+    id: "whisperingmadnessMiss",
+    fullName: "Whisperingmadness",
+    firstPerson:
+      /^You pass your hand in front of (?<target>\w+?)\. \w+ shakes \w+ head as if clearing \w+ mind\.$/,
+    secondPerson:
+      /^(?<user>\w+?) passes \w+ hand in front of you\. You feel an invisible claw brush the back of your skull, but quickly brush it off\.$/,
+    thirdPerson:
+      /^(?<user>\w+?) passes \w+ hand in front of (?<target>\w+?)\. \w+ shakes \w+ head as if clearing \w+ mind\.$/,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    info: "Miss",
+    tags: ["info"],
+    length: 2.3,
+  },
+  {
+    id: "whisperingmadness",
+    fullName: "Whisperingmadness",
+    firstPerson:
+      /^You pass your hand in front of (?<target>\w+?)\. \w+ trembles and \w+ eyes widen in terror\.$/,
+    secondPerson:
+      /^(?<user>\w+?) passes \w+ hand in front of you\. You feel an invisible claw brush the back of your skull\.\.$/,
+    thirdPerson:
+      /^(?<user>\w+?) passes \w+ hand in front of (?<target>\w+?)\. \w+ trembles and \w+ eyes widen in terror\.$/,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    tags: [],
+    length: 2.3,
+  },
+  {
+    id: "attend",
+    fullName: "Attend",
+    firstPerson:
+      /^Focusing your will, you exert your aura at (?<target>\w+?) and snap your fingers, forcing \w+ to pay attention to you\.$/,
+    secondPerson:
+      /(?<user>\w+?) glows with an emerald hue and snaps \w+ fingers at you\.$/,
+    thirdPerson:
+      /(?<user>\w+?) glows with an emerald hue and snaps \w+ fingers at (?<target>\w+?)\.$/,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    tags: [],
+    length: 2.5,
+  },
+  //#region Domination
+  {
+    id: "humbugCommand",
+    fullName: "Humbug Command",
+    firstPerson:
+      /^You command your humbug to instill a ravenous hunger in (?<target>\w+?)\.$/,
+    secondPerson:
+      /A humbug latches onto your throat, and your guts feel like they're devouring themselves as an unnatural hunger comes over you\.$/,
+    thirdPerson:
+      /A humbug clutches to the throat of (?<target>\w+?), its grotesque body undulating\.$/,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    tags: [],
+    length: 2.5,
+  },
+  //#endregion
+  //#region Tarot
+  {
     id: "priestess",
     fullName: "Priestess",
     firstPerson:
-      /Raising the High Priestess tarot over your head, parallel to the ground, you release it. It instantly expands and moves downward, healing you as your body passes through it\.$/,
-    secondPerson: false,
+      /Raising the High Priestess tarot over your head, parallel to the ground, you release it\. It instantly expands and moves downward, healing you as your body passes through it\.$/,
+    secondPerson:
+      /^(?<user>\w+?) raises a tarot over \w+ head, parallel to the ground\. Upon releasing it, it instantly expands and moves downward until your entire body has been passed through it, healing you as it falls\.$/,
     thirdPerson:
       /^(?<user>\w+?) raises a tarot over \w+ head, parallel to the ground. Upon releasing it, it instantly expands and moves downward until \w+ entire body has been passed through it\.$/,
     profession: ["occultist", "jester"],
@@ -27,6 +121,8 @@ export const actions = [
     tags: ["heal"],
     length: 3.0,
   },
+  //#endregion
+  //#region Attainment
   {
     id: "harry",
     fullName: "Harry",
@@ -79,7 +175,7 @@ export const actions = [
     tags: ["aeon"],
     length: 3.0,
   },
+  //#endregion
 ];
-
 
 //Archaeon tosses a tarot card at Proficy and as it reaches him, a huge mass of rope bursts out of it, entrapping and hindering him.
