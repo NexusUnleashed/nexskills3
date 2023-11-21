@@ -30,8 +30,8 @@ export const actions = [
   {
     id: "engage",
     fullName: "Engaged",
-    firstPerson: /^(?<user>\w+?) moves in to engage you\.$/,
-    secondPerson: false,
+    firstPerson: /^You move in to engage (?<target>\w+?)\.$/,
+    secondPerson: /^(?<user>\w+?) moves in to engage you\.$/,
     thirdPerson: /^(?<user>\w+?) moves in to engage (?<target>\w+?)\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
@@ -51,6 +51,35 @@ export const actions = [
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
     multiLine: 0,
+    tags: [],
+    length: 2.5,
+  },
+  {
+    id: "razeNone",
+    fullName: "Raze",
+    firstPerson: /^You whip .+ through the air in front of (?<target>\w+?), to no effect\.$/,
+    secondPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) lashes out at (?<target>\w+?) as he turns to flee\.$/,
+    profession: ["runewarden", "paladin", "infernal", "unnamable"],
+    skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
+    balance: "equilibrium",
+    multiLine: 0,
+    info: "none",
+    tags: [],
+    length: 2.5,
+  },
+  {
+    id: "raze",
+    fullName: "Raze",
+    firstPerson: false,
+    secondPerson: /^(?<user>\w+?) razes your magical shield with .+\.$/,
+    thirdPerson: false,
+    profession: ["runewarden", "paladin", "infernal", "unnamable"],
+    skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
+    balance: "equilibrium",
+    multiLine: 0,
+    info: "shield",
     tags: [],
     length: 2.5,
   },

@@ -11,7 +11,11 @@ import { actions as pariah } from "./professions/pariah";
 import { actions as priest } from "./professions/priest";
 import { actions as psion } from "./professions/psion";
 import { actions as runewarden } from "./professions/runewarden";
+
 import { actions as weaponmastery } from "./professions/weaponmastery";
+import { actions as harmonics } from "./professions/harmonics";
+import { actions as swashbuckling } from "./professions/swashbuckling";
+import { actions as voicecraft } from "./professions/voicecraft";
 
 import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
@@ -50,7 +54,9 @@ const actions = [
   ...psion,
   ...runewarden,
   ...weaponmastery,
-
+  ...harmonics,
+  ...swashbuckling,
+  ...voicecraft,
   ...tattoos,
   ...curing,
   ...general,
@@ -149,8 +155,10 @@ const checkSkills = (text) => {
     result = text.match(action.secondPerson);
     if (result) {
       action.target = "self";
-      action.user = result.groups.user;
-      action.info = result.groups.info || false;
+      if (result.groups) {
+        action.user = result.groups.user;
+        action.info = result.groups.info || false;
+      }
       break;
     }
 
