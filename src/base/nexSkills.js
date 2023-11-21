@@ -138,16 +138,18 @@ const checkSkills = (text) => {
       result = text.match(action.firstPerson);
       if (result) {
         action.user = "self";
-        action.target = result.groups.target || false;
-        action.info = result.groups.info || false;
+        if (result.groups) {
+          action.target = result.groups.target || false;
+          action.info = result.groups.info || false;
+        }
         break;
       }
     }
 
     result = text.match(action.secondPerson);
     if (result) {
-      action.user = result.groups.user;
       action.target = "self";
+      action.user = result.groups.user;
       action.info = result.groups.info || false;
       break;
     }

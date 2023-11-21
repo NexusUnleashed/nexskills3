@@ -18,14 +18,14 @@ export const actions = [
   {
     id: "tree",
     fullName: "Tree",
-    firstPerson: false,
+    firstPerson: /^You touch the tree of life tattoo\.$/,
     secondPerson: false,
     thirdPerson: /^(?<user>\w+) touches a tree of life tattoo\.$/,
     profession: ["general"],
     skill: "tattoos",
-    balance: "equilibrium",
+    balance: "free",
     multiLine: 0,
     tags: [],
-    length: 4.0,
+    length: 0,
   },
 ];
