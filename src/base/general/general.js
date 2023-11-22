@@ -15,7 +15,7 @@ export const actions = [
   {
     id: "rebounding",
     fullName: "Rebounding",
-    firstPerson: false,
+    firstPerson: /^You feel an aura of rebounding surround you\.$/,
     secondPerson: false,
     thirdPerson:
       /^You suddenly perceive the vague outline of an aura of rebounding around (?<user>.+?)\.$/,
@@ -26,8 +26,20 @@ export const actions = [
     tags: [],
     length: 0,
   },
+  {
+    id: "lyre",
+    fullName: "Prismatic",
+    firstPerson: /^You pluck at the strings on .+, and a bright, jovial tune accompanies the weaving of a prismatic barrier around you\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["general"],
+    skill: "defense",
+    balance: "equilibrium",
+    multiLine: 0,
+    tags: [],
+    length: 3.0,
+  },
 ];
-
 
 
 
