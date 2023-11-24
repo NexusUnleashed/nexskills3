@@ -16,6 +16,7 @@ import { actions as weaponmastery } from "./professions/weaponmastery";
 import { actions as harmonics } from "./professions/harmonics";
 import { actions as swashbuckling } from "./professions/swashbuckling";
 import { actions as voicecraft } from "./professions/voicecraft";
+import { actions as tekura } from "./professions/tekura";
 
 import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
@@ -57,6 +58,7 @@ const actions = [
   ...harmonics,
   ...swashbuckling,
   ...voicecraft,
+  ...tekura,
   ...tattoos,
   ...curing,
   ...general,
