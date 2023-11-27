@@ -14,6 +14,7 @@ import { actions as runewarden } from "./professions/runewarden";
 
 import { actions as weaponmastery } from "./professions/weaponmastery";
 import { actions as harmonics } from "./professions/harmonics";
+import { actions as ignition } from "./professions/ignition";
 import { actions as swashbuckling } from "./professions/swashbuckling";
 import { actions as voicecraft } from "./professions/voicecraft";
 import { actions as tekura } from "./professions/tekura";
@@ -56,6 +57,7 @@ const actions = [
   ...runewarden,
   ...weaponmastery,
   ...harmonics,
+  ...ignition,
   ...swashbuckling,
   ...voicecraft,
   ...tekura,

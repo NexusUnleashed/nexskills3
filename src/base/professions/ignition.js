@@ -111,6 +111,21 @@ export const actions = [
     tags: ["damage"],
     length: 2.0,
   },
+  {
+    id: "cataclysm",
+    fullName: "Cataclysm",
+    firstPerson:
+      /^You prepare to unleash a cataclysm against (?<target>.+?), but \w+ anticipates your intent and moves out of your target area\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["fire elemental lord"],
+    skill: "attainment",
+    balance: "balance",
+    multiLine: 0,
+    tags: ["damage"],
+    length: 2.0,
+  },
 ];
+
 //cataclysm non-combo?
 //You prepare to unleash a cataclysm against a Nelbennir alchemist, but he anticipates your intent and moves out of your target area.
