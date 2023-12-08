@@ -145,7 +145,7 @@ const checkSkills = (text) => {
       action.profession.includes(GMCP.Char.Status.class.toLowerCase()) ||
       action.profession.includes("general")
     ) {
-      result = text.match(action.firstPerson);
+      result = action.firstPerson ? text.match(action.firstPerson) : false;
       if (result) {
         action.user = "self";
         if (result.groups) {
@@ -156,7 +156,7 @@ const checkSkills = (text) => {
       }
     }
 
-    result = text.match(action.secondPerson);
+    result = action.secondPerson ? text.match(action.secondPerson) : false;
     if (result) {
       action.target = "self";
       if (result.groups) {
@@ -166,7 +166,7 @@ const checkSkills = (text) => {
       break;
     }
 
-    result = text.match(action.thirdPerson);
+    result = action.thirdPerson ? text.match(action.thirdPerson) : false;
     if (result) {
       action.user = result.groups.user;
       action.target = result.groups.target || false;
