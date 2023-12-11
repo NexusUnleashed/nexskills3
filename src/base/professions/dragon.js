@@ -101,6 +101,7 @@ export const actions = [
     ],
     skill: "dragoncraft",
     balance: "balance",
+    info: "Raze",
     tags: ["pve", "raze"],
     length: 2.0,
   },

@@ -1,4 +1,4 @@
-export const attainment = [
+export const sylvan = [
   {
     id: "thornpierce",
     fullName: "Thornpierce",

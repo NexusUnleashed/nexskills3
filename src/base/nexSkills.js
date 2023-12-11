@@ -11,13 +11,15 @@ import { actions as pariah } from "./professions/pariah";
 import { actions as priest } from "./professions/priest";
 import { actions as psion } from "./professions/psion";
 import { actions as runewarden } from "./professions/runewarden";
+import { sylvan } from "./professions/sylvan";
 
-import { actions as weaponmastery } from "./professions/weaponmastery";
-import { actions as harmonics } from "./professions/harmonics";
-import { actions as ignition } from "./professions/ignition";
-import { actions as swashbuckling } from "./professions/swashbuckling";
-import { actions as voicecraft } from "./professions/voicecraft";
-import { actions as tekura } from "./professions/tekura";
+import { actions as weaponmastery } from "./skills/weaponmastery";
+import { actions as harmonics } from "./skills/harmonics";
+import { actions as ignition } from "./skills/ignition";
+import { actions as swashbuckling } from "./skills/swashbuckling";
+import { actions as voicecraft } from "./skills/voicecraft";
+import { actions as tekura } from "./skills/tekura";
+import { propagation } from "./skills/propagation";
 
 import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
@@ -32,6 +34,7 @@ import { npcs as riagath } from "./areas/riagath";
 import { npcs as tirMuran } from "./areas/tirMuran";
 import { npcs as tuar } from "./areas/tuar";
 import { npcs as yggdrasil } from "./areas/yggdrasil";
+import { weatherweaving } from "./skills/weatherweaving";
 
 const npcs = [
   ...battlesite,
@@ -55,12 +58,16 @@ const actions = [
   ...priest,
   ...psion,
   ...runewarden,
+  ...sylvan,
+
   ...weaponmastery,
   ...harmonics,
   ...ignition,
+  ...propagation,
   ...swashbuckling,
   ...voicecraft,
   ...tekura,
+  ...weatherweaving,
   ...tattoos,
   ...curing,
   ...general,
