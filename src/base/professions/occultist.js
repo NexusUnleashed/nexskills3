@@ -11,7 +11,7 @@ export const actions = [
     profession: ["occultist"],
     skill: "occultism",
     balance: "equilibrium",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -133,7 +133,7 @@ export const actions = [
     profession: ["occultist"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -146,7 +146,7 @@ export const actions = [
     profession: ["occultist"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -159,7 +159,7 @@ export const actions = [
     profession: ["occultist"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -172,7 +172,8 @@ export const actions = [
     profession: ["occultist"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["aeon"],
+    info: "Aeon",
+    tags: ["pve", "aeon"],
     length: 3.0,
   },
   //#endregion

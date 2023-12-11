@@ -10,7 +10,7 @@ export const actions = [
     profession: ["shaman"],
     skill: "curses",
     balance: "balance",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 2.2,
   },
   //#endregion

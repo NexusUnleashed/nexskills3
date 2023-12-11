@@ -18,7 +18,7 @@ export const actions = [
     ],
     skill: "dragoncraft",
     balance: "balance",
-    tags: [],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -39,7 +39,7 @@ export const actions = [
     ],
     skill: "dragoncraft",
     balance: "equilibrium",
-    tags: [],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -91,15 +91,17 @@ export const actions = [
       /^You flick your tail at (?<target>.+?), dismissively brushing aside the paltry shield protecting \w+\.$/,
     secondPerson: false,
     thirdPerson: false,
-    profession: ["red dragon",
+    profession: [
+      "red dragon",
       "green dragon",
       "black dragon",
       "blue dragon",
       "gold dragon",
-      "silver dragon",],
+      "silver dragon",
+    ],
     skill: "dragoncraft",
     balance: "balance",
-    tags: ["raze"],
+    tags: ["pve", "raze"],
     length: 2.0,
   },
   //#endregion
@@ -114,7 +116,8 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["stun"],
+    info: "Stun",
+    tags: ["pve", "stun"],
     length: 3.0,
   },
   {
@@ -127,7 +130,8 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["raze"],
+    info: "Raze",
+    tags: ["pve", "raze"],
     length: 3.0,
   },
   {
@@ -140,7 +144,8 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    info: false,
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -153,7 +158,8 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["clumsy"],
+    info: "Clumsy",
+    tags: ["pve", "clumsy"],
     length: 3.0,
   },
   {
@@ -166,7 +172,8 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    info: false,
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -178,7 +185,8 @@ export const actions = [
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    info: false,
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -191,7 +199,8 @@ export const actions = [
     profession: ["black dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    info: false,
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -204,7 +213,8 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    info: false,
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -217,7 +227,8 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    info: false,
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -230,7 +241,8 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["inhibit"],
+    info: "Inhibit",
+    tags: ["pve", "inhibit"],
     length: 3.0,
   },
   {
@@ -243,7 +255,8 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    info: false,
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -256,7 +269,8 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["recklessness"],
+    info: "Recklessness",
+    tags: ["pve", "recklessness"],
     length: 3.0,
   },
   {
@@ -269,7 +283,8 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    info: false,
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -282,7 +297,8 @@ export const actions = [
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["raze"],
+    info: "Raze",
+    tags: ["pve", "raze"],
     length: 3.0,
   },
   //#endregion

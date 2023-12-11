@@ -10,7 +10,7 @@ export const actions = [
     profession: ["runewarden"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -23,7 +23,7 @@ export const actions = [
     profession: ["runewarden"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   //#endregion

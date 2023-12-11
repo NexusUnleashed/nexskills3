@@ -57,7 +57,8 @@ export const actions = [
   {
     id: "razeNone",
     fullName: "Raze",
-    firstPerson: /^You whip .+ through the air in front of (?<target>\w+?), to no effect\.$/,
+    firstPerson:
+      /^You whip .+ through the air in front of (?<target>\w+?), to no effect\.$/,
     secondPerson: false,
     thirdPerson:
       /^(?<user>\w+?) lashes out at (?<target>\w+?) as he turns to flee\.$/,
@@ -65,8 +66,8 @@ export const actions = [
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
     multiLine: 0,
-    info: "none",
-    tags: [],
+    info: "No raze",
+    tags: ["raze"],
     length: 2.5,
   },
   {
@@ -79,8 +80,8 @@ export const actions = [
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
     multiLine: 0,
-    info: "shield",
-    tags: [],
+    info: "Shield raze",
+    tags: ["raze"],
     length: 2.5,
   },
 ];

@@ -10,7 +10,7 @@ export const actions = [
     skill: "weaving",
     balance: "balance",
     multiLine: 1,
-    tags: [], // parasite > healthleach > manaleach
+    tags: ["aff"], // parasite > healthleach > manaleach
     length: 2.2,
   },
   {
@@ -24,7 +24,8 @@ export const actions = [
     skill: "weaving",
     balance: "balance",
     multiLine: 1,
-    tags: ["asthma", "bleeding"], // parasite > healthleach > manaleach
+    tags: ["aff"],
+    affs: ["asthma", "bleeding"], // parasite > healthleach > manaleach
     length: 2.2,
   },
 ];

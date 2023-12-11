@@ -2,7 +2,8 @@ export const actions = [
   {
     id: "reap",
     fullName: "Reap",
-    firstPerson: /^You unleash a vicious reaping blow at (?<target>.+?) with .+\.$/,
+    firstPerson:
+      /^You unleash a vicious reaping blow at (?<target>.+?) with .+\.$/,
     secondPerson: false,
     thirdPerson:
       /^(?<user>.+?) lashes out with a swift, reaping blow at (?<target>.+?)\.$/,
@@ -38,7 +39,7 @@ export const actions = [
     profession: ["depthswalker"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -51,7 +52,7 @@ export const actions = [
     profession: ["depthswalker"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -59,11 +60,12 @@ export const actions = [
     fullName: "Drain Tick",
     firstPerson: false,
     secondPerson: false,
-    thirdPerson: /^(?<target>.+?) grows paler as \w+ shadow grows more opaque\.$/,
+    thirdPerson:
+      /^(?<target>.+?) grows paler as \w+ shadow grows more opaque\.$/,
     profession: ["depthswalker"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   {
@@ -76,7 +78,8 @@ export const actions = [
     profession: ["depthswalker"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["raze"],
+    info: "Raze",
+    tags: ["pve", "raze"],
     length: 3.0,
   },
   //#endregion

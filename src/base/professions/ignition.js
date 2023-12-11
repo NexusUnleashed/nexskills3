@@ -10,7 +10,7 @@ export const actions = [
     skill: "ignition",
     balance: "balance",
     multiLine: 0,
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 2.4,
   },
   {
@@ -24,7 +24,8 @@ export const actions = [
     skill: "ignition",
     balance: "balance",
     multiLine: 0,
-    tags: ["raze"],
+    info: "Raze",
+    tags: ["pve", "raze"],
     length: 2.0,
   },
   {
@@ -38,7 +39,8 @@ export const actions = [
     skill: "attainment",
     balance: "balance",
     multiLine: 0,
-    tags: ["raze"],
+    info: "Raze",
+    tags: ["pve", "raze"],
     length: 2.0,
   },
   {
@@ -52,7 +54,8 @@ export const actions = [
     skill: "attainment",
     balance: "balance",
     multiLine: 0,
-    tags: ["sensitivity"],
+    info: "Sensitivity",
+    tags: ["pve", "sensitivity"],
     length: 2.0,
   },
   {
@@ -66,7 +69,7 @@ export const actions = [
     skill: "attainment",
     balance: "balance",
     multiLine: 0,
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 2.0,
   },
   {
@@ -80,7 +83,7 @@ export const actions = [
     skill: "attainment",
     balance: "balance",
     multiLine: 0,
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 2.0,
   },
   {
@@ -94,7 +97,7 @@ export const actions = [
     skill: "attainment",
     balance: "balance",
     multiLine: 0,
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 2.0,
   },
   {
@@ -108,7 +111,7 @@ export const actions = [
     skill: "attainment",
     balance: "balance",
     multiLine: 0,
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 2.0,
   },
   {
@@ -122,7 +125,7 @@ export const actions = [
     skill: "attainment",
     balance: "balance",
     multiLine: 0,
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 2.0,
   },
 ];

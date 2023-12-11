@@ -14,7 +14,7 @@ export const actions = [
     multiLine: 0,
     tags: ["raze"],
     length: 2.2,
-    reaction() { }
+    reaction() {},
   },
   {
     id: "serpent",
@@ -27,7 +27,8 @@ export const actions = [
     skill: "memorium",
     balance: "balance",
     multiLine: 0,
-    tags: ["paralysis"], //Gives voyria when following scorpion. How to account?
+    tags: ["aff"],
+    affs: ["paralysis"], //Gives voyria when following scorpion. How to account?
     length: 2.2,
   },
   {
@@ -55,7 +56,8 @@ export const actions = [
     skill: "memorium",
     balance: "balance",
     multiLine: 0,
-    tags: ["epilepsy"],
+    tags: ["aff"],
+    affs: ["epilepsy"],
     length: 2.2,
   },
   {
@@ -70,7 +72,8 @@ export const actions = [
     skill: "memorium",
     balance: "balance",
     multiLine: 0,
-    tags: ["asthma"],
+    tags: ["aff"],
+    affs: ["asthma"],
     length: 2.2,
   },
   {
@@ -85,7 +88,8 @@ export const actions = [
     skill: "memorium",
     balance: "balance",
     multiLine: 0,
-    tags: ["clumsiness"],
+    tags: ["aff"],
+    affs: ["clumsiness"],
     length: 2.2,
   },
   {
@@ -100,7 +104,8 @@ export const actions = [
     skill: "memorium",
     balance: "balance",
     multiLine: 0,
-    tags: ["scytherus"],
+    tags: ["aff"],
+    affs: ["scytherus"],
     length: 2.2,
   },
   {
@@ -115,7 +120,8 @@ export const actions = [
     skill: "memorium",
     balance: "balance",
     multiLine: 0,
-    tags: ["haemophilia", "bleeding"],
+    tags: ["aff"],
+    affs: ["haemophilia", "bleeding"],
     length: 2.2,
   },
   {
@@ -130,7 +136,8 @@ export const actions = [
     skill: "memorium",
     balance: "balance",
     multiLine: 0,
-    tags: ["weariness"],
+    tags: ["aff"],
+    affs: ["weariness"],
     length: 2.2,
   },
   //#endregion

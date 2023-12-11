@@ -1,30 +1,32 @@
 export const actions = [
-    //#region Pranks
-    {
-        id: "bop",
-        fullName: "Bop",
-        firstPerson: false,
-        secondPerson: false,
-        thirdPerson: /^(?<user>\w+?) gives (?<target>.+?)'s head a sound thumping with a blackjack\.$/,
-        profession: ["jester"],
-        skill: "pranks",
-        balance: "balance",
-        tags: ["damage"],
-        length: 3.0,
-    },
-    {
-        id: "bop2",
-        fullName: "Bop",
-        firstPerson: false,
-        secondPerson: false,
-        thirdPerson: /^(?<user>\w+?) reaches out and bops (?<target>.+?)'s head with a blackjack\.$/,
-        profession: ["jester"],
-        skill: "pranks",
-        balance: "balance",
-        tags: ["damage"],
-        length: 3.0,
-    },
-    //#endregion
+  //#region Pranks
+  {
+    id: "bop",
+    fullName: "Bop",
+    firstPerson: false,
+    secondPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) gives (?<target>.+?)'s head a sound thumping with a blackjack\.$/,
+    profession: ["jester"],
+    skill: "pranks",
+    balance: "balance",
+    tags: ["pve", "damage"],
+    length: 3.0,
+  },
+  {
+    id: "bop2",
+    fullName: "Bop",
+    firstPerson: false,
+    secondPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) reaches out and bops (?<target>.+?)'s head with a blackjack\.$/,
+    profession: ["jester"],
+    skill: "pranks",
+    balance: "balance",
+    tags: ["pve", "damage"],
+    length: 3.0,
+  },
+  //#endregion
 ];
 
 //Archaeon viciously mangles the right leg of a puppet of Antoninus.
@@ -36,4 +38,3 @@ export const actions = [
 
 //Archaeon raises his hands dramatically and summons an icewall to the up.
 //Archaeon glances at Antoninus while adding some facial detail to a puppet.
-

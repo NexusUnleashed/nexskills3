@@ -10,7 +10,7 @@ export const actions = [
     profession: ["serpent"],
     skill: "subterfuge",
     balance: "balance",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   //#endregion

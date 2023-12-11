@@ -9,7 +9,7 @@ export const actions = [
     profession: ["monk"],
     skill: "tekura",
     balance: "balance",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 4.0,
   },
   {
@@ -22,7 +22,7 @@ export const actions = [
     profession: ["monk"],
     skill: "tekura",
     balance: "balance",
-    tags: ["damage"],
+    tags: ["pve", "damage"],
     length: 4.0,
   },
 ];
