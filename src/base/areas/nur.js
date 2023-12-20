@@ -54,6 +54,16 @@ export const npcs = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
+      /^An elder angel tilts his head back opening his mouth to emit a stream of unintelligible words that rain down in a flurry of agonising utterances\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2,
+  },
+  {
+    user: "an elder angel",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
       /^An elder angel flicks his fingers in your direction and you are consumed by pure agony\.$/,
     thirdPerson: false,
     tags: ["damage"],
