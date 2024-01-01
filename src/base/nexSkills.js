@@ -11,6 +11,7 @@ import { actions as pariah } from "./professions/pariah";
 import { actions as priest } from "./professions/priest";
 import { actions as psion } from "./professions/psion";
 import { actions as runewarden } from "./professions/runewarden";
+import { actions as serpent } from "./professions/serpent";
 import { sylvan } from "./professions/sylvan";
 
 import { actions as weaponmastery } from "./skills/weaponmastery";
@@ -58,6 +59,7 @@ const actions = [
   ...priest,
   ...psion,
   ...runewarden,
+  ...serpent,
   ...sylvan,
 
   ...weaponmastery,
