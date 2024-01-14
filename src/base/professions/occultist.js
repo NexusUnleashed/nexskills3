@@ -139,10 +139,10 @@ export const actions = [
   {
     id: "harryTick",
     fullName: "Harry tick",
-    firstPerson:
-      /^(?<target>.+?) is tormented by horrific visions from the Plane of Chaos\.$/,
+    firstPerson: false,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<target>.+?) is tormented by horrific visions from the Plane of Chaos\.$/,
     profession: ["occultist"],
     skill: "attainment",
     balance: "battlerage",
@@ -163,6 +163,20 @@ export const actions = [
     length: 3.0,
   },
   {
+    id: "chaosgate",
+    fullName: "Chaosgate",
+    firstPerson:
+      /^Multicoloured rays burst forth from your outstretched hands and strike (?<target>.+?) in the head, forcing \w+ to obey your will\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: "Charm",
+    tags: ["pve", "charm"],
+    length: 3.0,
+  },
+  {
     id: "stagnate",
     fullName: "Stagnate",
     firstPerson:
@@ -174,6 +188,20 @@ export const actions = [
     balance: "battlerage",
     info: "Aeon",
     tags: ["pve", "aeon"],
+    length: 3.0,
+  },
+  {
+    id: "fluctuate",
+    fullName: "Fluctuate",
+    firstPerson:
+      /^You concentrate intently on (?<target>.+?) and watch as grotesque mutations sprout all over \w+ body\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: false,
+    tags: ["pve"],
     length: 3.0,
   },
   //#endregion

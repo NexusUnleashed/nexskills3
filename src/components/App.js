@@ -1,5 +1,4 @@
 import "../styles/App.css";
-import { mainWindowActionMsg, action, npcAction } from "../base/messages";
 import Dashboard from "./Dashboard";
 import { classList } from "../base/nexSkills";
 import { createTheme } from "@mui/material";
@@ -87,10 +86,6 @@ sortedSkills = sortedSkills.sort((a, b) => {
 function App() {
   return (
     <div>
-      <div dangerouslySetInnerHTML={{ __html: mainWindowActionMsg(action) }} />
-      <div
-        dangerouslySetInnerHTML={{ __html: mainWindowActionMsg(npcAction) }}
-      />
       <Dashboard
         theme={darkTheme}
         debugSkills={sortedSkills}

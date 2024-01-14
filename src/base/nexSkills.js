@@ -21,6 +21,7 @@ import { actions as swashbuckling } from "./skills/swashbuckling";
 import { actions as voicecraft } from "./skills/voicecraft";
 import { actions as tekura } from "./skills/tekura";
 import { propagation } from "./skills/propagation";
+import { weatherweaving } from "./skills/weatherweaving";
 
 import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
@@ -35,7 +36,7 @@ import { npcs as riagath } from "./areas/riagath";
 import { npcs as tirMuran } from "./areas/tirMuran";
 import { npcs as tuar } from "./areas/tuar";
 import { npcs as yggdrasil } from "./areas/yggdrasil";
-import { weatherweaving } from "./skills/weatherweaving";
+import { barrow } from "./areas/barrow";
 
 const npcs = [
   ...battlesite,
@@ -47,6 +48,7 @@ const npcs = [
   ...tirMuran,
   ...tuar,
   ...yggdrasil,
+  ...barrow,
 ];
 
 const actions = [
@@ -203,7 +205,10 @@ const checkNpcs = (text) => {
   let result = false;
   let action = false;
 
-  const areaNpcs = npcs.filter((e) => e.areaId.includes(GMCP.Location.areaid));
+  const areaNpcs = npcs.filter(
+    (e) => e.areaId.includes(GMCP.Location.areaid) || e.areaId.length === 0
+  );
+
   if (areaNpcs.length === 0) {
     return false;
   }
@@ -211,7 +216,7 @@ const checkNpcs = (text) => {
   for (let i = 0; i < areaNpcs.length; i++) {
     action = areaNpcs[i];
 
-    result = text.match(action.firstPerson);
+    result = action.firstPerson ? text.match(action.firstPerson) : false;
     if (result) {
       action.target = "self";
       if (result.groups?.user) {
@@ -220,7 +225,7 @@ const checkNpcs = (text) => {
       break;
     }
 
-    result = text.match(action.thirdPerson);
+    result = action.thirdPerson ? text.match(action.thirdPerson) : false;
     if (result) {
       action.target = result.groups.target;
       break;
