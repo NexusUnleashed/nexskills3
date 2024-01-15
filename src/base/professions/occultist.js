@@ -201,7 +201,21 @@ export const actions = [
     skill: "attainment",
     balance: "battlerage",
     info: false,
-    tags: ["pve"],
+    tags: ["pve", "damage"],
+    length: 3.0,
+  },
+  {
+    id: "ruin",
+    fullName: "Ruin",
+    firstPerson:
+      /^You gesture in a slashing motion at (?<target>.+?), and small tears form in \w+ translucent shield as chaos rips it apart\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: "Raze",
+    tags: ["pve", "raze"],
     length: 3.0,
   },
   //#endregion
