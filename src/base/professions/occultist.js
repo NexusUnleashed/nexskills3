@@ -88,23 +88,6 @@ export const actions = [
     tags: [],
     length: 2.5,
   },
-  //#region Domination
-  {
-    id: "humbugCommand",
-    fullName: "Humbug Command",
-    firstPerson:
-      /^You command your humbug to instill a ravenous hunger in (?<target>\w+?)\.$/,
-    secondPerson:
-      /A humbug latches onto your throat, and your guts feel like they're devouring themselves as an unnatural hunger comes over you\.$/,
-    thirdPerson:
-      /A humbug clutches to the throat of (?<target>\w+?), its grotesque body undulating\.$/,
-    profession: ["occultist"],
-    skill: "occultism",
-    balance: "equilibrium",
-    tags: [],
-    length: 2.5,
-  },
-  //#endregion
   //#region Tarot
   {
     id: "priestess",
