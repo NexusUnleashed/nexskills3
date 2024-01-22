@@ -23,6 +23,7 @@ import { actions as tekura } from "./skills/tekura";
 import { propagation } from "./skills/propagation";
 import { weatherweaving } from "./skills/weatherweaving";
 import { domination } from "./skills/domination";
+import { tarot } from "./skills/tarot";
 
 import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
@@ -65,6 +66,7 @@ const actions = [
   ...serpent,
   ...sylvan,
 
+  ...tarot,
   ...domination,
   ...weaponmastery,
   ...harmonics,

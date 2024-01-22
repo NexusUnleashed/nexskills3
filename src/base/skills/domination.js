@@ -102,10 +102,41 @@ export const domination = [
     length: 2.6,
   },
   {
+    id: "chimeraCommandDeaf",
+    fullName: "Chimera Command",
+    firstPerson:
+      /^A chimera throws forward all three of its heads and roars at (?<target>\w+?), but he seems completely unphased\.$/,
+    secondPerson:
+      /^A chimera throws all three of its heads forward and opens its mouth, but you hear only the slightest whisper of sound\.$/,
+    thirdPerson:
+      /^A chimera throws forward all three of its heads and roars at (?<target>\w+?), but he seems completely unphased\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "equilibrium",
+    tags: [],
+    info: "Deaf",
+    length: 2.6,
+    //multiLine: -1
+  },
+  {
+    id: "chimeraCommand",
+    fullName: "Chimera Command",
+    firstPerson: /^A chimera lets out a concussive roar at (?<target>\w+?)\.$/,
+    secondPerson:
+      /^A chimera lets out a concussive roar, all three of the creatures heads thrown forward toward you\.$/,
+    thirdPerson: /^A chimera lets out a concussive roar at (?<target>\w+?)\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "equilibrium",
+    tags: [],
+    length: 2.6,
+    //multiLine: -1
+  },
+  {
     id: "bubonisCommand",
     fullName: "Bubonis Command",
     firstPerson:
-      /^You command your bubonis to bring the plague to (?<target>\w+?)\.$/,
+      /^A bubonis reaches out and strokes the side of (?<target>\w+?)'s face, and boils form and rupture in an instant as he begins hacking up black fluid\.$/,
     secondPerson:
       /^A bubonis reaches out and strokes the side of your face, and you feel your entire body suffer. Boils form and rupture and you feel your lungs burn as they fill with fluid\.$/,
     thirdPerson:
@@ -115,6 +146,56 @@ export const domination = [
     balance: "tertiary",
     tags: [],
     length: 2.4,
-    multiLine: 1,
+    //multiLine: -1,
+  },
+  {
+    id: "wormCommand",
+    fullName: "Worm Command",
+    firstPerson:
+      /^You command your worm to infest (?<target>\w+?) with maggots\.$/,
+    secondPerson:
+      /^A worm spews a stream of maggots at you, and they begin burrowing into your flesh\.$/,
+    thirdPerson:
+      /^A worm spews a writhing mass of maggots at (?<target>\w+?)\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "tertiary",
+    tags: [],
+    length: 2.2,
+    //multiLine: -1,
+  },
+  {
+    id: "wormTick",
+    fullName: "Worm Tick",
+    firstPerson: false, // same message as third person
+    secondPerson:
+      /^The maggots of Palpatar continue to feed upon your flesh, leeching away your vitality\.$/,
+    thirdPerson:
+      /^Many somethings writhe beneath the skin of (?<target>\w+?), and the sickening sound of chewing can be heard\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "tertiary",
+    tags: [],
+    length: 2.2,
+    //multiLine: -1,
+  },
+  {
+    id: "croneCommand",
+    fullName: "Crone Command",
+    firstPerson:
+      /^A withered crone reaches out to caress the (?<limb>.+) of (?<target>\w+?), the limb withering away under her gnarled grasp\.$/,
+    secondPerson:
+      /^A withered crone reaches out and caresses your (?<limb>.+), and an icy chill radiates up the limb as it withers away\.$/,
+    thirdPerson:
+      /A withered crone reaches out to caress the (?<limb>.+) of (?<target>\w+?), the limb withering away under her gnarled grasp\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "tertiary",
+    tags: [],
+    length: 2.35,
+    reaction(action) {
+      action.info = action.args.groups.limb;
+    },
+    //multiLine: -1,
   },
 ];
