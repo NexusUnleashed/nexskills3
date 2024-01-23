@@ -41,6 +41,7 @@ export const actions = [
     balance: "equilibrium",
     tags: [],
     length: 2.5,
+    multiLine: 1,
   },
   {
     id: "whisperingmadnessMiss",
@@ -73,38 +74,6 @@ export const actions = [
     tags: [],
     length: 2.3,
   },
-  {
-    id: "attend",
-    fullName: "Attend",
-    firstPerson:
-      /^Focusing your will, you exert your aura at (?<target>\w+?) and snap your fingers, forcing \w+ to pay attention to you\.$/,
-    secondPerson:
-      /(?<user>\w+?) glows with an emerald hue and snaps \w+ fingers at you\.$/,
-    thirdPerson:
-      /(?<user>\w+?) glows with an emerald hue and snaps \w+ fingers at (?<target>\w+?)\.$/,
-    profession: ["occultist"],
-    skill: "occultism",
-    balance: "equilibrium",
-    tags: [],
-    length: 2.5,
-  },
-  //#region Tarot
-  {
-    id: "priestess",
-    fullName: "Priestess",
-    firstPerson:
-      /Raising the High Priestess tarot over your head, parallel to the ground, you release it\. It instantly expands and moves downward, healing you as your body passes through it\.$/,
-    secondPerson:
-      /^(?<user>\w+?) raises a tarot over \w+ head, parallel to the ground\. Upon releasing it, it instantly expands and moves downward until your entire body has been passed through it, healing you as it falls\.$/,
-    thirdPerson:
-      /^(?<user>\w+?) raises a tarot over \w+ head, parallel to the ground. Upon releasing it, it instantly expands and moves downward until \w+ entire body has been passed through it\.$/,
-    profession: ["occultist", "jester"],
-    skill: "tarot",
-    balance: "balance",
-    tags: ["heal"],
-    length: 3.0,
-  },
-  //#endregion
   //#region Attainment
   {
     id: "harry",
