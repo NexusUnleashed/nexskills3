@@ -196,13 +196,11 @@ const checkSkills = (text) => {
       action.reaction(action);
     }
     eventStream.raiseEvent("nexSkillMatch", action);
-  }
-
-  if (!result) {
+  } else {
     return checkNpcs(text);
   }
-  //return result;
-  return action;
+
+  return result ? action : false;
 };
 
 const checkNpcs = (text) => {
@@ -241,7 +239,7 @@ const checkNpcs = (text) => {
     eventStream.raiseEvent("nexSkillNpcMatch", action);
   }
 
-  return result ? result : false;
+  return result ? action : false;
 };
 
 export const nexSkills = {
