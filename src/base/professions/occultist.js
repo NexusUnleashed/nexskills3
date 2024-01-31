@@ -74,6 +74,22 @@ export const actions = [
     tags: [],
     length: 2.3,
   },
+  {
+    id: "devolve",
+    fullName: "Devolve",
+    firstPerson:
+      /^You utter a terrible curse and point a finger at (?<target>\w+?)\.$/,
+    secondPerson:
+      /^(?<user>\w+?) utters a terrible curse and points a finger at you\.$/,
+    thirdPerson:
+      /^(?<user>\w+?) utters a terrible curse and points a finger at (?<target>\w+?)\.$/,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    tags: [],
+    length: 2.4,
+    multiLine: 1,
+  },
   //#region Attainment
   {
     id: "harry",

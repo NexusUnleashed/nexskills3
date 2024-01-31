@@ -187,7 +187,7 @@ export const domination = [
     secondPerson:
       /^A withered crone reaches out and caresses your (?<limb>.+), and an icy chill radiates up the limb as it withers away\.$/,
     thirdPerson:
-      /A withered crone reaches out to caress the (?<limb>.+) of (?<target>\w+?), the limb withering away under her gnarled grasp\.$/,
+      /^A withered crone reaches out to caress the (?<limb>.+) of (?<target>\w+?), the limb withering away under her gnarled grasp\.$/,
     profession: ["occultist"],
     skill: "domination",
     balance: "tertiary",
@@ -197,5 +197,87 @@ export const domination = [
       action.info = action.args.groups.limb;
     },
     //multiLine: -1,
+  },
+  {
+    id: "wormPrime",
+    fullName: "Worm Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^The worm which is burrowed into your guts writhes and undulates, and you feel bile rising in the back of your throat\.$/,
+    thirdPerson:
+      /^The worm burrowing into (?<target>\w+?) writhes and undulates\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    length: 8.0,
+  },
+  {
+    id: "gremlinPrime",
+    fullName: "Gremlin Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^The gremlin races between and around your legs, its eratic movement setting your head to spinning\.$/,
+    thirdPerson:
+      /^The gremlin races around and between the legs of (?<target>\w+?), his eyes tracking it as he sways unsteadily\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    length: 11.0,
+  },
+  {
+    id: "humbugPrime",
+    fullName: "Humbug Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^You feel the humbug sucking horribly against your skin, drawing away your very will to fight\.$/,
+    thirdPerson:
+      /^The humbug clinging to the throat of (?<target>\w+?) expands with a squelching sound\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    length: 5.0,
+  },
+  {
+    id: "bloodleechPrime",
+    fullName: "Bloodleech Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^The tentacles of the bloodleech burrow into your skin, seeking the veins and fresh sources of life-giving fluid\.$/,
+    thirdPerson:
+      /^The bloodleech clinging to (?<target>\w+?) expands and contracts with a sickening sound\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    length: 5.0,
+  },
+  {
+    id: "slimePrime",
+    fullName: "Slime Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^You feel the slime attacking your physical well-being with its foul presence\.$/,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    length: 10.0,
+  },
+  {
+    id: "bubonisPrime",
+    fullName: "Bubonis Primebond",
+    firstPerson:
+      /^You sense the malignant glee of your bubonis as it infests (?<target>\w+?)\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    length: 11.0,
   },
 ];
