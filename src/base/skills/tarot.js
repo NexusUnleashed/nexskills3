@@ -50,8 +50,8 @@ export const tarot = [
     //multiLine: -1,
   },
   {
-    id: "aeon",
-    fullName: "Aeon",
+    id: "moon",
+    fullName: "Moon",
     firstPerson:
       /^As you fling the Moon tarot at (?<target>\w+?), it turns an ominous, sickly red, before striking \w+ in the head\.$/,
     secondPerson:
