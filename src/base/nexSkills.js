@@ -163,8 +163,10 @@ const checkSkills = (text) => {
       result = action.firstPerson ? text.match(action.firstPerson) : false;
       if (result) {
         action.user = "self";
+        action.target = "";
+        action.match = "firstPerson";
         if (result.groups) {
-          action.target = result.groups.target || false;
+          action.target = result.groups.target;
           action.info = result.groups.info || false;
         }
         break;
@@ -174,8 +176,9 @@ const checkSkills = (text) => {
     result = action.secondPerson ? text.match(action.secondPerson) : false;
     if (result) {
       action.target = "self";
+      action.match = "secondPerson";
       if (result.groups) {
-        action.user = result.groups.user;
+        action.user = result.groups.user || "";
         action.info = result.groups.info || false;
       }
       break;
@@ -183,9 +186,10 @@ const checkSkills = (text) => {
 
     result = action.thirdPerson ? text.match(action.thirdPerson) : false;
     if (result) {
-      action.user = result.groups.user;
-      action.target = result.groups.target || false;
+      action.user = result.groups.user || "";
+      action.target = result.groups.target || "";
       action.info = result.groups.info || false;
+      action.match = "thirdPerson";
       break;
     }
   }
@@ -196,6 +200,7 @@ const checkSkills = (text) => {
       action.reaction(action);
     }
     eventStream.raiseEvent("nexSkillMatch", action);
+    eventStream.raiseEvent(`nexSkillMatch${action.id}`, action);
   } else {
     return checkNpcs(text);
   }
