@@ -87,7 +87,7 @@ export const actions = [
     multiline: 0,
   },
   {
-    id: "rendUntargeted",
+    id: "rendTargeted",
     fullName: "Rend",
     firstPerson:
       /^Lunging forward with long, flashing claws extended, you tear into the flesh of (?<target>\w+)'s (?<limb>.+)\.$/,
