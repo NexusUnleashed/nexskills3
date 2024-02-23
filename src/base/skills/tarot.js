@@ -16,6 +16,21 @@ export const tarot = [
     //multiLine: -1,
   },
   {
+    id: "lovers",
+    fullName: "Lovers",
+    firstPerson:
+      /^You toss the Hanged Man tarot card at (?<target>\w+?) and as it reaches \w+, a huge mass of rope bursts out of it to entrap and hinder \w+\.$/,
+    secondPerson:
+      /^(?<user>\w+?) hurls a tarot card with the image of the Hanged Man on it at you\. As it reaches you, a huge mass of rope bursts out of it, entrapping and hindering you\.$/,
+    thirdPerson:
+      /^Khaseem throws a Lovers tarot at Pamxen and as it strikes true, a look of hopeless, star-crossed love crosses his face.\.$/,
+    profession: ["occultist", "jester"],
+    balance: "tertiary",
+    tags: [],
+    length: 2.2,
+    //multiLine: -1,
+  },
+  {
     id: "aeonStrip",
     fullName: "Aeon Strip",
     firstPerson:
