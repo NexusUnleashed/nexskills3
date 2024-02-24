@@ -10,7 +10,7 @@ export const tarot = [
       /^(?<user>\w+?) tosses a tarot card at (?<target>\w+?) and as it reaches \w+, a huge mass of rope bursts out of it, entrapping and hindering \w+\.$/,
     profession: ["occultist", "jester"],
     skill: "tarot",
-    balance: "tertiary",
+    balance: "balance",
     tags: [],
     length: 2.2,
     //multiLine: -1,
@@ -19,15 +19,34 @@ export const tarot = [
     id: "lovers",
     fullName: "Lovers",
     firstPerson:
-      /^You toss the Hanged Man tarot card at (?<target>\w+?) and as it reaches \w+, a huge mass of rope bursts out of it to entrap and hinder \w+\.$/,
+      /^You throw a Lovers tarot at (?<target>\w+) and as it strikes true, a look of utter love covers \w+ face\.$/,
     secondPerson:
-      /^(?<user>\w+?) hurls a tarot card with the image of the Hanged Man on it at you\. As it reaches you, a huge mass of rope bursts out of it, entrapping and hindering you\.$/,
+      /^(?<user>\w+) throws a Lovers tarot at you and as it strikes true, you fall hopelessly in love with \w+\.$/,
     thirdPerson:
-      /^Khaseem throws a Lovers tarot at Pamxen and as it strikes true, a look of hopeless, star-crossed love crosses his face.\.$/,
+      /^(?<user>\w+) throws a Lovers tarot at (?<target>\w+) and as it strikes true, a look of hopeless, star-crossed love crosses \w+ face\.$/,
     profession: ["occultist", "jester"],
-    balance: "tertiary",
-    tags: [],
-    length: 2.2,
+    balance: "balance",
+    affs: ["lovers"],
+    skill: "tarot",
+    tags: ["aff"],
+    length: 3.0,
+    //multiLine: -1,
+  },
+  {
+    id: "justiceTarot",
+    fullName: "Justice",
+    firstPerson:
+      /^With a prayer to Miramar, the Just, you fling your tarot card at (?<target>\w+)\. A set of scales appears above his head and one side of the scale quickly descends\. Justice will be done\.$/,
+    secondPerson:
+      /^(?<user>\w+) bows his head and mutters something, then flings a tarot card at you\. A set of scales appears above your head and one side of the scale quickly descends\. You have a bad feeling about this\.$/,
+    thirdPerson:
+      /^(?<user>\w+) bows his head and mutters something, then flings a tarot card at (?<target>\w+)\. A set of scales appears above his head and one side of the scale quickly descends\.$/,
+    profession: ["occultist", "jester"],
+    balance: "balance",
+    affs: ["justice"],
+    skill: "tarot",
+    tags: ["aff"],
+    length: 3.0,
     //multiLine: -1,
   },
   {
@@ -36,15 +55,15 @@ export const tarot = [
     firstPerson:
       /^You stand an Aeon tarot on your palm, and blow it lightly at (?<target>\w+?)\.$/,
     secondPerson:
-      /^Khaseem blows an Aeon tarot at you, destroying your speed defence\.$/,
+      /^(?<user>\w+) blows an Aeon tarot at you, destroying your speed defence\.$/,
     thirdPerson:
-      /^Khaseem stands an Aeon tarot on \w+ palm and blows it at (?<target>\w+?)\.$/,
+      /^(?<user>\w+) stands an Aeon tarot on \w+ palm and blows it at (?<target>\w+?)\.$/,
     profession: ["occultist", "jester"],
     skill: "tarot",
-    balance: "tertiary",
+    balance: "balance",
     tags: [],
     info: "Speed strip",
-    length: 2.2,
+    length: 3.7,
     //multiLine: -1,
   },
   {
@@ -58,10 +77,10 @@ export const tarot = [
       /^(?<user>\w+?) stands an Aeon tarot on \w+ open palm, and blows it lightly at (?<target>\w+?)\.$/,
     profession: ["occultist", "jester"],
     skill: "tarot",
-    balance: "tertiary",
+    balance: "balance",
     tags: [],
     info: false,
-    length: 2.2,
+    length: 3.7,
     //multiLine: -1,
   },
   {
@@ -75,7 +94,7 @@ export const tarot = [
       /^As (?<user>\w+?) flings a tarot card at (?<target>\w+?), it turns an ominous, sickly red before striking \w+ in the head\.$/,
     profession: ["occultist", "jester"],
     skill: "tarot",
-    balance: "tertiary",
+    balance: "equilibrium",
     tags: [],
     info: false,
     length: 2.2,
@@ -96,11 +115,11 @@ export const tarot = [
     id: "priestess",
     fullName: "Priestess",
     firstPerson:
-      /^Raising the High Priestess tarot over your head, parallel to the ground, you release it\. It instantly expands and moves downward, healing you as your body passes through it\.$/,
+      /^Raising the High Priestess tarot over your head, parallel to the ground, you release it\. It instantly expands and moves downward, healing (?:you|(?<target>\w+)) as \w+ body passes through it\.$/,
     secondPerson:
       /^(?<user>\w+?) raises a tarot over \w+ head, parallel to the ground\. Upon releasing it, it instantly expands and moves downward until your entire body has been passed through it, healing you as it falls\.$/,
     thirdPerson:
-      /^(?<user>\w+?) raises a tarot over \w+ head, parallel to the ground. Upon releasing it, it instantly expands and moves downward until \w+ entire body has been passed through it\.$/,
+      /^(?<user>\w+) raises a tarot card over the head of (?<target>\w+)\. Upon releasing it, it instantly expands and moves downward until \w+ entire body has been passed through it\.$/,
     profession: ["occultist", "jester"],
     skill: "tarot",
     balance: "balance",
@@ -110,10 +129,12 @@ export const tarot = [
   {
     id: "fool",
     fullName: "Fool",
-    firstPerson: /^You press the Fool tarot to your forehead\.$/,
-    secondPerson: false,
+    firstPerson:
+      /^^You press the Fool tarot to (?:your|(?<target>\w+)'s) forehead\.$/,
+    secondPerson:
+      /^(?<user>\w+?) presses a tarot to your forehead and a sensation of warmth ripples through your body\.$/,
     thirdPerson:
-      /^(?<user>\w+?) presses a tarot to \w+ forehead, producing a wan smile\.$/,
+      /^(?<user>\w+?) presses a tarot to (?:\w+|(?<target>\w+)'s) forehead, producing a wan smile\.$/,
     profession: ["occultist", "jester"],
     skill: "tarot",
     balance: "balance",

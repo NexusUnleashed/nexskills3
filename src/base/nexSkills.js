@@ -24,6 +24,7 @@ import { propagation } from "./skills/propagation";
 import { weatherweaving } from "./skills/weatherweaving";
 import { domination } from "./skills/domination";
 import { tarot } from "./skills/tarot";
+import { occultism } from "./skills/occultism";
 
 import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
@@ -39,6 +40,8 @@ import { npcs as tirMuran } from "./areas/tirMuran";
 import { npcs as tuar } from "./areas/tuar";
 import { npcs as yggdrasil } from "./areas/yggdrasil";
 import { barrow } from "./areas/barrow";
+import { aeonics } from "./skills/aeonics";
+import { shadowmancy } from "./skills/shadowmancy";
 
 const npcs = [
   ...battlesite,
@@ -68,6 +71,9 @@ const actions = [
 
   ...tarot,
   ...domination,
+  ...occultism,
+  ...aeonics,
+  ...shadowmancy,
   ...weaponmastery,
   ...harmonics,
   ...ignition,
