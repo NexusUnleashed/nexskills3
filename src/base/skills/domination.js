@@ -1,4 +1,5 @@
 export const domination = [
+  //#region COMMANDS
   {
     id: "humbugCommand",
     fullName: "Humbug Command",
@@ -104,12 +105,11 @@ export const domination = [
   {
     id: "chimeraCommandDeaf",
     fullName: "Chimera Command",
-    firstPerson:
-      /^A chimera throws forward all three of its heads and roars at (?<target>\w+?), but he seems completely unphased\.$/,
+    firstPerson: false,
     secondPerson:
       /^A chimera throws all three of its heads forward and opens its mouth, but you hear only the slightest whisper of sound\.$/,
     thirdPerson:
-      /^A chimera throws forward all three of its heads and roars at (?<target>\w+?), but he seems completely unphased\.$/,
+      /^A chimera throws forward all three of its heads and roars at (?<target>\w+?), but \w+ seems completely unphased\.$/,
     profession: ["occultist"],
     skill: "domination",
     balance: "equilibrium",
@@ -121,7 +121,7 @@ export const domination = [
   {
     id: "chimeraCommand",
     fullName: "Chimera Command",
-    firstPerson: /^A chimera lets out a concussive roar at (?<target>\w+?)\.$/,
+    firstPerson: false,
     secondPerson:
       /^A chimera lets out a concussive roar, all three of the creatures heads thrown forward toward you\.$/,
     thirdPerson: /^A chimera lets out a concussive roar at (?<target>\w+?)\.$/,
@@ -135,8 +135,7 @@ export const domination = [
   {
     id: "bubonisCommand",
     fullName: "Bubonis Command",
-    firstPerson:
-      /^A bubonis reaches out and strokes the side of (?<target>\w+?)'s face, and boils form and rupture in an instant as he begins hacking up black fluid\.$/,
+    firstPerson: false,
     secondPerson:
       /^A bubonis reaches out and strokes the side of your face, and you feel your entire body suffer. Boils form and rupture and you feel your lungs burn as they fill with fluid\.$/,
     thirdPerson:
@@ -183,7 +182,7 @@ export const domination = [
     id: "croneCommand",
     fullName: "Crone Command",
     firstPerson:
-      /^A withered crone reaches out to caress the (?<limb>.+) of (?<target>\w+?), the limb withering away under her gnarled grasp\.$/,
+      /^You command your crone to wither the (?<limb>.+) of (?<target>\w+?)\.$/,
     secondPerson:
       /^A withered crone reaches out and caresses your (?<limb>.+), and an icy chill radiates up the limb as it withers away\.$/,
     thirdPerson:
@@ -191,13 +190,33 @@ export const domination = [
     profession: ["occultist"],
     skill: "domination",
     balance: "tertiary",
-    tags: [],
+    tags: ["aff"],
     length: 2.35,
     reaction(action) {
       action.info = action.args.groups.limb;
+      action.affs.push(`broken${action.args.groups.limb.replace(" ", "")}`);
     },
     //multiLine: -1,
   },
+  {
+    id: "abominationCommand",
+    fullName: "Abomination Command",
+    firstPerson:
+      /^You command an eldritch abomination to discern the doom of Pamxen\.$/,
+    secondPerson:
+      /^Violet tendrils lash out from an eldritch abomination, plunging into you. Though they cause no physical harm, you feel a horrific tearing sensation, as if a fundamental part of your essence has been violated and exposed\.$/,
+    thirdPerson:
+      /^Incandescent tendrils lash out from an eldritch abomination, plunging into Pamxen. His back arches and eyes bulge as violet light pours from his mouth in a ghastly parody of a scream\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "tertiary",
+    info: "truename",
+    tags: [],
+    length: 2.6,
+    //multiLine: -1,
+  },
+  //#endregion
+  //#region PRIMEBONDS
   {
     id: "wormPrime",
     fullName: "Worm Primebond",
@@ -280,4 +299,5 @@ export const domination = [
     tags: [],
     length: 11.0,
   },
+  //#endregion
 ];

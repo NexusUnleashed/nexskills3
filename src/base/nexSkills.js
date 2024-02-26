@@ -175,6 +175,9 @@ const checkSkills = (text) => {
           action.target = result.groups.target;
           action.info = result.groups.info || false;
         }
+        if (action.target.toLowerCase() === "you") {
+          action.target = "self";
+        }
         break;
       }
     }
@@ -205,6 +208,7 @@ const checkSkills = (text) => {
     if (action.reaction) {
       action.reaction(action);
     }
+
     eventStream.raiseEvent("nexSkillMatch", action);
     eventStream.raiseEvent(`nexSkillMatch${action.id}`, action);
   } else {
