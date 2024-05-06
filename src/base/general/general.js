@@ -18,7 +18,7 @@ export const actions = [
     firstPerson: /^You feel an aura of rebounding surround you\.$/,
     secondPerson: false,
     thirdPerson:
-      /^You suddenly perceive the vague outline of an aura of rebounding around (?<user>\w+?)\.$/,
+      /^You suddenly perceive the vague outline of an aura of rebounding around (?<user>\w+)\.$/,
     profession: ["general"],
     skill: "defense",
     balance: "free",
@@ -33,7 +33,7 @@ export const actions = [
       /^You pluck at the strings on .+, and a bright, jovial tune accompanies the weaving of a prismatic barrier around you\.$/,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) plucks at the strings on .+, and a bright, jovial tune accompanies the weaving of a prismatic barrier around \w+\.$/,
+      /^(?<user>\w+) plucks at the strings on .+, and a bright, jovial tune accompanies the weaving of a prismatic barrier around \w+\.$/,
     profession: ["general"],
     skill: "defense",
     balance: "equilibrium",

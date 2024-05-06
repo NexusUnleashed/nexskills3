@@ -6,7 +6,7 @@ export const actions = [
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) slips behind (?<target>.+?) and garrotes \w+ with \w+ whip\.$/,
+      /^(?<user>\w+) slips behind (?<target>.+?) and garrotes \w+ with \w+ whip\.$/,
     profession: ["serpent"],
     skill: "subterfuge",
     balance: "balance",
@@ -21,7 +21,7 @@ export const actions = [
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) hunches \w+ shoulders and lets out a soft hiss\.$/,
+      /^(?<user>\w+) hunches \w+ shoulders and lets out a soft hiss\.$/,
     profession: ["serpent"],
     skill: "venom",
     balance: "free",

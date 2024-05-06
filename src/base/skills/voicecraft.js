@@ -4,7 +4,7 @@ export const actions = [
     fullName: "Limerick",
     firstPerson: false,
     secondPerson:
-      /^\w+ eyes gleaming, (?<user>\w+?) smiles and quickly sings a jaunty limerick at you\.$/,
+      /^\w+ eyes gleaming, (?<user>\w+) smiles and quickly sings a jaunty limerick at you\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "harmonics",
@@ -19,7 +19,7 @@ export const actions = [
     fullName: "Ode",
     firstPerson: false,
     secondPerson:
-      /^With a wink, (?<user>\w+?) recites "Ode to Elixirs" to you\.$/,
+      /^With a wink, (?<user>\w+) recites "Ode to Elixirs" to you\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "harmonics",
@@ -34,7 +34,7 @@ export const actions = [
     fullName: "Epic",
     firstPerson: false,
     secondPerson:
-      /^You are held motionless by (?<user>\w+?)'s epic tale of Nicator's heroism and bravery\.$/,
+      /^You are held motionless by (?<user>\w+)'s epic tale of Nicator's heroism and bravery\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "harmonics",
@@ -49,7 +49,7 @@ export const actions = [
     fullName: "Maqam",
     firstPerson: false,
     secondPerson:
-      /^You feel suddenly clumsy beside the graceful maqam of el'Jazira that (?<user>\w+?) sings at you\.$/,
+      /^You feel suddenly clumsy beside the graceful maqam of el'Jazira that (?<user>\w+) sings at you\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "harmonics",
@@ -64,7 +64,7 @@ export const actions = [
     fullName: "Ditty",
     firstPerson: false,
     secondPerson:
-      /^The songbird upon (?<user>\w+?)'s shoulder twitters an irritating ditty at you, disrupting your mind\.$/,
+      /^The songbird upon (?<user>\w+)'s shoulder twitters an irritating ditty at you, disrupting your mind\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "harmonics",
@@ -80,7 +80,7 @@ export const actions = [
     fullName: "Requiem",
     firstPerson: false,
     secondPerson:
-      /^The songbird upon (?<user>\w+?)'s shoulder launches into a requiem for historical Seleucar so convincing that paranoia of the future sets in\.$/,
+      /^The songbird upon (?<user>\w+)'s shoulder launches into a requiem for historical Seleucar so convincing that paranoia of the future sets in\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "harmonics",
@@ -96,7 +96,7 @@ export const actions = [
     fullName: "Passion",
     firstPerson: false,
     secondPerson:
-      /^The songbird upon (?<user>\w+?)'s shoulder sings a grave, perfect mimicry of the Passion of Imithia to you\.$/,
+      /^The songbird upon (?<user>\w+)'s shoulder sings a grave, perfect mimicry of the Passion of Imithia to you\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "harmonics",
@@ -112,7 +112,7 @@ export const actions = [
     fullName: "Pastorale",
     firstPerson: false,
     secondPerson:
-      /^The songbird upon (?<user>\w+?)'s shoulder sings a pastorale of the fields and streams to you\. You feel reluctant to leave the ground\.$/,
+      /^The songbird upon (?<user>\w+)'s shoulder sings a pastorale of the fields and streams to you\. You feel reluctant to leave the ground\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "harmonics",

@@ -30,9 +30,9 @@ export const actions = [
   {
     id: "engage",
     fullName: "Engaged",
-    firstPerson: /^You move in to engage (?<target>\w+?)\.$/,
-    secondPerson: /^(?<user>\w+?) moves in to engage you\.$/,
-    thirdPerson: /^(?<user>\w+?) moves in to engage (?<target>\w+?)\.$/,
+    firstPerson: /^You move in to engage (?<target>\w+)\.$/,
+    secondPerson: /^(?<user>\w+) moves in to engage you\.$/,
+    thirdPerson: /^(?<user>\w+) moves in to engage (?<target>\w+)\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
@@ -46,7 +46,7 @@ export const actions = [
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) lashes out at (?<target>\w+?) as he turns to flee\.$/,
+      /^(?<user>\w+) lashes out at (?<target>\w+) as he turns to flee\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
@@ -58,10 +58,10 @@ export const actions = [
     id: "razeNone",
     fullName: "Raze",
     firstPerson:
-      /^You whip .+ through the air in front of (?<target>\w+?), to no effect\.$/,
+      /^You whip .+ through the air in front of (?<target>\w+), to no effect\.$/,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) lashes out at (?<target>\w+?) as he turns to flee\.$/,
+      /^(?<user>\w+) lashes out at (?<target>\w+) as he turns to flee\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
@@ -74,7 +74,7 @@ export const actions = [
     id: "raze",
     fullName: "Raze",
     firstPerson: false,
-    secondPerson: /^(?<user>\w+?) razes your magical shield with .+\.$/,
+    secondPerson: /^(?<user>\w+) razes your magical shield with .+\.$/,
     thirdPerson: false,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.

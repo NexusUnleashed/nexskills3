@@ -8,9 +8,9 @@ export const shadowmancy = [
     firstPerson:
       /^You unleash a vicious reaping blow at (?<target>.+?) with .+\.$/,
     secondPerson:
-      /^(?<user>\w+?) delivers a lightning-fast strike to you with .+\.$/,
+      /^(?<user>\w+) delivers a lightning-fast strike to you with .+\.$/,
     thirdPerson:
-      /^(?<user>\w+?) lashes out with a swift, reaping blow at (?<target>.+?)\.$/,
+      /^(?<user>\w+) lashes out with a swift, reaping blow at (?<target>.+?)\.$/,
     profession: ["depthswalker"],
     skill: "shadowmancy",
     balance: "balance",
@@ -78,7 +78,7 @@ export const shadowmancy = [
     secondPerson:
       /^As the weapon strikes you, it burns with a sickly yellow light\.$/,
     thirdPerson:
-      /^As the weapon strikes (?<target>\w+?), it burns with a sickly yellow glow\.$/,
+      /^As the weapon strikes (?<target>\w+), it burns with a sickly yellow glow\.$/,
     profession: ["depthswalker"],
     skill: "shadowmancy",
     balance: "free",
@@ -93,7 +93,7 @@ export const shadowmancy = [
     secondPerson:
       /^As the weapon strikes you, the blade flashes an incandescent white\.$/,
     thirdPerson:
-      /^As the weapon strikes (?<target>\w+?), it blazes with incandescent white flame\.$/,
+      /^As the weapon strikes (?<target>\w+), it blazes with incandescent white flame\.$/,
     profession: ["depthswalker"],
     skill: "shadowmancy",
     balance: "free",
@@ -108,7 +108,7 @@ export const shadowmancy = [
     secondPerson:
       /^As the weapon strikes you, you feel your sanity slipping away\.$/,
     thirdPerson:
-      /^As the weapon strikes (?<target>\w+?), \w+ face grows vacant and he begins to tremble\.$/,
+      /^As the weapon strikes (?<target>\w+), \w+ face grows vacant and he begins to tremble\.$/,
     profession: ["depthswalker"],
     skill: "shadowmancy",
     balance: "free",
@@ -123,7 +123,7 @@ export const shadowmancy = [
     secondPerson:
       /^As the weapon strikes you, you feel your strength being leeched away\.$/,
     thirdPerson:
-      /^As the weapon strikes (?<target>\w+?), \w+ seems greatly diminished\.$/,
+      /^As the weapon strikes (?<target>\w+), \w+ seems greatly diminished\.$/,
     profession: ["depthswalker"],
     skill: "shadowmancy",
     balance: "free",

@@ -18,7 +18,7 @@ export const occultism = [
     id: "instill",
     fullName: "Instill",
     firstPerson:
-      /^You make a sharp gesture toward (?<target>\w+), disrupting \w+ aura with the (?<info>\w+?) affliction\.$/,
+      /^You make a sharp gesture toward (?<target>\w+), disrupting \w+ aura with the (?<info>\w+) affliction\.$/,
     secondPerson: /^(?<user>\w+) makes a quick, sharp gesture toward you\.$/,
     thirdPerson: /^(?<user>\w+) gestures sharply at (?<target>\w+)\.$/,
     profession: ["occultist"],

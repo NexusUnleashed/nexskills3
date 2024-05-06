@@ -6,7 +6,7 @@ export const actions = [
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) points an imperious finger at (?<target>.+?) and blood begins to flow from \w+ pores\.$/,
+      /^(?<user>\w+) points an imperious finger at (?<target>.+?) and blood begins to flow from \w+ pores\.$/,
     profession: ["shaman"],
     skill: "curses",
     balance: "balance",

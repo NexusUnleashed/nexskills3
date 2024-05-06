@@ -7,7 +7,7 @@ export const actions = [
       /^You rip into (?<target>.+?) with your massive, deadly claws\.$/,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) rips into (?<target>.+?) with \w+ massive, deadly claws\.$/,
+      /^(?<user>\w+) rips into (?<target>.+?) with \w+ massive, deadly claws\.$/,
     profession: [
       "red dragon",
       "green dragon",
@@ -206,11 +206,11 @@ export const actions = [
     id: "bite",
     fullName: "Bite",
     firstPerson:
-      /^Twisting your neck sideways, you seize (?<target>\w+?)'s body between your massive jaws, jerking \w+ back and forth and leaving ragged gashes in \w+ flesh\.$/,
+      /^Twisting your neck sideways, you seize (?<target>\w+)'s body between your massive jaws, jerking \w+ back and forth and leaving ragged gashes in \w+ flesh\.$/,
     secondPerson:
       /^(?<user>\w+) snaps \w+ massive jaws close around you, jerking you back and forth with agonising strength\.$/,
     thirdPerson:
-      /^(?<user>\w+) crushes (?<target>\w+?) between \w+ massive jaws, jerking \w+ back and forth like a rag doll\.$/,
+      /^(?<user>\w+) crushes (?<target>\w+) between \w+ massive jaws, jerking \w+ back and forth like a rag doll\.$/,
     profession: [
       "red dragon",
       "green dragon",
@@ -229,7 +229,7 @@ export const actions = [
     id: "biteProne",
     fullName: "Bite - Prone",
     firstPerson:
-      /^Twisting to grasp (?<target>\w+?) in your powerful jaws, you sink your teeth deep into \w+ flesh before tossing \w+ helpless body into the air and catching \w+ once more in your teeth\.$/,
+      /^Twisting to grasp (?<target>\w+) in your powerful jaws, you sink your teeth deep into \w+ flesh before tossing \w+ helpless body into the air and catching \w+ once more in your teeth\.$/,
     secondPerson:
       /^(?<user>\w+) snaps \w+ massive jaws close around you, flinging you effortlessly into the air before catching you with a second powerful bite\.$/,
     thirdPerson:
@@ -371,11 +371,11 @@ export const actions = [
     id: "blastRed",
     fullName: "Blast",
     firstPerson:
-      /^You rear back your head, and with a keening roar unleash incandescent hell upon (?<target>\w+?)\.$/,
+      /^You rear back your head, and with a keening roar unleash incandescent hell upon (?<target>\w+)\.$/,
     secondPerson:
       /^(?<user>\w+) rears back \w+ head, and with a keening roar unleashes incandescent hell upon you\.$/,
     thirdPerson:
-      /^(?<user>\w+) rears back \w+ head, and with a keening roar unleashes incandescent hell upon (?<target>\w+?)\.$/,
+      /^(?<user>\w+) rears back \w+ head, and with a keening roar unleashes incandescent hell upon (?<target>\w+)\.$/,
     profession: ["red dragon"],
     skill: "dragoncraft",
     balance: "equilibrium",
@@ -388,11 +388,11 @@ export const actions = [
     id: "blastGreen",
     fullName: "Blast",
     firstPerson:
-      /^Opening your dragon's mouth to its fullest, you blast (?<target>\w+?) with your toxic wrath, damaging \w+ very essence\.$/,
+      /^Opening your dragon's mouth to its fullest, you blast (?<target>\w+) with your toxic wrath, damaging \w+ very essence\.$/,
     secondPerson:
       /^Opening \w+ maw to its fullest, (?<user>\w+) blasts you with \w+ toxic wrath, covering you in deadly wyrmvenom and damaging your very essence\.$/,
     thirdPerson:
-      /^Opening \w+ maw to its fullest, (?<user>\w+) blasts (?<target>\w+?) with \w+ toxic wrath, covering \w+ in deadly wyrmvenom\.$/,
+      /^Opening \w+ maw to its fullest, (?<user>\w+) blasts (?<target>\w+) with \w+ toxic wrath, covering \w+ in deadly wyrmvenom\.$/,
     profession: ["green dragon"],
     skill: "dragoncraft",
     balance: "equilibrium",
@@ -405,11 +405,11 @@ export const actions = [
     id: "blastBlue",
     fullName: "Blast",
     firstPerson:
-      /^Opening your massive maw, you throw your head forward and blast wave after wave of deadly, all-consuming cold at (?<target>\w+?)\.$/,
+      /^Opening your massive maw, you throw your head forward and blast wave after wave of deadly, all-consuming cold at (?<target>\w+)\.$/,
     secondPerson:
       /^Opening \w+ massive maw, (?<user>\w+) throws \w+ head forward and blasts wave after wave of deadly, all-consuming cold at you\.$/,
     thirdPerson:
-      /^Opening \w+ massive maw, (?<user>\w+) throws \w+ head forward and blasts wave after wave of deadly, all-consuming cold at (?<target>\w+?)\.$/,
+      /^Opening \w+ massive maw, (?<user>\w+) throws \w+ head forward and blasts wave after wave of deadly, all-consuming cold at (?<target>\w+)\.$/,
     profession: ["blue dragon"],
     skill: "dragoncraft",
     balance: "equilibrium",
@@ -422,11 +422,11 @@ export const actions = [
     id: "blastBlack",
     fullName: "Blast",
     firstPerson:
-      /^Opening your maw, you force out a tremendous stream of acid, blasting the flesh from the very bones of (?<target>\w+?)\.$/,
+      /^Opening your maw, you force out a tremendous stream of acid, blasting the flesh from the very bones of (?<target>\w+)\.$/,
     secondPerson:
       /^Opening \w+ maw, (?<user>\w+) belches out a tremendous stream of eradicating acid, blasting the flesh from your very bones\.$/,
     thirdPerson:
-      /^Opening \w+ maw, (?<user>\w+) belches out a tremendous stream of eradicating acid, blasting the flesh from (?<target>\w+?)'s very bones\.$/,
+      /^Opening \w+ maw, (?<user>\w+) belches out a tremendous stream of eradicating acid, blasting the flesh from (?<target>\w+)'s very bones\.$/,
     profession: ["black dragon"],
     skill: "dragoncraft",
     balance: "equilibrium",
@@ -439,11 +439,11 @@ export const actions = [
     id: "blastGold",
     fullName: "Blast",
     firstPerson:
-      /^With a roar of triumph, you unleash a cataclysm of crushing psi energy, laying waste to (?<target>\w+?)'s mind\.$/,
+      /^With a roar of triumph, you unleash a cataclysm of crushing psi energy, laying waste to (?<target>\w+)'s mind\.$/,
     secondPerson:
       /^With a roar of triumph, (?<user>\w+) unleashes a cataclysm of crushing psi energy at you\.$/,
     thirdPerson:
-      /^With a roar of triumph, (?<user>\w+) unleashes a cataclysm of crushing psi energy at (?<target>\w+?)\.$/,
+      /^With a roar of triumph, (?<user>\w+) unleashes a cataclysm of crushing psi energy at (?<target>\w+)\.$/,
     profession: ["gold dragon"],
     skill: "dragoncraft",
     balance: "equilibrium",
@@ -456,11 +456,11 @@ export const actions = [
     id: "blastSilver",
     fullName: "Blast",
     firstPerson:
-      /^Opening your great maw, you unleash an overpowering blast of flesh-searing lightning at (?<target>\w+?), whose body goes rigid as \w+ screams in agony\.$/,
+      /^Opening your great maw, you unleash an overpowering blast of flesh-searing lightning at (?<target>\w+), whose body goes rigid as \w+ screams in agony\.$/,
     secondPerson:
       /^Opening \w+ great maw, (?<user>\w+) unleashes an overpowering blast of flesh-searing lightning at you. Your body goes rigid as you scream in mind-searing agony\.$/,
     thirdPerson:
-      /^Opening \w+ great maw, (?<user>\w+) unleashes an overpowering blast of flesh-searing lightning at (?<target>\w+?), whose body goes rigid as \w+ screams in agony\.$/,
+      /^Opening \w+ great maw, (?<user>\w+) unleashes an overpowering blast of flesh-searing lightning at (?<target>\w+), whose body goes rigid as \w+ screams in agony\.$/,
     profession: ["silver dragon"],
     skill: "dragoncraft",
     balance: "equilibrium",

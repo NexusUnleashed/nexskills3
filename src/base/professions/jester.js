@@ -6,7 +6,7 @@ export const actions = [
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) gives (?<target>.+?)'s head a sound thumping with a blackjack\.$/,
+      /^(?<user>\w+) gives (?<target>.+?)'s head a sound thumping with a blackjack\.$/,
     profession: ["jester"],
     skill: "pranks",
     balance: "balance",
@@ -19,7 +19,7 @@ export const actions = [
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) reaches out and bops (?<target>.+?)'s head with a blackjack\.$/,
+      /^(?<user>\w+) reaches out and bops (?<target>.+?)'s head with a blackjack\.$/,
     profession: ["jester"],
     skill: "pranks",
     balance: "balance",

@@ -145,17 +145,6 @@ export const tarot = [
     tags: [],
     info: false,
     length: 2.2,
-    reaction(args) {
-      if (
-        args.match === "firstPerson" &&
-        typeof insight.lastQueue !== "undefined"
-      ) {
-        const moon = insight.state.lastQueue.match(/FLING MOON AT \w+ (\w+)/);
-        if (moon) {
-          args.info = moon[1].toLowerCase();
-        }
-      }
-    },
     //multiLine: -1,
   },
   {

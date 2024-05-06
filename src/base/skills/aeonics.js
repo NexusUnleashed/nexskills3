@@ -18,11 +18,11 @@ export const aeonics = [
     id: "chronoAeonStrip",
     fullName: "Chrono Aeon Strip",
     firstPerson:
-      /^Directing your will upon (?<target>\w+?), you tear away the protection granted to him by the speed elixir\.$/,
+      /^Directing your will upon (?<target>\w+), you tear away the protection granted to him by the speed elixir\.$/,
     secondPerson:
       /^As the gaze of (?<user>\w+) falls upon you, you feel your speed enhancements torn away\.$/,
     thirdPerson:
-      /^As the gaze of (?<user>\w+) falls upon (?<target>\w+?), \w+ stumbles but seems to recover without visible issue\.$/,
+      /^As the gaze of (?<user>\w+) falls upon (?<target>\w+), \w+ stumbles but seems to recover without visible issue\.$/,
     profession: ["depthswalker"],
     skill: "aeonics",
     balance: "equilibrium",
@@ -36,11 +36,11 @@ export const aeonics = [
     id: "chronoAeon",
     fullName: "Chrono Aeon",
     firstPerson:
-      /^Invoking the might of Aeon, you bring down a curse of terrible proportions upon (?<target>\w+?)\.$/,
+      /^Invoking the might of Aeon, you bring down a curse of terrible proportions upon (?<target>\w+)\.$/,
     secondPerson:
       /^(?<user>\w+) slashes a hand in your direction and you feel yourself suddenly slow down to a terrifying degree\.$/,
     thirdPerson:
-      /^(?<user>\w+) slashes \w+ hand at (?<target>\w+?), who suddenly appears to be moving in slow motion\.$/,
+      /^(?<user>\w+) slashes \w+ hand at (?<target>\w+), who suddenly appears to be moving in slow motion\.$/,
     profession: ["depthswalker"],
     skill: "aeonics",
     balance: "equilibrium",

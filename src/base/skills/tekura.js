@@ -5,7 +5,7 @@ export const actions = [
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) pumps out at (?<target>.+?) with a powerful side kick\.$/,
+      /^(?<user>\w+) pumps out at (?<target>.+?) with a powerful side kick\.$/,
     profession: ["monk"],
     skill: "tekura",
     balance: "balance",
@@ -18,7 +18,7 @@ export const actions = [
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+?) launches a powerful uppercut at (?<target>.+?)\.$/,
+      /^(?<user>\w+) launches a powerful uppercut at (?<target>.+?)\.$/,
     profession: ["monk"],
     skill: "tekura",
     balance: "balance",
