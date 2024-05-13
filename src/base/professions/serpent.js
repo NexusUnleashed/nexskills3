@@ -1,4 +1,4 @@
-export const actions = [
+export default serpent = [
   //#region Subterfuge
   {
     id: "garrote",

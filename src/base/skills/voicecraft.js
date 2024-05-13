@@ -1,4 +1,4 @@
-export const actions = [
+export default voicecraft = [
   {
     id: "limerick",
     fullName: "Limerick",

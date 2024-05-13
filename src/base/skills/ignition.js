@@ -1,4 +1,4 @@
-export const actions = [
+export default ignition = [
   {
     id: "flamewhip",
     fullName: "Flamewhip",

@@ -1,4 +1,4 @@
-export const actions = [
+export default tekura = [
   {
     id: "sdk",
     fullName: "Sidekick",

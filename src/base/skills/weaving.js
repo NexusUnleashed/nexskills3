@@ -1,4 +1,4 @@
-export const weaving = [
+export default weaving = [
   {
     id: "weavingCharge",
     fullName: "Charge",

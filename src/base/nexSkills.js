@@ -14,34 +14,36 @@ import { actions as runewarden } from "./professions/runewarden";
 import { actions as serpent } from "./professions/serpent";
 import { sylvan } from "./professions/sylvan";
 
-import { actions as weaponmastery } from "./skills/weaponmastery";
+import { domination } from "./skills/domination";
 import { actions as harmonics } from "./skills/harmonics";
 import { actions as ignition } from "./skills/ignition";
-import { actions as swashbuckling } from "./skills/swashbuckling";
-import { actions as voicecraft } from "./skills/voicecraft";
-import { actions as tekura } from "./skills/tekura";
-import { propagation } from "./skills/propagation";
-import { weatherweaving } from "./skills/weatherweaving";
-import { domination } from "./skills/domination";
-import { tarot } from "./skills/tarot";
 import { occultism } from "./skills/occultism";
+import { propagation } from "./skills/propagation";
+import { actions as swashbuckling } from "./skills/swashbuckling";
+import { tarot } from "./skills/tarot";
+import { actions as tekura } from "./skills/tekura";
+import { actions as voicecraft } from "./skills/voicecraft";
+import { actions as weaponmastery } from "./skills/weaponmastery";
+import { weatherweaving } from "./skills/weatherweaving";
 
-import { actions as tattoos } from "./general/tattoos";
 import { actions as curing } from "./general/curing";
 import { actions as general } from "./general/general";
+import { actions as tattoos } from "./general/tattoos";
 
+import { barrow } from "./areas/barrow";
 import { npcs as battlesite } from "./areas/battlesite";
-import { npcs as judgementMountain } from "./areas/judgementMountain";
 import { npcs as grukaiSwamp } from "./areas/grukaiSwamp";
 import { npcs as istarion } from "./areas/istarion";
+import { npcs as judgementMountain } from "./areas/judgementMountain";
 import { npcs as nur } from "./areas/nur";
 import { npcs as riagath } from "./areas/riagath";
 import { npcs as tirMuran } from "./areas/tirMuran";
 import { npcs as tuar } from "./areas/tuar";
 import { npcs as yggdrasil } from "./areas/yggdrasil";
-import { barrow } from "./areas/barrow";
 import { aeonics } from "./skills/aeonics";
 import { shadowmancy } from "./skills/shadowmancy";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 const npcs = [
   ...battlesite,
@@ -55,7 +57,7 @@ const npcs = [
   ...yggdrasil,
   ...barrow,
 ];
-
+/*
 const actions = [
   ...depthswalker,
   ...dragon,
@@ -86,6 +88,31 @@ const actions = [
   ...curing,
   ...general,
 ];
+*/
+const actions = [];
+
+async function loadModules(directory) {
+  const files = await fs.readdir(directory);
+  console.log(files);
+  for (const file of files) {
+    if (file.endsWith(".js")) {
+      const filePath = path.join(directory, file);
+      try {
+        const { default: moduleExport } = await import(filePath);
+        const moduleName = path.basename(file, ".js");
+        modules[moduleName] = moduleExport;
+      } catch (error) {
+        console.error(`Error loading module from ${filePath}:`, error);
+      }
+    }
+  }
+}
+
+// Usage
+//await loadModules('./professions');
+loadModules("./skills");
+//await loadModules('./general');
+//await loadModules('./areas');
 
 export const classList = [
   "Alchemist",

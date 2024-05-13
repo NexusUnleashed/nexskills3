@@ -1,4 +1,4 @@
-export const actions = [
+export default jester = [
   //#region Pranks
   {
     id: "bop",
