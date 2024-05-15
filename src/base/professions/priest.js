@@ -1,4 +1,4 @@
-export default priest = [
+export const priest = [
   {
     id: "chasten",
     fullName: "Chasten",

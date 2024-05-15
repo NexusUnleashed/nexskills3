@@ -1,4 +1,4 @@
-export default occultism = [
+export const occultism = [
   {
     id: "warp",
     fullName: "Warp",

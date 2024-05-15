@@ -1,4 +1,4 @@
-export default weatherweaving = [
+export const weatherweaving = [
   {
     id: "stormhammer",
     fullName: "Stormhammer",

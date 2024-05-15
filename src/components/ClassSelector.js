@@ -19,7 +19,7 @@ const ClassSelector = ({ classList, profession, handleClassSelector }) => {
           <MenuItem
             disabled={
               //["Occultist", "Dragon"].indexOf(profession) > -1 ? false : true
-              nexSkills.actions.find((e) => e.profession.includes("psionn"))
+              nexSkills.actions.find((e) => e.profession.includes("psion"))
             }
             value={profession.toLowerCase()}
             key={i}

@@ -1,5 +1,5 @@
 //A nearly invisible magical shield forms around a sturdy troll woman.
-export const actions = [
+export const tattoos = [
   {
     id: "shield",
     fullName: "Shield",

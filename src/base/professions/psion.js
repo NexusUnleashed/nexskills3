@@ -1,4 +1,4 @@
-export default psion = [
+export const psion = [
   {
     id: "overhand",
     fullName: "Overhand",

@@ -1,4 +1,4 @@
-export default harmonics = [
+export const harmonics = [
   {
     id: "berceuse",
     fullName: "Berceuse",

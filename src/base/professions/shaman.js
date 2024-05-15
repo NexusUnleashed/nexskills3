@@ -1,4 +1,4 @@
-export default shaman = [
+export const shaman = [
   //#region Curses
   {
     id: "bleed",

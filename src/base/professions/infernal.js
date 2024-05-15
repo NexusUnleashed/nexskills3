@@ -1,4 +1,4 @@
-export default infernal = [
+export const infernal = [
   //#region Oppression
   {
     id: "exploit",

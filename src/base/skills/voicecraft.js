@@ -1,4 +1,4 @@
-export default voicecraft = [
+export const voicecraft = [
   {
     id: "limerick",
     fullName: "Limerick",

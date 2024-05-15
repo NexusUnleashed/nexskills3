@@ -1,4 +1,4 @@
-export default shadowmancy = [
+export const shadowmancy = [
   {
     //SHADOW REAP KHASEEM KALMIA
     //You rub some kalmia on a scythe of shadows.

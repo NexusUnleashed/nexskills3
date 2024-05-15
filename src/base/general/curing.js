@@ -1,4 +1,4 @@
-export const actions = [
+export const curing = [
   {
     id: "eat",
     fullName: "Eat",

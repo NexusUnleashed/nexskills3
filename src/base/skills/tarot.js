@@ -1,4 +1,4 @@
-export default tarot = [
+export const tarot = [
   {
     id: "tarotEmperor",
     fullName: "Tarot Emperor",

@@ -1,4 +1,4 @@
-export default runewarden = [
+export const runewarden = [
   //#region Attainment
   {
     id: "collide",

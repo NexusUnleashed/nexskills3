@@ -1,4 +1,4 @@
-export default sylvan = [
+export const sylvan = [
   {
     id: "thornpierce",
     fullName: "Thornpierce",

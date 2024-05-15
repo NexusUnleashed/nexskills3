@@ -1,4 +1,4 @@
-export default occultist = [
+export const occultist = [
   //#region Attainment
   {
     id: "harry",

@@ -1,4 +1,4 @@
-export default domination = [
+export const domination = [
   //#region COMMANDS
   {
     id: "humbugCommand",

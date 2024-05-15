@@ -1,4 +1,4 @@
-export const actions = [
+export const general = [
   {
     id: "npcSlain",
     fullName: "SLAIN",

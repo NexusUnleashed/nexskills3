@@ -1,4 +1,4 @@
-export default propagation = [
+export const propagation = [
   {
     id: "thornrend",
     fullName: "Thornrend",

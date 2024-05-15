@@ -1,35 +1,39 @@
 /* global eventStream, GMCP, nexGui */
 
 import { startUp } from "./mongo";
-
-import { actions as depthswalker } from "./professions/depthswalker";
-import { actions as dragon } from "./professions/dragon";
-import { actions as infernal } from "./professions/infernal";
-import { actions as jester } from "./professions/jester";
-import { actions as occultist } from "./professions/occultist";
-import { actions as pariah } from "./professions/pariah";
-import { actions as priest } from "./professions/priest";
-import { actions as psion } from "./professions/psion";
-import { actions as runewarden } from "./professions/runewarden";
-import { actions as serpent } from "./professions/serpent";
+//Professions
+import { depthswalker } from "./professions/depthswalker";
+import { dragon } from "./professions/dragon";
+import { infernal } from "./professions/infernal";
+import { jester } from "./professions/jester";
+import { occultist } from "./professions/occultist";
+import { pariah } from "./professions/pariah";
+import { priest } from "./professions/priest";
+import { psion } from "./professions/psion";
+import { runewarden } from "./professions/runewarden";
+import { serpent } from "./professions/serpent";
+import { shaman } from "./professions/shaman";
 import { sylvan } from "./professions/sylvan";
-
+//Skills
+import { aeonics } from "./skills/aeonics";
 import { domination } from "./skills/domination";
-import { actions as harmonics } from "./skills/harmonics";
-import { actions as ignition } from "./skills/ignition";
+import { harmonics } from "./skills/harmonics";
+import { ignition } from "./skills/ignition";
 import { occultism } from "./skills/occultism";
 import { propagation } from "./skills/propagation";
-import { actions as swashbuckling } from "./skills/swashbuckling";
+import { shadowmancy } from "./skills/shadowmancy";
+import { swashbuckling } from "./skills/swashbuckling";
 import { tarot } from "./skills/tarot";
-import { actions as tekura } from "./skills/tekura";
-import { actions as voicecraft } from "./skills/voicecraft";
-import { actions as weaponmastery } from "./skills/weaponmastery";
+import { tekura } from "./skills/tekura";
+import { voicecraft } from "./skills/voicecraft";
+import { weaponmastery } from "./skills/weaponmastery";
 import { weatherweaving } from "./skills/weatherweaving";
-
-import { actions as curing } from "./general/curing";
-import { actions as general } from "./general/general";
-import { actions as tattoos } from "./general/tattoos";
-
+import { weaving } from "./skills/weaving";
+//General
+import { curing } from "./general/curing";
+import { general } from "./general/general";
+import { tattoos } from "./general/tattoos";
+//NPCS
 import { barrow } from "./areas/barrow";
 import { npcs as battlesite } from "./areas/battlesite";
 import { npcs as grukaiSwamp } from "./areas/grukaiSwamp";
@@ -40,10 +44,6 @@ import { npcs as riagath } from "./areas/riagath";
 import { npcs as tirMuran } from "./areas/tirMuran";
 import { npcs as tuar } from "./areas/tuar";
 import { npcs as yggdrasil } from "./areas/yggdrasil";
-import { aeonics } from "./skills/aeonics";
-import { shadowmancy } from "./skills/shadowmancy";
-import fs from "node:fs/promises";
-import path from "node:path";
 
 const npcs = [
   ...battlesite,
@@ -57,7 +57,7 @@ const npcs = [
   ...yggdrasil,
   ...barrow,
 ];
-/*
+
 const actions = [
   ...depthswalker,
   ...dragon,
@@ -69,50 +69,28 @@ const actions = [
   ...psion,
   ...runewarden,
   ...serpent,
+  ...shaman,
   ...sylvan,
 
-  ...tarot,
-  ...domination,
-  ...occultism,
   ...aeonics,
-  ...shadowmancy,
-  ...weaponmastery,
+  ...domination,
   ...harmonics,
   ...ignition,
+  ...occultism,
   ...propagation,
+  ...shadowmancy,
   ...swashbuckling,
-  ...voicecraft,
+  ...tarot,
   ...tekura,
+  ...voicecraft,
+  ...weaponmastery,
   ...weatherweaving,
-  ...tattoos,
+  ...weaving,
+
   ...curing,
   ...general,
+  ...tattoos,
 ];
-*/
-const actions = [];
-
-async function loadModules(directory) {
-  const files = await fs.readdir(directory);
-  console.log(files);
-  for (const file of files) {
-    if (file.endsWith(".js")) {
-      const filePath = path.join(directory, file);
-      try {
-        const { default: moduleExport } = await import(filePath);
-        const moduleName = path.basename(file, ".js");
-        modules[moduleName] = moduleExport;
-      } catch (error) {
-        console.error(`Error loading module from ${filePath}:`, error);
-      }
-    }
-  }
-}
-
-// Usage
-//await loadModules('./professions');
-loadModules("./skills");
-//await loadModules('./general');
-//await loadModules('./areas');
 
 export const classList = [
   "Alchemist",

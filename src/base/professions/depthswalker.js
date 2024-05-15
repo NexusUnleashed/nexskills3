@@ -1,5 +1,4 @@
-export default depthswalker = [
-  //#region Attainment
+export const depthswalker = [
   {
     id: "lash",
     fullName: "Lash",
@@ -53,5 +52,4 @@ export default depthswalker = [
     tags: ["pve", "raze"],
     length: 3.0,
   },
-  //#endregion
 ];

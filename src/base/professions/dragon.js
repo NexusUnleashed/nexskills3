@@ -1,4 +1,4 @@
-export default dragon = [
+export const dragon = [
   //#region Dragoncraft
   {
     id: "gut",

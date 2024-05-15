@@ -1,4 +1,4 @@
-export default serpent = [
+export const serpent = [
   //#region Subterfuge
   {
     id: "garrote",

@@ -1,5 +1,5 @@
 /*global GMCP */
-export default pariah = [
+export const pariah = [
   //#region Pariah
   {
     id: "fissure",

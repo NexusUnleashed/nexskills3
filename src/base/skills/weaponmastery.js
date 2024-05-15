@@ -1,4 +1,4 @@
-export default weaponmastery = [
+export const weaponmastery = [
   {
     id: "battlefuryFocus",
     fullName: "Battlefury Focus",

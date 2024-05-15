@@ -1,4 +1,4 @@
-export default ignition = [
+export const ignition = [
   {
     id: "flamewhip",
     fullName: "Flamewhip",

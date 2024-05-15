@@ -1,4 +1,4 @@
-export default aeonics = [
+export const aeonics = [
   {
     id: "accelerate",
     fullName: "Accelerate",
