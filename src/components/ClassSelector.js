@@ -20,6 +20,8 @@ const ClassSelector = ({ classList, profession, handleClassSelector }) => {
             disabled={
               //["Occultist", "Dragon"].indexOf(profession) > -1 ? false : true
               nexSkills.actions.find((e) => e.profession.includes("psion"))
+                ? false
+                : true
             }
             value={profession.toLowerCase()}
             key={i}

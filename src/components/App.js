@@ -84,14 +84,15 @@ sortedSkills = sortedSkills.sort((a, b) => {
 });
 
 function App() {
-  return <div>Hello</div>;
-}
-
-export default App;
-/*
-<Dashboard
+  return (
+    <div>
+      <Dashboard
         theme={darkTheme}
         debugSkills={sortedSkills}
         classList={classList}
       />
-      */
+    </div>
+  );
+}
+
+export default App;
