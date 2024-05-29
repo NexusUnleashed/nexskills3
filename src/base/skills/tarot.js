@@ -206,13 +206,13 @@ export const tarot = [
     skill: "tarot",
     balance: "equilibrium",
     tags: ["aff"],
-    affs: ["manaleech"],
+    affs: [],
     length: 3.0,
   },
 
   {
-    id: "tarotRuinateJustice",
-    fullName: "Ruinate Justice",
+    id: "tarotHeretic",
+    fullName: "Tarot Heretic",
     firstPerson:
       /^The Heretic writhes between your fingers as you unleash it upon (?<target>\w+), blue sparks lighting the tips of your digits as they flicker across the Ruin-wrought image\.$/,
     secondPerson:
