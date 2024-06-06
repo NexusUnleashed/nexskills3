@@ -16,7 +16,7 @@ import { shaman } from "./professions/shaman";
 import { sylvan } from "./professions/sylvan";
 //Skills
 import { aeonics } from "./skills/aeonics";
-import { domination } from "./skills/domination";
+import domination from "./skills/domination";
 import { harmonics } from "./skills/harmonics";
 import { ignition } from "./skills/ignition";
 import { occultism } from "./skills/occultism";

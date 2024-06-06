@@ -3,6 +3,7 @@ import Dashboard from "./Dashboard";
 import { classList } from "../base/nexSkills";
 import { createTheme } from "@mui/material";
 import { nexSkills } from "../base/nexSkills";
+import FirstComponent from "./FirstComponent";
 
 const darkTheme = createTheme({
   palette: {
@@ -86,6 +87,7 @@ sortedSkills = sortedSkills.sort((a, b) => {
 function App() {
   return (
     <div>
+      <FirstComponent />
       <Dashboard
         theme={darkTheme}
         debugSkills={sortedSkills}

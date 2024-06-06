@@ -1,6 +1,6 @@
-const domination = {
+export const domination = [
   //#region COMMANDS
-  humbugCommand: {
+  {
     id: "humbugCommand",
     fullName: "Humbug Command",
     firstPerson:
@@ -15,7 +15,7 @@ const domination = {
     tags: [],
     length: 2.5,
   },
-  houndCommand: {
+  {
     id: "houndCommand",
     fullName: "Hound Command",
     firstPerson:
@@ -30,7 +30,7 @@ const domination = {
     tags: [],
     length: 2.2,
   },
-  stormCommand: {
+  {
     id: "stormCommand",
     fullName: "Storm Command",
     firstPerson:
@@ -45,7 +45,7 @@ const domination = {
     tags: [],
     length: 2.2,
   },
-  bloodleechCommand: {
+  {
     id: "bloodleechCommand",
     fullName: "Bloodleech Command",
     firstPerson:
@@ -60,7 +60,7 @@ const domination = {
     tags: [],
     length: 2.2,
   },
-  sycophantCommand: {
+  {
     id: "sycophantCommand",
     fullName: "Sycophant Command",
     firstPerson:
@@ -75,7 +75,7 @@ const domination = {
     tags: [],
     length: 2,
   },
-  slimeCommand: {
+  {
     id: "slimeCommand",
     fullName: "Slime Command",
     firstPerson: /^You command your slime to envelop (?<target>\w+)\.$/,
@@ -89,7 +89,7 @@ const domination = {
     tags: [],
     length: 2.6,
   },
-  slimeCommand2: {
+  {
     id: "slimeCommand2",
     fullName: "Slime Command",
     firstPerson: false,
@@ -102,7 +102,7 @@ const domination = {
     tags: [],
     length: 2.6,
   },
-  chimeraCommandDeaf: {
+  {
     id: "chimeraCommandDeaf",
     fullName: "Chimera Command",
     firstPerson: false,
@@ -118,7 +118,7 @@ const domination = {
     length: 2.6,
     //multiLine: -1
   },
-  chimeraCommand: {
+  {
     id: "chimeraCommand",
     fullName: "Chimera Command",
     firstPerson: false,
@@ -132,7 +132,7 @@ const domination = {
     length: 2.6,
     //multiLine: -1
   },
-  bubonisComand: {
+  {
     id: "bubonisCommand",
     fullName: "Bubonis Command",
     firstPerson: false,
@@ -147,7 +147,7 @@ const domination = {
     length: 2.4,
     //multiLine: -1,
   },
-  wormCommand: {
+  {
     id: "wormCommand",
     fullName: "Worm Command",
     firstPerson:
@@ -163,7 +163,7 @@ const domination = {
     length: 2.2,
     //multiLine: -1,
   },
-  wormTick: {
+  {
     id: "wormTick",
     fullName: "Worm Tick",
     firstPerson: false, // same message as third person
@@ -178,7 +178,7 @@ const domination = {
     length: 2.2,
     //multiLine: -1,
   },
-  croneCommand: {
+  {
     id: "croneCommand",
     fullName: "Crone Command",
     firstPerson:
@@ -198,7 +198,7 @@ const domination = {
     },
     //multiLine: -1,
   },
-  abominationCommand: {
+  {
     id: "abominationCommand",
     fullName: "Abomination Command",
     firstPerson:
@@ -217,7 +217,7 @@ const domination = {
   },
   //#endregion
   //#region PRIMEBONDS
-  wormPrime: {
+  {
     id: "wormPrime",
     fullName: "Worm Primebond",
     firstPerson: false,
@@ -231,7 +231,7 @@ const domination = {
     tags: [],
     length: 8.0,
   },
-  gremlinPrime: {
+  {
     id: "gremlinPrime",
     fullName: "Gremlin Primebond",
     firstPerson: false,
@@ -245,7 +245,7 @@ const domination = {
     tags: [],
     length: 11.0,
   },
-  humbugPrime: {
+  {
     id: "humbugPrime",
     fullName: "Humbug Primebond",
     firstPerson: false,
@@ -259,7 +259,7 @@ const domination = {
     tags: [],
     length: 5.0,
   },
-  bloodleechPrime: {
+  {
     id: "bloodleechPrime",
     fullName: "Bloodleech Primebond",
     firstPerson: false,
@@ -273,7 +273,7 @@ const domination = {
     tags: [],
     length: 5.0,
   },
-  slimePrime: {
+  {
     id: "slimePrime",
     fullName: "Slime Primebond",
     firstPerson: false,
@@ -286,7 +286,7 @@ const domination = {
     tags: [],
     length: 10.0,
   },
-  bubonisPrime: {
+  {
     id: "bubonisPrime",
     fullName: "Bubonis Primebond",
     firstPerson:
@@ -300,6 +300,4 @@ const domination = {
     length: 11.0,
   },
   //#endregion
-};
-
-export default Object.values(domination);
+];
