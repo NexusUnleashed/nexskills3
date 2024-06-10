@@ -58,6 +58,16 @@ const npcs = [
   ...barrow,
 ];
 
+const npcsMap = new Map();
+npcs.forEach((npc) => {
+  npc.areaId.forEach((areaId) => {
+    if (!npcsMap.has(areaId)) {
+      npcsMap.set(areaId, []);
+    }
+    npcsMap.get(areaId).push(npc);
+  });
+});
+
 const actions = [
   ...depthswalker,
   ...dragon,
@@ -126,49 +136,15 @@ export const classList = [
 //The flames of dragonbreath fade from a fortress guardsman's skin.
 //A knight of the Siroccian Order's blackened flesh slowly knits together.
 
-const checkSkillsOld = (line) => {
-  const text = line;
-  let result = false;
-
-  for (let i = 0; i < actions.length; i++) {
-    const element = actions[i];
-    const checks = [];
-    if (
-      element.profession === GMCP.Char.Status.class.toLowerCase() ||
-      GMCP.Char.Status.class.toLowerCase().indexOf(element.profession) > -1
-    ) {
-      checks.push(element.firstPerson);
-    }
-    checks.push(element.secondPerson, element.thirdPerson);
-
-    for (const check of checks) {
-      result = text.match(check);
-      if (result) {
-        break;
-      }
-    }
-
-    if (result) {
-      result.groups.action = element.id;
-      eventStream.raiseEvent("nexSkillMatch", {
-        matches: result,
-        action: element,
-      });
-      break;
-    }
-  }
-
-  return result ? result : false;
-};
-
 const checkSkills = (text) => {
   let result = false;
   let action = false;
+  const profession = GMCP.Char.Status.class.toLowerCase();
 
   for (let i = 0; i < actions.length; i++) {
     action = actions[i];
     if (
-      action.profession.includes(GMCP.Char.Status.class.toLowerCase()) ||
+      action.profession.includes(profession) ||
       action.profession.includes("general")
     ) {
       result = action.firstPerson ? text.match(action.firstPerson) : false;
@@ -224,12 +200,10 @@ const checkSkills = (text) => {
 };
 
 const checkNpcs = (text) => {
+  const areaId = GMCP.Location.areaid;
+  const areaNpcs = npcsMap.get(areaId) || [];
   let result = false;
   let action = false;
-
-  const areaNpcs = npcs.filter(
-    (e) => e.areaId.includes(GMCP.Location.areaid) || e.areaId.length === 0
-  );
 
   if (areaNpcs.length === 0) {
     return false;
