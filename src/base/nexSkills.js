@@ -58,6 +58,16 @@ const npcs = [
   ...barrow,
 ];
 
+const npcsMap = new Map();
+npcs.forEach((npc) => {
+  npc.areaId.forEach((areaId) => {
+    if (!npcsMap.has(areaId)) {
+      npcsMap.set(areaId, []);
+    }
+    npcsMap.get(areaId).push(npc);
+  });
+});
+
 const actions = [
   ...depthswalker,
   ...dragon,
@@ -190,12 +200,10 @@ const checkSkills = (text) => {
 };
 
 const checkNpcs = (text) => {
+  const areaId = GMCP.Location.areaid;
+  const areaNpcs = npcsMap.get(areaId) || [];
   let result = false;
   let action = false;
-
-  const areaNpcs = npcs.filter(
-    (e) => e.areaId.includes(GMCP.Location.areaid) || e.areaId.length === 0
-  );
 
   if (areaNpcs.length === 0) {
     return false;
