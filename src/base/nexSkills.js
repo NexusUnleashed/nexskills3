@@ -126,49 +126,15 @@ export const classList = [
 //The flames of dragonbreath fade from a fortress guardsman's skin.
 //A knight of the Siroccian Order's blackened flesh slowly knits together.
 
-const checkSkillsOld = (line) => {
-  const text = line;
-  let result = false;
-
-  for (let i = 0; i < actions.length; i++) {
-    const element = actions[i];
-    const checks = [];
-    if (
-      element.profession === GMCP.Char.Status.class.toLowerCase() ||
-      GMCP.Char.Status.class.toLowerCase().indexOf(element.profession) > -1
-    ) {
-      checks.push(element.firstPerson);
-    }
-    checks.push(element.secondPerson, element.thirdPerson);
-
-    for (const check of checks) {
-      result = text.match(check);
-      if (result) {
-        break;
-      }
-    }
-
-    if (result) {
-      result.groups.action = element.id;
-      eventStream.raiseEvent("nexSkillMatch", {
-        matches: result,
-        action: element,
-      });
-      break;
-    }
-  }
-
-  return result ? result : false;
-};
-
 const checkSkills = (text) => {
   let result = false;
   let action = false;
+  const profession = GMCP.Char.Status.class.toLowerCase();
 
   for (let i = 0; i < actions.length; i++) {
     action = actions[i];
     if (
-      action.profession.includes(GMCP.Char.Status.class.toLowerCase()) ||
+      action.profession.includes(profession) ||
       action.profession.includes("general")
     ) {
       result = action.firstPerson ? text.match(action.firstPerson) : false;
