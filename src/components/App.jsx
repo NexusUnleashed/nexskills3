@@ -18,6 +18,11 @@ const darkTheme = createTheme({
     fontFamily: ["Arial"],
   },
   components: {
+    MuiTreeItem: {
+      defaultProps: {
+        sx: { color: "#FFF5D6" },
+      },
+    },
     MuiList: {
       defaultProps: {
         sx: { color: "#FFF5D6" },
@@ -87,7 +92,6 @@ sortedSkills = sortedSkills.sort((a, b) => {
 function App() {
   return (
     <div>
-      <FirstComponent />
       <Dashboard
         theme={darkTheme}
         debugSkills={sortedSkills}

@@ -1,5 +1,7 @@
 import { Box, List, ThemeProvider } from "@mui/material";
 import { useEffect, useState } from "react";
+import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
+import { TreeItem } from "@mui/x-tree-view/TreeItem";
 import { startUp } from "../base/mongo";
 import ClassSelector from "./ClassSelector";
 import SkillListItem from "./SkillListItem";
@@ -13,10 +15,15 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
   const [profession, setProfession] = useState("all");
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const handleListItemClick = (event, index, id) => {
-    globalThis.tester = skills.find((e) => e.id === id);
-    setSkill(skills.find((e) => e.id === id));
-    setSelectedIndex(index);
+  const handleListItemClick = (event, id, selected) => {
+    const check = id.split("-");
+    if (check.length !== 4) {
+      return;
+    }
+    console.log(check[3]);
+    globalThis.tester = skills.find((e) => e.id === check[3]);
+    setSkill(debugSkills.find((e) => e.id === check[3]));
+    setSelectedIndex(selected);
   };
 
   const handleClassSelector = (event) => {
@@ -64,11 +71,49 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
             padding: "10px",
           }}
         >
-          <ClassSelector
+          {/*<ClassSelector
             classList={classList}
             profession={profession}
             handleClassSelector={handleClassSelector}
-          />
+          />*/}
+          <SimpleTreeView onItemSelectionToggle={handleListItemClick}>
+            {Object.keys(classList).map((id, i) => (
+              <TreeItem
+                itemId={`grid-${id}`}
+                label={`${id} (${
+                  debugSkills.filter((e) =>
+                    e.profession.includes(id.toLowerCase())
+                  ).length
+                })`}
+                key={`grid-${id}`}
+              >
+                {[...classList[id], "Attainment"].map((id2, i2) => (
+                  <TreeItem
+                    itemId={`grid-${id}-${id2}`}
+                    label={`${id2} (${
+                      debugSkills.filter(
+                        (e) =>
+                          e.skill === id2.toLowerCase() &&
+                          e.profession.includes(id.toLowerCase())
+                      ).length
+                    })`}
+                    key={`grid-${id}-${id2}`}
+                  >
+                    {debugSkills
+                      .filter((e) => e.skill === id2.toLowerCase())
+                      .map((skill, i3) => (
+                        <TreeItem
+                          itemId={`grid-${id}-${id2}-${skill.id}`}
+                          label={skill.fullName}
+                          key={`grid-${id}-${id2}-${skill.id}`}
+                        ></TreeItem>
+                      ))}
+                  </TreeItem>
+                ))}
+              </TreeItem>
+            ))}
+          </SimpleTreeView>
+          {/*
           <List component="nav" aria-label="secondary mailbox folder">
             {skills
               .filter(
@@ -84,6 +129,7 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
                 />
               ))}
           </List>
+*/}
         </Box>
         <Box
           sx={{

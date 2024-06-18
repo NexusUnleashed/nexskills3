@@ -1,7 +1,7 @@
 const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+//const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -41,7 +41,7 @@ module.exports = {
     new ESLintPlugin({
       extensions: [".tsx", ".ts", ".js", ".jsx"],
     }),
-    new NodePolyfillPlugin(),
+    //new NodePolyfillPlugin(),
   ],
   experiments: {
     topLevelAwait: true, // Enable top-level await for the loadModules function
