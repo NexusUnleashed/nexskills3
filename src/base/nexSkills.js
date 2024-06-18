@@ -2,11 +2,11 @@
 
 import { startUp } from "./mongo";
 //Attainment
-import { depthswalker } from "./skills/attainment/depthswalker";
-import { dragon } from "./skills/attainment/dragon";
-import { occultist } from "./skills/attainment/occultist";
-import { runewarden } from "./skills/attainment/runewarden";
-import { sylvan } from "./skills/attainment/sylvan";
+import depthswalker from "./skills/attainment/depthswalker";
+import dragon from "./skills/attainment/dragon";
+import occultist from "./skills/attainment/occultist";
+import runewarden from "./skills/attainment/runewarden";
+import sylvan from "./skills/attainment/sylvan";
 //Skills
 import aeonics from "./skills/aeonics";
 import curses from "./skills/curses";
@@ -33,9 +33,9 @@ import weatherweaving from "./skills/weatherweaving";
 import weaving from "./skills/weaving";
 import zeal from "./skills/zeal";
 //General
-import { curing } from "./general/curing";
-import { general } from "./general/general";
-import { tattoos } from "./general/tattoos";
+import curing from "./general/curing";
+import general from "./general/general";
+import tattoos from "./general/tattoos";
 //NPCS
 import { barrow } from "./areas/barrow";
 import { npcs as battlesite } from "./areas/battlesite";

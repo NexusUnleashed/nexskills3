@@ -1,5 +1,5 @@
-export const sylvan = [
-  {
+export const sylvan = {
+  thornpierce: {
     id: "thornpierce",
     fullName: "Thornpierce",
     firstPerson:
@@ -14,7 +14,7 @@ export const sylvan = [
     tags: ["pve", "raze"],
     length: 3,
   },
-  {
+  torrent: {
     id: "torrent",
     fullName: "Torrent",
     firstPerson:
@@ -28,7 +28,7 @@ export const sylvan = [
     tags: ["pve", "damage"],
     length: 0,
   },
-  {
+  rockshot: {
     id: "rockshot",
     fullName: "Rockshot",
     firstPerson:
@@ -44,7 +44,7 @@ export const sylvan = [
     affs: ["amensia"],
     length: 0,
   },
-  {
+  stonevine: {
     id: "stonevine",
     fullName: "Stonevine",
     firstPerson:
@@ -60,7 +60,7 @@ export const sylvan = [
     affs: [],
     length: 0,
   },
-  {
+  leechroot: {
     id: "leechroot",
     fullName: "Leechroot",
     firstPerson:
@@ -76,4 +76,5 @@ export const sylvan = [
     affs: [],
     length: 0,
   },
-];
+};
+export default Object.values(sylvan);

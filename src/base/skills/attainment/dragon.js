@@ -1,6 +1,6 @@
-export const dragon = [
+export const dragon = {
   //#region Attainment
-  {
+  glaciate: {
     id: "glaciate",
     fullName: "Glaciate",
     firstPerson:
@@ -14,7 +14,7 @@ export const dragon = [
     tags: ["pve", "stun"],
     length: 3.0,
   },
-  {
+  frostrive: {
     id: "frostrive",
     fullName: "Frostrive",
     firstPerson:
@@ -28,7 +28,7 @@ export const dragon = [
     tags: ["pve", "raze"],
     length: 3.0,
   },
-  {
+  override: {
     id: "override",
     fullName: "Override",
     firstPerson:
@@ -42,7 +42,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  ague: {
     id: "ague",
     fullName: "Ague",
     firstPerson:
@@ -56,7 +56,7 @@ export const dragon = [
     tags: ["pve", "clumsy"],
     length: 3.0,
   },
-  {
+  dragonchill: {
     id: "dragonchill",
     fullName: "Dragonchill",
     firstPerson:
@@ -70,7 +70,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  frostwave: {
     id: "frostwave",
     fullName: "Frostwave",
     firstPerson: /^You breathe a wave of icy air at (?<target>.+?)\.$/,
@@ -83,7 +83,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  dragonsting: {
     id: "dragonsting",
     fullName: "Dragonsting",
     firstPerson:
@@ -97,7 +97,7 @@ export const dragon = [
     tags: ["pve", "damage", "sensitivity"],
     length: 3.0,
   },
-  {
+  dragonspit: {
     id: "dragonspit",
     fullName: "Dragonspit",
     firstPerson:
@@ -111,7 +111,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  dragonspitTick: {
     id: "dragonspitTick",
     fullName: "Dragonspit Tick",
     firstPerson: false,
@@ -125,7 +125,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  corrode: {
     id: "corrode",
     fullName: "Corrode",
     firstPerson:
@@ -140,7 +140,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  dragonfear: {
     id: "dragonfear",
     fullName: "Dragonfear",
     firstPerson:
@@ -154,7 +154,7 @@ export const dragon = [
     tags: ["pve", "damage", "fear"],
     length: 3.0,
   },
-  {
+  dragonblaze: {
     id: "dragonblaze",
     fullName: "Dragonblaze",
     firstPerson:
@@ -168,7 +168,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  dragonblazeTick: {
     id: "dragonblazeTick",
     fullName: "Dragonblaze tick",
     firstPerson: false,
@@ -182,7 +182,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  scorch: {
     id: "scorch",
     fullName: "Scorch",
     firstPerson:
@@ -196,7 +196,7 @@ export const dragon = [
     tags: ["pve", "inhibit"],
     length: 3.0,
   },
-  {
+  overwhelm: {
     id: "overwhelm",
     fullName: "Overwhelm",
     firstPerson:
@@ -210,7 +210,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  dragontaunt: {
     id: "dragontaunt",
     fullName: "Dragontaunt",
     firstPerson:
@@ -224,7 +224,7 @@ export const dragon = [
     tags: ["pve", "recklessness"],
     length: 3.0,
   },
-  {
+  flamebath: {
     id: "flamebath",
     fullName: "Flamebath",
     firstPerson:
@@ -238,7 +238,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  melt: {
     id: "melt",
     fullName: "Melt",
     firstPerson:
@@ -253,4 +253,6 @@ export const dragon = [
     length: 3.0,
   },
   //#endregion
-];
+};
+
+export default Object.values(dragon);

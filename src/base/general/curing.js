@@ -1,5 +1,5 @@
-export const curing = [
-  {
+export const curing = {
+  eat: {
     id: "eat",
     fullName: "Eat",
     firstPerson: false,
@@ -12,7 +12,7 @@ export const curing = [
     tags: [],
     length: 1.6,
   },
-  {
+  apply: {
     id: "apply",
     fullName: "Apply",
     firstPerson: false,
@@ -26,7 +26,7 @@ export const curing = [
     tags: [],
     length: 1,
   },
-  {
+  smoke: {
     id: "smoke",
     fullName: "Smoke",
     firstPerson: false,
@@ -39,7 +39,7 @@ export const curing = [
     tags: [],
     length: 1.6,
   },
-  {
+  sip: {
     id: "sip",
     fullName: "Sip",
     firstPerson: false,
@@ -52,7 +52,7 @@ export const curing = [
     tags: [],
     length: 1.6,
   },
-  {
+  focus: {
     id: "focus",
     fullName: "Focus",
     firstPerson: false,
@@ -65,4 +65,6 @@ export const curing = [
     tags: [],
     length: 2.5,
   },
-];
+};
+
+export default Object.values(curing);

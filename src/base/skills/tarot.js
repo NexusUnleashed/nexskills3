@@ -228,4 +228,6 @@ export const tarot = {
   },
 };
 
+//Archaeon tosses a tarot card at Proficy and as it reaches him, a huge mass of rope bursts out of it, entrapping and hindering him.
+
 export default Object.values(tarot);

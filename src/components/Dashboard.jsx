@@ -67,7 +67,7 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
             border: "1px grey solid",
             background: "black",
             height: "auto",
-            width: "150px",
+            width: "250px",
             padding: "10px",
           }}
         >

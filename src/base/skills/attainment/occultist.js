@@ -1,6 +1,6 @@
-export const occultist = [
+export const occultist = {
   //#region Attainment
-  {
+  harry: {
     id: "harry",
     fullName: "Harry",
     firstPerson:
@@ -13,7 +13,7 @@ export const occultist = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  harryTick: {
     id: "harryTick",
     fullName: "Harry tick",
     firstPerson: false,
@@ -26,7 +26,7 @@ export const occultist = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  chaosgate: {
     id: "chaosgate",
     fullName: "Chaosgate",
     firstPerson:
@@ -39,7 +39,7 @@ export const occultist = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  chaosgate: {
     id: "chaosgate",
     fullName: "Chaosgate",
     firstPerson:
@@ -53,7 +53,7 @@ export const occultist = [
     tags: ["pve", "charm"],
     length: 3.0,
   },
-  {
+  stagnate: {
     id: "stagnate",
     fullName: "Stagnate",
     firstPerson:
@@ -67,7 +67,7 @@ export const occultist = [
     tags: ["pve", "aeon"],
     length: 3.0,
   },
-  {
+  fluctuate: {
     id: "fluctuate",
     fullName: "Fluctuate",
     firstPerson:
@@ -81,7 +81,7 @@ export const occultist = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  ruin: {
     id: "ruin",
     fullName: "Ruin",
     firstPerson:
@@ -96,6 +96,6 @@ export const occultist = [
     length: 3.0,
   },
   //#endregion
-];
+};
 
-//Archaeon tosses a tarot card at Proficy and as it reaches him, a huge mass of rope bursts out of it, entrapping and hindering him.
+export default Object.values(occultist);

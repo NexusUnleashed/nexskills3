@@ -1,5 +1,5 @@
-export const depthswalker = [
-  {
+export const depthswalker = {
+  lash: {
     id: "lash",
     fullName: "Lash",
     firstPerson:
@@ -12,7 +12,7 @@ export const depthswalker = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  drain: {
     id: "drain",
     fullName: "Drain",
     firstPerson:
@@ -25,7 +25,7 @@ export const depthswalker = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  drainTick: {
     id: "drainTick",
     fullName: "Drain Tick",
     firstPerson: false,
@@ -38,7 +38,7 @@ export const depthswalker = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  nakail: {
     id: "nakail",
     fullName: "Nakail",
     firstPerson:
@@ -52,4 +52,6 @@ export const depthswalker = [
     tags: ["pve", "raze"],
     length: 3.0,
   },
-];
+};
+
+export default Object.values(depthswalker);

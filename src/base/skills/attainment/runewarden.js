@@ -1,6 +1,6 @@
-export const runewarden = [
+export const runewarden = {
   //#region Attainment
-  {
+  collide: {
     id: "collide",
     fullName: "Collide",
     firstPerson:
@@ -13,7 +13,7 @@ export const runewarden = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  onslaught: {
     id: "onslaught",
     fullName: "Onslaught",
     firstPerson:
@@ -27,4 +27,6 @@ export const runewarden = [
     length: 3.0,
   },
   //#endregion
-];
+};
+
+export default Object.values(runewarden);

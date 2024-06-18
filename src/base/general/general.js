@@ -1,5 +1,5 @@
-export const general = [
-  {
+export const general = {
+  npcSlain: {
     id: "npcSlain",
     fullName: "SLAIN",
     firstPerson: /^You have slain (?<target>.+), retrieving the corpse\.$/,
@@ -12,7 +12,7 @@ export const general = [
     tags: [],
     length: 0,
   },
-  {
+  rebounding: {
     id: "rebounding",
     fullName: "Rebounding",
     firstPerson: /^You feel an aura of rebounding surround you\.$/,
@@ -26,7 +26,7 @@ export const general = [
     tags: [],
     length: 0,
   },
-  {
+  prismatic: {
     id: "prismatic",
     fullName: "Prismatic",
     firstPerson:
@@ -41,6 +41,7 @@ export const general = [
     tags: [],
     length: 4.0,
   },
-];
+};
 
 //Atalkez raises his hands dramatically and summons an icewall to the in.
+export default Object.values(general);

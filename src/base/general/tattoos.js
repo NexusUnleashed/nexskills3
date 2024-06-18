@@ -1,6 +1,6 @@
 //A nearly invisible magical shield forms around a sturdy troll woman.
-export const tattoos = [
-  {
+export const tattoos = {
+  shield: {
     id: "shield",
     fullName: "Shield",
     firstPerson:
@@ -15,7 +15,7 @@ export const tattoos = [
     tags: [],
     length: 4.0,
   },
-  {
+  tree: {
     id: "tree",
     fullName: "Tree",
     firstPerson: /^You touch the tree of life tattoo\.$/,
@@ -28,4 +28,6 @@ export const tattoos = [
     tags: [],
     length: 0,
   },
-];
+};
+
+export default Object.values(tattoos);

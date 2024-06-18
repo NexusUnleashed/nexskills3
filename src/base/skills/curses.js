@@ -1,4 +1,4 @@
-export const shaman = {
+export const curses = {
   //#region Curses
   bleed: {
     id: "bleed",
