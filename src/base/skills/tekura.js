@@ -1,5 +1,5 @@
-export const tekura = [
-  {
+export const tekura = {
+  sdk: {
     id: "sdk",
     fullName: "Sidekick",
     firstPerson: false,
@@ -12,7 +12,7 @@ export const tekura = [
     tags: ["pve", "damage"],
     length: 4.0,
   },
-  {
+  upc: {
     id: "upc",
     fullName: "Uppercut",
     firstPerson: false,
@@ -25,4 +25,6 @@ export const tekura = [
     tags: ["pve", "damage"],
     length: 4.0,
   },
-];
+};
+
+export default Object.values(tekura);

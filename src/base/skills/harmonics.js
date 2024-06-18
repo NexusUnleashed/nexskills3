@@ -1,5 +1,5 @@
-export const harmonics = [
-  {
+export const harmonics = {
+  berceuse: {
     id: "berceuse",
     fullName: "Berceuse",
     firstPerson: false,
@@ -13,7 +13,7 @@ export const harmonics = [
     tags: [],
     length: 0,
   },
-  {
+  reel: {
     id: "reel",
     fullName: "Reel",
     firstPerson: false,
@@ -27,9 +27,9 @@ export const harmonics = [
     tags: [],
     length: 0,
   },
-  {
-    id: "reel",
-    fullName: "Reel",
+  xxx: {
+    id: "xxx",
+    fullName: "XXX",
     firstPerson: false,
     secondPerson:
       /^The Contradanse melody swells sharply in your ear with a discombobulating sonic burst\.$/,
@@ -41,4 +41,6 @@ export const harmonics = [
     tags: [],
     length: 0,
   },
-];
+};
+
+export default Object.values(harmonics);

@@ -1,6 +1,6 @@
-export const jester = [
+export const pranks = {
   //#region Pranks
-  {
+  bop: {
     id: "bop",
     fullName: "Bop",
     firstPerson: false,
@@ -13,7 +13,7 @@ export const jester = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  bop2: {
     id: "bop2",
     fullName: "Bop",
     firstPerson: false,
@@ -27,7 +27,7 @@ export const jester = [
     length: 3.0,
   },
   //#endregion
-];
+};
 
 //Archaeon viciously mangles the right leg of a puppet of Antoninus.
 //Archaeon starts giggling insanely, and then breaks all four limbs on his puppet of Antoninus.
@@ -38,3 +38,5 @@ export const jester = [
 
 //Archaeon raises his hands dramatically and summons an icewall to the up.
 //Archaeon glances at Antoninus while adding some facial detail to a puppet.
+
+export default Object.values(pranks);

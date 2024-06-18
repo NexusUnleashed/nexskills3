@@ -1,5 +1,5 @@
-export const shadowmancy = [
-  {
+export const shadowmancy = {
+  reap: {
     //SHADOW REAP KHASEEM KALMIA
     //You rub some kalmia on a scythe of shadows.
     //You unleash a vicious reaping blow at Khaseem with a scythe of shadows.
@@ -18,7 +18,7 @@ export const shadowmancy = [
     tags: [],
     length: 2.4,
   },
-  {
+  cull: {
     //SHADOW CULL KHASEEM KALMIA
     //You rub some kalmia on a scythe of shadows.
     //You lay into Khaseem with a vicious blow from a scythe of shadows.
@@ -37,7 +37,7 @@ export const shadowmancy = [
     tags: [],
     length: 3.35,
   },
-  {
+  shadowStrike: {
     id: "shadowStrike",
     fullName: "Shadow Strike",
     firstPerson:
@@ -53,7 +53,7 @@ export const shadowmancy = [
     tags: [],
     length: 1.3,
   },
-  {
+  shadowStrikeKneel: {
     id: "shadowStrikeKneel",
     fullName: "Shadow Strike",
     firstPerson:
@@ -71,7 +71,7 @@ export const shadowmancy = [
     tags: ["aff"],
     length: 2.4,
   },
-  {
+  instillDepression: {
     id: "instillDepression",
     fullName: "Instill - Depression",
     firstPerson: false,
@@ -86,7 +86,7 @@ export const shadowmancy = [
     tags: [],
     length: 0.0,
   },
-  {
+  instillRetribution: {
     id: "instillRetribution",
     fullName: "Instill - Retribution",
     firstPerson: false,
@@ -101,7 +101,7 @@ export const shadowmancy = [
     tags: [],
     length: 0.0,
   },
-  {
+  instillMadness: {
     id: "instillMadness",
     fullName: "Instill - Madness",
     firstPerson: false,
@@ -116,8 +116,8 @@ export const shadowmancy = [
     tags: [],
     length: 0.0,
   },
-  {
-    id: "instillleach",
+  instillLeach: {
+    id: "instillLeach",
     fullName: "Instill - Leach",
     firstPerson: false,
     secondPerson:
@@ -131,6 +131,8 @@ export const shadowmancy = [
     tags: [],
     length: 0.0,
   },
-];
+};
 //DW instill
 //Focusing upon a scythe of shadows, you instill it with the directive of (\w+).
+
+export default Object.values(shadowmancy);

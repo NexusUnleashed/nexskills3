@@ -1,5 +1,5 @@
-export const tarot = [
-  {
+export const tarot = {
+  tarotEmperor: {
     id: "tarotEmperor",
     fullName: "Tarot Emperor",
     firstPerson:
@@ -15,7 +15,7 @@ export const tarot = [
     length: 3.0,
     multiLine: 0,
   },
-  {
+  tarotMagician: {
     id: "tarotMagician",
     fullName: "Tarot Magician",
     firstPerson:
@@ -31,7 +31,7 @@ export const tarot = [
     length: 3.0,
     multiLine: 0,
   },
-  {
+  tarotPriestess: {
     id: "tarotPriestess",
     fullName: "Priestess",
     firstPerson:
@@ -46,7 +46,7 @@ export const tarot = [
     tags: ["heal"],
     length: 3.0,
   },
-  {
+  tarotLovers: {
     id: "tarotLovers",
     fullName: "Tarot Lovers",
     firstPerson:
@@ -63,7 +63,7 @@ export const tarot = [
     length: 3.0,
     //multiLine: -1,
   },
-  {
+  tarotHangedman: {
     id: "tarotHangedman",
     fullName: "Tarot Hangedman",
     firstPerson:
@@ -79,7 +79,7 @@ export const tarot = [
     length: 2.2,
     //multiLine: -1,
   },
-  {
+  tarotJustice: {
     id: "tarotJustice",
     fullName: "Tarot Justice",
     firstPerson:
@@ -96,7 +96,7 @@ export const tarot = [
     length: 3.0,
     //multiLine: -1,
   },
-  {
+  tarotAeonStrip: {
     id: "tarotAeonStrip",
     fullName: "Tarot Aeon Strip",
     firstPerson:
@@ -113,7 +113,7 @@ export const tarot = [
     length: 3.7,
     //multiLine: -1,
   },
-  {
+  tarotAeon: {
     id: "tarotAeon",
     fullName: "Tarot Aeon",
     firstPerson:
@@ -130,7 +130,7 @@ export const tarot = [
     length: 3.7,
     //multiLine: -1,
   },
-  {
+  tarotMoon: {
     id: "tarotMoon",
     fullName: "Tarot Moon",
     firstPerson:
@@ -147,7 +147,7 @@ export const tarot = [
     length: 2.2,
     //multiLine: -1,
   },
-  {
+  tarotFool: {
     id: "tarotFool",
     fullName: "Fool",
     firstPerson:
@@ -162,7 +162,7 @@ export const tarot = [
     tags: ["cure"],
     length: 3.0,
   },
-  {
+  tarotDeathRub: {
     id: "tarotDeathRub",
     fullName: "Tarot Death Rub",
     firstPerson:
@@ -177,7 +177,7 @@ export const tarot = [
     tags: ["cure"],
     length: 3.2,
   },
-  {
+  tarotRuinateLovers: {
     id: "tarotRuinateLovers",
     fullName: "Ruinate Lovers",
     firstPerson:
@@ -193,7 +193,7 @@ export const tarot = [
     affs: ["manaleech"],
     length: 3.0,
   },
-  {
+  tarotRuinateJustice: {
     id: "tarotRuinateJustice",
     fullName: "Ruinate Justice",
     firstPerson:
@@ -210,7 +210,7 @@ export const tarot = [
     length: 3.0,
   },
 
-  {
+  tarotHeretic: {
     id: "tarotHeretic",
     fullName: "Tarot Heretic",
     firstPerson:
@@ -226,4 +226,6 @@ export const tarot = [
     affs: [],
     length: 3.0,
   },
-];
+};
+
+export default Object.values(tarot);

@@ -1,7 +1,7 @@
 /*global GMCP */
-export const pariah = [
+export const memorium = {
   //#region Pariah
-  {
+  fissure: {
     id: "fissure",
     fullName: "Epitaph Fissure",
     firstPerson: false,
@@ -16,7 +16,7 @@ export const pariah = [
     length: 2.2,
     reaction() {},
   },
-  {
+  serpent: {
     id: "serpent",
     fullName: "Epitaph Serpent",
     firstPerson: false,
@@ -31,7 +31,7 @@ export const pariah = [
     affs: ["paralysis"], //Gives voyria when following scorpion. How to account?
     length: 2.2,
   },
-  {
+  skein: {
     id: "skein",
     fullName: "Epitaph Skein",
     firstPerson: false,
@@ -45,7 +45,7 @@ export const pariah = [
     tags: [],
     length: 2.2,
   },
-  {
+  sun: {
     id: "sun",
     fullName: "Epitaph Sun",
     firstPerson: false,
@@ -60,7 +60,7 @@ export const pariah = [
     affs: ["epilepsy"],
     length: 2.2,
   },
-  {
+  jackal: {
     id: "jackal",
     fullName: "Epitaph Jackal",
     firstPerson: false,
@@ -76,7 +76,7 @@ export const pariah = [
     affs: ["asthma"],
     length: 2.2,
   },
-  {
+  scales: {
     id: "scales",
     fullName: "Epitaph Scales",
     firstPerson: false,
@@ -92,7 +92,7 @@ export const pariah = [
     affs: ["clumsiness"],
     length: 2.2,
   },
-  {
+  scorpion: {
     id: "scorpion",
     fullName: "Epitaph Scorpion",
     firstPerson: false,
@@ -108,7 +108,7 @@ export const pariah = [
     affs: ["scytherus"],
     length: 2.2,
   },
-  {
+  bear: {
     id: "bear",
     fullName: "Epitaph Bear",
     firstPerson: false,
@@ -124,7 +124,7 @@ export const pariah = [
     affs: ["haemophilia", "bleeding"],
     length: 2.2,
   },
-  {
+  nest: {
     id: "nest",
     fullName: "Epitaph Nest",
     firstPerson: false,
@@ -141,7 +141,9 @@ export const pariah = [
     length: 2.2,
   },
   //#endregion
-];
+};
+
+export default Object.values(memorium);
 
 //Mizik sweeps a leaf-bladed ritual knife in a circle above his head, the point coming to rest aimed at Amranu. A fine crimson spray patters about the two of them, though nothing else seems to have changed.
 //09:15:56.502 A great black cloud of buzzing humming darkness rises up, descending upon Amranu all at once in a wave of stinging death.

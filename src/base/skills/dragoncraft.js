@@ -1,6 +1,6 @@
-export const dragon = [
+export const dragoncraft = {
   //#region Dragoncraft
-  {
+  gut: {
     id: "gut",
     fullName: "Gut",
     firstPerson:
@@ -21,7 +21,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  incantation: {
     id: "incantation",
     fullName: "Incantation",
     firstPerson:
@@ -42,7 +42,7 @@ export const dragon = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  dragoncurse: {
     id: "dragoncurse",
     fullName: "Dragoncurse",
     firstPerson: false,
@@ -63,7 +63,7 @@ export const dragon = [
     length: 4.0,
     multiline: 0,
   },
-  {
+  rendUntargeted: {
     id: "rendUntargeted",
     fullName: "Rend",
     firstPerson:
@@ -86,7 +86,7 @@ export const dragon = [
     length: 2.0,
     multiline: 0,
   },
-  {
+  rendTargeted: {
     id: "rendTargeted",
     fullName: "Rend",
     firstPerson:
@@ -113,7 +113,7 @@ export const dragon = [
       action.info = action.args.groups.limb;
     },
   },
-  {
+  tailsmash: {
     id: "tailsmash",
     fullName: "Tailsmash",
     firstPerson:
@@ -134,7 +134,7 @@ export const dragon = [
     tags: ["pve", "raze"],
     length: 2.0,
   },
-  {
+  dragonheal: {
     id: "dragonheal",
     fullName: "Dragonheal",
     firstPerson:
@@ -156,7 +156,7 @@ export const dragon = [
     tags: ["cure"],
     length: 2.5,
   },
-  {
+  tailsweep: {
     id: "tailsweep",
     fullName: "Tailsweep",
     firstPerson:
@@ -178,7 +178,7 @@ export const dragon = [
     tags: [],
     length: 4.0,
   },
-  {
+  tailsweepHit: {
     id: "tailsweepHit",
     fullName: "Tailsweep",
     firstPerson:
@@ -202,7 +202,7 @@ export const dragon = [
     tags: ["aff"],
     length: 0,
   },
-  {
+  bite: {
     id: "bite",
     fullName: "Bite",
     firstPerson:
@@ -225,7 +225,7 @@ export const dragon = [
     tags: [],
     length: 3.5,
   },
-  {
+  biteProne: {
     id: "biteProne",
     fullName: "Bite - Prone",
     firstPerson:
@@ -249,7 +249,7 @@ export const dragon = [
     tags: [],
     length: 3.5,
   },
-  {
+  enmesh: {
     id: "enmesh",
     fullName: "Enmesh",
     firstPerson:
@@ -273,7 +273,7 @@ export const dragon = [
     tags: ["aff"],
     length: 3.0,
   },
-  {
+  enmeshHit1: {
     id: "enmeshHit1",
     fullName: "Enmesh",
     firstPerson: false,
@@ -296,7 +296,7 @@ export const dragon = [
     tags: ["aff"],
     length: 0,
   },
-  {
+  enmeshHit2: {
     id: "enmeshHit2",
     fullName: "Enmesh",
     firstPerson: false,
@@ -319,7 +319,7 @@ export const dragon = [
     tags: ["aff"],
     length: 0,
   },
-  {
+  dragonroar: {
     id: "dragonroar",
     fullName: "Dragonroar",
     firstPerson:
@@ -343,7 +343,7 @@ export const dragon = [
     tags: ["aff"],
     length: 4.0,
   },
-  {
+  breathgust: {
     id: "breathgust",
     fullName: "Gust",
     firstPerson:
@@ -367,7 +367,7 @@ export const dragon = [
     tags: ["aff"],
     length: 2.5,
   },
-  {
+  blastRed: {
     id: "blastRed",
     fullName: "Blast",
     firstPerson:
@@ -384,7 +384,7 @@ export const dragon = [
     length: 4.0,
     multiline: 0,
   },
-  {
+  blastGreen: {
     id: "blastGreen",
     fullName: "Blast",
     firstPerson:
@@ -401,7 +401,7 @@ export const dragon = [
     length: 4.0,
     multiline: 0,
   },
-  {
+  blastBlue: {
     id: "blastBlue",
     fullName: "Blast",
     firstPerson:
@@ -418,7 +418,7 @@ export const dragon = [
     length: 4.0,
     multiline: 0,
   },
-  {
+  blastBlack: {
     id: "blastBlack",
     fullName: "Blast",
     firstPerson:
@@ -435,7 +435,7 @@ export const dragon = [
     length: 4.0,
     multiline: 0,
   },
-  {
+  blastGold: {
     id: "blastGold",
     fullName: "Blast",
     firstPerson:
@@ -452,7 +452,7 @@ export const dragon = [
     length: 4.0,
     multiline: 0,
   },
-  {
+  blastSilver: {
     id: "blastSilver",
     fullName: "Blast",
     firstPerson:
@@ -472,258 +472,6 @@ export const dragon = [
   //Red
   //TODO enmesh
   //#endregion
-  //#region Attainment
-  {
-    id: "glaciate",
-    fullName: "Glaciate",
-    firstPerson:
-      /^You breathe a column of icy air at (?<target>.+?)'s head, stunning \w+\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["blue dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Stun",
-    tags: ["pve", "stun"],
-    length: 3.0,
-  },
-  {
-    id: "frostrive",
-    fullName: "Frostrive",
-    firstPerson:
-      /^(?<target>.+?)'s translucent shield cracks and fades away as you breathe an icy blast at it\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["blue dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Raze",
-    tags: ["pve", "raze"],
-    length: 3.0,
-  },
-  {
-    id: "override",
-    fullName: "Override",
-    firstPerson:
-      /^You barrel into (?<target>.+?) and knock \w+ to the ground before stomping over \w+ prone form\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["blue dragon", "black dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "ague",
-    fullName: "Ague",
-    firstPerson:
-      /^You let loose a steady stream of cold air around (?<target>.+?), who begins to shiver uncontrollably\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["blue dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Clumsy",
-    tags: ["pve", "clumsy"],
-    length: 3.0,
-  },
-  {
-    id: "dragonchill",
-    fullName: "Dragonchill",
-    firstPerson:
-      /^You form small chunks of ice in your enormous maw, then spit them at (?<target>.+?) in a barrage\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["blue dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "frostwave",
-    fullName: "Frostwave",
-    firstPerson: /^You breathe a wave of icy air at (?<target>.+?)\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["blue dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "dragonsting",
-    fullName: "Dragonsting",
-    firstPerson:
-      /^You swing your mighty tail around, stabbing (?<target>.+?) with an acid-covered spine\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["black dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Sensitivity",
-    tags: ["pve", "damage", "sensitivity"],
-    length: 3.0,
-  },
-  {
-    id: "dragonspit",
-    fullName: "Dragonspit",
-    firstPerson:
-      /^You spit a stream of acidic venom at (?<target>.+?) who writhes in agony as the spittle seeps into \w+ skin\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["black dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "dragonspitTick",
-    fullName: "Dragonspit Tick",
-    firstPerson: false,
-    secondPerson: false,
-    thirdPerson:
-      /^(?<target>.+?) writhes in agony as acidic spittle eats away at \w+ skin\.$/,
-    profession: ["black dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "corrode",
-    fullName: "Corrode",
-    firstPerson:
-      /^You open your gigantic maw and spew acid on (?<target>.+?)\. \w+ dodges to the side and is only partially covered by the corrosive slime\.$/,
-    secondPerson: false,
-    thirdPerson:
-      /^(?<user>\w+) opens \w+ gigantic maw and spews acid on (?<target>.+?)\. \w+ is too clumsy to dodge and is covered in the corrosive slime\.$/,
-    profession: ["black dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "dragonfear",
-    fullName: "Dragonfear",
-    firstPerson:
-      /^You open your enormous maw and let loose a mighty roar at (?<target>.+?), causing \w+ to quail in fear\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["black dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Fear",
-    tags: ["pve", "damage", "fear"],
-    length: 3.0,
-  },
-  {
-    id: "dragonblaze",
-    fullName: "Dragonblaze",
-    firstPerson:
-      /^You breathe a long torrent of flame at (?<target>.+?), igniting \w+ skin\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["red dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "dragonblazeTick",
-    fullName: "Dragonblaze tick",
-    firstPerson: false,
-    secondPerson: false,
-    thirdPerson:
-      /^(?<target>.+?) is wracked with pain as the flames of dragonbreath wreathe over \w+ skin\.$/,
-    profession: ["red dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "scorch",
-    fullName: "Scorch",
-    firstPerson:
-      /^You blacken (?<target>.+?)'s flesh with a quick blast of flame, slowing \w+ healing process\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["red dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Inhibit",
-    tags: ["pve", "inhibit"],
-    length: 3.0,
-  },
-  {
-    id: "overwhelm",
-    fullName: "Overwhelm",
-    firstPerson:
-      /^You charge quickly at (?<target>.+?), throwing your mighty form into \w+ and sending \w+ staggering back\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["red dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "dragontaunt",
-    fullName: "Dragontaunt",
-    firstPerson:
-      /^You slap your tail on the ground while growling at (?<target>.+?), forcing \w+ to recklessly attack\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["red dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Recklessness",
-    tags: ["pve", "recklessness"],
-    length: 3.0,
-  },
-  {
-    id: "flamebath",
-    fullName: "Flamebath",
-    firstPerson:
-      /^You blast (?<target>.+?) with a bath of flame, but \w+ is able to avoid the brunt of the blast\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["red dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
-    length: 3.0,
-  },
-  {
-    id: "melt",
-    fullName: "Melt",
-    firstPerson:
-      /^You breathe a white-hot blast of flame at (?<target>.+?) and burn away \w+ translucent shield\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["red dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Raze",
-    tags: ["pve", "raze"],
-    length: 3.0,
-  },
-  //#endregion
-];
+};
+
+export default Object.values(dragoncraft);

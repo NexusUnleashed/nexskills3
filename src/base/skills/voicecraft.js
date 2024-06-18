@@ -1,5 +1,5 @@
-export const voicecraft = [
-  {
+export const voicecraft = {
+  limerick: {
     id: "limerick",
     fullName: "Limerick",
     firstPerson: false,
@@ -14,7 +14,7 @@ export const voicecraft = [
     affs: ["impatience"],
     length: 0,
   },
-  {
+  ode: {
     id: "ode",
     fullName: "Ode",
     firstPerson: false,
@@ -29,7 +29,7 @@ export const voicecraft = [
     affs: ["addiction"],
     length: 0,
   },
-  {
+  epic: {
     id: "epic",
     fullName: "Epic",
     firstPerson: false,
@@ -44,7 +44,7 @@ export const voicecraft = [
     affs: ["paralysis"],
     length: 0,
   },
-  {
+  maqam: {
     id: "maqam",
     fullName: "Maqam",
     firstPerson: false,
@@ -59,7 +59,7 @@ export const voicecraft = [
     affs: ["clumsiness"],
     length: 0,
   },
-  {
+  birdDitty: {
     id: "birdDitty",
     fullName: "Ditty",
     firstPerson: false,
@@ -75,7 +75,7 @@ export const voicecraft = [
     affs: ["addiction"],
     length: 0,
   },
-  {
+  birdRequiem: {
     id: "birdRequiem",
     fullName: "Requiem",
     firstPerson: false,
@@ -91,7 +91,7 @@ export const voicecraft = [
     affs: ["paranoia"],
     length: 0,
   },
-  {
+  birdPassion: {
     id: "birdPassion",
     fullName: "Passion",
     firstPerson: false,
@@ -107,7 +107,7 @@ export const voicecraft = [
     affs: ["stupidity"],
     length: 0,
   },
-  {
+  birdPastorale: {
     id: "birdPastorale",
     fullName: "Pastorale",
     firstPerson: false,
@@ -123,4 +123,6 @@ export const voicecraft = [
     affs: ["vertigo"],
     length: 0,
   },
-];
+};
+
+export default Object.values(voicecraft);

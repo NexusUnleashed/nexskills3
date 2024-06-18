@@ -1,5 +1,5 @@
-export const weatherweaving = [
-  {
+export const weatherweaving = {
+  stormhammer: {
     id: "stormhammer",
     fullName: "Stormhammer",
     firstPerson:
@@ -13,8 +13,8 @@ export const weatherweaving = [
     tags: ["pve"],
     length: 6,
   },
-  {
-    id: "stormhammerTwo",
+  stormhammer2: {
+    id: "stormhammer2",
     fullName: "Stormhammerx2",
     firstPerson:
       /^The sky above grows dark as you call upon powerful magics\. Raising your hands balefully, you cause lightning bolts, the hammer of the storm, to shoot from your hands and slam into (?<target>.+?)\. The bolts ricochet off and slam into (?<target2>.+?)\.$/,
@@ -27,8 +27,8 @@ export const weatherweaving = [
     tags: ["pve"],
     length: 6,
   },
-  {
-    id: "stormhammerThree",
+  stormhammer3: {
+    id: "stormhammer3",
     fullName: "Stormhammerx3",
     firstPerson:
       /^The sky above grows dark as you call upon powerful magics\. Raising your hands balefully, you cause lightning bolts, the hammer of the storm, to shoot from your hands and slam into (?<target>.+?)\. The bolts ricochet off and slam into (?<target2>.+?)\. The bolts ricochet off and slam into (?<target3>.+?)\.$/,
@@ -41,4 +41,6 @@ export const weatherweaving = [
     tags: ["pve"],
     length: 6,
   },
-];
+};
+
+export default Object.values(weatherweaving);

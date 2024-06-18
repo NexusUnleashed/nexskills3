@@ -1,5 +1,5 @@
-export const occultism = [
-  {
+export const occultism = {
+  warp: {
     id: "warp",
     fullName: "Warp",
     firstPerson:
@@ -14,7 +14,7 @@ export const occultism = [
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  {
+  instill: {
     id: "instill",
     fullName: "Instill",
     firstPerson:
@@ -27,7 +27,7 @@ export const occultism = [
     tags: ["info"],
     length: 2.5,
   },
-  {
+  enervate: {
     id: "enervate",
     fullName: "Enervate",
     firstPerson:
@@ -42,7 +42,7 @@ export const occultism = [
     tags: [],
     length: 2.9,
   },
-  {
+  ague: {
     id: "ague",
     fullName: "Ague",
     firstPerson:
@@ -58,7 +58,7 @@ export const occultism = [
     tags: ["aff"],
     length: 2.2,
   },
-  {
+  shrivelTargeted: {
     id: "shrivelTargeted",
     fullName: "Shrivel Targeted",
     firstPerson:
@@ -79,7 +79,7 @@ export const occultism = [
       action.affs.push(`broken${action.args.groups.limb.replace(" ", "")}`);
     },
   },
-  {
+  shrivelArms: {
     id: "shrivelArms",
     fullName: "Shrivel Arms",
     firstPerson:
@@ -96,7 +96,7 @@ export const occultism = [
     tags: ["aff"],
     length: 2.1,
   },
-  {
+  shrivelLegs: {
     id: "shrivelLegs",
     fullName: "Shrivel Legs",
     firstPerson:
@@ -113,7 +113,7 @@ export const occultism = [
     tags: ["aff"],
     length: 2.1,
   },
-  {
+  pinchaura: {
     id: "pinchaura",
     fullName: "Pinchaura",
     firstPerson:
@@ -130,7 +130,7 @@ export const occultism = [
     tags: [],
     length: 4.0,
   },
-  {
+  attend: {
     id: "attend",
     fullName: "Attend",
     firstPerson:
@@ -146,7 +146,7 @@ export const occultism = [
     length: 2.5,
     multiLine: 1,
   },
-  {
+  unnamableSpeak: {
     id: "unnamableSpeak",
     fullName: "Unnamable Speak",
     firstPerson:
@@ -161,7 +161,7 @@ export const occultism = [
     length: 3.2,
     multiLine: 0,
   },
-  {
+  unnamableVision: {
     id: "unnamableVision",
     fullName: "Unnamable Vision",
     firstPerson:
@@ -176,7 +176,7 @@ export const occultism = [
     length: 3.2,
     multiLine: 0,
   },
-  {
+  whisperingmadnessMiss: {
     id: "whisperingmadnessMiss",
     fullName: "Whisperingmadness",
     firstPerson:
@@ -192,7 +192,7 @@ export const occultism = [
     tags: ["info"],
     length: 2.3,
   },
-  {
+  whisperingmadness: {
     id: "whisperingmadness",
     fullName: "Whisperingmadness",
     firstPerson:
@@ -207,7 +207,7 @@ export const occultism = [
     tags: [],
     length: 2.3,
   },
-  {
+  devolve: {
     id: "devolve",
     fullName: "Devolve",
     firstPerson:
@@ -224,7 +224,7 @@ export const occultism = [
     length: 2.4,
     multiLine: 1,
   },
-  {
+  bodywarp: {
     id: "bodywarp",
     fullName: "Bodywarp",
     firstPerson:
@@ -240,7 +240,7 @@ export const occultism = [
     length: 2.3,
     multiLine: 0,
   },
-  {
+  cleanseaura: {
     id: "cleanseaura",
     fullName: "Cleanseaura",
     firstPerson:
@@ -259,7 +259,7 @@ export const occultism = [
     //fail: The energy flickers and fades with no visible change.
     //success: A look of sudden concern flits across the visage of Pamxen.
   },
-  {
+  interlink: {
     id: "interlink",
     fullName: "Interlink",
     firstPerson:
@@ -280,7 +280,7 @@ export const occultism = [
       action.affs.push(`broken${action.args.groups.limb.replace(" ", "")}`);
     },
   },
-  {
+  regress: {
     id: "regress",
     fullName: "Regress",
     firstPerson:
@@ -297,7 +297,7 @@ export const occultism = [
     //The legs of Pamxen snap out from under \w+.
     //The face of Pamxen turns a particularly vibrant shade of green.
   },
-  {
+  compelDiscord: {
     id: "compelDiscord",
     fullName: "Compel Discord",
     firstPerson:
@@ -321,4 +321,6 @@ export const occultism = [
       }`;
     },
   },
-];
+};
+
+export default Object.values(occultism);

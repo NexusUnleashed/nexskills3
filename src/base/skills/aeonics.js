@@ -1,5 +1,5 @@
-export const aeonics = [
-  {
+const aeonics = {
+  accelerate: {
     id: "accelerate",
     fullName: "Accelerate",
     firstPerson:
@@ -14,7 +14,7 @@ export const aeonics = [
     tags: ["cure"],
     length: 2.5,
   },
-  {
+  chronoAeonStrip: {
     id: "chronoAeonStrip",
     fullName: "Chrono Aeon Strip",
     firstPerson:
@@ -32,7 +32,7 @@ export const aeonics = [
     length: 3.75,
     //multiLine: -1,
   },
-  {
+  chronoAeon: {
     id: "chronoAeon",
     fullName: "Chrono Aeon",
     firstPerson:
@@ -50,7 +50,7 @@ export const aeonics = [
     length: 3.75,
     //multiLine: -1,
   },
-  {
+  timeloop: {
     id: "timeloop",
     fullName: "Timeloop",
     firstPerson: false,
@@ -65,7 +65,7 @@ export const aeonics = [
     tags: ["aff"],
     length: 0,
   },
-  {
+  timeloopProc: {
     id: "timeloopProc",
     fullName: "Timeloop Proc",
     firstPerson: false,
@@ -79,4 +79,6 @@ export const aeonics = [
     tags: ["aff"],
     length: 0,
   },
-];
+};
+
+export default Object.values(aeonics);

@@ -1,6 +1,6 @@
-export const infernal = [
+export const oppression = {
   //#region Oppression
-  {
+  exploit: {
     id: "exploit",
     fullName: "Hellforge Exploit",
     firstPerson: false,
@@ -15,4 +15,6 @@ export const infernal = [
     length: 3.0,
   },
   //#endregion
-];
+};
+
+export default Object.values(oppression);

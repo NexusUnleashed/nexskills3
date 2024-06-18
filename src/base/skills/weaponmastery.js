@@ -1,5 +1,5 @@
-export const weaponmastery = [
-  {
+export const weaponmastery = {
+  battlefuryFocus: {
     id: "battlefuryFocus",
     fullName: "Battlefury Focus",
     firstPerson:
@@ -13,7 +13,7 @@ export const weaponmastery = [
     tags: [],
     length: 0,
   },
-  {
+  slaughter: {
     id: "slaughter",
     fullName: "Slaughter",
     firstPerson:
@@ -27,7 +27,7 @@ export const weaponmastery = [
     tags: ["damage"],
     length: 0,
   },
-  {
+  engage: {
     id: "engage",
     fullName: "Engaged",
     firstPerson: /^You move in to engage (?<target>\w+)\.$/,
@@ -40,7 +40,7 @@ export const weaponmastery = [
     tags: [],
     length: 2.5,
   },
-  {
+  engageHit: {
     id: "engageHit",
     fullName: "Engage Hit",
     firstPerson: false,
@@ -54,7 +54,7 @@ export const weaponmastery = [
     tags: [],
     length: 2.5,
   },
-  {
+  razeNone: {
     id: "razeNone",
     fullName: "Raze",
     firstPerson:
@@ -70,7 +70,7 @@ export const weaponmastery = [
     tags: ["raze"],
     length: 2.5,
   },
-  {
+  raze: {
     id: "raze",
     fullName: "Raze",
     firstPerson: false,
@@ -84,7 +84,7 @@ export const weaponmastery = [
     tags: ["raze"],
     length: 2.5,
   },
-];
+};
 
 //Antoninus whips Matsuhama's morningstar toward the right leg of Archaeon.
 //Archaeon goes down in a tangle of limbs as his legs are swept out from under him. //(Expend - morningstar - leg)
@@ -101,3 +101,5 @@ export const weaponmastery = [
 10:59:25.048 The attack rebounds back onto Antoninus!
 
 */
+
+export default Object.values(weaponmastery);

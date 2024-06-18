@@ -1,5 +1,5 @@
-export const ignition = [
-  {
+export const ignition = {
+  flamewhip: {
     id: "flamewhip",
     fullName: "Flamewhip",
     firstPerson:
@@ -13,7 +13,7 @@ export const ignition = [
     tags: ["pve", "damage"],
     length: 2.4,
   },
-  {
+  vapourize: {
     id: "vapourize",
     fullName: "Vapourize",
     firstPerson:
@@ -28,7 +28,7 @@ export const ignition = [
     tags: ["pve", "raze"],
     length: 2.0,
   },
-  {
+  wires: {
     id: "wires",
     fullName: "Wires",
     firstPerson:
@@ -43,7 +43,7 @@ export const ignition = [
     tags: ["pve", "raze"],
     length: 2.0,
   },
-  {
+  scourge: {
     id: "scourge",
     fullName: "Scourge",
     firstPerson:
@@ -58,7 +58,7 @@ export const ignition = [
     tags: ["pve", "sensitivity"],
     length: 2.0,
   },
-  {
+  devastation: {
     id: "devastation",
     fullName: "Devastation",
     firstPerson:
@@ -72,7 +72,7 @@ export const ignition = [
     tags: ["pve", "damage"],
     length: 2.0,
   },
-  {
+  bonds: {
     id: "bonds",
     fullName: "Bonds",
     firstPerson:
@@ -86,7 +86,7 @@ export const ignition = [
     tags: ["pve", "damage"],
     length: 2.0,
   },
-  {
+  bondsTick: {
     id: "bondsTick",
     fullName: "Bonds Tick",
     firstPerson:
@@ -100,7 +100,7 @@ export const ignition = [
     tags: ["pve", "damage"],
     length: 2.0,
   },
-  {
+  engulf: {
     id: "engulf",
     fullName: "Engulf",
     firstPerson:
@@ -114,7 +114,7 @@ export const ignition = [
     tags: ["pve", "damage"],
     length: 2.0,
   },
-  {
+  cataclysm: {
     id: "cataclysm",
     fullName: "Cataclysm",
     firstPerson:
@@ -128,7 +128,8 @@ export const ignition = [
     tags: ["pve", "damage"],
     length: 2.0,
   },
-];
-
+};
 //cataclysm non-combo?
 //You prepare to unleash a cataclysm against a Nelbennir alchemist, but he anticipates your intent and moves out of your target area.
+
+export default Object.values(ignition);

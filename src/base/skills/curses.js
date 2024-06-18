@@ -1,6 +1,6 @@
-export const shaman = [
+export const shaman = {
   //#region Curses
-  {
+  bleed: {
     id: "bleed",
     fullName: "Bleed",
     firstPerson: false,
@@ -14,4 +14,6 @@ export const shaman = [
     length: 2.2,
   },
   //#endregion
-];
+};
+
+export default Object.values(curses);

@@ -1,5 +1,5 @@
-export const propagation = [
-  {
+export const propagation = {
+  thornrend: {
     id: "thornrend",
     fullName: "Thornrend",
     firstPerson:
@@ -13,4 +13,6 @@ export const propagation = [
     tags: ["pve", "damage"],
     length: 3,
   },
-];
+};
+
+export default Object.values(propagation);

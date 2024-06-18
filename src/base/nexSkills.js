@@ -1,34 +1,37 @@
 /* global eventStream, GMCP, nexGui */
 
 import { startUp } from "./mongo";
-//Professions
-import { depthswalker } from "./professions/depthswalker";
-import { dragon } from "./professions/dragon";
-import { infernal } from "./professions/infernal";
-import { jester } from "./professions/jester";
-import { occultist } from "./professions/occultist";
-import { pariah } from "./professions/pariah";
-import { priest } from "./professions/priest";
-import { psion } from "./professions/psion";
-import { runewarden } from "./professions/runewarden";
-import { serpent } from "./professions/serpent";
-import { shaman } from "./professions/shaman";
-import { sylvan } from "./professions/sylvan";
+//Attainment
+import { depthswalker } from "./skills/attainment/depthswalker";
+import { dragon } from "./skills/attainment/dragon";
+import { occultist } from "./skills/attainment/occultist";
+import { runewarden } from "./skills/attainment/runewarden";
+import { sylvan } from "./skills/attainment/sylvan";
 //Skills
-import { aeonics } from "./skills/aeonics";
+import aeonics from "./skills/aeonics";
+import curses from "./skills/curses";
+import devotion from "./skills/devotion";
 import domination from "./skills/domination";
-import { harmonics } from "./skills/harmonics";
-import { ignition } from "./skills/ignition";
-import { occultism } from "./skills/occultism";
-import { propagation } from "./skills/propagation";
-import { shadowmancy } from "./skills/shadowmancy";
-import { swashbuckling } from "./skills/swashbuckling";
-import { tarot } from "./skills/tarot";
-import { tekura } from "./skills/tekura";
-import { voicecraft } from "./skills/voicecraft";
-import { weaponmastery } from "./skills/weaponmastery";
-import { weatherweaving } from "./skills/weatherweaving";
-import { weaving } from "./skills/weaving";
+import dragoncraft from "./skills/dragoncraft";
+import harmonics from "./skills/harmonics";
+import ignition from "./skills/ignition";
+import memorium from "./skills/memorium";
+import occultism from "./skills/occultism";
+import oppression from "./skills/oppression";
+import pranks from "./skills/pranks";
+import propagation from "./skills/propagation";
+import shadowmancy from "./skills/shadowmancy";
+import spirituality from "./skills/spirituality";
+import subterfuge from "./skills/subterfuge";
+import swashbuckling from "./skills/swashbuckling";
+import tarot from "./skills/tarot";
+import tekura from "./skills/tekura";
+import venom from "./skills/venom";
+import voicecraft from "./skills/voicecraft";
+import weaponmastery from "./skills/weaponmastery";
+import weatherweaving from "./skills/weatherweaving";
+import weaving from "./skills/weaving";
+import zeal from "./skills/zeal";
 //General
 import { curing } from "./general/curing";
 import { general } from "./general/general";
@@ -69,34 +72,38 @@ npcs.forEach((npc) => {
 });
 
 const actions = [
+  //Attainment
   ...depthswalker,
   ...dragon,
-  ...infernal,
-  ...jester,
   ...occultist,
-  ...pariah,
-  ...priest,
-  ...psion,
   ...runewarden,
-  ...serpent,
-  ...shaman,
   ...sylvan,
-
+  //Skills
   ...aeonics,
+  ...curses,
+  ...devotion,
   ...domination,
+  ...dragoncraft,
   ...harmonics,
   ...ignition,
+  ...memorium,
   ...occultism,
+  ...oppression,
+  ...pranks,
   ...propagation,
   ...shadowmancy,
+  ...spirituality,
+  ...subterfuge,
   ...swashbuckling,
   ...tarot,
   ...tekura,
+  ...venom,
   ...voicecraft,
   ...weaponmastery,
   ...weatherweaving,
   ...weaving,
-
+  ...zeal,
+  //General
   ...curing,
   ...general,
   ...tattoos,
