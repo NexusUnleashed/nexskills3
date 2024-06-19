@@ -1,4 +1,4 @@
-export const npcs = [
+export default battlesite = [
   {
     user: "a heavily armoured warrior sylphid beetle",
     areaId: [343],

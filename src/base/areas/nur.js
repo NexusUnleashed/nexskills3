@@ -1,4 +1,4 @@
-export const npcs = [
+export default nur = [
   {
     user: "a translucent butterfly",
     areaId: [401],

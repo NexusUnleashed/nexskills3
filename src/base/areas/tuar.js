@@ -1,4 +1,4 @@
-export const npcs = [
+export default tuar = [
   {
     user: "a Nelbennir scout",
     areaId: [207],
@@ -144,8 +144,7 @@ export const npcs = [
     user: "a warty stonefish",
     areaId: [207],
     areaName: "the Island of Tuar",
-    firstPerson:
-      /^You howl as a warty stonefish hacks into you\.$/,
+    firstPerson: /^You howl as a warty stonefish hacks into you\.$/,
     thirdPerson: false,
     tags: ["damage"],
     length: 0,

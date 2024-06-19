@@ -1,4 +1,4 @@
-export const npcs = [
+export default judgementMountain = [
   {
     user: "a Migri warrior",
     areaId: [257],

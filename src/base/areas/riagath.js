@@ -1,4 +1,4 @@
-export const npcs = [
+export default riagath = [
   {
     user: "a gigantic angler fish",
     areaId: [260],

@@ -1,4 +1,4 @@
-export const npcs = [
+export default istarion = [
   {
     user: "an austere Tsol'dasi", //TODO dupe
     areaId: [263],

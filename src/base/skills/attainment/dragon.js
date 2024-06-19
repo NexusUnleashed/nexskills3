@@ -1,5 +1,4 @@
 export const dragon = {
-  //#region Attainment
   glaciate: {
     id: "glaciate",
     fullName: "Glaciate",
@@ -252,7 +251,11 @@ export const dragon = {
     tags: ["pve", "raze"],
     length: 3.0,
   },
-  //#endregion
 };
+
+//You can use another Battlerage ability again. Available abilities: Overwhelm
+//You can use Dragonblaze again.
+//The flames of dragonbreath fade from a fortress guardsman's skin.
+//A knight of the Siroccian Order's blackened flesh slowly knits together.
 
 export default Object.values(dragon);

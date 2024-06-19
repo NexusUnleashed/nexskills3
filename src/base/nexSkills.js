@@ -37,16 +37,16 @@ import curing from "./general/curing";
 import general from "./general/general";
 import tattoos from "./general/tattoos";
 //NPCS
-import { barrow } from "./areas/barrow";
-import { npcs as battlesite } from "./areas/battlesite";
-import { npcs as grukaiSwamp } from "./areas/grukaiSwamp";
-import { npcs as istarion } from "./areas/istarion";
-import { npcs as judgementMountain } from "./areas/judgementMountain";
-import { npcs as nur } from "./areas/nur";
-import { npcs as riagath } from "./areas/riagath";
-import { npcs as tirMuran } from "./areas/tirMuran";
-import { npcs as tuar } from "./areas/tuar";
-import { npcs as yggdrasil } from "./areas/yggdrasil";
+import barrow from "./areas/barrow";
+import battlesite from "./areas/battlesite";
+import grukaiSwamp from "./areas/grukaiSwamp";
+import istarion from "./areas/istarion";
+import judgementMountain from "./areas/judgementMountain";
+import nur from "./areas/nur";
+import riagath from "./areas/riagath";
+import tirMuran from "./areas/tirMuran";
+import tuar from "./areas/tuar";
+import yggdrasil from "./areas/yggdrasil";
 
 const npcs = [
   ...battlesite,
@@ -137,11 +137,6 @@ export const classList = {
   "Fire elemental lord": ["Ignition"],
   "Water elemental lord": ["Pervasion"],
 };
-
-//You can use another Battlerage ability again. Available abilities: Overwhelm
-//You can use Dragonblaze again.
-//The flames of dragonbreath fade from a fortress guardsman's skin.
-//A knight of the Siroccian Order's blackened flesh slowly knits together.
 
 const checkSkills = (text) => {
   let result = false;

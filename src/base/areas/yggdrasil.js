@@ -1,4 +1,4 @@
-export const npcs = [
+export default yggdrasil = [
   {
     user: "a rajamala slaver",
     areaId: [337],

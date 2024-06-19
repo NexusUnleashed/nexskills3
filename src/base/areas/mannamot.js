@@ -1,4 +1,4 @@
-export const mannamot = [
+export default mannamot = [
   {
     user: "a greater air elemental",
     areaId: [330],

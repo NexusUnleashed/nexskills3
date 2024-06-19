@@ -1,4 +1,4 @@
-export const npcs = [
+export default grukaiSwamp = [
   {
     user: "an energetic turtle",
     areaId: [335],

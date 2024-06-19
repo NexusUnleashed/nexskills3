@@ -1,4 +1,4 @@
-export const npcs = [
+export default tirMuran = [
   {
     user: "a House Feranki mage",
     areaId: [145, 146],
