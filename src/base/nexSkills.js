@@ -248,3 +248,51 @@ export const nexSkills = {
 };
 
 globalThis.nexSkills = nexSkills;
+
+const txt =
+  "Khaseem reaches out and clenches a fist before Pamxen, who screams and doubles over in agony as his skin suddenly bubbles with gangrenous growths.";
+const regexify = (txt) => {
+  const words = txt.split(" ");
+  const user = "Khaseem";
+  const target = "Pamxen";
+  const pronouns = [
+    "he",
+    "He",
+    "him",
+    "Him",
+    "his",
+    "His",
+    "himself",
+    "Himself",
+    "she",
+    "She",
+    "her",
+    "Her",
+    "hers",
+    "Hers",
+    "herself",
+    "Herself",
+    "fae",
+    "Fae",
+    "faen",
+    "Faen",
+    "faenself",
+    "Faenself",
+  ];
+  for (let i = 0; i < words.length; i++) {
+    const cleanWord = words[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+    if (pronouns.includes(cleanWord)) {
+      words[i] = words[i].replace(cleanWord, "\\w+");
+    } else if (cleanWord === user) {
+      words[i] = words[i].replace(cleanWord, "(?<user>.+?)");
+    } else if (cleanWord === target) {
+      words[i] = words[i].replace(cleanWord, "(?<target>.+?)");
+    }
+  }
+  let result = words.join(" ");
+  result = result.replaceAll(".", "\\.");
+  result = "/^" + result;
+  result += "$/";
+  console.log(result);
+};
+regexify(txt);
