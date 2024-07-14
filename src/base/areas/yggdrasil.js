@@ -1,4 +1,4 @@
-export default yggdrasil = [
+const yggdrasil = [
   {
     user: "a rajamala slaver",
     areaId: [337],
@@ -60,3 +60,5 @@ export default yggdrasil = [
     length: 4.0,
   },
 ];
+
+export default yggdrasil;

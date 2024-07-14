@@ -1,4 +1,4 @@
-export default barrow = [
+const barrow = [
   {
     user: "a giant spider",
     areaId: [],
@@ -75,3 +75,5 @@ export default barrow = [
     length: 4.0,
   },
 ];
+
+export default barrow;

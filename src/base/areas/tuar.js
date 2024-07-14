@@ -1,4 +1,4 @@
-export default tuar = [
+const tuar = [
   {
     user: "a Nelbennir scout",
     areaId: [207],
@@ -210,3 +210,5 @@ export default tuar = [
     length: 0,
   },
 ];
+
+export default tuar;

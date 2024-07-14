@@ -1,4 +1,4 @@
-export default grukaiSwamp = [
+const grukaiSwamp = [
   {
     user: "an energetic turtle",
     areaId: [335],
@@ -91,3 +91,5 @@ export default grukaiSwamp = [
     length: 11.0,
   },
 ];
+
+export default grukaiSwamp;

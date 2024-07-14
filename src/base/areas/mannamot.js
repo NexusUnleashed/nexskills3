@@ -1,4 +1,4 @@
-export default mannamot = [
+const mannamot = [
   {
     user: "a greater air elemental",
     areaId: [330],
@@ -130,3 +130,5 @@ export default mannamot = [
     length: 3.0,
   },
 ];
+
+export default mannamot;

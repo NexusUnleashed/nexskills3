@@ -9,11 +9,11 @@ import runewarden from "./skills/attainment/runewarden";
 import sylvan from "./skills/attainment/sylvan";
 //Skills
 import aeonics from "./skills/aeonics";
+import bladedance from "./skills/bladedance";
 import curses from "./skills/curses";
 import devotion from "./skills/devotion";
 import domination from "./skills/domination";
 import dragoncraft from "./skills/dragoncraft";
-import harmonics from "./skills/harmonics";
 import ignition from "./skills/ignition";
 import memorium from "./skills/memorium";
 import occultism from "./skills/occultism";
@@ -23,11 +23,9 @@ import propagation from "./skills/propagation";
 import shadowmancy from "./skills/shadowmancy";
 import spirituality from "./skills/spirituality";
 import subterfuge from "./skills/subterfuge";
-import swashbuckling from "./skills/swashbuckling";
 import tarot from "./skills/tarot";
 import tekura from "./skills/tekura";
 import venom from "./skills/venom";
-import voicecraft from "./skills/voicecraft";
 import weaponmastery from "./skills/weaponmastery";
 import weatherweaving from "./skills/weatherweaving";
 import weaving from "./skills/weaving";
@@ -84,7 +82,6 @@ const actions = [
   ...devotion,
   ...domination,
   ...dragoncraft,
-  ...harmonics,
   ...ignition,
   ...memorium,
   ...occultism,
@@ -94,11 +91,9 @@ const actions = [
   ...shadowmancy,
   ...spirituality,
   ...subterfuge,
-  ...swashbuckling,
   ...tarot,
   ...tekura,
   ...venom,
-  ...voicecraft,
   ...weaponmastery,
   ...weatherweaving,
   ...weaving,
@@ -144,7 +139,8 @@ const checkSkills = (text) => {
   const profession = GMCP.Char.Status.class.toLowerCase();
 
   for (let i = 0; i < actions.length; i++) {
-    action = actions[i];
+    action = { ...actions[i] };
+
     if (
       action.profession.includes(profession) ||
       action.profession.includes("general")

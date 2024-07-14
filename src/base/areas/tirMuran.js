@@ -1,4 +1,4 @@
-export default tirMuran = [
+const tirMuran = [
   {
     user: "a House Feranki mage",
     areaId: [145, 146],
@@ -264,3 +264,5 @@ export default tirMuran = [
     length: 2.0,
   },
 ];
+
+export default tirMuran;

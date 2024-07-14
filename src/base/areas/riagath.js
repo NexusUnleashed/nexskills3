@@ -1,4 +1,4 @@
-export default riagath = [
+const riagath = [
   {
     user: "a gigantic angler fish",
     areaId: [260],
@@ -143,3 +143,5 @@ export default riagath = [
     length: 3.0,
   },
 ];
+
+export default riagath;

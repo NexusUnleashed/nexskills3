@@ -1,4 +1,4 @@
-export default nur = [
+const nur = [
   {
     user: "a translucent butterfly",
     areaId: [401],
@@ -433,3 +433,5 @@ export default nur = [
     length: 2,
   },
 ];
+
+export default nur;

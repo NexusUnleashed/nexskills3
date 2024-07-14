@@ -1,4 +1,4 @@
-export default istarion = [
+const istarion = [
   {
     user: "an austere Tsol'dasi", //TODO dupe
     areaId: [263],
@@ -220,3 +220,5 @@ export default istarion = [
     length: 3.0,
   },
 ];
+
+export default istarion;

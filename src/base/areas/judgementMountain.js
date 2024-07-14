@@ -1,4 +1,4 @@
-export default judgementMountain = [
+const judgementMountain = [
   {
     user: "a Migri warrior",
     areaId: [257],
@@ -130,3 +130,5 @@ export default judgementMountain = [
     length: 2.5,
   },
 ];
+
+export default judgementMountain;

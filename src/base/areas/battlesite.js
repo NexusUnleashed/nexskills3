@@ -1,4 +1,4 @@
-export default battlesite = [
+const battlesite = [
   {
     user: "a heavily armoured warrior sylphid beetle",
     areaId: [343],
@@ -30,3 +30,5 @@ export default battlesite = [
     length: 2.5,
   },
 ];
+
+export default battlesite;
