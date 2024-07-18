@@ -133,6 +133,26 @@ export const classList = {
   "Water elemental lord": ["Pervasion"],
 };
 
+const processMatch = (
+  result,
+  action,
+  matchType,
+  defaultUser,
+  defaultTarget
+) => {
+  if (result) {
+    const { groups } = result;
+    action.match = matchType;
+    action.user = groups?.user || defaultUser;
+    action.target = groups?.target || defaultTarget;
+    action.info = groups?.info || false;
+  }
+
+  return { result, action };
+};
+
+const evaluateText = () => {};
+
 const checkSkills = (text) => {
   let result = false;
   let action = false;
