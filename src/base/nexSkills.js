@@ -160,7 +160,7 @@ const evaluateText = (action, text, matchType, defaultUser, defaultTarget) => {
 
   const result = text.match(action[matchType]);
   if (result) {
-    processMatch(result, action, "secondPerson", "", "self");
+    return processMatch(result, action, matchType, defaultUser, defaultTarget);
   } else {
     return false;
   }
@@ -173,40 +173,40 @@ const finalizeCheck = (action) => {
 
   eventStream.raiseEvent("nexSkillMatch", action);
   eventStream.raiseEvent(`nexSkillMatch${action.id}`, action);
-
   return action;
 };
 
 const checkSkills = (text) => {
-  let result = false;
-  let action = false;
   const profession = GMCP.Char.Status.class.toLowerCase();
 
   for (let i = 0; i < actions.length; i++) {
-    action = { ...actions[i] };
+    const action = { ...actions[i] };
 
     if (
       action.profession.includes(profession) ||
       action.profession.includes("general")
     ) {
-      if (evaluateText(result, action, text, "firstPerson", "self", "")) {
+      if (evaluateText(action, text, "firstPerson", "self", "")) {
+        console.log("evaluateText firstPerson");
         if (action.target.toLowerCase() === "you") {
           action.target = "self";
         }
-        return finalizeCheck(result, action);
+        return finalizeCheck(action);
       }
     }
 
-    if (evaluateText(result, action, text, "secondPerson", "", "self")) {
-      return finalizeCheck(result, action);
+    if (evaluateText(action, text, "secondPerson", "", "self")) {
+      return finalizeCheck(action);
     }
 
-    if (evaluateText(result, action, text, "thirdPerson", "", "")) {
-      return finalizeCheck(result, action);
+    if (evaluateText(action, text, "thirdPerson", "", "")) {
+      return finalizeCheck(action);
     }
   }
 
-  return checkNpcs(text);
+  //return checkNpcs(text);
+  console.log("checkSkills false", false);
+  return false;
 };
 
 const checkNpcs = (text) => {
@@ -303,4 +303,4 @@ const regexify = (txt) => {
   result += "$/";
   console.log(result);
 };
-regexify(txt);
+//regexify(txt);
