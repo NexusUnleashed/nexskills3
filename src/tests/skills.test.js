@@ -18,6 +18,12 @@ beforeEach(() => {
   };
 });
 describe("Player Actions", () => {
+  test("No match", () => {
+    const text =
+      "This is a story about a pattern that did not match anything that was expected of it.";
+    const result = nexSkills.checkSkills(text);
+    expect(result).toBe(false);
+  });
   test("First Person", () => {
     const text =
       "You seize upon the aura of Argwin, and violently twist his left arm out of alignment with the planar norm.";

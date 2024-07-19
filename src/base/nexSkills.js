@@ -154,25 +154,35 @@ const processMatch = (
 };
 
 const evaluateText = (action, text, matchType, defaultUser, defaultTarget) => {
-  if (!action[matchType]) {
+  const patterns = action[matchType];
+  if (!patterns) {
     return false;
   }
 
-  const result = text.match(action[matchType]);
-  if (result) {
-    return processMatch(result, action, matchType, defaultUser, defaultTarget);
+  let result = false;
+  if (Array.isArray(patterns)) {
+    result = text.match(patterns[0]);
+    for (let i = 0; i < patterns.length; i++) {
+      result = text.match(patterns[i]);
+    }
   } else {
-    return false;
+    result = text.match(patterns);
   }
+
+  return processMatch(result, action, matchType, defaultUser, defaultTarget);
 };
 
-const finalizeCheck = (action) => {
+const finalizeCheck = (action, type = false) => {
   if (action.reaction) {
     action.reaction(action);
   }
 
-  eventStream.raiseEvent("nexSkillMatch", action);
-  eventStream.raiseEvent(`nexSkillMatch${action.id}`, action);
+  if (type === "npc") {
+    eventStream.raiseEvent("nexSkillNpcMatch", action);
+  } else {
+    eventStream.raiseEvent("nexSkillMatch", action);
+    eventStream.raiseEvent(`nexSkillMatch${action.id}`, action);
+  }
   return action;
 };
 
@@ -204,46 +214,31 @@ const checkSkills = (text) => {
     }
   }
 
-  //return checkNpcs(text);
-  console.log("checkSkills false", false);
-  return false;
+  return checkNpcs(text);
+  //console.log("checkSkills false", false);
+  //return false;
 };
 
 const checkNpcs = (text) => {
   const areaId = GMCP.Location.areaid;
   const areaNpcs = npcsMap.get(areaId) || [];
-  let result = false;
-  let action = false;
 
   if (areaNpcs.length === 0) {
     return false;
   }
 
   for (let i = 0; i < areaNpcs.length; i++) {
-    action = areaNpcs[i];
+    const action = { ...areaNpcs[i] };
 
-    result = action.firstPerson ? text.match(action.firstPerson) : false;
-    if (result) {
-      action.target = "self";
-      if (result.groups?.user) {
-        action.user = result.groups.user;
-      }
-      break;
+    if (evaluateText(action, text, "firstPerson", action.user, "self")) {
+      return finalizeCheck(action, "npc");
     }
-
-    result = action.thirdPerson ? text.match(action.thirdPerson) : false;
-    if (result) {
-      action.target = result.groups.target;
-      break;
+    if (evaluateText(action, text, "thirdPerson", action.user, "self")) {
+      return finalizeCheck(action, "npc");
     }
   }
 
-  if (result) {
-    action.args = result;
-    eventStream.raiseEvent("nexSkillNpcMatch", action);
-  }
-
-  return result ? action : false;
+  return false;
 };
 
 export const nexSkills = {
