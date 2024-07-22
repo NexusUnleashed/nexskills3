@@ -93,15 +93,15 @@ const action = {
   id: "interlink",
   fullName: "Interlink",
   firstPerson: [
-    /^You seize upon the aura of (?<target>\w+), and violently twist \w+ (?<limb>.+) out of alignment with the planar norm\.$/,
+    /^You seize upon the aura of (?<target>\w+), and violently twist \w+ (?<limb>.+?) out of alignment with the planar norm\.$/,
     /^Second pattern here$/,
   ],
   secondPerson: [
-    /^Pain lances through your (?<limb>.+) as the fingers of (?<user>\w+) twitch in an aborted motion towards you\.$/,
+    /^Pain lances through your (?<limb>.+?) as the fingers of (?<user>\w+) twitch in an aborted motion towards you\.$/,
     /^Second pattern here$/,
   ],
   thirdPerson: [
-    /^A red glow surrounds the (?<limb>.+) of (?<target>\w+), bones twisting beneath the skin\.$/,
+    /^A red glow surrounds the (?<limb>.+?) of (?<target>\w+), bones twisting beneath the skin\.$/,
     /^Second pattern here$/,
   ],
   profession: ["occultist"],

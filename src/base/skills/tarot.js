@@ -1,6 +1,6 @@
 export const tarot = {
-  tarotEmperor: {
-    id: "tarotEmperor",
+  emperor: {
+    id: "emperor",
     fullName: "Tarot Emperor",
     firstPerson:
       /^As you throw the Emperor tarot at (?<target>\w+), \w+ gazes at you with adoration and falls in line behind you\.$/,
@@ -13,10 +13,9 @@ export const tarot = {
     balance: "balance",
     tags: [],
     length: 3.0,
-    multiLine: 0,
   },
-  tarotMagician: {
-    id: "tarotMagician",
+  magician: {
+    id: "magician",
     fullName: "Tarot Magician",
     firstPerson:
       /^You release the Magician tarot and as it (?:drops slowly|slowly drops) to the earth, it bathes (?<target>\w+) in (?:a |)muted blue light\.$/,
@@ -29,10 +28,9 @@ export const tarot = {
     balance: "balance",
     tags: [],
     length: 3.0,
-    multiLine: 0,
   },
-  tarotPriestess: {
-    id: "tarotPriestess",
+  priestess: {
+    id: "priestess",
     fullName: "Priestess",
     firstPerson:
       /^Raising the High Priestess tarot over your head, parallel to the ground, you release it\. It instantly expands and moves downward, healing (?<target>\w+) as \w+ body passes through it\.$/,
@@ -46,8 +44,8 @@ export const tarot = {
     tags: ["heal"],
     length: 3.0,
   },
-  tarotLovers: {
-    id: "tarotLovers",
+  lovers: {
+    id: "lovers",
     fullName: "Tarot Lovers",
     firstPerson:
       /^You throw a Lovers tarot at (?<target>\w+) and as it strikes true, a look of utter love covers \w+ face\.$/,
@@ -61,10 +59,9 @@ export const tarot = {
     skill: "tarot",
     tags: ["aff"],
     length: 3.0,
-    //multiLine: -1,
   },
-  tarotHangedman: {
-    id: "tarotHangedman",
+  hangedman: {
+    id: "hangedman",
     fullName: "Tarot Hangedman",
     firstPerson:
       /^You toss the Hanged Man tarot card at (?<target>\w+) and as it reaches \w+, a huge mass of rope bursts out of it to entrap and hinder \w+\.$/,
@@ -77,10 +74,9 @@ export const tarot = {
     balance: "balance",
     tags: [],
     length: 2.2,
-    //multiLine: -1,
   },
-  tarotJustice: {
-    id: "tarotJustice",
+  justice: {
+    id: "justice",
     fullName: "Tarot Justice",
     firstPerson:
       /^With a prayer to Miramar, the Just, you fling your tarot card at (?<target>\w+)\. A set of scales appears above \w+head and one side of the scale quickly descends\. Justice will be done\.$/,
@@ -94,10 +90,9 @@ export const tarot = {
     skill: "tarot",
     tags: ["aff"],
     length: 3.0,
-    //multiLine: -1,
   },
-  tarotAeonStrip: {
-    id: "tarotAeonStrip",
+  aeonStrip: {
+    id: "aeonStrip",
     fullName: "Tarot Aeon Strip",
     firstPerson:
       /^You stand an Aeon tarot on your palm, and blow it lightly at (?<target>\w+)\.$/,
@@ -111,10 +106,9 @@ export const tarot = {
     tags: [],
     info: "Speed strip",
     length: 3.7,
-    //multiLine: -1,
   },
-  tarotAeon: {
-    id: "tarotAeon",
+  aeon: {
+    id: "aeon",
     fullName: "Tarot Aeon",
     firstPerson:
       /^Standing the Aeon on your open palm, you blow it lightly at (?<target>\w+) and watch as it seems to slow \w+ movement through the time stream\.$/,
@@ -128,10 +122,9 @@ export const tarot = {
     tags: [],
     info: false,
     length: 3.7,
-    //multiLine: -1,
   },
-  tarotMoon: {
-    id: "tarotMoon",
+  moon: {
+    id: "moon",
     fullName: "Tarot Moon",
     firstPerson:
       /^As you fling the Moon tarot at (?<target>\w+), it turns an ominous, sickly red, before striking \w+ in the head\.$/,
@@ -145,10 +138,9 @@ export const tarot = {
     tags: [],
     info: false,
     length: 2.2,
-    //multiLine: -1,
   },
-  tarotFool: {
-    id: "tarotFool",
+  fool: {
+    id: "fool",
     fullName: "Fool",
     firstPerson:
       /^You press the Fool tarot to (?:your|(?<target>\w+)'s) forehead\.$/,
@@ -162,8 +154,8 @@ export const tarot = {
     tags: ["cure"],
     length: 3.0,
   },
-  tarotDeathRub: {
-    id: "tarotDeathRub",
+  deathRub: {
+    id: "deathRub",
     fullName: "Tarot Death Rub",
     firstPerson:
       /^You rub the image of Death on (?<target>\w+) and feel a satisfying electrical charge run up your arm\.$/,
@@ -177,8 +169,8 @@ export const tarot = {
     tags: ["cure"],
     length: 3.2,
   },
-  tarotRuinateLovers: {
-    id: "tarotRuinateLovers",
+  ruinateLovers: {
+    id: "ruinateLovers",
     fullName: "Ruinate Lovers",
     firstPerson:
       /^The card twists and writhes as it leaps from your hand towards (?<target>\w+), the image resolving into a twisted visage crossed with a bloody knife\.$/,
@@ -193,8 +185,8 @@ export const tarot = {
     affs: ["manaleech"],
     length: 3.0,
   },
-  tarotRuinateJustice: {
-    id: "tarotRuinateJustice",
+  ruinateJustice: {
+    id: "ruinateJustice",
     fullName: "Ruinate Justice",
     firstPerson:
       /^As you fling a card at (?<target>\w+), the scales of justice upon its surface twists and cracks as the image becomes something indefinable, but vastly more sinister\.$/,
@@ -210,8 +202,8 @@ export const tarot = {
     length: 3.0,
   },
 
-  tarotHeretic: {
-    id: "tarotHeretic",
+  heretic: {
+    id: "heretic",
     fullName: "Tarot Heretic",
     firstPerson:
       /^The Heretic writhes between your fingers as you unleash it upon (?<target>\w+), blue sparks lighting the tips of your digits as they flicker across the Ruin-wrought image\.$/,

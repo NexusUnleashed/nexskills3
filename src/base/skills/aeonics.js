@@ -10,7 +10,6 @@ const aeonics = {
     profession: ["depthswalker"],
     skill: "aeonics",
     balance: "equilibrium",
-    multiLine: 0,
     tags: ["cure"],
     length: 2.5,
   },
@@ -30,7 +29,6 @@ const aeonics = {
     tags: [],
     info: "Speed strip",
     length: 3.75,
-    //multiLine: -1,
   },
   chronoAeon: {
     id: "chronoAeon",
@@ -48,7 +46,6 @@ const aeonics = {
     tags: ["aff"],
     info: false,
     length: 3.75,
-    //multiLine: -1,
   },
   timeloop: {
     id: "timeloop",
@@ -60,7 +57,6 @@ const aeonics = {
     profession: ["depthswalker"],
     skill: "aeonics",
     balance: "free",
-    multiLine: 0,
     affs: ["timeloop"],
     tags: ["aff"],
     length: 0,
@@ -74,11 +70,9 @@ const aeonics = {
     profession: ["depthswalker"],
     skill: "aeonics",
     balance: "free",
-    multiLine: 0,
     affs: [],
     tags: ["aff"],
     length: 0,
   },
 };
-
 export default Object.values(aeonics);

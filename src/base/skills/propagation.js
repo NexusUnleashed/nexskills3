@@ -9,7 +9,6 @@ export const propagation = {
     profession: ["sylvan"],
     skill: "propagation",
     balance: "equilibrium",
-    multiLine: 0,
     tags: ["pve", "damage"],
     length: 3,
   },

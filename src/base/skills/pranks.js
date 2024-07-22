@@ -1,5 +1,4 @@
 export const pranks = {
-  //#region Pranks
   bop: {
     id: "bop",
     fullName: "Bop",
@@ -26,7 +25,6 @@ export const pranks = {
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  //#endregion
 };
 
 //Archaeon viciously mangles the right leg of a puppet of Antoninus.

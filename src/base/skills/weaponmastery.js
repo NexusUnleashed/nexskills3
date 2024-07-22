@@ -9,7 +9,6 @@ export const weaponmastery = {
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery",
     balance: "free",
-    multiLine: 0,
     tags: [],
     length: 0,
   },
@@ -23,7 +22,6 @@ export const weaponmastery = {
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery",
     balance: "balance",
-    multiLine: 0,
     tags: ["damage"],
     length: 0,
   },
@@ -36,7 +34,6 @@ export const weaponmastery = {
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
-    multiLine: 0,
     tags: [],
     length: 2.5,
   },
@@ -50,7 +47,6 @@ export const weaponmastery = {
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
-    multiLine: 0,
     tags: [],
     length: 2.5,
   },
@@ -65,7 +61,6 @@ export const weaponmastery = {
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
-    multiLine: 0,
     info: "No raze",
     tags: ["raze"],
     length: 2.5,
@@ -79,7 +74,6 @@ export const weaponmastery = {
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",
-    multiLine: 0,
     info: "Shield raze",
     tags: ["raze"],
     length: 2.5,

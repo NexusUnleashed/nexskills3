@@ -1,5 +1,4 @@
 export const curses = {
-  //#region Curses
   bleed: {
     id: "bleed",
     fullName: "Bleed",
@@ -13,7 +12,6 @@ export const curses = {
     tags: ["pve", "damage"],
     length: 2.2,
   },
-  //#endregion
 };
 
 export default Object.values(curses);

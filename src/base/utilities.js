@@ -34,7 +34,6 @@ export const addAction = (action) => {
     profession: [],
     skill: "",
     balance: "",
-    multiLine: 0,
     tags: [],
     length: 0,
     reaction() {},

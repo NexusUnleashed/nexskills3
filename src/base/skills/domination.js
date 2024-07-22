@@ -1,6 +1,6 @@
 const domination = {
   //#region COMMANDS
-  dominationHumbugCommand: {
+  humbugCommand: {
     id: "humbugCommand",
     fullName: "Humbug Command",
     firstPerson:
@@ -15,7 +15,7 @@ const domination = {
     tags: [],
     length: 2.5,
   },
-  dominationHoundCommand: {
+  houndCommand: {
     id: "houndCommand",
     fullName: "Hound Command",
     firstPerson:
@@ -30,7 +30,7 @@ const domination = {
     tags: [],
     length: 2.2,
   },
-  dominationStormCommand: {
+  stormCommand: {
     id: "stormCommand",
     fullName: "Storm Command",
     firstPerson:
@@ -45,7 +45,7 @@ const domination = {
     tags: [],
     length: 2.2,
   },
-  dominationBloodleechCommand: {
+  bloodleechCommand: {
     id: "bloodleechCommand",
     fullName: "Bloodleech Command",
     firstPerson:
@@ -75,7 +75,7 @@ const domination = {
     tags: [],
     length: 2,
   },
-  dominationSlimeCommand: {
+  slimeCommand: {
     id: "slimeCommand",
     fullName: "Slime Command",
     firstPerson: /^You command your slime to envelop (?<target>\w+)\.$/,
@@ -89,7 +89,7 @@ const domination = {
     tags: [],
     length: 2.6,
   },
-  dominationSlimeCommand2: {
+  slimeCommand2: {
     id: "slimeCommand2",
     fullName: "Slime Command",
     firstPerson: false,
@@ -102,7 +102,7 @@ const domination = {
     tags: [],
     length: 2.6,
   },
-  dominationChimeraCommandDeaf: {
+  chimeraCommandDeaf: {
     id: "chimeraCommandDeaf",
     fullName: "Chimera Command",
     firstPerson: false,
@@ -116,9 +116,8 @@ const domination = {
     tags: [],
     info: "Deaf",
     length: 2.6,
-    //multiLine: -1
   },
-  dominationChimeraCommand: {
+  chimeraCommand: {
     id: "chimeraCommand",
     fullName: "Chimera Command",
     firstPerson: false,
@@ -130,9 +129,8 @@ const domination = {
     balance: "equilibrium",
     tags: [],
     length: 2.6,
-    //multiLine: -1
   },
-  dominationBubonisComand: {
+  bubonisComand: {
     id: "bubonisCommand",
     fullName: "Bubonis Command",
     firstPerson: false,
@@ -145,9 +143,8 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.4,
-    //multiLine: -1,
   },
-  dominationWormCommand: {
+  wormCommand: {
     id: "wormCommand",
     fullName: "Worm Command",
     firstPerson:
@@ -161,9 +158,8 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.2,
-    //multiLine: -1,
   },
-  dominationWormTick: {
+  wormTick: {
     id: "wormTick",
     fullName: "Worm Tick",
     firstPerson: false, // same message as third person
@@ -176,17 +172,16 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.2,
-    //multiLine: -1,
   },
-  dominationCroneCommand: {
+  croneCommand: {
     id: "croneCommand",
     fullName: "Crone Command",
     firstPerson:
-      /^You command your crone to wither the (?<limb>.+) of (?<target>\w+)\.$/,
+      /^You command your crone to wither the (?<limb>.+?) of (?<target>\w+)\.$/,
     secondPerson:
-      /^A withered crone reaches out and caresses your (?<limb>.+), and an icy chill radiates up the limb as it withers away\.$/,
+      /^A withered crone reaches out and caresses your (?<limb>.+?), and an icy chill radiates up the limb as it withers away\.$/,
     thirdPerson:
-      /^A withered crone reaches out to caress the (?<limb>.+) of (?<target>\w+), the limb withering away under her gnarled grasp\.$/,
+      /^A withered crone reaches out to caress the (?<limb>.+?) of (?<target>\w+), the limb withering away under her gnarled grasp\.$/,
     profession: ["occultist"],
     skill: "domination",
     balance: "tertiary",
@@ -196,9 +191,8 @@ const domination = {
       action.info = action.args.groups.limb;
       action.affs.push(`broken${action.args.groups.limb.replace(" ", "")}`);
     },
-    //multiLine: -1,
   },
-  dominationAbominationCommand: {
+  abominationCommand: {
     id: "abominationCommand",
     fullName: "Abomination Command",
     firstPerson:
@@ -213,11 +207,10 @@ const domination = {
     info: "truename",
     tags: [],
     length: 2.6,
-    //multiLine: -1,
   },
   //#endregion
   //#region PRIMEBONDS
-  dominationWormPrime: {
+  wormPrime: {
     id: "wormPrime",
     fullName: "Worm Primebond",
     firstPerson: false,
@@ -231,7 +224,7 @@ const domination = {
     tags: [],
     length: 8.0,
   },
-  dominationGremlinPrime: {
+  gremlinPrime: {
     id: "gremlinPrime",
     fullName: "Gremlin Primebond",
     firstPerson: false,
@@ -245,7 +238,7 @@ const domination = {
     tags: [],
     length: 11.0,
   },
-  dominationHumbugPrime: {
+  humbugPrime: {
     id: "humbugPrime",
     fullName: "Humbug Primebond",
     firstPerson: false,
@@ -259,7 +252,7 @@ const domination = {
     tags: [],
     length: 5.0,
   },
-  dominationBloodleechPrime: {
+  bloodleechPrime: {
     id: "bloodleechPrime",
     fullName: "Bloodleech Primebond",
     firstPerson: false,
@@ -273,7 +266,7 @@ const domination = {
     tags: [],
     length: 5.0,
   },
-  dominationSlimePrime: {
+  slimePrime: {
     id: "slimePrime",
     fullName: "Slime Primebond",
     firstPerson: false,
@@ -286,7 +279,7 @@ const domination = {
     tags: [],
     length: 10.0,
   },
-  dominationBubonisPrime: {
+  bubonisPrime: {
     id: "bubonisPrime",
     fullName: "Bubonis Primebond",
     firstPerson:

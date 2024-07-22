@@ -16,6 +16,27 @@ beforeEach(() => {
       return;
     },
   };
+  window.nexusclient = {
+    current_block: [
+      {
+        parsed_line: {
+          text() {
+            return "You touch Argwin's left arm, and it multiline test shrivels away.";
+          },
+        },
+      },
+      {
+        parsed_line: {
+          text() {
+            return "You make a sharp gesture toward Argwin, disrupting his aura with the paralysis affliction.";
+          },
+        },
+      },
+    ],
+    current_line: {
+      index: 0,
+    },
+  };
 });
 describe("Player Actions", () => {
   test("No match", () => {
@@ -50,5 +71,32 @@ describe("Player Actions", () => {
     expect(result.target).toBe("Argwin");
     expect(result.user).toBe("Khaseem");
     expect(result.match).toBe("thirdPerson");
+  });
+
+  test("Multiline Attack", () => {
+    nexSkills.actions.push({
+      id: "multiline",
+      fullName: "Warp",
+      firstPerson: [
+        /^You touch (?<target>\w+)'s (?<limb>.+?), and it multiline test shrivels away\.$/,
+        /^You make a sharp gesture toward (?<target>\w+), disrupting \w+ aura with the (?<info>\w+) affliction\.$/,
+      ],
+      secondPerson: false,
+      thirdPerson: false,
+      profession: ["occultist"],
+      skill: "occultism",
+      balance: "equilibrium",
+      tags: ["pve", "damage"],
+      length: 3.0,
+    });
+    const text =
+      "You touch Argwin's left arm, and it multiline test shrivels away.";
+    const result = nexSkills.checkSkills(text);
+    console.log(result);
+    expect(result).toBeTruthy();
+    expect(result.id).toBe("multiline");
+    expect(result.target).toBe("Argwin");
+    expect(result.user).toBe("self");
+    expect(result.match).toBe("firstPerson");
   });
 });

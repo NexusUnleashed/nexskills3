@@ -2,6 +2,7 @@
 
 //import { startUp } from "./mongo";
 //Attainment
+import bard from "./skills/attainment/bard";
 import depthswalker from "./skills/attainment/depthswalker";
 import dragon from "./skills/attainment/dragon";
 import occultist from "./skills/attainment/occultist";
@@ -71,6 +72,7 @@ npcs.forEach((npc) => {
 
 const actions = [
   //Attainment
+  ...bard,
   ...depthswalker,
   ...dragon,
   ...occultist,
@@ -161,9 +163,13 @@ const evaluateText = (action, text, matchType, defaultUser, defaultTarget) => {
 
   let result = false;
   if (Array.isArray(patterns)) {
-    result = text.match(patterns[0]);
+    const cb = nexusclient.current_block;
+    const cl = nexusclient.current_line;
     for (let i = 0; i < patterns.length; i++) {
-      result = text.match(patterns[i]);
+      result = cb[cl.index + i].parsed_line.text().match(patterns[i]);
+      if (!result) {
+        break;
+      }
     }
   } else {
     result = text.match(patterns);

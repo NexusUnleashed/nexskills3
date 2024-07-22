@@ -1,5 +1,5 @@
 export const weaving = {
-  weavingOverhand: {
+  overhand: {
     id: "overhand",
     fullName: "Overhand",
     firstPerson: false,
@@ -9,11 +9,10 @@ export const weaving = {
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
-    multiLine: 1,
     tags: ["aff"], // parasite > healthleach > manaleach
     length: 2.2,
   },
-  weavingDeathblow: {
+  deathblow: {
     id: "deathblow",
     fullName: "Deathblow",
     firstPerson: false,
@@ -23,13 +22,12 @@ export const weaving = {
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
-    multiLine: 1,
     tags: ["aff"],
     affs: ["asthma", "bleeding"], // parasite > healthleach > manaleach
     length: 2.2,
   },
-  weavingCharge: {
-    id: "weavingCharge",
+  charge: {
+    id: "charge",
     fullName: "Charge",
     firstPerson:
       /^Charging forward, you drive a translucent spear into (?<target>\w+)\.$/,
@@ -45,8 +43,8 @@ export const weaving = {
     length: 2.3,
     multiLine: false,
   },
-  weavingCleaveMiss: {
-    id: "weavingCleaveMiss",
+  cleaveMiss: {
+    id: "cleaveMiss",
     fullName: "Cleave",
     firstPerson:
       /^Your blow scythes through the air in front of (?<target>\w+), missing entirely\.$/,

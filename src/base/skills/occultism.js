@@ -62,11 +62,11 @@ export const occultism = {
     id: "shrivelTargeted",
     fullName: "Shrivel Targeted",
     firstPerson:
-      /^You touch (?<target>\w+)'s (?<limb>.+), and it shrivels away\.$/,
+      /^You touch (?<target>\w+)'s (?<limb>.+?), and it shrivels away\.$/,
     secondPerson:
-      /^You watch in horror as (?<user>\w+) touches your (?<limb>.+), and it shrivels away to uselessness\.$/,
+      /^You watch in horror as (?<user>\w+) touches your (?<limb>.+?), and it shrivels away to uselessness\.$/,
     thirdPerson:
-      /^(?<user>\w+) reaches out to grab (?<target>\w+)'s (?<limb>.+), and it shrivels away\.$/,
+      /^(?<user>\w+) reaches out to grab (?<target>\w+)'s (?<limb>.+?), and it shrivels away\.$/,
     profession: ["occultist"],
     skill: "occultism",
     balance: "equilibrium",
@@ -144,7 +144,6 @@ export const occultism = {
     balance: "equilibrium",
     tags: [],
     length: 2.5,
-    multiLine: 1,
   },
   unnamableSpeak: {
     id: "unnamableSpeak",
@@ -159,7 +158,6 @@ export const occultism = {
     balance: "equilibrium",
     tags: [],
     length: 3.2,
-    multiLine: 0,
   },
   unnamableVision: {
     id: "unnamableVision",
@@ -174,7 +172,6 @@ export const occultism = {
     balance: "equilibrium",
     tags: [],
     length: 3.2,
-    multiLine: 0,
   },
   whisperingmadnessMiss: {
     id: "whisperingmadnessMiss",
@@ -222,7 +219,6 @@ export const occultism = {
     affs: ["disloyalty", "shyness"],
     tags: ["aff"],
     length: 2.4,
-    multiLine: 1,
   },
   bodywarp: {
     id: "bodywarp",
@@ -238,7 +234,6 @@ export const occultism = {
     affs: ["fear"],
     tags: ["aff"],
     length: 2.3,
-    multiLine: 0,
   },
   cleanseaura: {
     id: "cleanseaura",
@@ -255,7 +250,6 @@ export const occultism = {
     affs: ["fear"],
     tags: ["aff"],
     length: 2.3,
-    multiLine: 0,
     //fail: The energy flickers and fades with no visible change.
     //success: A look of sudden concern flits across the visage of Pamxen.
   },
@@ -263,11 +257,11 @@ export const occultism = {
     id: "interlink",
     fullName: "Interlink",
     firstPerson:
-      /^You seize upon the aura of (?<target>\w+), and violently twist \w+ (?<limb>.+) out of alignment with the planar norm\.$/,
+      /^You seize upon the aura of (?<target>\w+), and violently twist \w+ (?<limb>.+?) out of alignment with the planar norm\.$/,
     secondPerson:
-      /^Pain lances through your (?<limb>.+) as the fingers of (?<user>\w+) twitch in an aborted motion towards you\.$/,
+      /^Pain lances through your (?<limb>.+?) as the fingers of (?<user>\w+) twitch in an aborted motion towards you\.$/,
     thirdPerson:
-      /^A red glow surrounds the (?<limb>.+) of (?<target>\w+), bones twisting beneath the skin\.$/,
+      /^A red glow surrounds the (?<limb>.+?) of (?<target>\w+), bones twisting beneath the skin\.$/,
     profession: ["occultist"],
     skill: "occultism",
     balance: "equilibrium",
@@ -301,7 +295,7 @@ export const occultism = {
     id: "compelDiscord",
     fullName: "Compel Discord",
     firstPerson:
-      /^Fixing your gaze upon that beyond (?<target>\w+), you speak to that without and within of the nature of (.+), wielding the deepest knowing of \w+ nature to compell \w+ to hear and be silent\.$/,
+      /^Fixing your gaze upon that beyond (?<target>\w+), you speak to that without and within of the nature of (.+?), wielding the deepest knowing of \w+ nature to compell \w+ to hear and be silent\.$/,
     secondPerson:
       /^(?<user>\w+) draws back with a knowing smile and fixes \w+ gaze to a point beyond you, an eldritch chant that sets your bones to resonating in symphony with something utterly unnatural spilling forth from \w+ lips in a compelled decree\.$/,
     thirdPerson:
