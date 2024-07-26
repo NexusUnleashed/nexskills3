@@ -34,6 +34,7 @@ import zeal from "./skills/zeal";
 //General
 import curing from "./general/curing";
 import general from "./general/general";
+import talismans from "./general/talismans";
 import tattoos from "./general/tattoos";
 //NPCS
 import barrow from "./areas/barrow";
@@ -103,6 +104,7 @@ const actions = [
   //General
   ...curing,
   ...general,
+  ...talismans,
   ...tattoos,
 ];
 
