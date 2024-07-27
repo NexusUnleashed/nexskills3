@@ -7,7 +7,7 @@ export const talismans = {
     id: "searedglyph",
     fullName: "Seared Glyph",
     firstPerson:
-      /^Fire lashes out from a Shield of Absorption, ravaging the unsuspecting form of (?<target>\.+?) with its insatiable fury\.$/,
+      /^Fire lashes out from a Shield of Absorption, ravaging the unsuspecting form of (?<target>.+?) with its insatiable fury\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["general"],

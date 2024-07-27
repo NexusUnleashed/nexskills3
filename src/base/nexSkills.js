@@ -165,8 +165,8 @@ const evaluateText = (action, text, matchType, defaultUser, defaultTarget) => {
 
   let result = false;
   if (Array.isArray(patterns)) {
-    const cb = nexusclient.current_block;
-    const cl = nexusclient.current_line;
+    const { current_block: cb, current_line: cl } = nexusclient;
+
     for (let i = 0; i < patterns.length; i++) {
       result = cb[cl.index + i].parsed_line.text().match(patterns[i]);
       if (!result) {
@@ -205,7 +205,6 @@ const checkSkills = (text) => {
       action.profession.includes("general")
     ) {
       if (evaluateText(action, text, "firstPerson", "self", "")) {
-        console.log("evaluateText firstPerson");
         if (action.target.toLowerCase() === "you") {
           action.target = "self";
         }
@@ -250,12 +249,12 @@ const checkNpcs = (text) => {
 };
 
 export const nexSkills = {
-  actions: actions,
-  npcs: npcs,
+  actions,
+  npcs,
 
-  checkSkills: checkSkills,
-  checkNpcs: checkNpcs,
-  //startUp: startUp,
+  checkSkills,
+  checkNpcs,
+  //startUp,
 };
 
 globalThis.nexSkills = nexSkills;
