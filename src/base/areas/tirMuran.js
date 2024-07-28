@@ -68,7 +68,6 @@ const tirMuran = [
     thirdPerson: false,
     tags: ["damage"],
     length: 2.5,
-    multiLine: 1,
   },
   {
     user: "a Vertani guard",
@@ -99,7 +98,6 @@ const tirMuran = [
     thirdPerson: false,
     tags: ["damage"],
     length: 2.5,
-    multiLine: 1,
   },
   {
     user: "a Vertani guard",
@@ -230,7 +228,6 @@ const tirMuran = [
     thirdPerson: false,
     tags: ["damage"],
     length: 2.0,
-    multiLine: 1,
   },
   {
     user: "Rakrr, the Vertani swordsmaster",
@@ -241,7 +238,6 @@ const tirMuran = [
     thirdPerson: false,
     tags: ["damage"],
     length: 2.0,
-    multiLine: 1,
   },
   {
     user: "Rakrr, the Vertani swordsmaster",

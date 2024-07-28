@@ -1,18 +1,17 @@
 const bladedance = {
-  bladedanceJab: {
+  jab: {
     id: "jab",
     fullName: "Jab",
     //You dart out an etched, Vashnari rapier in a lightning-fast jab to the left arm of (Laorir).
     firstPerson:
-      /^You dart out .+ in a lightning-fast jab to the (?<limb>.+) of (?<target>.+?)\.$/,
+      /^You dart out .+ in a lightning-fast jab to the (?<limb>.+?) of (?<target>.+?)\.$/,
     //Dzak darts out with an etched, Vashnari rapier in a lightning-fast jab towards your left arm.
     secondPerson:
-      /^(?<user>\w+) darts out with .+ in a lightning-fast jab towards your (?<limb>.+)\.$/,
+      /^(?<user>\w+) darts out with .+ in a lightning-fast jab towards your (?<limb>.+?)\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 2,
     tags: [],
     affs: [],
     // From front at the arms: broken limb. From front at torso: nausea. From side at arms: clumsiness. From side at torso: asthma. From back at arms: weariness. From back at torso: anorexia
@@ -20,7 +19,7 @@ const bladedance = {
     length: 2.3,
   },
   //raze miss
-  bladedancePunctuate: {
+  punctuate: {
     id: "punctuate",
     fullName: "Punctuate",
     //Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (Laorir).
@@ -32,15 +31,14 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 1,
     tags: ["raze"],
     affs: false,
     info: false,
     length: 2.0,
   },
   //raze hit
-  bladedancePunctuate: {
-    id: "punctuate",
+  punctuateRaze: {
+    id: "punctuateRaze",
     fullName: "Punctuate",
     //Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (Laorir).
     //The anti-weapon field surrounding (Laorir) shatters under the point of your rapier.
@@ -54,7 +52,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 1,
     tags: ["raze"],
     affs: false,
     info: false,
@@ -69,7 +66,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 0,
     tags: [],
     affs: false,
     info: false,
@@ -88,7 +84,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 0,
     tags: ["aff"],
     affs: [], // From front: crescendo. From side: earworm. From back: both crescendo and earworm.
     info: false,
@@ -105,7 +100,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 0,
     tags: [],
     affs: false,
     info: false,
@@ -116,15 +110,14 @@ const bladedance = {
     fullName: "Highsun",
     //With a flourish of an etched, Vashnari rapier you step smoothly into (Laorir), your blade slicing at his head.
     firstPerson:
-      /^With a flourish of .+ you step smoothly into (?<target>.+?), your blade slicing at \w+ (?<limb>.+)\.$/,
+      /^With a flourish of .+ you step smoothly into (?<target>.+?), your blade slicing at \w+ (?<limb>.+?)\.$/,
     //With a flourish of an etched, Vashnari rapier Dzak steps in close, his blade slicing at your head.
     secondPerson:
-      /^With a flourish of .+ (?<user>\w+) steps in close, \w+ blade slicing at your (?<limb>.+)\.$/,
+      /^With a flourish of .+ (?<user>\w+) steps in close, \w+ blade slicing at your (?<limb>.+?)\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 0,
     tags: ["aff"],
     affs: [], // Will give the first of the following afflictions that target does not have: From front at head: clumisness, weariness, recklessness. From side at head: addiction, generosity, confusion. From back at head: paralysis, generosity, diminished. From front at arms: clumsiness, weariness, haemophilia. From side at arms: weariness, clumsiness, healthleech. From back at arms: paralysis, healthleech, sensitivity.
     info: false,
@@ -135,15 +128,14 @@ const bladedance = {
     fullName: "Heelsnap",
     //An etched, Vashnari rapier sings with a metallic song as you direct a deep cut toward (Laorir)'s left leg.
     firstPerson:
-      /^.+ sings with a metallic song as you direct a deep cut toward (?<target>.+?) (?<limb>.+)\.$/,
+      /^.+ sings with a metallic song as you direct a deep cut toward (?<target>.+?) (?<limb>.+?)\.$/,
     //Dzak's blade sings with a metallic song as he directs a deep cut towards your left leg.
     secondPerson:
-      /^(?<user>\w+) blade sings with a metallic song as \w+ directs a deep cut towards your (?<limb>.+)\.$/,
+      /^(?<user>\w+) blade sings with a metallic song as \w+ directs a deep cut towards your (?<limb>.+?)\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 0,
     tags: ["aff"],
     affs: [], // From front: breaks leg. From side at left leg: healthleech. From side at right leg: sensitivity. From back: hamstrung and dismount.
     info: false,
@@ -158,7 +150,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 0,
     tags: [],
     affs: false,
     info: false,
@@ -173,7 +164,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 0,
     tags: [],
     affs: false,
     info: false,
@@ -193,7 +183,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    multiLine: 1,
     tags: [],
     affs: false,
     info: false,
@@ -212,7 +201,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: false, //passive positioning. It always begins in the front position, but the "start" of the footwork passive gives a different line.
-    multiLine: 0,
     tags: [],
     affs: false,
     info: false,
@@ -230,7 +218,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: false, //passive positioning.
-    multiLine: 0,
     tags: [],
     affs: false,
     info: false,
@@ -249,7 +236,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: false, //passive positioning.
-    multiLine: 0,
     tags: [],
     affs: false,
     info: false,
@@ -268,7 +254,6 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: false, //passive positioning.
-    multiLine: 0,
     tags: [],
     affs: false,
     info: false,

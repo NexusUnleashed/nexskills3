@@ -25,7 +25,7 @@ export const dragoncraft = {
     id: "incantation",
     fullName: "Incantation",
     firstPerson:
-      /^Drawing from the well of your puissance, you invoke a dramatic chant in the dragon tongue\. Your voice resonates with each word, culminating in a wave of magical energy that you bend to your will and thrust towards (?<target>.+), bombarding \w+ with the ancient power\.$/,
+      /^Drawing from the well of your puissance, you invoke a dramatic chant in the dragon tongue\. Your voice resonates with each word, culminating in a wave of magical energy that you bend to your will and thrust towards (?<target>.+?), bombarding \w+ with the ancient power\.$/,
     secondPerson: false,
     thirdPerson:
       /^A resonant vibration emanates from (?<user>\w+) as \w+ invokes a rumbling, sonorous chant in the dragon tongue\. As the sound increases, (?<target>.+?) jerks violently, \w+ body wracked by an unseen force\.$/,
@@ -61,7 +61,6 @@ export const dragoncraft = {
     balance: "equilibrium",
     tags: [],
     length: 4.0,
-    multiline: 0,
   },
   rendUntargeted: {
     id: "rendUntargeted",
@@ -84,17 +83,16 @@ export const dragoncraft = {
     balance: "balance",
     tags: [],
     length: 2.0,
-    multiline: 0,
   },
   rendTargeted: {
     id: "rendTargeted",
     fullName: "Rend",
     firstPerson:
-      /^Lunging forward with long, flashing claws extended, you tear into the flesh of (?<target>\w+)'s (?<limb>.+)\.$/,
+      /^Lunging forward with long, flashing claws extended, you tear into the flesh of (?<target>\w+)'s (?<limb>.+?)\.$/,
     secondPerson:
-      /^(?<user>\w+) lunges forward with long, flashing claws extended, tearing down to the bones of your (?<limb>.+)\.$/,
+      /^(?<user>\w+) lunges forward with long, flashing claws extended, tearing down to the bones of your (?<limb>.+?)\.$/,
     thirdPerson:
-      /^(?<user>\w+) lunges at (?<target>\w+) with long, flashing claws extended, tearing into \w+ (?<limb>.+) ruthlessly\.$/,
+      /^(?<user>\w+) lunges at (?<target>\w+) with long, flashing claws extended, tearing into \w+ (?<limb>.+?) ruthlessly\.$/,
     profession: [
       "red dragon",
       "green dragon",
@@ -108,7 +106,6 @@ export const dragoncraft = {
     affs: [],
     tags: ["prep"],
     length: 2.0,
-    multiline: 0,
     reaction(action) {
       action.info = action.args.groups.limb;
     },
@@ -382,7 +379,6 @@ export const dragoncraft = {
     tags: [],
     info: "Red",
     length: 4.0,
-    multiline: 0,
   },
   blastGreen: {
     id: "blastGreen",
@@ -399,7 +395,6 @@ export const dragoncraft = {
     tags: [],
     info: "Green",
     length: 4.0,
-    multiline: 0,
   },
   blastBlue: {
     id: "blastBlue",
@@ -416,7 +411,6 @@ export const dragoncraft = {
     tags: [],
     info: "Blue",
     length: 4.0,
-    multiline: 0,
   },
   blastBlack: {
     id: "blastBlack",
@@ -433,7 +427,6 @@ export const dragoncraft = {
     tags: [],
     info: "Black",
     length: 4.0,
-    multiline: 0,
   },
   blastGold: {
     id: "blastGold",
@@ -450,7 +443,6 @@ export const dragoncraft = {
     tags: [],
     info: "Gold",
     length: 4.0,
-    multiline: 0,
   },
   blastSilver: {
     id: "blastSilver",
@@ -467,7 +459,6 @@ export const dragoncraft = {
     tags: [],
     info: "Silver",
     length: 4.0,
-    multiline: 0,
   },
   //Red
   //TODO enmesh

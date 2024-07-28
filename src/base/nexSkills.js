@@ -1,7 +1,8 @@
 /* global eventStream, GMCP, nexGui */
 
-import { startUp } from "./mongo";
+//import { startUp } from "./mongo";
 //Attainment
+import bard from "./skills/attainment/bard";
 import depthswalker from "./skills/attainment/depthswalker";
 import dragon from "./skills/attainment/dragon";
 import occultist from "./skills/attainment/occultist";
@@ -33,6 +34,7 @@ import zeal from "./skills/zeal";
 //General
 import curing from "./general/curing";
 import general from "./general/general";
+import talismans from "./general/talismans";
 import tattoos from "./general/tattoos";
 //NPCS
 import barrow from "./areas/barrow";
@@ -71,6 +73,7 @@ npcs.forEach((npc) => {
 
 const actions = [
   //Attainment
+  ...bard,
   ...depthswalker,
   ...dragon,
   ...occultist,
@@ -101,6 +104,7 @@ const actions = [
   //General
   ...curing,
   ...general,
+  ...talismans,
   ...tattoos,
 ];
 
@@ -146,121 +150,117 @@ const processMatch = (
     action.user = groups?.user || defaultUser;
     action.target = groups?.target || defaultTarget;
     action.info = groups?.info || false;
+    action.args = result;
+    return true;
+  } else {
+    return false;
   }
-
-  return { result, action };
 };
 
-const evaluateText = () => {};
+const evaluateText = (action, text, matchType, defaultUser, defaultTarget) => {
+  const patterns = action[matchType];
+  if (!patterns) {
+    return false;
+  }
+
+  let result = false;
+  if (Array.isArray(patterns)) {
+    const { current_block: cb, current_line: cl } = nexusclient;
+
+    for (let i = 0; i < patterns.length; i++) {
+      result = cb[cl.index + i].parsed_line.text().match(patterns[i]);
+      if (!result) {
+        break;
+      }
+    }
+  } else {
+    result = text.match(patterns);
+  }
+
+  return processMatch(result, action, matchType, defaultUser, defaultTarget);
+};
+
+const finalizeCheck = (action, type = false) => {
+  if (action.reaction) {
+    action.reaction(action);
+  }
+
+  if (type === "npc") {
+    eventStream.raiseEvent("nexSkillNpcMatch", action);
+  } else {
+    eventStream.raiseEvent("nexSkillMatch", action);
+    eventStream.raiseEvent(`nexSkillMatch${action.id}`, action);
+  }
+  return action;
+};
 
 const checkSkills = (text) => {
-  let result = false;
-  let action = false;
   const profession = GMCP.Char.Status.class.toLowerCase();
 
   for (let i = 0; i < actions.length; i++) {
-    action = { ...actions[i] };
+    const action = { ...actions[i] };
 
     if (
       action.profession.includes(profession) ||
       action.profession.includes("general")
     ) {
-      result = action.firstPerson ? text.match(action.firstPerson) : false;
-      if (result) {
-        action.user = "self";
-        action.target = "";
-        action.match = "firstPerson";
-        if (result.groups) {
-          action.target = result.groups.target;
-          action.info = result.groups.info || false;
-        }
+      if (evaluateText(action, text, "firstPerson", "self", "")) {
         if (action.target.toLowerCase() === "you") {
           action.target = "self";
         }
-        break;
+        return finalizeCheck(action);
       }
     }
 
-    result = action.secondPerson ? text.match(action.secondPerson) : false;
-    if (result) {
-      action.target = "self";
-      action.match = "secondPerson";
-      if (result.groups) {
-        action.user = result.groups.user || "";
-        action.info = result.groups.info || false;
-      }
-      break;
+    if (evaluateText(action, text, "secondPerson", "", "self")) {
+      return finalizeCheck(action);
     }
 
-    result = action.thirdPerson ? text.match(action.thirdPerson) : false;
-    if (result) {
-      action.user = result.groups.user || "";
-      action.target = result.groups.target || "";
-      action.info = result.groups.info || false;
-      action.match = "thirdPerson";
-      break;
+    if (evaluateText(action, text, "thirdPerson", "", "")) {
+      return finalizeCheck(action);
     }
   }
 
-  if (result) {
-    action.args = result;
-    if (action.reaction) {
-      action.reaction(action);
-    }
-
-    eventStream.raiseEvent("nexSkillMatch", action);
-    eventStream.raiseEvent(`nexSkillMatch${action.id}`, action);
-  } else {
-    return checkNpcs(text);
-  }
-
-  return result ? action : false;
+  return checkNpcs(text);
+  //console.log("checkSkills false", false);
+  //return false;
 };
 
 const checkNpcs = (text) => {
   const areaId = GMCP.Location.areaid;
   const areaNpcs = npcsMap.get(areaId) || [];
-  let result = false;
-  let action = false;
 
   if (areaNpcs.length === 0) {
     return false;
   }
 
   for (let i = 0; i < areaNpcs.length; i++) {
-    action = areaNpcs[i];
+    const action = { ...areaNpcs[i] };
 
-    result = action.firstPerson ? text.match(action.firstPerson) : false;
-    if (result) {
-      action.target = "self";
-      if (result.groups?.user) {
-        action.user = result.groups.user;
-      }
-      break;
+    if (evaluateText(action, text, "firstPerson", action.user, "self")) {
+      return finalizeCheck(action, "npc");
     }
-
-    result = action.thirdPerson ? text.match(action.thirdPerson) : false;
-    if (result) {
-      action.target = result.groups.target;
-      break;
+    if (evaluateText(action, text, "thirdPerson", action.user, "self")) {
+      return finalizeCheck(action, "npc");
     }
   }
 
-  if (result) {
-    action.args = result;
-    eventStream.raiseEvent("nexSkillNpcMatch", action);
-  }
-
-  return result ? action : false;
+  return false;
 };
 
 export const nexSkills = {
-  actions: actions,
-  npcs: npcs,
+  actions,
+  npcs,
 
-  checkSkills: checkSkills,
-  checkNpcs: checkNpcs,
-  startUp: startUp,
+  checkSkills,
+  checkNpcs,
+  //startUp,
+
+  find(id) {
+    const skills = actions.filter((e) => e.id === "id".toLowerCase());
+    console.log(skills);
+    return skills;
+  },
 };
 
 globalThis.nexSkills = nexSkills;
@@ -311,4 +311,4 @@ const regexify = (txt) => {
   result += "$/";
   console.log(result);
 };
-regexify(txt);
+//regexify(txt);

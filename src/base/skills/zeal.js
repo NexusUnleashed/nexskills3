@@ -9,7 +9,6 @@ export const zeal = {
     profession: ["priest"],
     skill: "zeal",
     balance: "prayer",
-    multiLine: 0,
     tags: ["aff"],
     affs: ["guilt"],
     length: 1.7,
@@ -24,7 +23,6 @@ export const zeal = {
     profession: ["priest"],
     skill: "zeal",
     balance: "prayer",
-    multiLine: 0,
     tags: ["aff"],
     affs: ["guilt"],
     length: 1.7,
@@ -39,7 +37,7 @@ export const zeal = {
     profession: ["priest"],
     skill: "zeal",
     balance: "prayer",
-    multiLine: 0, //A line of golden flame leaps forth, lashing about Amranu and searing him to the bone.
+    //multiline: A line of golden flame leaps forth, lashing about Amranu and searing him to the bone.
     tags: ["aff"],
     affs: ["ablaze"],
     length: 2.3,
@@ -54,7 +52,7 @@ export const zeal = {
     profession: ["priest"],
     skill: "zeal",
     balance: "prayer",
-    multiLine: 0, //A line of golden flame leaps forth, lashing about Amranu and searing him to the bone.
+    //multiline: A line of golden flame leaps forth, lashing about Amranu and searing him to the bone.
     tags: ["aff"],
     affs: ["paralysis"],
     length: 1.6,
@@ -69,7 +67,7 @@ export const zeal = {
     profession: ["priest"],
     skill: "zeal",
     balance: "prayer",
-    multiLine: 0, //A line of golden flame leaps forth, lashing about Amranu and searing him to the bone.
+    //multiline: A line of golden flame leaps forth, lashing about Amranu and searing him to the bone.
     tags: ["aff"],
     affs: ["paralysis"],
     length: 1.6,
@@ -84,7 +82,7 @@ export const zeal = {
     profession: ["priest"],
     skill: "zeal",
     balance: "prayer",
-    multiLine: 0, //Antoninus claws at his eyes, fingers scrabbling frantically.
+    //multiline: Antoninus claws at his eyes, fingers scrabbling frantically.
     tags: ["aff"],
     affs: ["hellsight"],
     length: 1.6,
@@ -99,7 +97,6 @@ export const zeal = {
     profession: ["priest"],
     skill: "zeal",
     balance: "prayer",
-    multiLine: 0,
     tags: ["heal", "cure"],
     affs: [],
     length: 3.0,
