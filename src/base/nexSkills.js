@@ -255,6 +255,12 @@ export const nexSkills = {
   checkSkills,
   checkNpcs,
   //startUp,
+
+  find(id) {
+    const skills = actions.filter((e) => e.id === "id".toLowerCase());
+    console.log(skills);
+    return skills;
+  },
 };
 
 globalThis.nexSkills = nexSkills;
