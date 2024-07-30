@@ -37,6 +37,7 @@ import general from "./general/general";
 import talismans from "./general/talismans";
 import tattoos from "./general/tattoos";
 //NPCS
+import ageiro from "./areas/ageiro";
 import barrow from "./areas/barrow";
 import battlesite from "./areas/battlesite";
 import grukaiSwamp from "./areas/grukaiSwamp";
@@ -44,12 +45,14 @@ import istarion from "./areas/istarion";
 import judgementMountain from "./areas/judgementMountain";
 import nur from "./areas/nur";
 import riagath from "./areas/riagath";
+import tapoa from "./areas/tapoa";
 import tirMuran from "./areas/tirMuran";
 import tuar from "./areas/tuar";
 import yggdrasil from "./areas/yggdrasil";
 
 const npcs = [
-  ...battlesite,
+  ...ageiro,
+  ...battlesite,f
   ...judgementMountain,
   ...grukaiSwamp,
   ...istarion,
@@ -59,6 +62,7 @@ const npcs = [
   ...tuar,
   ...yggdrasil,
   ...barrow,
+  ...tapoa,
 ];
 
 const npcsMap = new Map();
