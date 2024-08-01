@@ -16,7 +16,7 @@ export const bard = {
     id: "trill",
     fullName: "Trill",
     firstPerson:
-      /^You direct your voice in a high-pitched trill at (?<target>\.+?), dazing \w+\.$/,
+      /^You direct your voice in a high-pitched trill at (?<target>.+?), dazing \w+\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["bard"],
@@ -46,7 +46,7 @@ export const bard = {
     id: "howlslash",
     fullName: "Howlslash",
     firstPerson:
-      /^You use your powerful voice to distract (?<target>\.+?) with a ululating howl before stepping in with a vicious slash\.$/,
+      /^You use your powerful voice to distract (?<target>.+?) with a ululating howl before stepping in with a vicious slash\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["bard"],
@@ -60,7 +60,8 @@ export const bard = {
   cyclone: {
     id: "cyclone",
     fullName: "Cyclone",
-    firstPerson: false,
+    firstPerson:
+      /^Your careful footwork leads you in a tight spin past (?<target>.+?), but \w+ is able to avoid the worst of your slashing blade\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["bard"],
@@ -74,7 +75,8 @@ export const bard = {
   charm: {
     id: "charm",
     fullName: "Charm",
-    firstPerson: false,
+    firstPerson:
+      /^You direct a soothing song at (?<target>.+?), enticing \w+ into defending you\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["bard"],

@@ -10,6 +10,9 @@ export const curing = {
     balance: "herb",
     tags: [],
     length: 1.6,
+    reaction(args) {
+      args.target = nexSys.tables.herb_name_to_herb[args.target] || args.target;
+    },
   },
   apply: {
     id: "apply",
