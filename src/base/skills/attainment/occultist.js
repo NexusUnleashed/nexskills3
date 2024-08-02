@@ -40,8 +40,8 @@ export const occultist = {
     length: 3.0,
   },
   chaosgate: {
-    id: "chaosgate",
-    fullName: "Chaosgate",
+    id: "temper",
+    fullName: "Temper",
     firstPerson:
       /^Multicoloured rays burst forth from your outstretched hands and strike (?<target>.+?) in the head, forcing \w+ to obey your will\.$/,
     secondPerson: false,

@@ -52,7 +52,7 @@ import yggdrasil from "./areas/yggdrasil";
 
 const npcs = [
   ...ageiro,
-  ...battlesite,f
+  ...battlesite,
   ...judgementMountain,
   ...grukaiSwamp,
   ...istarion,
