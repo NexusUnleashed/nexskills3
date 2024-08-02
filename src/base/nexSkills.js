@@ -205,8 +205,8 @@ const checkSkills = (text) => {
     const action = { ...actions[i] };
 
     if (
-      action.profession.includes(profession) ||
-      action.profession.includes("general")
+      action.profession?.includes(profession) ||
+      action.profession?.includes("general")
     ) {
       if (evaluateText(action, text, "firstPerson", "self", "")) {
         if (action.target.toLowerCase() === "you") {
