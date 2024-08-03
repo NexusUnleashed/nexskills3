@@ -100,7 +100,11 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
                     key={`grid-${id}-${id2}`}
                   >
                     {debugSkills
-                      .filter((e) => e.skill === id2.toLowerCase())
+                      .filter(
+                        (e) =>
+                          e.skill === id2.toLowerCase() &&
+                          e.profession.includes(id.toLowerCase())
+                      )
                       .map((skill, i3) => (
                         <TreeItem
                           itemId={`grid-${id}-${id2}-${skill.id}`}

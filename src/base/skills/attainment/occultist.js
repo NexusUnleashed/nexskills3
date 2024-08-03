@@ -39,9 +39,9 @@ export const occultist = {
     tags: ["pve", "damage"],
     length: 3.0,
   },
-  chaosgate: {
-    id: "temper",
-    fullName: "Temper",
+  temperance: {
+    id: "temperance",
+    fullName: "Temperance",
     firstPerson:
       /^Multicoloured rays burst forth from your outstretched hands and strike (?<target>.+?) in the head, forcing \w+ to obey your will\.$/,
     secondPerson: false,

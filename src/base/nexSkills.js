@@ -261,7 +261,7 @@ export const nexSkills = {
   //startUp,
 
   find(id) {
-    const skills = actions.filter((e) => e.id === "id".toLowerCase());
+    const skills = actions.filter((e) => e.id === id.toLowerCase());
     console.log(skills);
     return skills;
   },

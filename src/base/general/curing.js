@@ -4,24 +4,21 @@ export const curing = {
     fullName: "Eat",
     firstPerson: /^You eat (.+?)\.$/,
     secondPerson: false,
-    thirdPerson: /^(?<user>\w+) eats (?<target>.+?)\.$/,
+    thirdPerson: /^(?<user>\w+) eats (?<info>.+?)\.$/,
     profession: ["general"],
     skill: "",
     balance: "herb",
     tags: [],
     length: 1.6,
-    reaction(args) {
-      args.target = nexSys.tables.herb_name_to_herb[args.target] || args.target;
-    },
   },
   apply: {
     id: "apply",
     fullName: "Apply",
     firstPerson:
-      /^You take out some salve and quickly rub it on your (?<limb>.+?)\.$/,
+      /^You take out some salve and quickly rub it on your (?<info>.+?)\.$/,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+) takes some salve from a vial and rubs it on \w+ (?<target>.+?)\.$/,
+      /^(?<user>\w+) takes some salve from a vial and rubs it on \w+ (?<info>.+?)\.$/,
     profession: ["general"],
     skill: "",
     balance: "salve",
@@ -33,7 +30,7 @@ export const curing = {
     fullName: "Smoke",
     firstPerson: /^You take a long drag of (\w+) off your pipe\.$/,
     secondPerson: false,
-    thirdPerson: /^(?<user>\w+) takes a long drag off \w+ (?<target>.+?)\.$/,
+    thirdPerson: /^(?<user>\w+) takes a long drag off \w+ (?<info>.+?)\.$/,
     profession: ["general"],
     skill: "",
     balance: "smoke",
@@ -43,9 +40,9 @@ export const curing = {
   sip: {
     id: "sip",
     fullName: "Sip",
-    firstPerson: /^You take a drink from (?:a:an) (?<target>.+?)\.$/,
+    firstPerson: /^You take a drink from (?:a:an) (?<info>.+?)\.$/,
     secondPerson: false,
-    thirdPerson: /^(?<user>\w+) takes a drink from (?:a|an) (?<target>.+?)\.$/,
+    thirdPerson: /^(?<user>\w+) takes a drink from (?:a|an) (?<info>.+?)\.$/,
     profession: ["general"],
     skill: "",
     balance: "sip",
