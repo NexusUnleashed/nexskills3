@@ -1,5 +1,45 @@
 const tapoa = [
   {
+    user: "a blackfin shark",
+    areaId: [162],
+    areaName: "Tapoa Island",
+    //A dark fin sinks below the ocean's surface, followed by an eerie silence.
+    firstPerson:
+      /^Slowly, the water below you begins to shift and without warning, a blackfin shark lunges towards you, biting into your flesh as you shriek in pain\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+  },
+  {
+    user: "a blackfin shark",
+    areaId: [162],
+    areaName: "Tapoa Island",
+    firstPerson:
+      /^Displaying bloody rows of razor-sharp teeth, a blackfin shark opens his mouth wide and clamps down around your torso, tearing chunks of flesh from your side\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+  },
+  {
+    user: "a blackfin shark",
+    areaId: [162],
+    areaName: "Tapoa Island",
+    firstPerson:
+      /^A blackfin shark cuts a slow circle around you through the water before turning almost instantaneously, driving his body toward you and ramming his snout into your gut\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+  },
+  {
+    user: "a giant jellyfish",
+    areaId: [162],
+    areaName: "Tapoa Island",
+    firstPerson:
+      /^A trail of sparks streams through the water as a giant jellyfish stretches his tentacles toward you, the tips striking your chest with a painful zap\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+  },
+  //12:52:46.57s A thin tentacle flings towards you and wraps about your neck, tiny sparks flying as a giant jellyfish makes contact with your skin.
+  //12:52:46.57s An excruciating burn spreads over your flesh as poison makes its way into your bloodstream.
+  //12:52:46.57s You are confused as to the effects of the venom.
+  {
     user: "a ravenous vulture",
     areaId: [162],
     areaName: "Tapoa Island",
@@ -99,6 +139,24 @@ const tapoa = [
       /^With an enraged howl, a female ape grabs your legs and lifts you above her head, whirling you about before effortlessly tossing you into the underbrush\.$/,
     thirdPerson: false,
     tags: ["damage", "prone", "brokenleftarm"], //TODO: reaction for the arm?
+  },
+  {
+    user: "the king ape",
+    areaId: [162],
+    areaName: "Tapoa Island",
+    firstPerson:
+      /^You freeze in horror as the king ape raises his mighty arms to the heavens and hurls himself downward, pounding your body into the ground\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+  },
+  {
+    user: "the king ape",
+    areaId: [162],
+    areaName: "Tapoa Island",
+    firstPerson:
+      /^Grasping two large stones in either fist, the king ape brings his arms together to strike either side of your skull and crush your brain\.$/,
+    thirdPerson: false,
+    tags: ["damage", "stupidity"],
   },
   {
     user: "a blue-platted sand crab",

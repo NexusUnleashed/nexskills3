@@ -118,6 +118,15 @@ const ageiro = [
     thirdPerson: false,
     tags: ["damage"],
   },
+  {
+    user: "a silver malagma",
+    areaId: [209],
+    areaName: "the Isle of Ageiro",
+    firstPerson:
+      /A silver malagma backhands you violently, her heavy metal arm nearly caving in your skull\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+  },
 ];
 
 export default ageiro;
