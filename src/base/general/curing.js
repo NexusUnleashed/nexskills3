@@ -40,7 +40,7 @@ export const curing = {
   sip: {
     id: "sip",
     fullName: "Sip",
-    firstPerson: /^You take a drink from (?:a:an) (?<info>.+?)\.$/,
+    firstPerson: /^You take a drink from (?:a|an) (?<info>.+?)\.$/,
     secondPerson: false,
     thirdPerson: /^(?<user>\w+) takes a drink from (?:a|an) (?<info>.+?)\.$/,
     profession: ["general"],
