@@ -2,7 +2,7 @@ export const curing = {
   eat: {
     id: "eat",
     fullName: "Eat",
-    firstPerson: /^You eat (.+?)\.$/,
+    firstPerson: /^You eat (?<info>.+?)\.$/,
     secondPerson: false,
     thirdPerson: /^(?<user>\w+) eats (?<info>.+?)\.$/,
     profession: ["general"],
@@ -28,7 +28,7 @@ export const curing = {
   smoke: {
     id: "smoke",
     fullName: "Smoke",
-    firstPerson: /^You take a long drag of (\w+) off your pipe\.$/,
+    firstPerson: /^You take a long drag of (?<info>\w+) off your pipe\.$/,
     secondPerson: false,
     thirdPerson: /^(?<user>\w+) takes a long drag off \w+ (?<info>.+?)\.$/,
     profession: ["general"],
