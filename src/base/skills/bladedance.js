@@ -33,12 +33,12 @@ const bladedance = {
     balance: "balance",
     tags: ["raze"],
     affs: false,
-    info: false,
+    info: "Nothing",
     length: 2.0,
   },
   //raze hit
   punctuateRaze: {
-    id: "punctuateRaze",
+    id: "punctuate",
     fullName: "Punctuate",
     //Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (Laorir).
     //The anti-weapon field surrounding (Laorir) shatters under the point of your rapier.
@@ -54,10 +54,10 @@ const bladedance = {
     balance: "balance",
     tags: ["raze"],
     affs: false,
-    info: false,
+    info: "Raze",
     length: 2.0,
   },
-  bladedanceHound: {
+  hound: {
     id: "hound",
     fullName: "Hound",
     firstPerson: false,
@@ -71,7 +71,7 @@ const bladedance = {
     info: false,
     length: 3.0,
   },
-  bladedanceFlick: {
+  flick: {
     id: "flick",
     fullName: "Flick",
     //You flick out with the point of an etched, Vashnari rapier, song blessed steel singing a keening note towards (Laorir).
@@ -89,7 +89,7 @@ const bladedance = {
     info: false,
     length: 2.3,
   },
-  bladedanceFlourish: {
+  flourish: {
     id: "flourish",
     fullName: "Flourish",
     firstPerson:
@@ -105,12 +105,12 @@ const bladedance = {
     info: false,
     length: 2.3,
   },
-  bladedanceHighsun: {
+  highsun: {
     id: "highsun",
     fullName: "Highsun",
     //With a flourish of an etched, Vashnari rapier you step smoothly into (Laorir), your blade slicing at his head.
     firstPerson:
-      /^With a flourish of .+ you step smoothly into (?<target>.+?), your blade slicing at \w+ (?<limb>.+?)\.$/,
+      /^With a flourish of .+? you step smoothly into (?<target>.+?), your blade slicing at \w+ (?<limb>.+?)\.$/,
     //With a flourish of an etched, Vashnari rapier Dzak steps in close, his blade slicing at your head.
     secondPerson:
       /^With a flourish of .+ (?<user>\w+) steps in close, \w+ blade slicing at your (?<limb>.+?)\.$/,
@@ -118,12 +118,15 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    tags: ["aff"],
+    tags: ["pve", "damage", "aff"],
     affs: [], // Will give the first of the following afflictions that target does not have: From front at head: clumisness, weariness, recklessness. From side at head: addiction, generosity, confusion. From back at head: paralysis, generosity, diminished. From front at arms: clumsiness, weariness, haemophilia. From side at arms: weariness, clumsiness, healthleech. From back at arms: paralysis, healthleech, sensitivity.
     info: false,
     length: 2.3,
+    reaction(action) {
+      action.info = action.args.groups.limb;
+    },
   },
-  bladedanceHeelsnap: {
+  heelsnap: {
     id: "heelsnap",
     fullName: "Heelsnap",
     //An etched, Vashnari rapier sings with a metallic song as you direct a deep cut toward (Laorir)'s left leg.
@@ -141,7 +144,7 @@ const bladedance = {
     info: false,
     length: 2.3,
   },
-  bladedanceSunrise: {
+  sunrise: {
     id: "sunrise",
     fullName: "Sunrise",
     firstPerson: false,
@@ -155,7 +158,7 @@ const bladedance = {
     info: false,
     length: 2.3,
   },
-  bladedanceSunset: {
+  sunset: {
     id: "sunset",
     fullName: "Sunset",
     firstPerson: false,
@@ -169,7 +172,7 @@ const bladedance = {
     info: false,
     length: 2.3,
   },
-  bladedanceDeathfrombelow: {
+  deathfrombelow: {
     id: "deathfrombelow",
     fullName: "Deathfrombelow",
     //You drop into a crouch, knees bent in perfect synchronicity as one foot sweeps out in a wide arc before tucking in close and tight. The power of a coiled spring surges within as muscle and bone and nerve contract and expand, and with an ululating shout you launch yourself like a living missile from ground to sky, your warcry ringing forth to herald your coming!
@@ -188,7 +191,7 @@ const bladedance = {
     info: false,
     length: 3,
   },
-  bladedanceFootwork: {
+  footwork: {
     id: "footwork",
     fullName: "Footwork",
     //On feet as light as snow, you begin to circle (Laorir), your partner in this most deadly dance.
@@ -206,9 +209,9 @@ const bladedance = {
     info: false,
     length: false,
   },
-  bladedanceFootworkfront: {
-    id: "footworkfront",
-    fullName: "Footworkfront",
+  footworkFront: {
+    id: "footworkFront",
+    fullName: "Footwork",
     firstPerson:
       /^Your deadly dance carries you back around to face (?<target>\w+)\.$/,
     //Dzak circles back to your front, rapier languidly swaying with the hypnotic grace of his dance.
@@ -220,12 +223,12 @@ const bladedance = {
     balance: false, //passive positioning.
     tags: [],
     affs: false,
-    info: false,
+    info: "front",
     length: false,
   },
-  bladedanceFootworkside: {
-    id: "footworkside",
-    fullName: "Footworkside",
+  footworkSide: {
+    id: "footworkSide",
+    fullName: "Footwork",
     //You continue to circle (Laorir), your deadly dance carrying you around to his flank.
     firstPerson:
       /^You continue to circle (?<target>\w+), your deadly dance carrying you around to \w+ flank\.$/,
@@ -238,12 +241,12 @@ const bladedance = {
     balance: false, //passive positioning.
     tags: [],
     affs: false,
-    info: false,
+    info: "side",
     length: false,
   },
-  bladedanceFootworkback: {
-    id: "footworkback",
-    fullName: "Footworkback",
+  footworkBack: {
+    id: "footworkBack",
+    fullName: "Footwork",
     //Your deadly dance carries you with lethal promise to the blindspot of (Laorir).
     firstPerson:
       /^Your deadly dance carries you with lethal promise to the blindspot of (?<target>\w+)\.$/,
@@ -256,9 +259,9 @@ const bladedance = {
     balance: false, //passive positioning.
     tags: [],
     affs: false,
-    info: false,
+    info: "back",
     length: false,
   },
 };
 
-export default bladedance;
+export default Object.values(bladedance);

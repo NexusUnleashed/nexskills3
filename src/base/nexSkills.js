@@ -85,6 +85,7 @@ const actions = [
   ...sylvan,
   //Skills
   ...aeonics,
+  ...bladedance,
   ...curses,
   ...devotion,
   ...domination,
@@ -115,7 +116,7 @@ const actions = [
 export const classList = {
   Alchemist: ["Alchemy", "Physiology", "Formulation", "Sublimation"],
   Apostate: ["Evileye", "Necromancy", "Apostasy"],
-  Bard: ["Voicecraft", "Swashbuckling", "Harmonics", "Woe"],
+  Bard: ["Bladedance", "Composition", "Sagas", "Woe"],
   Blademaster: ["TwoArts", "Striking", "Shindo"],
   Depthswalker: ["Aeonics", "Shadowmancy", "Teminus"],
   Dragon: ["Dragoncraft"],
