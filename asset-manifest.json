@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nexskills3/static/css/main.09119c7a.css",
-    "main.js": "/nexskills3/static/js/main.be3a06c7.js",
-    "static/js/787.076d790a.chunk.js": "/nexskills3/static/js/787.076d790a.chunk.js",
+    "main.css": "/nexskills3/static/css/main.523cc25b.css",
+    "main.js": "/nexskills3/static/js/main.fd7c1e7b.js",
+    "static/js/453.e5f5d9eb.chunk.js": "/nexskills3/static/js/453.e5f5d9eb.chunk.js",
     "index.html": "/nexskills3/index.html",
-    "main.09119c7a.css.map": "/nexskills3/static/css/main.09119c7a.css.map",
-    "main.be3a06c7.js.map": "/nexskills3/static/js/main.be3a06c7.js.map",
-    "787.076d790a.chunk.js.map": "/nexskills3/static/js/787.076d790a.chunk.js.map"
+    "main.523cc25b.css.map": "/nexskills3/static/css/main.523cc25b.css.map",
+    "main.fd7c1e7b.js.map": "/nexskills3/static/js/main.fd7c1e7b.js.map",
+    "453.e5f5d9eb.chunk.js.map": "/nexskills3/static/js/453.e5f5d9eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09119c7a.css",
-    "static/js/main.be3a06c7.js"
+    "static/css/main.523cc25b.css",
+    "static/js/main.fd7c1e7b.js"
   ]
 }
