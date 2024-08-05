@@ -2,7 +2,6 @@ import { Box, List, ThemeProvider } from "@mui/material";
 import { useEffect, useState } from "react";
 import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
 import { TreeItem } from "@mui/x-tree-view/TreeItem";
-import { startUp } from "../base/mongo";
 import ClassSelector from "./ClassSelector";
 import SkillListItem from "./SkillListItem";
 import SkillTable from "./SkillTable";
@@ -53,7 +52,6 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
       setLoaded(true);
     };
     connect();
-    console.log("mongo render");
   }, [loaded]);
 
   return (

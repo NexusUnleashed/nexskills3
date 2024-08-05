@@ -1,6 +1,5 @@
 /* global eventStream, GMCP, nexGui */
 
-//import { startUp } from "./mongo";
 //Attainment
 import bard from "./skills/attainment/bard";
 import depthswalker from "./skills/attainment/depthswalker";
