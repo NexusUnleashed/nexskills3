@@ -78,7 +78,7 @@ const ageiro = [
     firstPerson:
       /^Grabbing two shovels from the ground, a golden malagma brings them crashing into your head from both sides\.$/,
     thirdPerson: false,
-    tags: ["damage"],
+    tags: ["damage", "stun"],
   },
   {
     user: "a golden malagma",
