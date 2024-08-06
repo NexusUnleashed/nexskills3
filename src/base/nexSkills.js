@@ -150,7 +150,8 @@ const processMatch = (
 ) => {
   if (result) {
     const { groups } = result;
-    action.match = matchType;
+    action.line = result.input;
+    action.matchType = matchType;
     action.user = groups?.user || defaultUser;
     action.target = groups?.target || defaultTarget;
     action.info = groups?.info || false;
@@ -187,6 +188,11 @@ const evaluateText = (action, text, matchType, defaultUser, defaultTarget) => {
 const finalizeCheck = (action, type = false) => {
   if (action.reaction) {
     action.reaction(action);
+  }
+
+  // This check allows some action.reactions to void the match
+  if (!action.matchType) {
+    return false;
   }
 
   if (type === "npc") {

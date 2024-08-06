@@ -95,7 +95,10 @@ function App() {
       <Dashboard
         theme={darkTheme}
         debugSkills={sortedSkills}
-        classList={{ ...classList, General: ["general"] }}
+        classList={{
+          ...classList,
+          General: ["Curing", "Tattoos", "Talisman", "Defense"],
+        }}
       />
     </div>
   );

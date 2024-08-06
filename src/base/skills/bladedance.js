@@ -76,10 +76,10 @@ const bladedance = {
     fullName: "Flick",
     //You flick out with the point of an etched, Vashnari rapier, song blessed steel singing a keening note towards (Laorir).
     firstPerson:
-      /^You flick out with the point of .+ song blessed steel singing a keening note towards (?<target>.+?)\.$/,
+      /^You flick out with the point of .+? song blessed steel singing a keening note towards (?<target>.+?)\.$/,
     //Dzak flicks out with an etched, Vashnari rapier towards you, a keening note raising from the blade's lunge.
     secondPerson:
-      /^(?<user>\w+) flicks out with .+ towards you, a keening note raising from the blade's lunge\.$/,
+      /^(?<user>\w+) flicks out with .+? towards you, a keening note raising from the blade's lunge\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
@@ -93,9 +93,9 @@ const bladedance = {
     id: "flourish",
     fullName: "Flourish",
     firstPerson:
-      /^You weave .+ through the air in a dazzling display, the music of your bladesong sweeping forth to wash over (?<target>.+?) while your feet shift to a new stance\.$/, //line in-game: You weave an etched, Vashnari rapier through the air in a dazzling display, the music of your bladesong sweeping forth to wash over (Laorir) while your feet shift to a new stance.
+      /^You weave .+? through the air in a dazzling display, the music of your bladesong sweeping forth to wash over (?<target>.+?) while your feet shift to a new stance\.$/, //line in-game: You weave an etched, Vashnari rapier through the air in a dazzling display, the music of your bladesong sweeping forth to wash over (Laorir) while your feet shift to a new stance.
     secondPerson:
-      /^(?<user>\w+) weaves .+ through the air in a dazzling display, and in the moment of your distraction \w+ is no longer where \w+ was\.$/, //line in-game: Dzak weaves an etched, Vashnari rapier through the air in a dazzling display, and in the moment of your distraction he is no longer where he was.
+      /^(?<user>\w+) weaves .+? through the air in a dazzling display, and in the moment of your distraction \w+ is no longer where \w+ was\.$/, //line in-game: Dzak weaves an etched, Vashnari rapier through the air in a dazzling display, and in the moment of your distraction he is no longer where he was.
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
@@ -131,7 +131,7 @@ const bladedance = {
     fullName: "Heelsnap",
     //An etched, Vashnari rapier sings with a metallic song as you direct a deep cut toward (Laorir)'s left leg.
     firstPerson:
-      /^.+ sings with a metallic song as you direct a deep cut toward (?<target>.+?) (?<limb>.+?)\.$/,
+      /^.+? sings with a metallic song as you direct a deep cut toward (?<target>.+?) (?<limb>.+?)\.$/,
     //Dzak's blade sings with a metallic song as he directs a deep cut towards your left leg.
     secondPerson:
       /^(?<user>\w+) blade sings with a metallic song as \w+ directs a deep cut towards your (?<limb>.+?)\.$/,
@@ -178,7 +178,7 @@ const bladedance = {
     //You drop into a crouch, knees bent in perfect synchronicity as one foot sweeps out in a wide arc before tucking in close and tight. The power of a coiled spring surges within as muscle and bone and nerve contract and expand, and with an ululating shout you launch yourself like a living missile from ground to sky, your warcry ringing forth to herald your coming!
     //Carried into the skies by the force of feet and fury, your blade pierces the flesh of (Laorir) as your ululating cry gives way to a shout, "DEATH FROM BELOW!"
     firstPerson:
-      /^Carried into the skies by the force of feet and fury, your blade pierces the flesh of (?<target>\w+) as your ululating cry gives way to a shout, .+$/,
+      /^Carried into the skies by the force of feet and fury, your blade pierces the flesh of (?<target>\w+) as your ululating cry gives way to a shout, "DEATH FROM BELOW!"$/,
     //An ululating cry rings out from below, but you have nary a moment to even react as like a living missile Dzak launches himself upward, his blade piercing your flesh while he shouts, "DEATH FROM BELOW!"
     secondPerson:
       /^An ululating cry rings out from below, but you have nary a moment to even react as like a living missile (?<user>\w+) launches \w+ upward, \w+ blade piercing your flesh while \w+ shouts, .+$/,

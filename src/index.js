@@ -17,6 +17,9 @@ window.nexSys = {
     affAbbrev: {},
   },
 };
+window.eventStream = {
+  raiseEvent() {},
+};
 //#endregion
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

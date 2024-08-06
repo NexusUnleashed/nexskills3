@@ -51,7 +51,7 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
       setSkills([...tempSkills]);
       setLoaded(true);
     };
-    connect();
+    //connect();
   }, [loaded]);
 
   return (
