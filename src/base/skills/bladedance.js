@@ -4,15 +4,15 @@ const bladedance = {
     fullName: "Jab",
     //You dart out an etched, Vashnari rapier in a lightning-fast jab to the left arm of (Laorir).
     firstPerson:
-      /^You dart out .+ in a lightning-fast jab to the (?<limb>.+?) of (?<target>.+?)\.$/,
+      /^You dart out .+? in a lightning-fast jab to the (?<limb>.+?) of (?<target>.+?)\.$/,
     //Dzak darts out with an etched, Vashnari rapier in a lightning-fast jab towards your left arm.
     secondPerson:
-      /^(?<user>\w+) darts out with .+ in a lightning-fast jab towards your (?<limb>.+?)\.$/,
+      /^(?<user>\w+) darts out with .+? in a lightning-fast jab towards your (?<limb>.+?)\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    tags: [],
+    tags: ["pve", "damage"],
     affs: [],
     // From front at the arms: broken limb. From front at torso: nausea. From side at arms: clumsiness. From side at torso: asthma. From back at arms: weariness. From back at torso: anorexia
     info: false,
@@ -113,7 +113,7 @@ const bladedance = {
       /^With a flourish of .+? you step smoothly into (?<target>.+?), your blade slicing at \w+ (?<limb>.+?)\.$/,
     //With a flourish of an etched, Vashnari rapier Dzak steps in close, his blade slicing at your head.
     secondPerson:
-      /^With a flourish of .+ (?<user>\w+) steps in close, \w+ blade slicing at your (?<limb>.+?)\.$/,
+      /^With a flourish of .+? (?<user>\w+) steps in close, \w+ blade slicing at your (?<limb>.+?)\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
@@ -139,7 +139,7 @@ const bladedance = {
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
-    tags: ["aff"],
+    tags: ["pve", "damage", "aff"],
     affs: [], // From front: breaks leg. From side at left leg: healthleech. From side at right leg: sensitivity. From back: hamstrung and dismount.
     info: false,
     length: 2.3,
@@ -216,7 +216,7 @@ const bladedance = {
       /^Your deadly dance carries you back around to face (?<target>\w+)\.$/,
     //Dzak circles back to your front, rapier languidly swaying with the hypnotic grace of his dance.
     secondPerson:
-      /^(?<user>.+?) circles back to your front, rapier languidly swaying with the hypnotic grace of \w+ dance\.$/,
+      /^(?<user>\w+?) circles back to your front, rapier languidly swaying with the hypnotic grace of \w+ dance\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
@@ -234,7 +234,7 @@ const bladedance = {
       /^You continue to circle (?<target>\w+), your deadly dance carrying you around to \w+ flank\.$/,
     //Dzak continues to circle you, his deadly dance carrying him poised and ready around to your flank.
     secondPerson:
-      /^(?<user>.+?) continues to circle you, \w+ deadly dance carrying \w+ poised and ready around to your flank\.$/,
+      /^(?<user>\w+) continues to circle you, \w+ deadly dance carrying \w+ poised and ready around to your flank\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
@@ -252,7 +252,7 @@ const bladedance = {
       /^Your deadly dance carries you with lethal promise to the blindspot of (?<target>\w+)\.$/,
     //Dzak continues to circle you, slipping in and out of your blindspot as he dances behind you.
     secondPerson:
-      /^(?<user>.+?) continues to circle you, slipping in and out of your blindspot as \w+ dances behind you\.$/,
+      /^(?<user>\w+?) continues to circle you, slipping in and out of your blindspot as \w+ dances behind you\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
