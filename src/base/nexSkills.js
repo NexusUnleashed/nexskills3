@@ -150,12 +150,11 @@ const processMatch = (
 ) => {
   if (result) {
     const { groups } = result;
-    action.line = result.input;
     action.matchType = matchType;
     action.user = groups?.user || defaultUser;
     action.target = groups?.target || defaultTarget;
     action.info = groups?.info || false;
-    action.args = result;
+    action.originalLine = result[0];
     return true;
   } else {
     return false;
