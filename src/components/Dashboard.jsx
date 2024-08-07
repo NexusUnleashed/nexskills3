@@ -16,7 +16,7 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
 
   const handleListItemClick = (event, id, selected) => {
     const check = id.split("-");
-    if (check.length !== 4) {
+    if (check.length !== 5) {
       return;
     }
     console.log(check[3]);
@@ -105,9 +105,9 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
                       )
                       .map((skill, i3) => (
                         <TreeItem
-                          itemId={`grid-${id}-${id2}-${skill.id}`}
+                          itemId={`grid-${id}-${id2}-${skill.id}-${i3}`}
                           label={skill.fullName}
-                          key={`grid-${id}-${id2}-${skill.id}`}
+                          key={`grid-${id}-${id2}-${skill.id}-${i3}`}
                         ></TreeItem>
                       ))}
                   </TreeItem>
