@@ -1,7 +1,7 @@
 export const tarot = {
   emperor: {
     id: "emperor",
-    fullName: "Tarot Emperor",
+    fullName: "Emperor",
     firstPerson:
       /^As you throw the Emperor tarot at (?<target>\w+), \w+ gazes at you with adoration and falls in line behind you\.$/,
     secondPerson:
@@ -16,7 +16,7 @@ export const tarot = {
   },
   magician: {
     id: "magician",
-    fullName: "Tarot Magician",
+    fullName: "Magician",
     firstPerson:
       /^You release the Magician tarot and as it (?:drops slowly|slowly drops) to the earth, it bathes (?<target>\w+) in (?:a |)muted blue light\.$/,
     secondPerson:
@@ -46,7 +46,7 @@ export const tarot = {
   },
   lovers: {
     id: "lovers",
-    fullName: "Tarot Lovers",
+    fullName: "Lovers",
     firstPerson:
       /^You throw a Lovers tarot at (?<target>\w+) and as it strikes true, a look of utter love covers \w+ face\.$/,
     secondPerson:
@@ -62,7 +62,7 @@ export const tarot = {
   },
   hangedman: {
     id: "hangedman",
-    fullName: "Tarot Hangedman",
+    fullName: "Hangedman",
     firstPerson:
       /^You toss the Hanged Man tarot card at (?<target>\w+) and as it reaches \w+, a huge mass of rope bursts out of it to entrap and hinder \w+\.$/,
     secondPerson:
@@ -77,7 +77,7 @@ export const tarot = {
   },
   justice: {
     id: "justice",
-    fullName: "Tarot Justice",
+    fullName: "Justice",
     firstPerson:
       /^With a prayer to Miramar, the Just, you fling your tarot card at (?<target>\w+)\. A set of scales appears above \w+head and one side of the scale quickly descends\. Justice will be done\.$/,
     secondPerson:
@@ -92,8 +92,8 @@ export const tarot = {
     length: 3.0,
   },
   aeonStrip: {
-    id: "aeonStrip",
-    fullName: "Tarot Aeon Strip",
+    id: "aeon",
+    fullName: "Aeon",
     firstPerson:
       /^You stand an Aeon tarot on your palm, and blow it lightly at (?<target>\w+)\.$/,
     secondPerson:
@@ -109,7 +109,7 @@ export const tarot = {
   },
   aeon: {
     id: "aeon",
-    fullName: "Tarot Aeon",
+    fullName: "Aeon",
     firstPerson:
       /^Standing the Aeon on your open palm, you blow it lightly at (?<target>\w+) and watch as it seems to slow \w+ movement through the time stream\.$/,
     secondPerson:
@@ -125,7 +125,7 @@ export const tarot = {
   },
   moon: {
     id: "moon",
-    fullName: "Tarot Moon",
+    fullName: "Moon",
     firstPerson:
       /^As you fling the Moon tarot at (?<target>\w+), it turns an ominous, sickly red, before striking \w+ in the head\.$/,
     secondPerson:
@@ -156,7 +156,7 @@ export const tarot = {
   },
   deathRub: {
     id: "deathRub",
-    fullName: "Tarot Death Rub",
+    fullName: "Death Rub",
     firstPerson:
       /^You rub the image of Death on (?<target>\w+) and feel a satisfying electrical charge run up your arm\.$/,
     secondPerson:
@@ -204,7 +204,7 @@ export const tarot = {
 
   heretic: {
     id: "heretic",
-    fullName: "Tarot Heretic",
+    fullName: "Heretic",
     firstPerson:
       /^The Heretic writhes between your fingers as you unleash it upon (?<target>\w+), blue sparks lighting the tips of your digits as they flicker across the Ruin-wrought image\.$/,
     secondPerson:
