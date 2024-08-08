@@ -75,8 +75,8 @@ export const occultism = {
     tags: ["aff"],
     length: 2.1,
     reaction(action) {
-      action.info = action.args.groups.limb;
-      action.affs.push(`broken${action.args.groups.limb.replace(" ", "")}`);
+      action.info = action.limb;
+      action.affs.push(`broken${action.limb.replace(" ", "")}`);
     },
   },
   shrivelArms: {
@@ -270,8 +270,8 @@ export const occultism = {
     tags: ["aff"],
     length: 2.6,
     reaction(action) {
-      action.info = action.args.groups.limb;
-      action.affs.push(`broken${action.args.groups.limb.replace(" ", "")}`);
+      action.info = action.limb;
+      action.affs.push(`broken${action.limb.replace(" ", "")}`);
     },
   },
   regress: {

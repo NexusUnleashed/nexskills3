@@ -107,7 +107,7 @@ export const dragoncraft = {
     tags: ["prep"],
     length: 2.0,
     reaction(action) {
-      action.info = action.args.groups.limb;
+      action.info = action.limb;
     },
   },
   tailsmash: {

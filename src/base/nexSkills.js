@@ -154,6 +154,7 @@ const processMatch = (
     action.user = groups?.user || defaultUser;
     action.target = groups?.target || defaultTarget;
     action.info = groups?.info || false;
+    action.limb = groups?.limb || false;
     action.originalLine = result[0];
     return true;
   } else {

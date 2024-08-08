@@ -188,8 +188,8 @@ const domination = {
     tags: ["aff"],
     length: 2.35,
     reaction(action) {
-      action.info = action.args.groups.limb;
-      action.affs.push(`broken${action.args.groups.limb.replace(" ", "")}`);
+      action.info = action.limb;
+      action.affs.push(`broken${action.limb.replace(" ", "")}`);
     },
   },
   abominationCommand: {

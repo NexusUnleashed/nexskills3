@@ -123,7 +123,7 @@ const bladedance = {
     info: false,
     length: 2.3,
     reaction(action) {
-      action.info = action.args.groups.limb;
+      action.info = action.limb;
     },
   },
   heelsnap: {
