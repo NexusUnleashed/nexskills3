@@ -92,7 +92,7 @@ export const tarot = {
     length: 3.0,
   },
   aeonStrip: {
-    id: "aeon",
+    id: "aeonStrip",
     fullName: "Aeon",
     firstPerson:
       /^You stand an Aeon tarot on your palm, and blow it lightly at (?<target>\w+)\.$/,
@@ -219,7 +219,5 @@ export const tarot = {
     length: 3.0,
   },
 };
-
-//Archaeon tosses a tarot card at Proficy and as it reaches him, a huge mass of rope bursts out of it, entrapping and hindering him.
 
 export default Object.values(tarot);

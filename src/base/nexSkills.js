@@ -153,9 +153,10 @@ const processMatch = (
     action.matchType = matchType;
     action.user = groups?.user || defaultUser;
     action.target = groups?.target || defaultTarget;
-    action.info = groups?.info || false;
+    action.info = groups?.info || action.info;
     action.limb = groups?.limb || false;
     action.originalLine = result[0];
+    action.args = result;
     return true;
   } else {
     return false;

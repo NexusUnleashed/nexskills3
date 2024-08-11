@@ -26,6 +26,10 @@ export const occultism = {
     balance: "equilibrium",
     tags: ["info"],
     length: 2.5,
+    affs: [],
+    reaction(action) {
+      action.affs.push(action.groups.info);
+    },
   },
   enervate: {
     id: "enervate",
@@ -112,6 +116,26 @@ export const occultism = {
     info: false,
     tags: ["aff"],
     length: 2.1,
+  },
+  shrivelRehit: {
+    id: "shrivelRehit",
+    fullName: "Shrivel",
+    firstPerson:
+      /^You reach out and touch (?<target>\w+)'s (?<limb>\w+), but you can shrivel it no further.\.$/,
+    secondPerson:
+      /^(?<user>\w+) reaches out and touches your (?<limb>\w+), but it is already a useless husk\.$/,
+    thirdPerson:
+      /^(?<user>\w+) reaches out to grab (?<target>\w+)'s (?<limb>\w+), but nothing happens\.$/,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    affs: [],
+    info: false,
+    tags: ["aff"],
+    length: 2.1,
+    reaction(action) {
+      action.info = `Hit broken ${action.limb}`;
+    },
   },
   pinchaura: {
     id: "pinchaura",
