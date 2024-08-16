@@ -11,7 +11,7 @@ const domination = {
       /^A humbug clutches to the throat of (?<target>\w+), its grotesque body undulating\.$/,
     profession: ["occultist"],
     skill: "domination",
-    balance: "equilibrium",
+    balance: "tertiary",
     tags: [],
     length: 2.5,
   },
@@ -26,7 +26,7 @@ const domination = {
       /^A Chaos hound produces a baying howl, and (?<target>\w+) slumps with a sigh\.$/,
     profession: ["occultist"],
     skill: "domination",
-    balance: "equilibrium",
+    balance: "tertiary",
     tags: [],
     length: 2.2,
   },
@@ -41,7 +41,7 @@ const domination = {
       /^A lash of energy whips out of the chaos storm to strike (?<target>\w+), \w+ face going blank for a brief instant on contact\.$/,
     profession: ["occultist"],
     skill: "domination",
-    balance: "equilibrium",
+    balance: "tertiary",
     tags: [],
     length: 2.2,
   },
@@ -56,7 +56,7 @@ const domination = {
       /^A bloodleech scuttles over the skin of (?<target>\w+), its tentacle-like appendages scratching and scraping\.$/,
     profession: ["occultist"],
     skill: "domination",
-    balance: "equilibrium",
+    balance: "tertiary",
     tags: [],
     length: 2.2,
   },
@@ -71,7 +71,7 @@ const domination = {
       /^The sycophant of (?<user>\w+) hunches forward and begins muttering incessantly at (?<target>\w+), who sways unsteadily\.$/,
     profession: ["occultist"],
     skill: "domination",
-    balance: "equilibrium",
+    balance: "tertiary",
     tags: [],
     length: 2,
   },
@@ -85,12 +85,12 @@ const domination = {
       /^(?<user>\w+) gestures toward (?<target>\w+), and a mass of green slime flows up and over \w+\.$/,
     profession: ["occultist"],
     skill: "domination",
-    balance: "equilibrium",
+    balance: "tertiary",
     tags: [],
     length: 2.6,
   },
   slimeCommand2: {
-    id: "slimeCommand2",
+    id: "slimeCommand",
     fullName: "Slime Command",
     firstPerson: false,
     secondPerson:
@@ -98,21 +98,21 @@ const domination = {
     thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
-    balance: "equilibrium",
+    balance: "tertiary",
     tags: [],
     length: 2.6,
   },
   chimeraCommandDeaf: {
     id: "chimeraCommandDeaf",
     fullName: "Chimera Command",
-    firstPerson: false,
+    firstPerson: false, //You command your chimera to bring Pamxen low.
     secondPerson:
       /^A chimera throws all three of its heads forward and opens its mouth, but you hear only the slightest whisper of sound\.$/,
     thirdPerson:
       /^A chimera throws forward all three of its heads and roars at (?<target>\w+), but \w+ seems completely unphased\.$/,
     profession: ["occultist"],
     skill: "domination",
-    balance: "equilibrium",
+    balance: "tertiary",
     tags: [],
     info: "Deaf",
     length: 2.6,
@@ -120,13 +120,13 @@ const domination = {
   chimeraCommand: {
     id: "chimeraCommand",
     fullName: "Chimera Command",
-    firstPerson: false,
+    firstPerson: false, //You command your chimera to bring Pamxen low.
     secondPerson:
       /^A chimera lets out a concussive roar, all three of the creatures heads thrown forward toward you\.$/,
     thirdPerson: /^A chimera lets out a concussive roar at (?<target>\w+)\.$/,
     profession: ["occultist"],
     skill: "domination",
-    balance: "equilibrium",
+    balance: "tertiary",
     tags: [],
     length: 2.6,
   },
@@ -186,6 +186,7 @@ const domination = {
     skill: "domination",
     balance: "tertiary",
     tags: ["aff"],
+    affs: [],
     length: 2.35,
     reaction(action) {
       action.info = action.limb;
@@ -196,7 +197,7 @@ const domination = {
     id: "abominationCommand",
     fullName: "Abomination Command",
     firstPerson:
-      /^You command an eldritch abomination to discern the doom of Pamxen\.$/,
+      /^You command an eldritch abomination to discern the doom of (?<target>\w+)\.$/,
     secondPerson:
       /^Violet tendrils lash out from an eldritch abomination, plunging into you. Though they cause no physical harm, you feel a horrific tearing sensation, as if a fundamental part of your essence has been violated and exposed\.$/,
     thirdPerson:
@@ -208,10 +209,84 @@ const domination = {
     tags: [],
     length: 2.6,
   },
+  abominationCommandFail: {
+    id: "abominationCommandFail",
+    fullName: "Abomination Command",
+    firstPerson:
+      /^An eldritch abomination cannot discern anything through the natural defences of (?<target>\w+)\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "tertiary",
+    info: "Fail",
+    tags: [],
+    length: 2.6,
+  },
+  gremlinCommandFail: {
+    id: "gremlinCommandFail",
+    fullName: "Gremlin",
+    firstPerson:
+      /^(?<target>\w+) has no shield for your gremlin to shatter, occultist\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "equilibrium",
+    info: "No shield",
+    tags: [],
+    length: 2.75,
+  },
+  gremlinCommand: {
+    id: "gremlinCommand",
+    fullName: "Gremlin Command",
+    firstPerson:
+      /^You command your gremlin to shatter the defences surrounding (?<target>\w+)\.$/,
+    secondPerson:
+      /^With a mad cackle, a gremlin leaps at you and batters your shield with a flurry of blows, fracturing it in moments\.$/,
+    thirdPerson:
+      /^A gremlin leaps at (?<target>\w+), cackling madly as it delivers blow after blow against his magical shield\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "equilibrium",
+    info: "Razed",
+    tags: [],
+    length: 2.75,
+  },
+  firelordCommand: {
+    id: "firelordCommand",
+    fullName: "Firelord Command",
+    firstPerson:
+      /^You command your firelord to bring down a portion of the power of Pyradius against (?<target>\w+)\.$/,
+    secondPerson:
+      /^As a firelord glares at you, sudden agonising heat ignites in your veins. It is gone as swiftly as it came, but you feel suddenly lightheaded\.$/,
+    thirdPerson:
+      /^A firelord glances briefly at (?<target>\w+), and a single spark leaps from its eyes to strike him. \w+ convulses violently as if under some great strain, then it fades\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "equilibrium",
+    info: false,
+    tags: [],
+    length: 2.6,
+  },
+  firelordCommand: {
+    id: "firelordCommandFail",
+    fullName: "Firelord Command",
+    firstPerson:
+      /^(?<target>\w+) does not labour under any afflictions that Pyradius may warp\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "equilibrium",
+    info: "Fail",
+    tags: [],
+    length: 2.6,
+  },
   //#endregion
   //#region PRIMEBONDS
-  wormPrime: {
-    id: "wormPrime",
+  wormPrimebond: {
+    id: "wormPrimebond",
     fullName: "Worm Primebond",
     firstPerson: false,
     secondPerson:
@@ -224,8 +299,8 @@ const domination = {
     tags: [],
     length: 8.0,
   },
-  gremlinPrime: {
-    id: "gremlinPrime",
+  gremlinPrimebond: {
+    id: "gremlinPrimebond",
     fullName: "Gremlin Primebond",
     firstPerson: false,
     secondPerson:
@@ -235,11 +310,27 @@ const domination = {
     profession: ["occultist"],
     skill: "domination",
     balance: "free",
-    tags: [],
+    affs: ["dizziness"],
+    tags: ["affs"],
     length: 11.0,
   },
-  humbugPrime: {
-    id: "humbugPrime",
+  gremlinPrimebond2: {
+    id: "gremlinPrimebond2",
+    fullName: "Gremlin Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^The gremlin races between your legs, throwing you off-balance\.$/,
+    thirdPerson: /^The gremlin races between the legs of (?<target>\w+)\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    info: "balance", //off balance target if they already have dizziness
+    affs: ["dizziness", "balance"],
+    tags: ["affs"],
+    length: 11.0,
+  },
+  humbugPrimebond: {
+    id: "humbugPrimebond",
     fullName: "Humbug Primebond",
     firstPerson: false,
     secondPerson:
@@ -252,8 +343,8 @@ const domination = {
     tags: [],
     length: 5.0,
   },
-  bloodleechPrime: {
-    id: "bloodleechPrime",
+  bloodleechPrimebond: {
+    id: "bloodleechPrimebond",
     fullName: "Bloodleech Primebond",
     firstPerson: false,
     secondPerson:
@@ -266,8 +357,8 @@ const domination = {
     tags: [],
     length: 5.0,
   },
-  slimePrime: {
-    id: "slimePrime",
+  slimePrimebond: {
+    id: "slimePrimebond",
     fullName: "Slime Primebond",
     firstPerson: false,
     secondPerson:
@@ -279,8 +370,8 @@ const domination = {
     tags: [],
     length: 10.0,
   },
-  bubonisPrime: {
-    id: "bubonisPrime",
+  bubonisPrimebond: {
+    id: "bubonisPrimebond",
     fullName: "Bubonis Primebond",
     firstPerson:
       /^You sense the malignant glee of your bubonis as it infests (?<target>\w+)\.$/,
@@ -291,6 +382,86 @@ const domination = {
     balance: "free",
     tags: [],
     length: 11.0,
+  },
+  chimeraPrimebondGas: {
+    id: "chimeraPrimebondGas",
+    fullName: "Chimera Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^The chimera's dragon head exhales a cloud of gas at you, and you feel sleepy\.$/,
+    thirdPerson:
+      /^The chimera's dragon head exhales a cloud of gas at (?<target>\w+)\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    info: "sleep gas",
+    length: 8.0,
+  },
+  chimeraPrimebondRam: {
+    id: "chimeraPrimebondRam",
+    fullName: "Chimera Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^The chimera's goat head rams into you and knocks you sprawling\.$/,
+    thirdPerson:
+      /^The chimera's goat head rams into (?<target>\w+) and knocks \w+ sprawling\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    info: "ram",
+    length: 8.0,
+  },
+  chimeraPrimebondRoar: {
+    id: "chimeraPrimebondRoar",
+    fullName: "Chimera Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^The lion head on the chimera roars at you, stunning you with its power\.$/,
+    thirdPerson:
+      /^(?<target>\w+) is stunned by the roaring of the chimera's lion head\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    info: "roar",
+    length: 8.0,
+  },
+  chimeraPrimebondUndeaf: {
+    id: "chimeraPrimebondUndeaf",
+    fullName: "Chimera Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^The lion head on the chimera roars at you, restoring your hearing\.$/,
+    thirdPerson:
+      /^(?<target>\w+) is startled to attention by the roaring of the chimera's lion head\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    info: "undeaf",
+    length: 8.0,
+  },
+  cronePrimebond: {
+    id: "cronePrimebond",
+    fullName: "Crone Primebond",
+    firstPerson: false,
+    secondPerson:
+      /^The crone strokes your (?<limb>.+?) gently, withering it into uselessness\.$/,
+    thirdPerson:
+      /^The crone withers (?<target>\w+)'s (?<limb>.+?) into uselessness\.$/,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "free",
+    tags: [],
+    affs: [],
+    info: false,
+    length: 9.0,
+    reaction(action) {
+      action.info = action.limb;
+      action.affs.push(`broken${action.limb.replace(" ", "")}`);
+    },
   },
   //#endregion
 };
