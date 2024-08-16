@@ -4,7 +4,7 @@ const nur = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
-      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a viridescent tinge. Discharging the vivid energy, he sends a toxic blast to impact with you\.$/,
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a viridescent tinge\. Discharging the vivid energy, he sends a toxic blast to impact with you\.$/,
     thirdPerson: false,
     tags: ["damage", "loki"],
     length: 2,
@@ -14,7 +14,7 @@ const nur = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
-      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a bright violet tinge. Discharging the vivid energy, he sends a blast of power to impact with you\.$/,
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a bright violet tinge\. Discharging the vivid energy, he sends a blast of power to impact with you\.$/,
     thirdPerson: false,
     tags: ["damage", "transfix??? (fix this)"],
     length: 4,
@@ -24,7 +24,17 @@ const nur = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
-      /^A translucent butterfly beats his wings rapidly and his translucent body turns ghostly white. Discharging the pale energy, he sends a blast of power to impact with you\.$/,
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a soft azure tinge\. Discharging the glacial energy, he sends a blast of power to impact with you.\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 4,
+  },
+  {
+    user: "a translucent butterfly",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
+      /^A translucent butterfly beats his wings rapidly and his translucent body turns ghostly white\. Discharging the pale energy, he sends a blast of power to impact with you\.$/,
     thirdPerson: false,
     tags: ["damage", "paralysis"],
     length: 4,
@@ -34,7 +44,7 @@ const nur = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
-      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a bright crimson tinge. Discharging the blazing energy, he sends a blast of power to impact with you\.$/,
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a bright crimson tinge\. Discharging the blazing energy, he sends a blast of power to impact with you\.$/,
     thirdPerson: false,
     tags: ["damage", "burning"],
     length: 4,
@@ -44,7 +54,7 @@ const nur = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
-      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a dark amber tinge. Discharging the crackling energy, he sends a blast of power to impact with you\.$/,
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a dark amber tinge\. Discharging the crackling energy, he sends a blast of power to impact with you\.$/,
     thirdPerson: false,
     tags: ["damage"],
     length: 4,
