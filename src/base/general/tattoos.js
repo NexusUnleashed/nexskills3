@@ -26,6 +26,19 @@ export const tattoos = {
     tags: [],
     length: 0,
   },
+  cloak: {
+    id: "cloak",
+    fullName: "Cloak",
+    firstPerson:
+      /^You caress the tattoo and immediately you feel a cloak of protection surround you\.$/,
+    secondPerson: false,
+    thirdPerson: /^(?<user>\w+) touches a cloak tattoo\.$/,
+    profession: ["general"],
+    skill: "tattoos",
+    balance: "free",
+    tags: [],
+    length: 0,
+  },
 };
 
 export default Object.values(tattoos);

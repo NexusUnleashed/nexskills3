@@ -340,8 +340,8 @@ export const dragoncraft = {
     tags: ["aff"],
     length: 4.0,
   },
-  breathgust: {
-    id: "breathgust",
+  gust: {
+    id: "gust",
     fullName: "Gust",
     firstPerson:
       /^Drawing an enormous breath, you exhale, expelling a gale of wind with such force that (?<target>\w+) is knocked over\.$/,

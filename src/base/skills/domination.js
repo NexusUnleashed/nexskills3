@@ -190,7 +190,7 @@ const domination = {
     length: 2.35,
     reaction(action) {
       action.info = action.limb;
-      action.affs.push(`broken${action.limb.replace(" ", "")}`);
+      action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
   },
   abominationCommand: {
@@ -460,7 +460,7 @@ const domination = {
     length: 9.0,
     reaction(action) {
       action.info = action.limb;
-      action.affs.push(`broken${action.limb.replace(" ", "")}`);
+      action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
   },
   //#endregion

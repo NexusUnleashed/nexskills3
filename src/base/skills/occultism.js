@@ -28,7 +28,9 @@ export const occultism = {
     length: 2.5,
     affs: [],
     reaction(action) {
-      action.affs.push(action.groups.info);
+      if (action.args.groups?.info) {
+        action.affs = [action.args.groups.info];
+      }
     },
   },
   enervate: {
@@ -80,7 +82,7 @@ export const occultism = {
     length: 2.1,
     reaction(action) {
       action.info = action.limb;
-      action.affs.push(`broken${action.limb.replace(" ", "")}`);
+      action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
   },
   shrivelArms: {
@@ -295,7 +297,7 @@ export const occultism = {
     length: 2.6,
     reaction(action) {
       action.info = action.limb;
-      action.affs.push(`broken${action.limb.replace(" ", "")}`);
+      action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
   },
   regress: {
