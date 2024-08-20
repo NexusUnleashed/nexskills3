@@ -44,6 +44,7 @@ const eddibles = [
 const curativeMsgs = {
   "You feel your health and mana replenished.": "potash",
   "The elixir heals and soothes you.": "health",
+  "Your mind feels stronger and more alert.": "mana",
 };
 
 export const curing = {
