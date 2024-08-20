@@ -40,6 +40,12 @@ const eddibles = [
   "some irid moss",
   "a black cohosh root",
 ];
+
+const curativeMsgs = {
+  "You feel your health and mana replenished.": "potash",
+  "The elixir heals and soothes you.": "health",
+};
+
 export const curing = {
   eat: {
     id: "eat",
