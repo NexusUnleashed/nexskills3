@@ -48,6 +48,8 @@ import tapoa from "./areas/tapoa";
 import tirMuran from "./areas/tirMuran";
 import tuar from "./areas/tuar";
 import yggdrasil from "./areas/yggdrasil";
+import composition from "./skills/composition";
+import knights from "./skills/knights";
 
 const npcs = [
   ...ageiro,
@@ -85,11 +87,13 @@ const actions = [
   //Skills
   ...aeonics,
   ...bladedance,
+  ...composition,
   ...curses,
   ...devotion,
   ...domination,
   ...dragoncraft,
   ...ignition,
+  ...knights,
   ...memorium,
   ...occultism,
   ...oppression,
