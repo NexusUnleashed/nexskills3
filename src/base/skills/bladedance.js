@@ -131,10 +131,10 @@ const bladedance = {
     fullName: "Heelsnap",
     //An etched, Vashnari rapier sings with a metallic song as you direct a deep cut toward (Laorir)'s left leg.
     firstPerson:
-      /^.+? sings with a metallic song as you direct a deep cut toward (?<target>.+?) (?<limb>.+?)\.$/,
+      /^.+? sings with a metallic song as you direct a deep cut toward (?<target>.+?)'s (?<limb>.+?)\.$/,
     //Dzak's blade sings with a metallic song as he directs a deep cut towards your left leg.
     secondPerson:
-      /^(?<user>\w+) blade sings with a metallic song as \w+ directs a deep cut towards your (?<limb>.+?)\.$/,
+      /^(?<user>\w+)'s blade sings with a metallic song as \w+ directs a deep cut towards your (?<limb>.+?)\.$/,
     thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
@@ -196,7 +196,7 @@ const bladedance = {
     fullName: "Footwork",
     //On feet as light as snow, you begin to circle (Laorir), your partner in this most deadly dance.
     firstPerson:
-      /^On feet as light as snow, you begin to circle (?<target>\w+), your partner in this most deadly dance\.$/,
+      /^On feet as light as snow, you begin to circle (?<target>.+?), your partner in this most deadly dance\.$/,
     //With a deadly grace Dzak begins to circle you, rapier poised and ready to strike.
     secondPerson:
       /^With a deadly grace (?<user>\w+) begins to circle you, rapier poised and ready to strike\.$/,
