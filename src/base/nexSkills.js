@@ -213,7 +213,11 @@ const checkSkills = (text) => {
   const profession = GMCP.Char.Status.class.toLowerCase();
 
   for (let i = 0; i < actions.length; i++) {
-    const action = { ...actions[i] };
+    const action = {
+      ...actions[i], //shallow copy
+      affs: actions[i].affs, //deep copy
+      tags: actions[i].tags, //deep copy
+    };
 
     if (
       action.profession?.includes(profession) ||

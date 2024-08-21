@@ -46,15 +46,23 @@ export const weaponmastery = {
     id: "raze",
     fullName: "Raze",
     firstPerson: false,
-    secondPerson: /^(?<user>\w+) razes your magical shield with .+?\.$/,
+    secondPerson:
+      /^(?<user>\w+) razes your (?<info>aura of rebounding|magical shield) with .+?\.$/,
     thirdPerson:
-      /^(?<user>\w+) razes (?<target>.+?)'s magical shield with .+?\.$/,
+      /^(?<user>\w+) razes (?<target>.+?)'s (aura of rebounding|magical shield) with .+?\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "balance",
     info: "Shield",
     tags: ["raze"],
     length: 2,
+    reaction(action) {
+      if (action.info === "aura of rebounding") {
+        action.info = "Rebounding";
+      } else {
+        action.info = "Shield";
+      }
+    },
   },
   slice: {
     id: "slice",
@@ -62,7 +70,7 @@ export const weaponmastery = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^The blade of Antoninus is a blur as he moves forward, slicing into Amranu\.$/,
+      /^The blade of (?<user>\w+) is a blur as he moves forward, slicing into (?<target>\w+)\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "balance",
@@ -76,7 +84,7 @@ export const weaponmastery = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^Antoninus swings his shield around, smashing the temple of Amranu with a backhanded blow\.$/,
+      /^(?<user>\w+) swings \w+ shield around, smashing the temple of (?<target>\w+) with a backhanded blow\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "balance",
@@ -90,7 +98,7 @@ export const weaponmastery = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^Lunging to the side, Antoninus brings his shield around to smash into the spine of Amranu\.$/,
+      /^Lunging to the side, (?<user>\w+) brings \w+ shield around to smash into the spine of (?<target>\w+)\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "balance",
@@ -104,7 +112,7 @@ export const weaponmastery = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^Antoninus smashes the edge of .+? into the kneecaps of Amranu, causing him to stumble\.$/,
+      /^(?<user>\w+) smashes the edge of .+? into the kneecaps of (?<target>\w+), causing \w+ to stumble\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "balance",
@@ -131,7 +139,7 @@ export const weaponmastery = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^Antoninus draws Antoninus's lovely buckler back, then lunges forward with a savage strike to the ribs of Amranu\.$/,
+      /^(?<user>\w+) draws .+? back, then lunges forward with a savage strike to the ribs of (?<target>\w+)\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "tertiary",
@@ -145,7 +153,7 @@ export const weaponmastery = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^Antoninus lunges downward, slamming the edge of Antoninus's lovely buckler into the shins of Amranu\.$/,
+      /^(?<user>\w+) lunges downward, slamming the edge of .+? into the shins of (?<target>\w+)\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "tertiary",
@@ -156,19 +164,25 @@ export const weaponmastery = {
   //#endregion
 };
 
-//Antoninus whips Matsuhama's morningstar toward the right leg of Archaeon.
-//Archaeon goes down in a tangle of limbs as his legs are swept out from under him. //(Expend - morningstar - leg)
+//(?<user>\w+) whips Matsuhama's morningstar toward the right leg of Archaeon.
+//Archaeon goes down in a tangle of limbs as \w+ legs are swept out from under him. //(Expend - morningstar - leg)
 /*
-20:13:36.078 Antoninus whips Matsuhama's morningstar toward the left leg of Archaeon.
-20:13:36.078 Antoninus misses Archaeon with Matsuhama's morningstar.
-20:13:36.078 Antoninus whips Matsuhama's morningstar toward the left leg of Archaeon.
-20:13:36.078 Antoninus misses Archaeon with Matsuhama's morningstar.
+20:13:36.078 (?<user>\w+) whips Matsuhama's morningstar toward the left leg of Archaeon.
+20:13:36.078 (?<user>\w+) misses Archaeon with Matsuhama's morningstar.
+20:13:36.078 (?<user>\w+) whips Matsuhama's morningstar toward the left leg of Archaeon.
+20:13:36.078 (?<user>\w+) misses Archaeon with Matsuhama's morningstar.
 
 
-10:59:25.048 Antoninus whips Matsuhama's morningstar toward the left leg of Archaeon.
-10:59:25.048 The attack rebounds back onto Antoninus!
-10:59:25.048 Antoninus whips Matsuhama's morningstar toward the left leg of Archaeon.
-10:59:25.048 The attack rebounds back onto Antoninus!
+10:59:25.048 (?<user>\w+) whips Matsuhama's morningstar toward the left leg of Archaeon.
+10:59:25.048 The attack rebounds back onto (?<user>\w+)!
+10:59:25.048 (?<user>\w+) whips Matsuhama's morningstar toward the left leg of Archaeon.
+10:59:25.048 The attack rebounds back onto (?<user>\w+)!
+
+Lightning-quick, Emiya jabs you with a hydra-etched scimitar with a vine-wreathed hilt.
+Lightning-quick, Emiya jabs your left leg with a hydra-etched scimitar with a vine-wreathed hilt.
+Emiya swings a hydra-etched scimitar with a vine-wreathed hilt at your left leg with all her might.
+Emiya slashes into your left leg with a hydra-etched scimitar with a vine-wreathed hilt.
+
 
 */
 
