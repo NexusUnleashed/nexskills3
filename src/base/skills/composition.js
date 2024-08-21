@@ -5,7 +5,8 @@ const composition = {
     firstPerson:
       /^Your paean slams into (?<target>\w+) with all the weight of history's greatest triumphs\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+)'s paean slams into (?<target>\w+) with all the weight of history's greatest triumphs\.$/,
     profession: ["bard"],
     skill: "composition",
     balance: false,

@@ -1,33 +1,4 @@
 export const weaponmastery = {
-  //#region 2H
-  battlefuryFocus: {
-    id: "battlefuryFocus",
-    fullName: "Battlefury Focus",
-    firstPerson:
-      /^Channeling the fury of battle, you prepare to unleash a brutally swift stroke against your foe\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["runewarden", "paladin", "infernal", "unnamable"],
-    skill: "weaponmastery",
-    balance: "free",
-    tags: [],
-    length: 0,
-  },
-  slaughter: {
-    id: "slaughter",
-    fullName: "Slaughter",
-    firstPerson:
-      /^Drawing back .+, you unleash a flesh-mincing blow at (?<target>.+?)\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["runewarden", "paladin", "infernal", "unnamable"],
-    skill: "weaponmastery",
-    balance: "balance",
-    tags: ["damage"],
-    length: 0,
-  },
-  //#endregion
-  //#region SNB
   razeNone: {
     id: "razeNone",
     fullName: "Raze",
@@ -64,6 +35,61 @@ export const weaponmastery = {
       }
     },
   },
+  impale: {
+    id: "impale",
+    fullName: "Impale",
+    firstPerson: false,
+    secondPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) draws back \w+ blade and impales (?<target>\w+) to the hilt\.$/,
+    profession: ["runewarden", "paladin", "infernal", "unnamable"],
+    skill: "weaponmastery",
+    balance: "balance",
+    tags: [],
+    length: 4,
+  },
+  disembowel: {
+    id: "disembowel",
+    fullName: "Disembowel",
+    firstPerson: false,
+    secondPerson: false,
+    thirdPerson:
+      /^With a vicious snarl (?<user>\w+) carves a merciless swathe through the steaming guts of (?<target>\w+), who gurgles and chokes as \w+ withdraws \w+ dripping blade, glistening with gore\.$/,
+    profession: ["runewarden", "paladin", "infernal", "unnamable"],
+    skill: "weaponmastery",
+    balance: "balance",
+    tags: [],
+    length: 3,
+  },
+  //#region 2H
+  battlefuryFocus: {
+    id: "battlefuryFocus",
+    fullName: "Battlefury Focus",
+    firstPerson:
+      /^Channeling the fury of battle, you prepare to unleash a brutally swift stroke against your foe\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["runewarden", "paladin", "infernal", "unnamable"],
+    skill: "weaponmastery",
+    balance: "free",
+    tags: [],
+    length: 0,
+  },
+  slaughter: {
+    id: "slaughter",
+    fullName: "Slaughter",
+    firstPerson:
+      /^Drawing back .+, you unleash a flesh-mincing blow at (?<target>.+?)\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["runewarden", "paladin", "infernal", "unnamable"],
+    skill: "weaponmastery",
+    balance: "balance",
+    tags: ["damage"],
+    length: 0,
+  },
+  //#endregion
+  //#region SNB
   slice: {
     id: "slice",
     fullName: "Slice",

@@ -8,7 +8,8 @@ const bladedance = {
     //Dzak darts out with an etched, Vashnari rapier in a lightning-fast jab towards your left arm.
     secondPerson:
       /^(?<user>\w+) darts out with .+? in a lightning-fast jab towards your (?<limb>.+?)\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) darts out with .+? in a lightning-fast jab towards the (?<limb>.+?) of (?<target>.+?)\.$/,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -80,7 +81,8 @@ const bladedance = {
     //Dzak flicks out with an etched, Vashnari rapier towards you, a keening note raising from the blade's lunge.
     secondPerson:
       /^(?<user>\w+) flicks out with .+? towards you, a keening note raising from the blade's lunge\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) flicks out with A Soulpiercer towards (?<target>\w+), a keening note rising from the blade's lunge\.$/,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
