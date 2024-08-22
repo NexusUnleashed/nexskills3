@@ -1,24 +1,4 @@
 const bladedance = {
-  jab: {
-    id: "jab",
-    fullName: "Jab",
-    //You dart out an etched, Vashnari rapier in a lightning-fast jab to the left arm of (Laorir).
-    firstPerson:
-      /^You dart out .+? in a lightning-fast jab to the (?<limb>.+?) of (?<target>.+?)\.$/,
-    //Dzak darts out with an etched, Vashnari rapier in a lightning-fast jab towards your left arm.
-    secondPerson:
-      /^(?<user>\w+) darts out with .+? in a lightning-fast jab towards your (?<limb>.+?)\.$/,
-    thirdPerson:
-      /^(?<user>\w+) darts out with .+? in a lightning-fast jab towards the (?<limb>.+?) of (?<target>.+?)\.$/,
-    profession: ["bard"],
-    skill: "bladedance",
-    balance: "balance",
-    tags: ["pve", "damage"],
-    affs: [],
-    // From front at the arms: broken limb. From front at torso: nausea. From side at arms: clumsiness. From side at torso: asthma. From back at arms: weariness. From back at torso: anorexia
-    info: false,
-    length: 2.3,
-  },
   //raze miss
   punctuate: {
     id: "punctuate",
@@ -43,8 +23,10 @@ const bladedance = {
     fullName: "Punctuate",
     //Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (Laorir).
     //The anti-weapon field surrounding (Laorir) shatters under the point of your rapier.
-    firstPerson:
+    firstPerson: [
+      /^Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (?<target>\w+)\.$/,
       /^The anti-weapon field surrounding (?<target>\w+) shatters under the point of your rapier\.$/,
+    ],
     //The staccato song of an etched, Vashnari rapier punctuates a flurry of blows as Dzak's blade pursues you relentlessly.
     //The anti-weapon field surrounding you shatters under the flurry of strikes.
     secondPerson:
@@ -55,7 +37,7 @@ const bladedance = {
     balance: "balance",
     tags: ["raze"],
     affs: false,
-    info: "Raze",
+    info: "Raze Rebounding",
     length: 2.0,
   },
   hound: {
@@ -71,6 +53,31 @@ const bladedance = {
     affs: false,
     info: false,
     length: 3.0,
+  },
+  jab: {
+    id: "jab",
+    fullName: "Jab",
+    //You dart out an etched, Vashnari rapier in a lightning-fast jab to the left arm of (Laorir).
+    firstPerson:
+      /^You dart out .+? in a lightning-fast jab to the (?<limb>.+?) of (?<target>.+?)\.$/,
+    //Dzak darts out with an etched, Vashnari rapier in a lightning-fast jab towards your left arm.
+    secondPerson:
+      /^(?<user>\w+) darts out with .+? in a lightning-fast jab towards your (?<limb>.+?)\.$/,
+    thirdPerson:
+      /^(?<user>\w+) darts out with .+? in a lightning-fast jab towards the (?<limb>.+?) of (?<target>.+?)\.$/,
+    profession: ["bard"],
+    skill: "bladedance",
+    balance: "balance",
+    tags: ["pve", "damage"],
+    affs: [],
+    // From front at the arms: broken limb. From front at torso: nausea. From side at arms: clumsiness. From side at torso: asthma. From back at arms: weariness. From back at torso: anorexia
+    info: false,
+    length: 2.3,
+    reaction(action) {
+      action.info = action.limb;
+    },
+    //FRONT-TORSO: Your blade slips through the guard of Mornath, sinking into vulnerable organs before you swiftly withdraw.
+    //SIDE-TORSO: Your blade slides between the ribs of Mornath before you swiftly withdraw.
   },
   flick: {
     id: "flick",
@@ -90,6 +97,9 @@ const bladedance = {
     affs: [], // From front: crescendo. From side: earworm. From back: both crescendo and earworm.
     info: false,
     length: 2.3,
+    //FRONT: A rich, vibrant hum rises from your blade as it finds the flesh of Mornath.
+    //SIDE: A hum on the edge of hearing emanates from your blade as it finds the flesh of Mornath.
+    //BACK: A grim note knells from your blade as it finds the flesh of Mornath.
   },
   flourish: {
     id: "flourish",
