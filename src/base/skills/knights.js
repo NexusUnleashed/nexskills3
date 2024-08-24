@@ -27,3 +27,12 @@ const knights = {
 };
 
 export default Object.values(knights);
+
+/*
+An arrow flies towards you, shot by (Alyzar).
+It strikes you, gouging a deep and bloody wound.
+Your hearing is suddenly restored.
+
+The meteor, shot by (Farrah), slams into your shield, shattering it.
+Frozen by fear, you can do naught but watch, wide-eyed with terror, as (Farrah)'s blazing sphere streaks towards you and slams into your body, burning you horribly.  //meteor hit
+*/

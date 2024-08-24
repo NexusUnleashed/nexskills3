@@ -466,3 +466,13 @@ export const dragoncraft = {
 };
 
 export default Object.values(dragoncraft);
+
+/*
+
+A snaking stream of acid from (Keturah)'s maw forks into the room, blasting into you mercilessly.
+The stream hits your magical shield, shattering it.
+
+
+
+
+*/

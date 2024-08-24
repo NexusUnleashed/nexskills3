@@ -8,7 +8,10 @@ const bladedance = {
     firstPerson: /^Your rapier strikes only air in front of (?<target>\w+)\.$/,
     secondPerson:
       /^(?<user>\w+) strikes only air with \w+ flurry of blows, the tip of \w+ rapier flickering before your face\.$/, //line in-game: Dzak strikes only air with his flurry of blows, the tip of his rapier flickering before your face.   note: 2 lines for this as well, the first being generic and is: The staccato song of an etched, Vashnari rapier punctuates a flurry of blows as Dzak's blade pursues you relentlessly.
-    thirdPerson: false,
+    thirdPerson: [
+      /^(?<user>\w+)'s movement yields to a flurry of blows upon (?<target>\w+), the staccato song of .+? accompaniment\.$/,
+      /^(?<user>\w+) strikes only air in front of (?<target>\w+) with \w+ flurry of blows.$/,
+    ],
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -77,7 +80,9 @@ const bladedance = {
       action.info = action.limb;
     },
     //FRONT-TORSO: Your blade slips through the guard of Mornath, sinking into vulnerable organs before you swiftly withdraw.
+    //FRONT-TORSO: (Myrddin) looks queasy as the blade of (Dunn) slides home and clear in a flawless strike and withdraw.
     //SIDE-TORSO: Your blade slides between the ribs of Mornath before you swiftly withdraw.
+    //SIDE-TORSO: The blade of (Dunn) slips into the body of (Myrddin) as breath rushes from his mouth in a silent gasp.
   },
   flick: {
     id: "flick",
@@ -89,7 +94,7 @@ const bladedance = {
     secondPerson:
       /^(?<user>\w+) flicks out with .+? towards you, a keening note raising from the blade's lunge\.$/,
     thirdPerson:
-      /^(?<user>\w+) flicks out with A Soulpiercer towards (?<target>\w+), a keening note rising from the blade's lunge\.$/,
+      /^(?<user>\w+) flicks out with .+? towards (?<target>\w+), a keening note rising from the blade's lunge\.$/,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -99,6 +104,7 @@ const bladedance = {
     length: 2.3,
     //FRONT: A rich, vibrant hum rises from your blade as it finds the flesh of Mornath.
     //SIDE: A hum on the edge of hearing emanates from your blade as it finds the flesh of Mornath.
+    //SIDE: A hum on the edge of hearing emanates from the blade of (Dunn) as it finds the flesh of (Keturah).
     //BACK: A grim note knells from your blade as it finds the flesh of Mornath.
   },
   flourish: {
@@ -126,12 +132,14 @@ const bladedance = {
     //With a flourish of an etched, Vashnari rapier Dzak steps in close, his blade slicing at your head.
     secondPerson:
       /^With a flourish of .+? (?<user>\w+) steps in close, \w+ blade slicing at your (?<limb>.+?)\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^With a flourish of .+? (?<user>\w+) steps smoothly into (?<target>.+?), \w+ blade slicing at .+?'s (?<limb>.+?)\.$/,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
     tags: ["pve", "damage", "aff"],
-    affs: [], // Will give the first of the following afflictions that target does not have: From front at head: clumisness, weariness, recklessness. From side at head: addiction, generosity, confusion. From back at head: paralysis, generosity, diminished. From front at arms: clumsiness, weariness, haemophilia. From side at arms: weariness, clumsiness, healthleech. From back at arms: paralysis, healthleech, sensitivity.
+    //FRONT-ARM: The song of an icy jade rapier rings out as the point slashes through the flesh of (Keturah) to cut at the tendons beneath.
+    affs: [],
     info: false,
     length: 2.3,
     reaction(action) {
@@ -147,7 +155,8 @@ const bladedance = {
     //Dzak's blade sings with a metallic song as he directs a deep cut towards your left leg.
     secondPerson:
       /^(?<user>\w+)'s blade sings with a metallic song as \w+ directs a deep cut towards your (?<limb>.+?)\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+)'s blade sings with a metallic song as \w+ directs a deep cut towards the (?<limb>.+?) of (?<target>.+?)\.$/,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -212,7 +221,8 @@ const bladedance = {
     //With a deadly grace Dzak begins to circle you, rapier poised and ready to strike.
     secondPerson:
       /^With a deadly grace (?<user>\w+) begins to circle you, rapier poised and ready to strike\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^With a deadly grace (?<user>\w+) begins to circle (?<target>.+?), \w+ rapier poised and ready to strike.$/,
     profession: ["bard"],
     skill: "bladedance",
     balance: false, //passive positioning. It always begins in the front position, but the "start" of the footwork passive gives a different line.
@@ -247,7 +257,8 @@ const bladedance = {
     //Dzak continues to circle you, his deadly dance carrying him poised and ready around to your flank.
     secondPerson:
       /^(?<user>\w+) continues to circle you, \w+ deadly dance carrying \w+ poised and ready around to your flank\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) continues to circle (?<target>\w+), \w+ deadly dance carrying \w+ poised and ready around to \w+ partner's flank\.$/,
     profession: ["bard"],
     skill: "bladedance",
     balance: false, //passive positioning.
@@ -265,7 +276,8 @@ const bladedance = {
     //Dzak continues to circle you, slipping in and out of your blindspot as he dances behind you.
     secondPerson:
       /^(?<user>\w+?) continues to circle you, slipping in and out of your blindspot as \w+ dances behind you\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) continues to circle (?<target>\w+), rapier poised and ready as \w+ dances behind \w+ partner\.$/,
     profession: ["bard"],
     skill: "bladedance",
     balance: false, //passive positioning.

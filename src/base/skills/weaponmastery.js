@@ -204,11 +204,16 @@ export const weaponmastery = {
 10:59:25.048 (?<user>\w+) whips Matsuhama's morningstar toward the left leg of Archaeon.
 10:59:25.048 The attack rebounds back onto (?<user>\w+)!
 
+(Archaeon) whips a grim blade of unhallowed bone through the air in front of (Karalden), to no effect.
+
+Lightning-quick, (Archaeon) jabs (Myrddin) with a blade of the harrowing.
 Lightning-quick, Emiya jabs you with a hydra-etched scimitar with a vine-wreathed hilt.
 Lightning-quick, Emiya jabs your left leg with a hydra-etched scimitar with a vine-wreathed hilt.
 Emiya swings a hydra-etched scimitar with a vine-wreathed hilt at your left leg with all her might.
+Emiya swings a hydra-etched scimitar with a vine-wreathed hilt at you with all her might.
 Emiya slashes into your left leg with a hydra-etched scimitar with a vine-wreathed hilt.
 
+(Puxi) slashes into you with a Scimitar of Eagles!
 
 */
 

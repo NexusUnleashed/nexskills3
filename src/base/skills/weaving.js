@@ -5,6 +5,7 @@ export const weaving = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
+      ///^A translucent mace coalesces in (?<user>.+?)'s hands, firming as it gains substance beyond the incorporeal\.$/,
       /^(?<user>.+?) brings a translucent mace around in a savage overhand strike, smashing it into the head of (?<target>.+?)\.$/,
     profession: ["psion"],
     skill: "weaving",
