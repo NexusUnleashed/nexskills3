@@ -81,6 +81,20 @@ export const curing = {
     tags: [],
     length: 1,
   },
+  health: {
+    id: "health",
+    fullName: "Health",
+    firstPerson:
+      /^You take some elixir from .+? and rub it into your (?<info>.+?)\.$/,
+    secondPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) takes some elixir from .+? and rubs it into \w+ (?<info>.+?)\.$/,
+    profession: ["general"],
+    skill: "curing",
+    balance: "sip",
+    tags: [],
+    length: 1.6,
+  },
   smoke: {
     id: "smoke",
     fullName: "Smoke",
@@ -121,3 +135,6 @@ export const curing = {
 };
 
 export default Object.values(curing);
+
+//Atalkez takes some elixir from a quartz vial and rubs it into his torso.
+//Atalkez takes some elixir from a quartz vial and rubs it into his legs.
