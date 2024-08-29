@@ -2,7 +2,8 @@ export const spirituality = {
   chasten: {
     id: "chasten",
     fullName: "Chasten",
-    firstPerson: false,
+    firstPerson:
+      /^You direct a dark bolt of energy through your mace towards (?<target>\w+)\. The curse of (?<info>\w+) is brought down on to your victim\.$/,
     secondPerson: false,
     thirdPerson:
       /^A dark bolt of energy erupts from the mace held by (?<user>\w+), afflicting (?<target>.+?) with a chastening magic\.$/,
@@ -15,10 +16,11 @@ export const spirituality = {
   smite: {
     id: "smite",
     fullName: "Smite",
-    firstPerson: false,
+    firstPerson:
+      /^You utter a prayer and smite (?<target>.+?)'s (?<limb>.+?) with .+?\.$/,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+) utters a prayer and smites (?<target>.+?)'s (?<limb>.+?) with an Auroran Mace\.$/,
+      /^(?<user>\w+) utters a prayer and smites (?<target>.+?)'s (?<limb>.+?) with .+?\.$/,
     profession: ["priest"],
     skill: "spirituality",
     balance: "equilibrium",

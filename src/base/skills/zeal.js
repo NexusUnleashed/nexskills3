@@ -2,7 +2,8 @@ export const zeal = {
   guilt: {
     id: "guilt",
     fullName: "Guilt",
-    firstPerson: false,
+    firstPerson:
+      /^"And your guilt will be made plain," you proselytise to (?<target>\w+)\.$/,
     secondPerson: false,
     thirdPerson:
       /^"And your guilt will be made plain," (?<user>\w+) proselytises, finger raised to point at (?<target>.+?)\.$/,
@@ -45,7 +46,7 @@ export const zeal = {
   penance: {
     id: "penance",
     fullName: "Penance",
-    firstPerson: false,
+    firstPerson: /^"And face your penance!" you denounce (?<target>\w+)\.$/,
     secondPerson: false,
     thirdPerson:
       /^"And face your penance!" denounces (?<user>\w+), hand raised in warding against (?<target>.+?)\.$/,

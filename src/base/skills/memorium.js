@@ -90,7 +90,10 @@ export const memorium = {
     id: "scorpion",
     fullName: "Epitaph Scorpion",
     firstPerson: false,
-    secondPerson: false,
+    secondPerson:
+      /^(?<user>\w+) traces a logograph depicting a striking scorpion in the air before you, the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
+    //The logograph leaps from the air to you, and you feel a terrible pain in the side of your neck before an icy cold rushes through you.
+    //You feel light headed and dizzy.
     thirdPerson:
       /^(?<user>\w+) traces a logograph depicting a striking scorpion in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     //The logograph is still solidifying as it leaps from the air to Amranu, an insubstantial stinger rising and falling thrice in terrible succession before the logograph is gone.
