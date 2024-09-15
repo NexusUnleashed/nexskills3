@@ -73,7 +73,6 @@ const bladedance = {
     balance: "balance",
     tags: ["pve", "damage"],
     affs: [],
-    // From front at the arms: broken limb. From front at torso: nausea. From side at arms: clumsiness. From side at torso: asthma. From back at arms: weariness. From back at torso: anorexia
     info: false,
     length: 2.3,
     reaction(action) {
