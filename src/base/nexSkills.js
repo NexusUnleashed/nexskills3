@@ -50,6 +50,7 @@ import tuar from "./areas/tuar";
 import yggdrasil from "./areas/yggdrasil";
 import composition from "./skills/composition";
 import knights from "./skills/knights";
+import elementalism from "./skills/elementalism";
 
 const npcs = [
   ...ageiro,
@@ -92,6 +93,7 @@ const actions = [
   ...devotion,
   ...domination,
   ...dragoncraft,
+  ...elementalism,
   ...ignition,
   ...knights,
   ...memorium,

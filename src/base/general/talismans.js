@@ -19,3 +19,5 @@ export const talismans = {
 };
 
 export default Object.values(talismans);
+
+//Aegoth points his fists at the ground and freezing blasts of air emanate from his bracers to cover it in ice.
