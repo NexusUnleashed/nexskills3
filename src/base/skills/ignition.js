@@ -4,8 +4,10 @@ export const ignition = {
     fullName: "Flamewhip",
     firstPerson:
       /^A whip of liquid flame coalesces in your hand, and with a savage lash you send it to scourge the flesh of (?<target>.+?)\.$/,
-    secondPerson: false,
-    thirdPerson: false,
+    secondPerson:
+      /^A whip of flame coalesces in the hand of Khaseem, with which he viciously lashes you\.$/,
+    thirdPerson:
+      /^A whip of flame coalesces in the hand of Khaseem, which he brings around in a savage lashing motion to scourge the flesh of Pamxen\.$/,
     profession: ["fire elemental lord"],
     skill: "ignition",
     balance: "balance",
