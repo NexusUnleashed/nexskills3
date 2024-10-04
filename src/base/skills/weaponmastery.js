@@ -2,38 +2,53 @@ export const weaponmastery = {
   slash: {
     id: "slash",
     fullName: "Slash",
-    firstPerson: /^You slash into (?<target>.+?) with (a|an) .+?\.$/,
+    firstPerson:
+      /^You slash into (?<target>.+?)(?:'s (?<limb>(?:head|torso|left (?:arm|leg)|right (?:arm|leg))))? with .+\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) slashes into (?<target>.+?)(?:'s (?<limb>(?:head|torso|left (?:arm|leg)|right (?:arm|leg))))? with .+\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery",
     balance: "balance",
     tags: ["pve", "damage"],
     length: 2.2,
+    reaction(action) {
+      action.info = action.limb;
+    },
   },
   slash2: {
     id: "slash2",
     fullName: "Slash",
-    firstPerson: /^You swing .+? at (?<target>.+?) with all your might\.$/,
+    firstPerson:
+      /^You swing .+? at (?<target>.+?)(?:'s (?<limb>(?:head|torso|left (?:arm|leg)|right (?:arm|leg))))? with all your might\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) swings .+? at (?<target>.+?)(?:'s (?<limb>(?:head|torso|left (?:arm|leg)|right (?:arm|leg))))? with all \w+ might\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery",
     balance: "balance",
     tags: ["pve", "damage"],
     length: 2.2,
+    reaction(action) {
+      action.info = action.limb;
+    },
   },
   slash3: {
     id: "slash3",
     fullName: "Slash",
-    firstPerson: /^Lightning-quick, you jab (?<target>.+?) with .+?\.$/,
+    firstPerson:
+      /^Lightning-quick, you jab (?<target>.+?)(?:'s (?<limb>(?:head|torso|left (?:arm|leg)|right (?:arm|leg))))? with .+?\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^Lightning-quick, (?<user>\w+) jabs (?<target>.+?)(?:'s (?<limb>(?:head|torso|left (?:arm|leg)|right (?:arm|leg))))? with .+?\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery",
     balance: "balance",
     tags: ["pve", "damage"],
     length: 2.2,
+    reaction(action) {
+      action.info = action.limb;
+    },
   },
 
   razeNone: {

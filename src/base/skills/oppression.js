@@ -66,6 +66,8 @@ export const oppression = {
     secondPerson: false,
     thirdPerson:
       /^.+? trembles in the hand of (?<user>\w+) as it strikes (?<target>\w+), a sanguine mist engulfing its wielder\.$/,
+    //The sanguine mist surrounding Tabethys billows and writhes exultantly.
+    //--Aff cure line?
     profession: ["infernal"],
     skill: "oppression",
     balance: "free",
@@ -91,3 +93,7 @@ export const oppression = {
 };
 
 export default Object.values(oppression);
+
+//Agony
+//The sanguine mist surrounding Tabethys billows and writhes exultantly.
+//--Aff cure line?

@@ -8,6 +8,8 @@ export const memorium = {
     secondPerson: false,
     thirdPerson:
       /^Crimson fire trails the knife of (?<user>\w+) as \w+ slashes \w+ knife through the air before (?<target>.+?), a jagged logograph hanging in its passing\.$/,
+    //There is a sharp cracking sound from the air directly in front of Tabethys, but nothing else seems to happen.
+    //A violent cracking sound from the air in front of Tabethys heralds her magical shield exploding into a shower of translucent shards.
     profession: ["pariah"],
     skill: "memorium",
     balance: "balance",
