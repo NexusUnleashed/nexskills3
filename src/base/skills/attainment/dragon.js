@@ -1,4 +1,5 @@
 export const dragon = {
+  //#region Blue Dragon
   glaciate: {
     id: "glaciate",
     fullName: "Glaciate",
@@ -82,6 +83,8 @@ export const dragon = {
     tags: ["pve", "damage"],
     length: 3.0,
   },
+  //#endregion
+  //#region Black Dragon
   dragonsting: {
     id: "dragonsting",
     fullName: "Dragonsting",
@@ -153,13 +156,16 @@ export const dragon = {
     tags: ["pve", "damage", "fear"],
     length: 3.0,
   },
+  //#endregion
+  //#region Red Dragon
   dragonblaze: {
     id: "dragonblaze",
     fullName: "Dragonblaze",
     firstPerson:
       /^You breathe a long torrent of flame at (?<target>.+?), igniting \w+ skin\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) breathes a long torrent of flame at (?<target>.+?), igniting \w+ skin\.$/,
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -201,7 +207,8 @@ export const dragon = {
     firstPerson:
       /^You charge quickly at (?<target>.+?), throwing your mighty form into \w+ and sending \w+ staggering back\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) charges quickly at (?<target>.+?), throwing \w+ massive form at \w+ target in a mighty crash\.$/,
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -243,7 +250,8 @@ export const dragon = {
     firstPerson:
       /^You breathe a white-hot blast of flame at (?<target>.+?) and burn away \w+ translucent shield\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) breathes a white-hot blast of flame at (?<target>.+?) and burns away \w+ translucent shield\.$/,
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -251,6 +259,7 @@ export const dragon = {
     tags: ["pve", "raze"],
     length: 3.0,
   },
+  //#endregion
 };
 
 //You can use another Battlerage ability again. Available abilities: Overwhelm

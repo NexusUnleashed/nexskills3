@@ -18,8 +18,8 @@ const elementalism = {
   erode: {
     id: "erode",
     fullName: "Erode",
-    firstPerson: /^You cast a spell of erosion at Pamxen\.$/,
-    secondPerson: /^Khaseem casts a spell of erosion at you\.$/,
+    firstPerson: /^You cast a spell of erosion at (?<target>\w+)\.$/,
+    secondPerson: /^(?<user>\w+) casts a spell of erosion at you\.$/,
     thirdPerson: /^(?<user>\w+) casts a spell of erosion at Pamxen\.$/,
     profession: ["magi"],
     skill: "elementalism",
@@ -94,7 +94,7 @@ const elementalism = {
     id: "gust",
     fullName: "Gust",
     firstPerson:
-      /^You call upon a gust of wind to push (?<target>\w+) out to the southwest\.$/,
+      /^You call upon a gust of wind to push (?<target>\w+) out to the (?<info>\w+)\.$/,
     secondPerson:
       /^(?<user>\w+) raises \w+ arms and a gust of wind slams into you, pushing you to the (?<info>\w+)\.$/,
     thirdPerson:
