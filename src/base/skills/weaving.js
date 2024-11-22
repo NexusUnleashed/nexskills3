@@ -27,9 +27,11 @@ export const weaving = {
     firstPerson:
       //You weave a translucent battleaxe into being, its ethereal form firming to corporeality in your hands.
       /^Your blow scythes through the air in front of (?<target>\w+), missing entirely\.$/,
-    secondPerson:
+    secondPerson: [
       /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon you\.$/,
-    //The blow scythes through the air in front of you, missing entirely. //MISS. No shield
+      /^The blow scythes through the air in front of you, missing entirely\.$/,
+    ],
+    //MISS. No shield
     thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
@@ -43,11 +45,12 @@ export const weaving = {
     fullName: "Cleave",
     firstPerson:
       //You weave a translucent battleaxe into being, its ethereal form firming to corporeality in your hands.
-      /^You bring a translucent battleaxe in a powerful overhead blow down upon (?<target>\w+)\.$/,
-    //Your blow cleaves through the magical shield surrounding Khaseem, continuing on to drive him from his feet.
-    secondPerson:
+      /^Your blow cleaves through the magical shield surrounding (?<target>\w+), continuing on to drive \w+ from his feet\.$/,
+    secondPerson: [
       /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon you\.$/,
-    //The blow cleaves through your magical shield, shattering it and knocking you from your feet! //HIT. Prone
+      /^The blow cleaves through your magical shield, shattering it and knocking you from your feet!$/,
+    ],
+    //HIT. Prone
     thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
@@ -112,8 +115,8 @@ export const weaving = {
     affs: ["prone"],
     length: 2.3,
   },
-  entwineEntalge: {
-    id: "entwineEntalge",
+  entwineEntangle: {
+    id: "entwineEntangle",
     fullName: "Entwine",
     firstPerson:
       //You weave a translucent lash into being, its ethereal form firming to corporeality in your hands.
@@ -144,6 +147,21 @@ export const weaving = {
     affs: ["trueblind"], //5s trueblind. +blackout if prone
     length: 2.3,
   },
+  puncture: {
+    id: "puncture",
+    fullName: "Puncture",
+    firstPerson:
+      /^With a lightning-fast jab of your blade you puncture the cluster of nerves just below the (left|right) shoulder of (?<target>\w+?)\.$/,
+    secondPerson:
+      /^A terrible weariness overcomes you as (?<user>\w+?) darts out \w+ blade and drives the tip into you just beneath your (left|right) shoulder\.$/,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "balance",
+    tags: [],
+    length: 2.3,
+    affs: ["weariness"],
+  },
   sever: {
     id: "sever",
     fullName: "Sever",
@@ -159,7 +177,7 @@ export const weaving = {
     length: 2.3,
     reaction(action) {
       action.info = action.limb;
-      action.affs = ["clumsiness", `broken${action.limb.replace(" ", "")}`];
+      action.affs = ["clumsiness"];
     },
   },
 
@@ -189,6 +207,21 @@ export const weaving = {
       /^A sharp pain across your throat and a sudden lack of breath comes moments before you register the retreat of (?<user>\w+?), bloody dagger in hand\.$/,
     thirdPerson:
       /^Almost too swift to perceive, (?<user>\w+?) lashes out with a translucent dagger, tracing a bloody line across the throat of (?<target>.+?)\.$/,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "balance",
+    tags: ["aff"],
+    affs: ["asthma"],
+    length: 2.2,
+  },
+  backhand: {
+    id: "backhand",
+    fullName: "Backhand",
+    firstPerson:
+      /^You deliver a savage backhanded blow with a translucent mace to the face of (?<target>\w+?)\.$/,
+    secondPerson:
+      /^Pain explodes through your skull as (?<user>\w+?) brings a translucent mace around in a savage backhanded blow to your face\.$/,
+    thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
