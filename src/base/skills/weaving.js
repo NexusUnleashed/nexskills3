@@ -13,7 +13,7 @@ export const weaving = {
       /^(?<user>\w+) rushes at you with a translucent spear, driving it deep into you\.$/,
     thirdPerson:
       //A translucent spear coalesces in Khayyin's hands, firming as it gains substance beyond the incorporeal.
-      /^(?<user>\w+)Pamxen rushes at (?<target>\w+), driving a translucent spear deep into \w+\.$/,
+      /^(?<user>\w+) rushes at (?<target>\w+), driving a translucent spear deep into \w+\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -32,7 +32,10 @@ export const weaving = {
       /^The blow scythes through the air in front of you, missing entirely\.$/,
     ],
     //MISS. No shield
-    thirdPerson: false,
+    thirdPerson: [
+      /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon (?<target>\w+)\.$/,
+      /^(?<user>\w+)'s blow scythes through nothing but air\.$/,
+    ],
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -51,7 +54,10 @@ export const weaving = {
       /^The blow cleaves through your magical shield, shattering it and knocking you from your feet!$/,
     ],
     //HIT. Prone
-    thirdPerson: false,
+    thirdPerson: [
+      /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon (?<target>\w+)\.$/,
+      /^The blow cleaves through the magical shield surrounding (?<target>\w+), shattering it!$/,
+    ],
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -87,7 +93,8 @@ export const weaving = {
       //A translucent dagger coalesces in Khayyin's hands, firming as it gains substance beyond the incorporeal.
       /^(?<user>\w+) ducks low, \w+ blade slicing into your (?<limb>\w+? leg)\.$/,
     //Khaseem stumbles, falling to the ground. //Mangled leg + prone
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) ducks low, \w+ blade slicing into the left leg of (?<target>\w+)\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -107,13 +114,15 @@ export const weaving = {
     secondPerson:
       //A translucent lash coalesces in Khayyin's hands, firming as it gains substance beyond the incorporeal.
       /^(?<user>\w+) lashes out with a translucent lash, entangling it about you and sharply yanking you off your feet\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) lashes out with a translucent lash, entangling it about (?<target>\w+) and yanking \w+ off \w+ feet\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
     tags: [],
     affs: ["prone"],
     length: 2.3,
+    info: "prone",
   },
   entwineEntangle: {
     id: "entwineEntangle",
@@ -124,13 +133,15 @@ export const weaving = {
     secondPerson:
       //A translucent lash coalesces in Khayyin's hands, firming as it gains substance beyond the incorporeal.
       /^(?<user>\w+) lashes out at you with a translucent lash, expertly entangling you within its coils\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) lashes out at (?<target>\w+) with a translucent lash, expertly entangling \w+ within its coils\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
     tags: [],
     affs: ["entangled"],
     length: 2.3,
+    info: "entangled",
   },
   lightsteal: {
     id: "lightsteal",
@@ -139,7 +150,8 @@ export const weaving = {
       /^You slash a translucent dagger across the eyes of (?<target>\w+?), viciously robbing \w+ of sight\.$/,
     secondPerson:
       /^Horrific pain overcomes you as (?<user>\w+?) slashes a translucent dagger across your eyes in a lightning-fast motion, the world falling into darkness\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) slashes a translucent dagger across the eyes of (?<target>\w+?) in a lightning-fast motion\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -154,7 +166,8 @@ export const weaving = {
       /^With a lightning-fast jab of your blade you puncture the cluster of nerves just below the (left|right) shoulder of (?<target>\w+?)\.$/,
     secondPerson:
       /^A terrible weariness overcomes you as (?<user>\w+?) darts out \w+ blade and drives the tip into you just beneath your (left|right) shoulder\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) lashes out with lightning speed, \w+ blade driving into (?<target>\w+?) just beneath \w+ (right|left) shoulder\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -169,7 +182,8 @@ export const weaving = {
       /^With a precise strike you sever the muscles in the (?<limb>\w+? arm) of (?<target>\w+?)\.$/,
     secondPerson:
       /^Your (?<limb>\w+? arm) flops uselessly as (?<user>\w+?) severs the muscles in it with a precise blow of \w+ translucent sword\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) severs the muscles in the (?<limb>\w+? arm) of (?<target>\w+?) with a precise blow of \w+ translucent sword\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -189,8 +203,9 @@ export const weaving = {
     firstPerson:
       /^You lash at (?<target>\w+?) with a translucent lash, directing the fundamental weave of \w+ (?<info>\w+) to begin unwinding\.$/,
     secondPerson:
-      /^A sharp pain across your throat and a sudden lack of breath comes moments before you register the retreat of (?<user>\w+?), bloody dagger in hand\.$/,
-    thirdPerson: false,
+      /^(?<user>\w+?) delivers a series of lashes against you with a translucent lash, and the very fabric of your being violently rebels against your mortal flesh\.$/,
+    thirdPerson:
+      /^(?<user>\w+?) delivers a series of lashes to (?<target>\w+?) with a translucent lash\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -221,7 +236,8 @@ export const weaving = {
       /^You deliver a savage backhanded blow with a translucent mace to the face of (?<target>\w+?)\.$/,
     secondPerson:
       /^Pain explodes through your skull as (?<user>\w+?) brings a translucent mace around in a savage backhanded blow to your face\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) delivers a backhanded blow to the face of (?<target>\w+?) with a translucent mace\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -236,7 +252,8 @@ export const weaving = {
       /^Stepping forward, you brutally drive a translucent sword into (?<target>\w+?)'s guts, ripping it free in a spray of crimson\.$/,
     secondPerson:
       /^With a brutal thrust of a translucent sword, (?<user>\w+?) sinks \w+ weapon into your guts, ripping it free in a spray of crimson\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) drives a translucent sword into the guts of (?<target>\w+?) with a brutal thrust, ripping it free in a spray of crimson\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
@@ -250,8 +267,9 @@ export const weaving = {
     firstPerson:
       /^You rush at (?<target>\w+?), unleashing a flurry of (\d+) blow with your blade to rend him asunder\.$/,
     secondPerson:
-      /^In a blur of motion (?<user>\w+?) rushes at you, his blade rending your flesh in a devastating flurry of (\d+) strike\.$/,
-    thirdPerson: false,
+      /^In a blur of motion (?<user>\w+?) rushes at you, his blade rending your flesh in a devastating flurry of (\d) strike\.$/,
+    thirdPerson:
+      /^(?<user>\w+?) rushes at (?<target>\w+?), slashing at \w+ (\d) times in a flurry of lethal motion\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
