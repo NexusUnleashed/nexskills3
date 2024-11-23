@@ -143,6 +143,118 @@ export const weaving = {
     length: 2.3,
     info: "entangled",
   },
+  disruption: {
+    id: "disruption",
+    fullName: "Disruption",
+    firstPerson:
+      /^Lightning explodes from your blade as you hack into (?<target>\w+), \w+ body locking up as the current rips through \w+\.$/,
+    secondPerson:
+      /^Your body locks up as lightning explodes from the blade as it hacks into you\.$/,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "free",
+    tags: [],
+    affs: ["paralysis"],
+    length: 0,
+    info: false,
+  },
+  disruption2: {
+    id: "disruption2",
+    fullName: "Disruption",
+    firstPerson:
+      /^Lightning explodes from your weapon as it smashes into (?<target>\w+), \w+ body locking up in agony as it rips through \w+\.$/,
+    secondPerson:
+      /^Lightning explodes from the \w+ as it smashes into you, your body locking in agony as the current rips through your body\.$/,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "free",
+    tags: [],
+    affs: ["paralysis"],
+    length: 0,
+    info: false,
+  },
+  laceration: {
+    id: "laceration",
+    fullName: "Laceration",
+    firstPerson:
+      /^Your blade tears into (?<target>\w+), a spray of crimson exploding from the wound as your weapon strikes bone\.$/,
+    secondPerson:
+      /^Blood sprays from your wounds as the blade tears into you, cleaving to the bone\.$/,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "free",
+    tags: [],
+    affs: ["haemophilia"],
+    length: 0,
+    info: false,
+  },
+  laceration2: {
+    id: "laceration2",
+    fullName: "Laceration",
+    firstPerson:
+      /^The spikes adorning your (mace|lash) tear bloody furrows in the flesh of (?<target>\w+)\.$/,
+    secondPerson:
+      /^The spikes adorning the (mace|lash) rip into your flesh, tearing bloody furrows\.$/,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "free",
+    tags: [],
+    affs: ["haemophilia"],
+    length: 0,
+    info: false,
+  },
+  dazzle: {
+    id: "dazzle",
+    fullName: "Dazzle",
+    firstPerson:
+      /^As your weapon strikes (?<target>\w+) a brilliant flash of light explodes forth\.$/,
+    secondPerson:
+      /^As the weapon strikes you, an incandescent burst of light explodes forth, dazing you\.$/,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "free",
+    tags: [],
+    affs: ["clumsiness"],
+    length: 0,
+    info: false,
+  },
+  rattle: {
+    id: "rattle",
+    fullName: "Rattle",
+    firstPerson:
+      /^As your weapon strikes (?<target>\w+), power blasts outward in a concussive wave\.$/,
+    secondPerson:
+      /^As the weapon strikes you, a concussive wave lashes out and slams into you with brain-rattling force\.$/,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "free",
+    tags: [],
+    affs: ["epilepsy"],
+    length: 0,
+    info: false,
+  },
+  vapours: {
+    id: "vapours",
+    fullName: "Vapours",
+    firstPerson:
+      /^As your weapon strikes (?<target>\w+) a wave of cloying vapours rolls over \w+\.$/,
+    secondPerson:
+      /^As the weapon strikes you, a wave of cloying vapour rolls over you, slithering into your lungs and causing your breath to falter\.$/,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "free",
+    tags: [],
+    affs: ["asthma"],
+    length: 0,
+    info: false,
+  },
   lightsteal: {
     id: "lightsteal",
     fullName: "Lightsteal",
@@ -245,6 +357,21 @@ export const weaving = {
     affs: ["asthma"],
     length: 2.2,
   },
+  invert: {
+    id: "invert",
+    fullName: "Invert",
+    firstPerson:
+      /^You pluck at the weave of (?<target>\w+?), swapping the states of his (?<old>\w+?) and (?<new>\w+?)\.$/,
+    secondPerson:
+      /^(?<user>\w+?) plucks at invisible threads in the air before \w+, and you feel a sudden nausea as your fundamental essence shifts\.$/,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "weaving",
+    balance: "balance",
+    tags: [],
+    affs: [],
+    length: 2.3,
+  },
   exsanguinate: {
     id: "exsanguinate",
     fullName: "Exsanguinate",
@@ -278,11 +405,17 @@ export const weaving = {
     length: 2.3,
   },
 };
+//charge
 //You weave a translucent spear into being, its ethereal form firming to corporeality in your hands.
+//cleave
 //You weave a translucent battleaxe into being, its ethereal form firming to corporeality in your hands.
+//overhand
 //You weave a translucent mace into being, its ethereal form firming to corporeality in your hands.
+//hamstring
 //You weave a translucent dagger into being, its ethereal form firming to corporeality in your hands.
+//entwine
 //You weave a translucent lash into being, its ethereal form firming to corporeality in your hands.
+//puncture
 //You weave a translucent sword into being, its ethereal form firming to corporeality in your hands.
 
 //A translucent spear coalesces in Khayyin's hands, firming as it gains substance beyond the incorporeal.
