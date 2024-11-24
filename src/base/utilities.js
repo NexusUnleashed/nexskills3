@@ -12,9 +12,9 @@ export const nextLine = (txt) => {
 export const inBlock = (txt) => {
   let res = false;
   const cb = nexusclient.current_block;
-  const index = nexusclient.current_block.current_line.index;
-  for (let i = index + 1; i < nexusclient.current_block.length; i++) {
-    const element = nexusclient.current_block[i];
+  const index = nexusclient.current_line.index;
+  for (let i = index + 1; i < cb.length; i++) {
+    const element = cb[i];
     if (element.parsed_line.text().includes(txt)) {
       res = true;
       break;

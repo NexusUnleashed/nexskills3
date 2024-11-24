@@ -1,3 +1,5 @@
+import { inBlock } from "../utilities";
+
 const aeonics = {
   accelerate: {
     id: "accelerate",
@@ -12,6 +14,11 @@ const aeonics = {
     balance: "equilibrium",
     tags: ["cure"],
     length: 2.5,
+    reaction: (action) => {
+      if (inBlock(`${action.target} grows older before your eyes.`)) {
+        action.info = "Boosted";
+      }
+    },
   },
   chronoAeonStrip: {
     id: "chronoAeonStrip",
@@ -47,6 +54,8 @@ const aeonics = {
     info: false,
     length: 3.75,
   },
+  //chrono loop
+  //Bending your will upon a scythe of shadows, you corrupt the weapon's timestream.
   timeloop: {
     id: "timeloop",
     fullName: "Timeloop",
