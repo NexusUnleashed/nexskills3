@@ -50,3 +50,41 @@ Theodor whips a brutal, spiked morning star toward the left leg of (Zorina).
 (Mystor) stares at Maedhros, giving him the evil eye.
 Maedhros shuffles his feet in boredom.
 (Mystor) curses Maedhros with the visage of a rotting corpse.
+
+-- 3rd Party Confirmation
+
+
+/*
+10:59:25.048 Antoninus whips Matsuhama's morningstar toward the left leg of Archaeon.
+10:59:25.048 The attack rebounds back onto Antoninus!
+10:59:25.048 Antoninus whips Matsuhama's morningstar toward the left leg of Archaeon.
+10:59:25.048 The attack rebounds back onto Antoninus!
+*/
+
+
+Sprucebruce attempts to defend against your attack but you bat his weak attempt aside. //parry bypass with nausea infernal
+Lightning-quick, you jab Haeron with a Scimitar of Eagles.
+Lightning-quick, you jab Haeron's left leg with a Scimitar of Eagles.
+You slash into Haeron with a Scimitar of Eagles.
+You slash into Haeron's left leg with a Scimitar of Eagles.
+You swing a Scimitar of Eagles at Haeron with all your might.
+You swing a Scimitar of Eagles at Haeron's right leg with all your might.
+You lash out at Haeron with a Scimitar of Eagles, but miss
+
+
+As you carve into Haeron, you perceive that you have dealt 7.2% damage to his left leg.
+
+Lightning-quick, Haeron jabs you with an Eagle's Scream.
+Haeron viciously jabs an Eagle's Scream into your right leg.
+Haeron viciously jabs an Eagle's Scream into you.
+Haeron misses you with an Eagle's Scream.
+
+Lightning-quick, Haeron jabs your left leg with an Eagle's Scream.
+You parry the attack with a deft manoeuvre.
+
+You swing a Scimitar of Eagles at Haeron's left leg with all your might.
+Haeron parries the attack with a deft manoeuvre.
+
+Sprucebruce quickly pricks you with his dirk.
+Striking like a snake, Sprucebruce follows the first attack with another.
+Sprucebruce sinks his fangs into your body and you wince in pain.
