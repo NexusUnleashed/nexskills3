@@ -114,6 +114,7 @@ const emulation = {
       /^Golden chains of light coalesce in the hands of (?<user>\w+?), and \w+ casts them out to bind you to \w+\.$/,
     thirdPerson:
       /^Golden chains of light coalesce in the hands of (?<user>\w+?), and \w+ casts them out to bind (?<target>\w+?) to \w+\.$/,
+    //Golden chains of light coalesce in the hands of (Sephor), and he casts them out to bind (Svarog) to him.
     profession: ["psion"],
     skill: "psionics",
     balance: "equilibrium",
