@@ -105,7 +105,10 @@ const domination = {
   chimeraCommandDeaf: {
     id: "chimeraCommandDeaf",
     fullName: "Chimera Command",
-    firstPerson: false, //You command your chimera to bring Pamxen low.
+    firstPerson: [
+      /^You command your chimera to bring \w+ low\.$/,
+      /^A chimera throws forward all three of its heads and roars at (?<target>\w+), but \w+ seems completely unphased\.$/,
+    ],
     secondPerson:
       /^A chimera throws all three of its heads forward and opens its mouth, but you hear only the slightest whisper of sound\.$/,
     thirdPerson:
@@ -120,7 +123,10 @@ const domination = {
   chimeraCommand: {
     id: "chimeraCommand",
     fullName: "Chimera Command",
-    firstPerson: false, //You command your chimera to bring Pamxen low.
+    firstPerson: [
+      /^You command your chimera to bring \w+ low\.$/,
+      /^A chimera lets out a concussive roar at (?<target>\w+)\.$/,
+    ],
     secondPerson:
       /^A chimera lets out a concussive roar, all three of the creatures heads thrown forward toward you\.$/,
     thirdPerson: /^A chimera lets out a concussive roar at (?<target>\w+)\.$/,
