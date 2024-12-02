@@ -9,11 +9,14 @@ import runewarden from "./skills/attainment/runewarden";
 import sylvan from "./skills/attainment/sylvan";
 //Skills
 import aeonics from "./skills/aeonics";
+import artificing from "./skills/artificing";
 import bladedance from "./skills/bladedance";
+import composition from "./skills/composition";
 import curses from "./skills/curses";
 import devotion from "./skills/devotion";
 import domination from "./skills/domination";
 import dragoncraft from "./skills/dragoncraft";
+import elementalism from "./skills/elementalism";
 import ignition from "./skills/ignition";
 import memorium from "./skills/memorium";
 import occultism from "./skills/occultism";
@@ -31,6 +34,7 @@ import weatherweaving from "./skills/weatherweaving";
 import weaving from "./skills/weaving";
 import zeal from "./skills/zeal";
 //General
+import knights from "./skills/knights";
 import curing from "./general/curing";
 import general from "./general/general";
 import talismans from "./general/talismans";
@@ -48,9 +52,6 @@ import tapoa from "./areas/tapoa";
 import tirMuran from "./areas/tirMuran";
 import tuar from "./areas/tuar";
 import yggdrasil from "./areas/yggdrasil";
-import composition from "./skills/composition";
-import knights from "./skills/knights";
-import elementalism from "./skills/elementalism";
 
 const npcs = [
   ...ageiro,
@@ -87,6 +88,7 @@ const actions = [
   ...sylvan,
   //Skills
   ...aeonics,
+  ...artificing,
   ...bladedance,
   ...composition,
   ...curses,
