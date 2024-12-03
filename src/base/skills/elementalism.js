@@ -18,7 +18,7 @@ const elementalism = {
   erode: {
     id: "erode",
     fullName: "Erode",
-    firstPerson: /^You cast a spell of erosion at (?<target>\w+)\.$/,
+    firstPerson: /^You cast a spell of erosion at (?<target>.+?)\.$/,
     secondPerson: /^(?<user>\w+) casts a spell of erosion at you\.$/,
     thirdPerson: /^(?<user>\w+) casts a spell of erosion at Pamxen\.$/,
     profession: ["magi"],
@@ -263,6 +263,7 @@ const elementalism = {
     info: false,
     length: 2.3,
   },
+  //stormhammer: With Sylvan
 };
 
 export default Object.values(elementalism);

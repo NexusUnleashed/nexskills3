@@ -4,6 +4,7 @@
 import bard from "./skills/attainment/bard";
 import depthswalker from "./skills/attainment/depthswalker";
 import dragon from "./skills/attainment/dragon";
+import magi from "./skills/attainment/magi";
 import occultist from "./skills/attainment/occultist";
 import runewarden from "./skills/attainment/runewarden";
 import sylvan from "./skills/attainment/sylvan";
@@ -83,6 +84,7 @@ const actions = [
   ...bard,
   ...depthswalker,
   ...dragon,
+  ...magi,
   ...occultist,
   ...runewarden,
   ...sylvan,

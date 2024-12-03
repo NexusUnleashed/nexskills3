@@ -3,7 +3,7 @@ const artificing = {
     id: "scintilla",
     fullName: "Staffcast",
     firstPerson:
-      /^The burning light punches through (?<target>.+), evaporating \w+ inner organs\. \w+ retches before \w+ dies, as the horrible smell of charred flesh fills the air\.$/,
+      /^As you point a primordial staff at (?<target>.+?), a scintilla of bright, burning light shoots out, striking \w+ with focused elemental power\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["magi"],
@@ -18,7 +18,7 @@ const artificing = {
     id: "horripilation",
     fullName: "Staffcast",
     firstPerson:
-      /^You point a primordial staff at (?<target>.+) and \w+ screams in pain as \w+ skin begins to freeze and crack\.$/,
+      /^You point a primordial staff at (?<target>.+?) and \w+ screams in pain as \w+ skin begins to freeze and crack\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["magi"],

@@ -55,7 +55,7 @@ export const weaponmastery = {
     id: "razeNone",
     fullName: "Raze",
     firstPerson:
-      /^You whip .+ through the air in front of (?<target>\w+), to no effect\.$/,
+      /^You whip .+? through the air in front of (?<target>\w+), to no effect\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
