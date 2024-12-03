@@ -29,6 +29,21 @@ const artificing = {
     info: false,
     length: 2.0,
   },
+  dissolution: {
+    id: "dissolution",
+    fullName: "Dissolution",
+    firstPerson:
+      /^You point a primordial staff at (?<target>.+?), and a stream of bile-like acid streams out, covering \w+, who screams in agony\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["magi"],
+    skill: "artificing",
+    balance: "equilibrium",
+    tags: ["pve", "damage"],
+    affs: [],
+    info: false,
+    length: 2.0,
+  },
 };
 
 export default Object.values(artificing);

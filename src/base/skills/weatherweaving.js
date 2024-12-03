@@ -1,6 +1,6 @@
 export const weatherweaving = {
   stormhammer: {
-    id: "stormhammer",
+    id: "stormhammer x1",
     fullName: "Stormhammer",
     firstPerson:
       /^The sky above grows dark as you call upon powerful magics\. Raising your hands balefully, you cause lightning bolts, the hammer of the storm, to shoot from your hands and slam into (?<target>[^\.]+?)\.$/,
@@ -14,7 +14,7 @@ export const weatherweaving = {
   },
   stormhammer2: {
     id: "stormhammer2",
-    fullName: "Stormhammerx2",
+    fullName: "Stormhammer x2",
     firstPerson:
       /^The sky above grows dark as you call upon powerful magics\. Raising your hands balefully, you cause lightning bolts, the hammer of the storm, to shoot from your hands and slam into (?<target>[^\.]+?)\. The bolts ricochet off and slam into (?<target2>[^\.]+?)\.$/,
     secondPerson: false,
@@ -27,7 +27,7 @@ export const weatherweaving = {
   },
   stormhammer3: {
     id: "stormhammer3",
-    fullName: "Stormhammerx3",
+    fullName: "Stormhammer x3",
     firstPerson:
       /^The sky above grows dark as you call upon powerful magics\. Raising your hands balefully, you cause lightning bolts, the hammer of the storm, to shoot from your hands and slam into (?<target>[^\.]+?)\. The bolts ricochet off and slam into (?<target2>[^\.]+?)\. The bolts ricochet off and slam into (?<target3>.+?)\.$/,
     secondPerson: false,
