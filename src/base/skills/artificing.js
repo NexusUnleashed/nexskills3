@@ -1,7 +1,7 @@
 const artificing = {
   scintilla: {
     id: "scintilla",
-    fullName: "Staffcast",
+    fullName: "Scintilla",
     firstPerson:
       /^As you point a primordial staff at (?<target>.+?), a scintilla of bright, burning light shoots out, striking \w+ with focused elemental power\.$/,
     secondPerson: false,
@@ -11,12 +11,12 @@ const artificing = {
     balance: "equilibrium",
     tags: ["pve", "damage"],
     affs: [],
-    info: "Scintilla",
+    info: false,
     length: 2.0,
   },
   horripilation: {
     id: "horripilation",
-    fullName: "Staffcast",
+    fullName: "Horripilation",
     firstPerson:
       /^You point a primordial staff at (?<target>.+?) and \w+ screams in pain as \w+ skin begins to freeze and crack\.$/,
     secondPerson: false,
@@ -26,7 +26,7 @@ const artificing = {
     balance: "equilibrium",
     tags: ["pve", "damage"],
     affs: [],
-    info: "Horripilation",
+    info: false,
     length: 2.0,
   },
 };
