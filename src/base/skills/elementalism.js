@@ -141,6 +141,7 @@ const elementalism = {
     info: false,
     length: 2.4,
   },
+  /*
   freeze: {
     id: "freeze",
     fullName: "Freeze",
@@ -157,6 +158,23 @@ const elementalism = {
     affs: [],
     info: false,
     length: 3.0,
+  },
+  */
+  freeze: {
+    id: "freeze",
+    fullName: "Freeze",
+    firstPerson:
+      /^You raise a hand towards (Khayyin) and blast him with cold, frigid air\.$/,
+    secondPerson:
+      /^Khaseem raises a hand towards you and blasts you with cold, frigid air\.$/,
+    thirdPerson: false,
+    profession: ["magi"],
+    skill: "elementalism",
+    balance: "equilibrium",
+    tags: [],
+    affs: [],
+    info: false,
+    length: 2.2,
   },
   geyser: {
     id: "geyser",
@@ -431,6 +449,23 @@ const elementalism = {
     info: false,
     length: 0,
   },
+  resonanceFireMinor: {
+    id: "resonanceFireMinor",
+    fullName: "Fire - Minor",
+    firstPerson:
+      /^You direct your will against the temperance elixir which protects (?<target>\w+) and it burns away\.$/,
+    secondPerson:
+      /^The temperance defence which protects you burns away at the will of (?<user>\w+)\.$/,
+    thirdPerson: false,
+    profession: ["magi"],
+    skill: "elementalism",
+    balance: "free",
+    tags: [],
+    affs: [],
+    info: "Temperance",
+    length: 0,
+  },
+
   resonanceFireModerate: {
     id: "resonanceFireModerate",
     fullName: "Fire - Moderate",
