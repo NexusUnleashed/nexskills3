@@ -79,15 +79,37 @@ const elementalism = {
     id: "shalestormTick",
     fullName: "Shalestorm Tick",
     firstPerson: false,
-    secondPerson:
+    secondPerson: [
       /^Huge boulders relentlessly hammer at you as they materialise from the very air\.$/,
+      /^One of the boulders smashes into your (?<limb>.+?) with a sickening crack\.$/,
+    ],
     thirdPerson: false,
     profession: ["magi"],
     skill: "elementalism",
-    balance: "equilibrium",
+    balance: "free",
     tags: [],
     affs: [],
     info: false,
+    length: 5,
+    reaction(action) {
+      action.info = action.limb;
+      action.affs = [`broken${action.limb.replace(" ", "")}`];
+    },
+  },
+  shalestormRaze: {
+    id: "shalestormRaze",
+    fullName: "Shalestorm Tick",
+    firstPerson: false,
+    secondPerson:
+      /^Huge boulders hammer at the magical shield surrounding you, shattering it into a spray of translucent shards\.$/,
+    thirdPerson:
+      /^Huge boulders hammer at the magical shield surrounding (?<target>\w+), shattering it in a spray of translucent shards\.$/,
+    profession: ["magi"],
+    skill: "elementalism",
+    balance: "free",
+    tags: [],
+    affs: [],
+    info: "Raze",
     length: 5,
   },
   gust: {
@@ -109,7 +131,7 @@ const elementalism = {
   },
   firelashLOS: {
     id: "firelashLOS",
-    fullName: "Firelash Ranged",
+    fullName: "Firelash LOS",
     firstPerson:
       /^You form a lash of fire, and send it speeding to the (?<info>\w+) to scorch the flesh of (?<target>\w+)\.$/,
     secondPerson:
@@ -119,7 +141,7 @@ const elementalism = {
     profession: ["magi"],
     skill: "elementalism",
     balance: "equilibrium",
-    tags: [],
+    tags: ["los"],
     affs: [],
     info: false,
     length: 2.4,
