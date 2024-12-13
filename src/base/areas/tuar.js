@@ -100,6 +100,17 @@ const tuar = [
     length: 0,
   },
   {
+    user: "a Nelbennir alchemist",
+    areaId: [207],
+    areaName: "the Island of Tuar",
+    firstPerson:
+      /^A Nelbennir alchemist throws his head back and opens his tentacled mouth, spewing a thick, noxious bile upon you\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 0,
+  },
+
+  {
     user: "a sinuous white salamander",
     areaId: [207],
     areaName: "the Island of Tuar",
