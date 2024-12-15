@@ -26,14 +26,14 @@ export const weaving = {
     fullName: "Cleave",
     firstPerson:
       //You weave a translucent battleaxe into being, its ethereal form firming to corporeality in your hands.
-      /^Your blow scythes through the air in front of (?<target>\w+), missing entirely\.$/,
+      /^Your blow scythes through the air in front of (?<target>.+?), missing entirely\.$/,
     secondPerson: [
       /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon you\.$/,
       /^The blow scythes through the air in front of you, missing entirely\.$/,
     ],
     //MISS. No shield
     thirdPerson: [
-      /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon (?<target>\w+)\.$/,
+      /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon (?<target>.+?)\.$/,
       /^(?<user>\w+)'s blow scythes through nothing but air\.$/,
     ],
     profession: ["psion"],
@@ -48,15 +48,15 @@ export const weaving = {
     fullName: "Cleave",
     firstPerson:
       //You weave a translucent battleaxe into being, its ethereal form firming to corporeality in your hands.
-      /^Your blow cleaves through the magical shield surrounding (?<target>\w+), continuing on to drive \w+ from his feet\.$/,
+      /^Your blow cleaves through the magical shield surrounding (?<target>.+?), continuing on to drive \w+ from his feet\.$/,
     secondPerson: [
       /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon you\.$/,
       /^The blow cleaves through your magical shield, shattering it and knocking you from your feet!$/,
     ],
     //HIT. Prone
     thirdPerson: [
-      /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon (?<target>\w+)\.$/,
-      /^The blow cleaves through the magical shield surrounding (?<target>\w+), shattering it!$/,
+      /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon (?<target>.+?)\.$/,
+      /^The blow cleaves through the magical shield surrounding (?<target>.+?), shattering it!$/,
     ],
     profession: ["psion"],
     skill: "weaving",
