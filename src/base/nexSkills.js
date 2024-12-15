@@ -35,11 +35,11 @@ import weatherweaving from "./skills/weatherweaving";
 import weaving from "./skills/weaving";
 import zeal from "./skills/zeal";
 //General
-import knights from "./skills/knights";
 import curing from "./general/curing";
 import general from "./general/general";
 import talismans from "./general/talismans";
 import tattoos from "./general/tattoos";
+import knights from "./skills/knights";
 //NPCS
 import ageiro from "./areas/ageiro";
 import barrow from "./areas/barrow";
@@ -47,6 +47,7 @@ import battlesite from "./areas/battlesite";
 import grukaiSwamp from "./areas/grukaiSwamp";
 import istarion from "./areas/istarion";
 import judgementMountain from "./areas/judgementMountain";
+import mannamot from "./areas/mannamot";
 import nur from "./areas/nur";
 import riagath from "./areas/riagath";
 import tapoa from "./areas/tapoa";
@@ -56,28 +57,37 @@ import yggdrasil from "./areas/yggdrasil";
 
 const npcs = [
   ...ageiro,
+  ...barrow,
   ...battlesite,
-  ...judgementMountain,
   ...grukaiSwamp,
   ...istarion,
+  ...judgementMountain,
+  ...mannamot,
   ...nur,
   ...riagath,
+  ...tapoa,
   ...tirMuran,
   ...tuar,
   ...yggdrasil,
-  ...barrow,
-  ...tapoa,
 ];
 
 const npcsMap = new Map();
 npcs.forEach((npc) => {
-  npc.areaId.forEach((areaId) => {
-    if (!npcsMap.has(areaId)) {
-      npcsMap.set(areaId, []);
+  if (!npc.areaId) {
+    if (!npcsMap.has(npc.areaName)) {
+      npcsMap.set(npc.areaName, []);
     }
-    npcsMap.get(areaId).push(npc);
-  });
+    npcsMap.get(npc.areaName).push(npc);
+  } else {
+    npc.areaId.forEach((areaId) => {
+      if (!npcsMap.has(areaId)) {
+        npcsMap.set(areaId, []);
+      }
+      npcsMap.get(areaId).push(npc);
+    });
+  }
 });
+console.log(npcsMap);
 
 const actions = [
   //Attainment
@@ -252,12 +262,9 @@ const checkSkills = (text) => {
 };
 
 const checkNpcs = (text) => {
-  const areaId = GMCP.Location.areaid;
-  const areaNpcs = npcsMap.get(areaId) || [];
+  const { areaid, area } = GMCP.Location;
 
-  if (areaNpcs.length === 0) {
-    return false;
-  }
+  const areaNpcs = npcsMap.get(areaid) ?? npcsMap.get(area) ?? [];
 
   for (let i = 0; i < areaNpcs.length; i++) {
     const action = { ...areaNpcs[i] };
