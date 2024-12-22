@@ -57,7 +57,7 @@ export const occultist = {
     id: "stagnate",
     fullName: "Stagnate",
     firstPerson:
-      /^You wave one arm at (?<target>.+?), causing a small time rift to form around her\.$/,
+      /^You wave one arm at (?<target>.+?), causing a small time rift to form around \w+\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["occultist"],

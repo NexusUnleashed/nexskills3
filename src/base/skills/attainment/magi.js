@@ -62,7 +62,8 @@ export const magi = {
     profession: ["magi"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["pve", "damage"],
+    info: "Aeon",
+    tags: ["pve"],
     length: 16.0,
   },
   stormbolt: {
@@ -75,7 +76,8 @@ export const magi = {
     profession: ["magi"],
     skill: "attainment",
     balance: "battlerage",
-    tags: ["pve", "damage"],
+    info: "Sensitivity",
+    tags: ["pve"],
     length: 16.0,
   },
   disintegrate: {

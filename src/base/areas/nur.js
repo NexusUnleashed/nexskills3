@@ -14,6 +14,16 @@ const nur = [
     areaId: [401],
     areaName: "First Circle of Nur",
     firstPerson:
+      /^A translucent butterfly beats his wings rapidly and his translucent body takes on a coal-black tinge\. Discharging the inky energy, he sends a blast of power to impact with you\.$/,
+    thirdPerson: false,
+    tags: ["damage", "blackout"],
+    length: 2,
+  },
+  {
+    user: "a translucent butterfly",
+    areaId: [401],
+    areaName: "First Circle of Nur",
+    firstPerson:
       /^A translucent butterfly beats his wings rapidly and his translucent body takes on a bright violet tinge\. Discharging the vivid energy, he sends a blast of power to impact with you\.$/,
     thirdPerson: false,
     tags: ["damage", "transfix??? (fix this)"],

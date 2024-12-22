@@ -20,7 +20,8 @@ export const dragon = {
     firstPerson:
       /^(?<target>.+?)'s translucent shield cracks and fades away as you breathe an icy blast at it\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<target>.+?)'s translucent shield cracks and fades away as (?<user>\w+?) breathes an icy blast at it\.$/,
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -34,7 +35,8 @@ export const dragon = {
     firstPerson:
       /^You barrel into (?<target>.+?) and knock \w+ to the ground before stomping over \w+ prone form\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) barrels into (?<target>.+?) and knocks \w+ to the ground before stomping over \w+ prone form\.$/,
     profession: ["blue dragon", "black dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -48,7 +50,8 @@ export const dragon = {
     firstPerson:
       /^You let loose a steady stream of cold air around (?<target>.+?), who begins to shiver uncontrollably\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) lets loose a steady stream of cold air around (?<target>.+?), who begins to shiver uncontrollably\.$/,
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -62,7 +65,8 @@ export const dragon = {
     firstPerson:
       /^You form small chunks of ice in your enormous maw, then spit them at (?<target>.+?) in a barrage\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) spits a barrage of icy chunks at (?<target>.+?)\.$/,
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -244,6 +248,23 @@ export const dragon = {
     tags: ["pve", "damage"],
     length: 3.0,
   },
+  melt: {
+    id: "melt",
+    fullName: "Melt",
+    firstPerson:
+      /^You breathe a white-hot blast of flame at (?<target>.+?) and burn away \w+ translucent shield\.$/,
+    secondPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) breathes a white-hot blast of flame at (?<target>.+?) and burns away \w+ translucent shield\.$/,
+    profession: ["red dragon"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: "Raze",
+    tags: ["pve", "raze"],
+    length: 3.0,
+  },
+  //#endregion
+  //#region Gold Dragon
   melt: {
     id: "melt",
     fullName: "Melt",
