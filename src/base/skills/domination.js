@@ -247,7 +247,7 @@ const domination = {
     id: "gremlinCommand",
     fullName: "Gremlin Command",
     firstPerson:
-      /^You command your gremlin to shatter the defences surrounding (?<target>\.+?)\.$/,
+      /^You command your gremlin to shatter the defences surrounding (?<target>.+?)\.$/,
     secondPerson:
       /^With a mad cackle, a gremlin leaps at you and batters your shield with a flurry of blows, fracturing it in moments\.$/,
     thirdPerson:

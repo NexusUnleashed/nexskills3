@@ -337,7 +337,7 @@ export const weaving = {
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
-    tags: ["pve", "aff"],
+    tags: ["pve", "damage", "aff"],
     affs: ["asthma"],
     length: 2.2,
   },

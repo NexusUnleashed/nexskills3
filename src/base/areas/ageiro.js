@@ -13,7 +13,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^Grabbing up a shovel, a copper malagma jams the blade into your throat. Blood oozes from the gash as you struggle to regain your breath\.$/,
+      /^Grabbing up a shovel, a copper malagma jams the blade into your throat\. Blood oozes from the gash as you struggle to regain your breath\.$/,
     thirdPerson: false,
     tags: ["damage"],
   },
@@ -22,7 +22,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^Balling up his fists, a copper malagma smashes several punches into your torso\.$/,
+      /^Balling up \w+ fists, a copper malagma smashes several punches into your torso\.$/,
     thirdPerson: false,
     tags: ["damage"],
   },
@@ -40,7 +40,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^With all his might, an iron malagma swings a partially rotted wooden shaft at your head\.$/,
+      /^With all \w+ might, an iron malagma swings a partially rotted wooden shaft at your head\.$/,
     thirdPerson: false,
     tags: ["damage"],
   },
@@ -49,7 +49,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^Grabbing your arm in her vice-like hands, an iron malagma snaps the bone in two\.$/,
+      /^Grabbing your arm in \w+ vice-like hands, an iron malagma snaps the bone in two\.$/,
     thirdPerson: false,
     tags: ["damage", "brokenleftarm"],
   },
@@ -67,7 +67,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^A golden malagma drives his hand through your stomach, barely missing your spine as his fingers break through the skin of your back\.$/,
+      /^A golden malagma drives \w+ hand through your stomach, barely missing your spine as \w+ fingers break through the skin of your back\.$/,
     thirdPerson: false,
     tags: ["damage"],
   },
@@ -96,7 +96,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^A silver malagma backhands you violently, his heavy metal arm nearly caving in your skull\.$/,
+      /^A silver malagma backhands you violently, \w+ heavy metal arm nearly caving in your skull\.$/,
     thirdPerson: false,
     tags: ["damage"],
   },
@@ -123,7 +123,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /A silver malagma backhands you violently, her heavy metal arm nearly caving in your skull\.$/,
+      /A silver malagma backhands you violently, \w+ heavy metal arm nearly caving in your skull\.$/,
     thirdPerson: false,
     tags: ["damage"],
   },

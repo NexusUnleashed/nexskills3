@@ -63,8 +63,10 @@ const tirMuran = [
     user: "a Vertani guard",
     areaId: [145, 146],
     areaName: "Tir Murann",
-    firstPerson:
+    firstPerson: [
       /^A Vertani guard vaults towards you with surprising speed, bringing the bladed side of his weapon bearing down on you\.$/,
+      /^The accompanying slash carves deeply through your flesh from your shoulder blade diagonally across to the waist\.$/,
+    ],
     thirdPerson: false,
     tags: ["damage"],
     length: 2.5,
