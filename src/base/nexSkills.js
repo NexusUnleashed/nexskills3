@@ -51,8 +51,9 @@ import mannamot from "./areas/mannamot";
 import nur from "./areas/nur";
 import riagath from "./areas/riagath";
 import tapoa from "./areas/tapoa";
-import tirMuran from "./areas/tirMuran";
+import tirMurann from "./areas/tirMurann";
 import tuar from "./areas/tuar";
+import underworld from "./areas/underworld";
 import yggdrasil from "./areas/yggdrasil";
 
 const npcs = [
@@ -66,8 +67,9 @@ const npcs = [
   ...nur,
   ...riagath,
   ...tapoa,
-  ...tirMuran,
+  ...tirMurann,
   ...tuar,
+  ...underworld,
   ...yggdrasil,
 ];
 
@@ -231,8 +233,8 @@ const checkSkills = (text) => {
   for (let i = 0; i < actions.length; i++) {
     const action = {
       ...actions[i], //shallow copy
-      affs: actions[i].affs, //deep copy
-      tags: actions[i].tags, //deep copy
+      affs: actions[i].affs ? [...actions[i].affs] : [], //deep copy
+      tags: [...actions[i].tags], //deep copy
     };
 
     if (
@@ -267,7 +269,10 @@ const checkNpcs = (text) => {
   const areaNpcs = npcsMap.get(areaid) ?? npcsMap.get(area) ?? [];
 
   for (let i = 0; i < areaNpcs.length; i++) {
-    const action = { ...areaNpcs[i] };
+    const action = {
+      ...areaNpcs[i],
+      tags: [...areaNpcs[i].tags], //deep copy
+    };
 
     if (evaluateText(action, text, "firstPerson", action.user, "self")) {
       return finalizeCheck(action, "npc");

@@ -60,18 +60,61 @@ export const addAction = (action) => {
   return res;
 };
 
-export const checkRandomLimb = () => {
-  /*const nextLine =
-    nexusclient.current_block[
-      nexusclient.current_block.indexOf(nexusclient.current_line) + 1
-    ];*/
+function checkLine(pattern, index = 1) {
   const nextLine =
-    nexusclient.current_block[nexusclient.current_line.index + 1];
+    nexusclient.current_block[nexusclient.current_line.index + index];
   const line = nextLine.parsed_line ? nextLine.parsed_line.text() : "";
-  const match = line.match(/^Your (\w+) (\w+) breaks with a loud crack\.$/);
+  const match = line.match(pattern);
   if (match) {
     return `broken${match[1]}${match[2]}`;
   } else {
-    return `brokenleftarm`;
+    return false;
+  }
+}
+
+export const checkRandomLimbs = (args) => {
+  const re = /^Your (\w+) (\w+) breaks with a loud crack\.$/;
+
+  for (let i = 1; i < 5; i++) {
+    const match = checkLine(re, i);
+    if (match) {
+      args.tags.push(match);
+    } else {
+      break;
+    }
   }
 };
+
+export const checkSensitivity = (args) => {
+  const re2 = /^Your hearing is suddenly restored\.$/;
+  const match2 = checkLine(re2);
+  if (match2) {
+    args.tags.push("undeaf");
+  } else {
+    args.tags.push("sensitivity???");
+  }
+
+  return;
+  const re = /^A prickly, stinging sensation spreads through your body\.$/;
+  const match = checkLine(re);
+  if (match) {
+    args.tags.push("sensitivity");
+    return true;
+  }
+};
+
+export const checkTransfix = (args) => {
+  const re =
+    /^.+? attempts to transfix you, but succeeds only in curing your blindness\.$/;
+  const match = checkLine(re);
+  if (match) {
+    args.tags.push("unblind");
+  } else {
+    args.tags.push("transfix???");
+  }
+};
+
+//A prickly, stinging sensation spreads through your body.
+//Your hearing is suddenly restored.
+
+//A soldier of Osterrych attempts to transfix you, but succeeds only in curing your blindness.

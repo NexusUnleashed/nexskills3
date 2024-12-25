@@ -1,3 +1,9 @@
+import {
+  checkSensitivity,
+  checkRandomLimbs,
+  checkTransfix,
+} from "../utilities";
+
 const tapoa = [
   {
     user: "a blackfin shark",
@@ -138,7 +144,10 @@ const tapoa = [
     firstPerson:
       /^With an enraged howl, a female ape grabs your legs and lifts you above her head, whirling you about before effortlessly tossing you into the underbrush\.$/,
     thirdPerson: false,
-    tags: ["damage", "prone", "brokenleftarm"], //TODO: reaction for the arm?
+    tags: ["damage", "prone"],
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "the king ape",

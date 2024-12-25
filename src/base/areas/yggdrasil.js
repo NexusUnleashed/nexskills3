@@ -1,3 +1,9 @@
+import {
+  checkSensitivity,
+  checkRandomLimbs,
+  checkTransfix,
+} from "../utilities";
+
 const yggdrasil = [
   {
     user: "a rajamala slaver",
@@ -16,8 +22,11 @@ const yggdrasil = [
     firstPerson:
       /^A rajamala slaver uses his massive bulk to slam your body to the ground\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenleftleg", "brokenrightleg", "prone"],
+    tags: ["damage", "prone"],
     length: 4.0,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "a rajamala slaver",
@@ -26,8 +35,11 @@ const yggdrasil = [
     firstPerson:
       /^A rajamala slaver leaps into the air and hurtles towards you\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenleftleg", "brokenrightleg", "prone"],
+    tags: ["damage", "prone"],
     length: 4.0,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "a huge rat",

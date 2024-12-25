@@ -1,3 +1,9 @@
+import {
+  checkSensitivity,
+  checkRandomLimbs,
+  checkTransfix,
+} from "../utilities";
+
 const nur = [
   {
     user: "a translucent butterfly",
@@ -26,8 +32,11 @@ const nur = [
     firstPerson:
       /^A translucent butterfly beats his wings rapidly and his translucent body takes on a bright violet tinge\. Discharging the vivid energy, he sends a blast of power to impact with you\.$/,
     thirdPerson: false,
-    tags: ["damage", "transfix??? (fix this)"],
+    tags: ["damage"],
     length: 4,
+    reaction(args) {
+      checkTransfix(args);
+    },
   },
   {
     user: "a translucent butterfly",
@@ -157,9 +166,11 @@ const nur = [
     firstPerson:
       /^Spinning his spear in one hand, an angel spearbearer ducks down low and jabs his spear between your legs before twisting it, causing you to fall to the ground\.$/,
     thirdPerson: false,
-    tags: ["damage", "prone", "brokenleftleg"],
+    tags: ["damage", "prone"],
     length: 2,
-    reaction() {},
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "an angel spearbearer",
@@ -229,8 +240,11 @@ const nur = [
     firstPerson:
       /^Gliding effortlessly through your defences, an expulsor angel smashes her buckler into your extremities with dreadful force\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenleftleg"], // TODO Random limb
+    tags: ["damage"],
     length: 2,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "an expulsor angel",
@@ -289,8 +303,11 @@ const nur = [
     firstPerson:
       /^An inquisitor angel opens her mouth and speaks a single word. The sound of a multitude blasts forth, slamming relentlessly into you in a blast of power\.$/,
     thirdPerson: false,
-    tags: ["damage", "undeaf", "confusion", "dementia"],
+    tags: ["damage", "confusion", "dementia"],
     length: 2,
+    reaction(args) {
+      checkSensitivity(args);
+    },
   },
   {
     user: "an inquisitor angel",
@@ -329,8 +346,11 @@ const nur = [
     firstPerson:
       /^A watcher angel opens his mouth and speaks a single word. The sound of a multitude blasts forth, slamming relentlessly into you in a blast of power\.$/,
     thirdPerson: false,
-    tags: ["damage", "undeaf", "confusion", "dementia"],
+    tags: ["damage", "confusion", "dementia"],
     length: 2,
+    reaction(args) {
+      checkSensitivity(args);
+    },
   },
   {
     user: "a watcher angel",
@@ -419,8 +439,11 @@ const nur = [
     firstPerson:
       /^Advancing upon you swiftly, a lithe angelic razer swings her left-hand longsword in a powerful overarm arc, inflicting a withering strike that crushes your bones\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenleftarm"], //random ARM break
+    tags: ["damage"],
     length: 2,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "a solemn angel",

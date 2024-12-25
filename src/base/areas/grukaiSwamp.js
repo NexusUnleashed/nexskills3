@@ -1,3 +1,9 @@
+import {
+  checkSensitivity,
+  checkRandomLimbs,
+  checkTransfix,
+} from "../utilities";
+
 const grukaiSwamp = [
   {
     user: "an energetic turtle",
@@ -6,8 +12,11 @@ const grukaiSwamp = [
     firstPerson:
       /^An energetic red turtle slams his body into your leg, shattering it in the process.\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenleftleg"], //TODO random leg
+    tags: ["damage"],
     length: 1.5,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "a sinister glubber",
@@ -16,8 +25,11 @@ const grukaiSwamp = [
     firstPerson:
       /^A sinister glubber claws viciously at your arm, severing the joints\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenleftarm"], //TODO random arm
+    tags: ["damage"],
     length: 1.5,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "a sinister glubber",
@@ -26,8 +38,11 @@ const grukaiSwamp = [
     firstPerson:
       /^A sinister glubber claws viciously at your leg, severing the joints\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenleftleg"], //TODO random leg
+    tags: ["damage"],
     length: 1.5,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "a sinister glubber",
@@ -65,10 +80,12 @@ const grukaiSwamp = [
     areaName: "Grukai Swamp",
     firstPerson:
       /^Waving his appendages before your face, a tentacled polyp leaves a number of deep lacerations and manages to leave you transfixed\.$/,
-    //A tentacled polyp attempts to transfix you, but succeeds only in curing your blindness.
     thirdPerson: false,
     tags: ["damage"],
     length: 11.0,
+    reaction(args) {
+      checkTransfix(args);
+    },
   },
   {
     user: "a tentacled polyp",

@@ -1,3 +1,9 @@
+import {
+  checkSensitivity,
+  checkRandomLimbs,
+  checkTransfix,
+} from "../utilities";
+
 const ageiro = [
   {
     user: "a nickle snake",
@@ -51,7 +57,10 @@ const ageiro = [
     firstPerson:
       /^Grabbing your arm in \w+ vice-like hands, an iron malagma snaps the bone in two\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenleftarm"],
+    tags: ["damage"],
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "an iron malagma",
@@ -60,7 +69,10 @@ const ageiro = [
     firstPerson:
       /^Grabbing a pick from the floor of the mine, an iron malagma swings sharply and embeds the rusted head into your arm\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenleftarm"],
+    tags: ["damage"],
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "a golden malagma",

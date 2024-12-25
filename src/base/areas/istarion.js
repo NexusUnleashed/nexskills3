@@ -1,3 +1,9 @@
+import {
+  checkSensitivity,
+  checkRandomLimbs,
+  checkTransfix,
+} from "../utilities";
+
 const istarion = [
   {
     user: "an austere Tsol'dasi", //TODO dupe
@@ -106,8 +112,11 @@ const istarion = [
     firstPerson:
       /^A watch spider outrider sends the sphere end of her staff into one of your kneecaps, causing your bones to crack and pop unpleasantly\.$/,
     thirdPerson: false,
-    tags: ["damage", "brokenrightleg"], // TODO random limb
+    tags: ["damage"],
     length: 4.0,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "a watch spider outrider",
@@ -156,8 +165,11 @@ const istarion = [
     firstPerson:
       /^A whisper spider outrider moves close to you with speed, grabbing an arm while slamming into your body\. The force of the impact causes you to somersault onto the ground, dislocating your arm in the process\.$/,
     thirdPerson: false,
-    tags: ["damage", "prone", "brokenleftarm"], // TODO random arm
+    tags: ["damage", "prone"],
     length: 4.0,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "a sword spider outrider",

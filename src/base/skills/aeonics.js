@@ -13,6 +13,7 @@ const aeonics = {
     skill: "aeonics",
     balance: "equilibrium",
     tags: ["cure"],
+    affs: [],
     length: 2.5,
     reaction: (action) => {
       if (inBlock(`${action.target} grows older before your eyes.`)) {

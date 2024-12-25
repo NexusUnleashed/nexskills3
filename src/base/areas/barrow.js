@@ -1,3 +1,9 @@
+import {
+  checkSensitivity,
+  checkRandomLimbs,
+  checkTransfix,
+} from "../utilities";
+
 const barrow = [
   {
     user: "a giant spider",
@@ -136,8 +142,11 @@ const barrow = [
       /^Vulkuz, Barrow-lord of the Darkenwood brushes a skeletal hand against your body, which withers at his touch\.$/,
     thirdPerson:
       /^Vulkuz, Barrow-lord of the Darkenwood brushes a skeletal hand against (?<target>\w+?)'s body which withers at his touch\.$/,
-    tags: ["damage", "paralyis", "brokenrightarm"],
+    tags: ["damage", "paralyis"],
     length: 4.0,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
   },
   {
     user: "Vulkuz, Barrow-lord of the Darkenwood",
@@ -147,8 +156,11 @@ const barrow = [
       /^Vulkuz, Barrow-lord of the Darkenwood's eyes flash with menace as he mutters a curse under his breath\. Agony courses through your body and your flesh begins to wither and die\.$/,
     thirdPerson:
       /^Vulkuz, Barrow-lord of the Darkenwood's eyes flash with menace as he mutters a curse under his breath\. A look of intolerable agony washes over (?<target>\w+?), and \w+ flesh begins to wither and die before your eyes\.$/,
-    tags: ["damage", "slickness", "sensitivity"],
+    tags: ["damage", "slickness"],
     length: 4.0,
+    reaction(args) {
+      checkSensitivity(args);
+    },
   },
 ];
 

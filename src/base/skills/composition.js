@@ -11,7 +11,7 @@ const composition = {
     skill: "composition",
     balance: false,
     tags: [],
-    affs: false,
+    affs: [],
     info: false,
     length: false,
   },

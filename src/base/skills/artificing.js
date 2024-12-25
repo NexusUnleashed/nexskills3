@@ -19,7 +19,8 @@ const artificing = {
     fullName: "Horripilation",
     firstPerson:
       /^You point a primordial staff at (?<target>.+?) and \w+ screams in pain as \w+ skin begins to freeze and crack\.$/,
-    secondPerson: false,
+    secondPerson:
+      /^(?<user>\w+?) points an elemental staff at you and you scream in pain as your skin begins to freeze and crack\.$/,
     thirdPerson: false,
     profession: ["magi"],
     skill: "artificing",
