@@ -48,7 +48,7 @@ export const depthswalker = {
     profession: ["depthswalker"],
     skill: "attainment",
     balance: "battlerage",
-    info: "Raze",
+    info: "raze",
     tags: ["pve", "raze"],
     length: 3.0,
   },

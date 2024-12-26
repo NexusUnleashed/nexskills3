@@ -118,7 +118,7 @@ const tirMuran = [
     firstPerson:
       /^You gnash your teeth as a scimitar-wielding Vertani soldier brings the butt of his scimitar down on your head, splitting your skull\.$/,
     thirdPerson: false,
-    tags: ["damage"],
+    tags: ["damage", "stun"],
     length: 2.5,
   },
   {

@@ -53,7 +53,7 @@ export const weaponmastery = {
 
   razeNone: {
     id: "razeNone",
-    fullName: "Raze",
+    fullName: "raze",
     firstPerson:
       /^You whip .+? through the air in front of (?<target>\w+), to no effect\.$/,
     secondPerson: false,
@@ -67,7 +67,7 @@ export const weaponmastery = {
   },
   raze: {
     id: "raze",
-    fullName: "Raze",
+    fullName: "raze",
     firstPerson: false,
     secondPerson:
       /^(?<user>\w+) razes your (?<info>aura of rebounding|magical shield) with .+?\.$/,

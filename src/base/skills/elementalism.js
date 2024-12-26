@@ -109,7 +109,7 @@ const elementalism = {
     balance: "free",
     tags: [],
     affs: [],
-    info: "Raze",
+    info: "raze",
     length: 5,
   },
   gust: {

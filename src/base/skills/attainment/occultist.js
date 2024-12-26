@@ -91,7 +91,7 @@ export const occultist = {
     profession: ["occultist"],
     skill: "attainment",
     balance: "battlerage",
-    info: "Raze",
+    info: "raze",
     tags: ["pve", "raze"],
     length: 3.0,
   },

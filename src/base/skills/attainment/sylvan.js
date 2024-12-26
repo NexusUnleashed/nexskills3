@@ -9,7 +9,7 @@ export const sylvan = {
     profession: ["sylvan"],
     skill: "attainment",
     balance: "free",
-    info: "Raze",
+    info: "raze",
     tags: ["pve", "raze"],
     length: 3,
   },

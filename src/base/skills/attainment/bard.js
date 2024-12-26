@@ -37,7 +37,7 @@ export const bard = {
     profession: ["bard"],
     skill: "attainment",
     balance: "battlerage",
-    info: "Raze",
+    info: "raze",
     affs: [],
     tags: ["pve", "raze"],
     length: 0.0,

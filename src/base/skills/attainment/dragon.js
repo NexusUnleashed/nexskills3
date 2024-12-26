@@ -1,32 +1,17 @@
 export const dragon = {
-  //#region Blue Dragon
-  glaciate: {
-    id: "glaciate",
-    fullName: "Glaciate",
+  overwhelm: {
+    id: "overwhelm",
+    fullName: "Overwhelm",
     firstPerson:
-      /^You breathe a column of icy air at (?<target>.+?)'s head, stunning \w+\.$/,
-    secondPerson: false,
-    thirdPerson: false,
-    profession: ["blue dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Stun",
-    tags: ["pve", "stun"],
-    length: 3.0,
-  },
-  frostrive: {
-    id: "frostrive",
-    fullName: "Frostrive",
-    firstPerson:
-      /^(?<target>.+?)'s translucent shield cracks and fades away as you breathe an icy blast at it\.$/,
+      /^You charge quickly at (?<target>.+?), throwing your mighty form into \w+ and sending \w+ staggering back\.$/,
     secondPerson: false,
     thirdPerson:
-      /^(?<target>.+?)'s translucent shield cracks and fades away as (?<user>\w+?) breathes an icy blast at it\.$/,
-    profession: ["blue dragon"],
+      /^(?<user>\w+?) charges quickly at (?<target>.+?), throwing \w+ massive form at \w+ target in a mighty crash\.$/,
+    profession: ["red dragon", "golden dragon"],
     skill: "attainment",
     balance: "battlerage",
-    info: "Raze",
-    tags: ["pve", "raze"],
+    info: false,
+    tags: ["pve", "damage"],
     length: 3.0,
   },
   override: {
@@ -44,6 +29,113 @@ export const dragon = {
     tags: ["pve", "damage"],
     length: 3.0,
   },
+  //#region Golden Dragon
+  psishatter: {
+    id: "psishatter",
+    fullName: "Psishatter",
+    firstPerson:
+      /^You blast (?<target>.+?) with psychic energy, demolishing \w+ translucent shield\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["golden dragon"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: "raze",
+    tags: ["pve", "raze"],
+    length: 3.0,
+  },
+  psiblast: {
+    id: "psiblast",
+    fullName: "Psiblast",
+    firstPerson:
+      /^You level your draconic gaze at (?<target>.+?), assaulting \w+ with psychic waves of force\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["golden dragon"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: false,
+    tags: ["pve", "damage"],
+    length: 3.0,
+  },
+  psistorm: {
+    id: "psistorm",
+    fullName: "Psistorm",
+    firstPerson:
+      /^You summon a psychic storm around (?<target>.+?), but \w+ stands strong against the buffeting winds\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["golden dragon"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: false,
+    tags: ["pve", "damage"],
+    length: 3.0,
+  },
+  psidaze: {
+    //A Vertani guard blinks his eyes as he forgets what he was doing.
+    //Sparkles of psi energy cease their distracting dance around a Vertani guard's vision.
+    //3.4s?
+    id: "psidaze",
+    fullName: "Psidaze",
+    firstPerson:
+      /^You summon sparkles of psi energy around (?<target>.+?), causing him to forget \w+ actions as the sparkles distract \w+\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["golden dragon"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: "amnesia",
+    tags: ["pve"],
+    length: 3.0,
+  },
+  deaden: {
+    //A Vertani guard returns to normal speed as he throws off a mental intrusion.
+    //4s?
+    id: "deaden",
+    fullName: "Deaden",
+    firstPerson:
+      /^You psychically slam your mind into (?<target>.+?)'s, deadening \w+ reactions\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["golden dragon"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: "aeon",
+    tags: ["pve"],
+    length: 3.0,
+  },
+  //#endregion
+  //#region Blue Dragon
+  glaciate: {
+    id: "glaciate",
+    fullName: "Glaciate",
+    firstPerson:
+      /^You breathe a column of icy air at (?<target>.+?)'s head, stunning \w+\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["blue dragon"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: "stun",
+    tags: ["pve", "stun"],
+    length: 3.0,
+  },
+  frostrive: {
+    id: "frostrive",
+    fullName: "Frostrive",
+    firstPerson:
+      /^(?<target>.+?)'s translucent shield cracks and fades away as you breathe an icy blast at it\.$/,
+    secondPerson: false,
+    thirdPerson:
+      /^(?<target>.+?)'s translucent shield cracks and fades away as (?<user>\w+?) breathes an icy blast at it\.$/,
+    profession: ["blue dragon"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: "raze",
+    tags: ["pve", "raze"],
+    length: 3.0,
+  },
   ague: {
     id: "ague",
     fullName: "Ague",
@@ -55,8 +147,8 @@ export const dragon = {
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
-    info: "Clumsy",
-    tags: ["pve", "clumsy"],
+    info: "clumsiness",
+    tags: ["pve", "clumsiness"],
     length: 3.0,
   },
   dragonchill: {
@@ -201,23 +293,8 @@ export const dragon = {
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    info: "Inhibit",
+    info: "inhibit",
     tags: ["pve", "inhibit"],
-    length: 3.0,
-  },
-  overwhelm: {
-    id: "overwhelm",
-    fullName: "Overwhelm",
-    firstPerson:
-      /^You charge quickly at (?<target>.+?), throwing your mighty form into \w+ and sending \w+ staggering back\.$/,
-    secondPerson: false,
-    thirdPerson:
-      /^(?<user>\w+?) charges quickly at (?<target>.+?), throwing \w+ massive form at \w+ target in a mighty crash\.$/,
-    profession: ["red dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: false,
-    tags: ["pve", "damage"],
     length: 3.0,
   },
   dragontaunt: {
@@ -230,7 +307,7 @@ export const dragon = {
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    info: "Recklessness",
+    info: "recklessness",
     tags: ["pve", "recklessness"],
     length: 3.0,
   },
@@ -259,24 +336,7 @@ export const dragon = {
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
-    info: "Raze",
-    tags: ["pve", "raze"],
-    length: 3.0,
-  },
-  //#endregion
-  //#region Gold Dragon
-  melt: {
-    id: "melt",
-    fullName: "Melt",
-    firstPerson:
-      /^You breathe a white-hot blast of flame at (?<target>.+?) and burn away \w+ translucent shield\.$/,
-    secondPerson: false,
-    thirdPerson:
-      /^(?<user>\w+?) breathes a white-hot blast of flame at (?<target>.+?) and burns away \w+ translucent shield\.$/,
-    profession: ["red dragon"],
-    skill: "attainment",
-    balance: "battlerage",
-    info: "Raze",
+    info: "raze",
     tags: ["pve", "raze"],
     length: 3.0,
   },

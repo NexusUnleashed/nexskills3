@@ -13,7 +13,7 @@ export const psionics = {
     tags: [],
     affs: [],
     length: 2,
-    info: "Raze",
+    info: "raze",
   },
   splinterMiss: {
     id: "splinterMiss",

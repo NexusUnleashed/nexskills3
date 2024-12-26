@@ -40,7 +40,7 @@ const bladedance = {
     balance: "balance",
     tags: ["raze"],
     affs: [],
-    info: "Raze Rebounding",
+    info: "raze Rebounding",
     length: 2.0,
   },
   hound: {
