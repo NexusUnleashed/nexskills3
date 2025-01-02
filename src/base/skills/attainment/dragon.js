@@ -79,7 +79,7 @@ export const dragon = {
     id: "psidaze",
     fullName: "Psidaze",
     firstPerson:
-      /^You summon sparkles of psi energy around (?<target>.+?), causing him to forget \w+ actions as the sparkles distract \w+\.$/,
+      /^You summon sparkles of psi energy around (?<target>.+?), causing \w+ to forget \w+ actions as the sparkles distract \w+\.$/,
     secondPerson: false,
     thirdPerson: false,
     profession: ["golden dragon"],

@@ -8,12 +8,12 @@ export const crystalism = {
     thirdPerson:
       /^A single, piercing note emanates from (?<user>\w+), a sound to set teeth on edge and glass to shattering.$/,
     profession: ["magi"],
-    skill: "elementalism",
-    balance: "free",
+    skill: "crystalism",
+    balance: "equilibrium",
     tags: [],
     affs: [],
     info: false,
-    length: 2.8,
+    length: 5,
     reaction(action) {
       switch (
         nexusclient.current_block[
@@ -76,23 +76,6 @@ export const crystalism = {
         ].gag = true;
       }
     },
-  },
-  destabiliseDissipate: {
-    id: "destabiliseDissipate",
-    fullName: "Destabilise",
-    firstPerson: false,
-    secondPerson: [
-      /^A single, piercing note emanates from Khaseem, a sound to set teeth on edge and glass to shattering.$/,
-      /^A spike of agony suddenly blossoms behind your eyes\.$/,
-    ],
-    thirdPerson: false,
-    profession: ["magi"],
-    skill: "elementalism",
-    balance: "free",
-    tags: [],
-    affs: [],
-    info: "Dissipate",
-    length: 2.8,
   },
 };
 

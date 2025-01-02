@@ -207,7 +207,7 @@ const domination = {
     secondPerson:
       /^Violet tendrils lash out from an eldritch abomination, plunging into you. Though they cause no physical harm, you feel a horrific tearing sensation, as if a fundamental part of your essence has been violated and exposed\.$/,
     thirdPerson:
-      /^Incandescent tendrils lash out from an eldritch abomination, plunging into Pamxen. His back arches and eyes bulge as violet light pours from his mouth in a ghastly parody of a scream\.$/,
+      /^Incandescent tendrils lash out from an eldritch abomination, plunging into (?<target>\w+)\. \w+ back arches and eyes bulge as violet light pours from \w+ mouth in a ghastly parody of a scream\.$/,
     profession: ["occultist"],
     skill: "domination",
     balance: "tertiary",
@@ -251,7 +251,7 @@ const domination = {
     secondPerson:
       /^With a mad cackle, a gremlin leaps at you and batters your shield with a flurry of blows, fracturing it in moments\.$/,
     thirdPerson:
-      /^A gremlin leaps at (?<target>\w+), cackling madly as it delivers blow after blow against his magical shield\.$/,
+      /^A gremlin leaps at (?<target>\w+), cackling madly as it delivers blow after blow against \w+ magical shield\.$/,
     profession: ["occultist"],
     skill: "domination",
     balance: "equilibrium",
@@ -267,7 +267,7 @@ const domination = {
     secondPerson:
       /^As a firelord glares at you, sudden agonising heat ignites in your veins. It is gone as swiftly as it came, but you feel suddenly lightheaded\.$/,
     thirdPerson:
-      /^A firelord glances briefly at (?<target>\w+), and a single spark leaps from its eyes to strike him. \w+ convulses violently as if under some great strain, then it fades\.$/,
+      /^A firelord glances briefly at (?<target>\w+), and a single spark leaps from its eyes to strike \w+\. \w+ convulses violently as if under some great strain, then it fades\.$/,
     profession: ["occultist"],
     skill: "domination",
     balance: "equilibrium",
@@ -312,7 +312,7 @@ const domination = {
     secondPerson:
       /^The gremlin races between and around your legs, its eratic movement setting your head to spinning\.$/,
     thirdPerson:
-      /^The gremlin races around and between the legs of (?<target>\w+), his eyes tracking it as he sways unsteadily\.$/,
+      /^The gremlin races around and between the legs of (?<target>\w+), \w+ eyes tracking it as he sways unsteadily\.$/,
     profession: ["occultist"],
     skill: "domination",
     balance: "free",

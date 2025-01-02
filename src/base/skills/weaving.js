@@ -48,7 +48,7 @@ export const weaving = {
     fullName: "Cleave",
     firstPerson:
       //You weave a translucent battleaxe into being, its ethereal form firming to corporeality in your hands.
-      /^Your blow cleaves through the magical shield surrounding (?<target>.+?), continuing on to drive \w+ from his feet\.$/,
+      /^Your blow cleaves through the magical shield surrounding (?<target>.+?), continuing on to drive \w+ from \w+ feet\.$/,
     secondPerson: [
       /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon you\.$/,
       /^The blow cleaves through your magical shield, shattering it and knocking you from your feet!$/,
@@ -361,7 +361,7 @@ export const weaving = {
     id: "invert",
     fullName: "Invert",
     firstPerson:
-      /^You pluck at the weave of (?<target>\w+?), swapping the states of his (?<old>\w+?) and (?<new>\w+?)\.$/,
+      /^You pluck at the weave of (?<target>\w+?), swapping the states of \w+ (?<old>\w+?) and (?<new>\w+?)\.$/,
     secondPerson:
       /^(?<user>\w+?) plucks at invisible threads in the air before \w+, and you feel a sudden nausea as your fundamental essence shifts\.$/,
     thirdPerson: false,
@@ -392,9 +392,9 @@ export const weaving = {
     id: "flurry",
     fullName: "Flurry",
     firstPerson:
-      /^You rush at (?<target>\w+?), unleashing a flurry of (\d+) blow with your blade to rend him asunder\.$/,
+      /^You rush at (?<target>\w+?), unleashing a flurry of (\d+) blow with your blade to rend \w+ asunder\.$/,
     secondPerson:
-      /^In a blur of motion (?<user>\w+?) rushes at you, his blade rending your flesh in a devastating flurry of (\d) strike\.$/,
+      /^In a blur of motion (?<user>\w+?) rushes at you, \w+ blade rending your flesh in a devastating flurry of (\d) strike\.$/,
     thirdPerson:
       /^(?<user>\w+?) rushes at (?<target>\w+?), slashing at \w+ (\d) times in a flurry of lethal motion\.$/,
     profession: ["psion"],

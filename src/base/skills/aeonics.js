@@ -25,7 +25,7 @@ const aeonics = {
     id: "chronoAeonStrip",
     fullName: "Chrono Aeon Strip",
     firstPerson:
-      /^Directing your will upon (?<target>\w+), you tear away the protection granted to him by the speed elixir\.$/,
+      /^Directing your will upon (?<target>\w+), you tear away the protection granted to \w+ by the speed elixir\.$/,
     secondPerson:
       /^As the gaze of (?<user>\w+) falls upon you, you feel your speed enhancements torn away\.$/,
     thirdPerson:

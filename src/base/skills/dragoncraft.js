@@ -252,7 +252,7 @@ export const dragoncraft = {
     firstPerson:
       /^Fixing your gaze upon (?<target>\w+), you begin a low keening, exercising your mastery of the Veil to bind your foe\.$/,
     secondPerson:
-      /^(?<user>\w+) turns to fix his gaze upon you, and you feel your heart increase its palpitations as a low keening echoes from his throat\.$/,
+      /^(?<user>\w+) turns to fix \w+ gaze upon you, and you feel your heart increase its palpitations as a low keening echoes from \w+ throat\.$/,
     thirdPerson:
       /^(?<user>\w+) fixes \w+ gaze upon (?<target>\w+), swaying slowly as \w+ begins a low keening\.$/,
     profession: [

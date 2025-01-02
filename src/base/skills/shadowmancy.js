@@ -170,7 +170,7 @@ export const shadowmancy = {
     secondPerson:
       /^The voices plaguing you reach a deafening crescendo, stunning you with their intensity\.$/,
     thirdPerson:
-      /^The head of (?<target>\w+) snaps back as if struck and his eyes roll madly\.$/,
+      /^The head of (?<target>\w+) snaps back as if struck and \w+ eyes roll madly\.$/,
     profession: ["depthswalker"],
     skill: "shadowmancy",
     balance: "free",

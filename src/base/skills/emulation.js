@@ -6,7 +6,7 @@ const emulation = {
       /^You summon up the might of the waves, a great surge of water lifting you up and hurling you away\.$/,
     secondPerson: false,
     thirdPerson:
-      /^Mystic waters rise about (?<user>\w+?), the frothing crest of a surging wave carrying him away to the (?<info>\w+?)\.$/,
+      /^Mystic waters rise about (?<user>\w+?), the frothing crest of a surging wave carrying \w+ away to the (?<info>\w+?)\.$/,
     profession: ["psion"],
     skill: "psionics",
     balance: "equilibrium",
@@ -29,7 +29,7 @@ const emulation = {
     //A bar of crackling lightning transfixes you, your body ravaged relentlessly under the onslaught.
     //A raging inferno rolls over you, your body ravaged relentlessly under the onslaught.
     thirdPerson:
-      /^(?<user>\w+?) cups his hands in front of \w+, a .+? coalescing before him and streaking away to the (?<info>\w+?)\.$/,
+      /^(?<user>\w+?) cups \w+ hands in front of \w+, a .+? coalescing before \w+ and streaking away to the (?<info>\w+?)\.$/,
     //Khaseem cups his hands in front of himself, a raging torrent of ice coalescing before him and streaking away to the southwest.
     //Khaseem cups his hands in front of himself, a bar of crackling lightning coalescing before him and streaking away to the southeast.
     //Khaseem cups his hands in front of himself, a raging inferno coalescing before him and streaking away to the southeast.

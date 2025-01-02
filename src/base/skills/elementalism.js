@@ -186,7 +186,7 @@ const elementalism = {
     id: "freeze",
     fullName: "Freeze",
     firstPerson:
-      /^You raise a hand towards (Khayyin) and blast him with cold, frigid air\.$/,
+      /^You raise a hand towards (?<target>\w+) and blast \w+ with cold, frigid air\.$/,
     secondPerson:
       /^Khaseem raises a hand towards you and blasts you with cold, frigid air\.$/,
     thirdPerson: false,
