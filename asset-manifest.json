@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nexskills3/static/css/main.523cc25b.css",
-    "main.js": "/nexskills3/static/js/main.afc6c46f.js",
+    "main.js": "/nexskills3/static/js/main.181feaec.js",
     "static/js/453.e5f5d9eb.chunk.js": "/nexskills3/static/js/453.e5f5d9eb.chunk.js",
     "index.html": "/nexskills3/index.html",
     "main.523cc25b.css.map": "/nexskills3/static/css/main.523cc25b.css.map",
-    "main.afc6c46f.js.map": "/nexskills3/static/js/main.afc6c46f.js.map",
+    "main.181feaec.js.map": "/nexskills3/static/js/main.181feaec.js.map",
     "453.e5f5d9eb.chunk.js.map": "/nexskills3/static/js/453.e5f5d9eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.523cc25b.css",
-    "static/js/main.afc6c46f.js"
+    "static/js/main.181feaec.js"
   ]
 }
