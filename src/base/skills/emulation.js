@@ -8,7 +8,7 @@ const emulation = {
     thirdPerson:
       /^Mystic waters rise about (?<user>\w+?), the frothing crest of a surging wave carrying \w+ away to the (?<info>\w+?)\.$/,
     profession: ["psion"],
-    skill: "psionics",
+    skill: "emulation",
     balance: "equilibrium",
     tags: ["affs"],
     affs: ["lightbind"],
@@ -34,7 +34,7 @@ const emulation = {
     //Khaseem cups his hands in front of himself, a bar of crackling lightning coalescing before him and streaking away to the southeast.
     //Khaseem cups his hands in front of himself, a raging inferno coalescing before him and streaking away to the southeast.
     profession: ["psion"],
-    skill: "psionics",
+    skill: "emulation",
     balance: "equilibrium",
     tags: ["los"],
     affs: [],
@@ -49,7 +49,7 @@ const emulation = {
     secondPerson: false,
     thirdPerson: /^The eyes of (?<user>\w+?) flash with a golden glow\.$/,
     profession: ["psion"],
-    skill: "psionics",
+    skill: "emulation",
     balance: "equilibrium",
     tags: ["def"],
     affs: [],
@@ -64,7 +64,7 @@ const emulation = {
     secondPerson: false,
     thirdPerson: false,
     profession: ["psion"],
-    skill: "psionics",
+    skill: "emulation",
     balance: "equilibrium",
     tags: ["def"],
     affs: [],
@@ -81,7 +81,7 @@ const emulation = {
     thirdPerson:
       /^A look of deadly menace flashes in the eyes of (?<user>\w+?) as \w+ turns \w+ attentions towards (?<target>\w+?)\.$/,
     profession: ["psion"],
-    skill: "psionics",
+    skill: "emulation",
     balance: "equilibrium",
     tags: ["def"],
     affs: [],
@@ -98,7 +98,7 @@ const emulation = {
     thirdPerson:
       /^A rope of light lashes out from (?<user>\w+?), binding \w+? to (?<target>\w+?)\.$/,
     profession: ["psion"],
-    skill: "psionics",
+    skill: "emulation",
     balance: "equilibrium",
     tags: ["def"],
     affs: [],
@@ -116,7 +116,7 @@ const emulation = {
       /^Golden chains of light coalesce in the hands of (?<user>\w+?), and \w+ casts them out to bind (?<target>\w+?) to \w+\.$/,
     //Golden chains of light coalesce in the hands of (Sephor), and he casts them out to bind (Svarog) to him.
     profession: ["psion"],
-    skill: "psionics",
+    skill: "emulation",
     balance: "equilibrium",
     tags: ["affs"],
     affs: ["lightbind"],
