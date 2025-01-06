@@ -90,3 +90,43 @@ Striking like a snake, Sprucebruce follows the first attack with another.
 Sprucebruce sinks his fangs into your body and you wince in pain.
 
 (Jems) leaps forwards onto (Grandue) and mauls him viciously.
+
+(Mizik) strums a few notes on a Lasallian lyre, and a prismatic barrier forms around him.
+Havyn attempts to transfix (Fitz), but succeeds only in curing faes blindness.
+With blinding speed, Havyn transfixes you with a swirling pattern of fire and air.
+With blinding speed, (Proficy) is transfixed with a swirling pattern of fire and air.
+
+//Alchemist
+17:57:33.921  (Mizik) glowers at Havyn with a look of repressed disgust before making a slight gesture toward her.
+17:57:33.921  (Mizik) glowers at Havyn with a look of repressed disgust before making a slight gesture toward her.
+17:57:33.921  Horror overcomes Havyn's face as her body stiffens into paralysis.
+
+//cata staffcast
+(Fitz) screams in pain as faes skin begins to freeze and crack.
+
+//dragon gaze start
+An ominous feeling descends upon you as (Dominius) turns his gaze upon you.
+//dragon gaze resolve
+A sudden sense of panic overtakes you as the draconic curse manifests, afflicting you with asthma.
+
+17:58:10.293  Maylina stares at (Fitz), giving faen the evil eye.
+17:58:10.293  (Fitz) shuffles faes feet in boredom.
+17:58:10.293  Maylina stares at (Fitz), giving faen the evil eye.
+17:58:10.293  Horror overcomes (Fitz)'s face as faes body stiffens into paralysis.
+
+18:03:51.905  (Ravai) stares at you, giving you the evil eye.
+18:03:51.905  You shuffle your feet noisily, suddenly bored.
+18:03:51.905  (Ravai) stares at you, giving you the evil eye.
+18:03:51.905  A prickly stinging overcomes your body, fading away into numbness.
+
+//Blademaster
+As (Weymar) draws Sovereign Silhouette from its scabbard, he drives the pommel into (Ulvin)'s chin.
+Ducking behind him, (Weymar) strikes at (Ulvin)'s hamstring with a rigid, practised grip.
+
+(Xarthus) whips a Scimitar of Eagles through the air in front of (Poxie), to no effect.
+
+//Quash > arc
+(Melech) whips a Dreadblade bastard sword in a controlled arc toward (Poxie).
+Maedhros swings his weapon in a wide arc.
+
+(Xarthus) slashes into you with a Scimitar of Eagles!
