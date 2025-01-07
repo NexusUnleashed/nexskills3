@@ -86,6 +86,15 @@ const tapoa = [
     areaId: [162],
     areaName: "Tapoa Island",
     firstPerson:
+      /^Growling softly as he crouches low to the ground, a scraggly dingo quickly springs towards you, his open jaws clamping shut around your neck and piercing your jugular\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+  },
+  {
+    user: "a scraggly dingo",
+    areaId: [162],
+    areaName: "Tapoa Island",
+    firstPerson:
       /^Snapping his jaws ferociously, a scraggly dingo runs between your legs, causing you to fall and hit your head on a nearby rock\.$/,
     thirdPerson: false,
     tags: ["damage", "prone"],
@@ -175,6 +184,15 @@ const tapoa = [
       /^A blue-plated sand crab scuttles across the sand and jabs his pincer into your leg\.$/,
     thirdPerson: false,
     tags: ["damage"],
+  },
+  {
+    user: "a large red kangaroo",
+    areaId: [162],
+    areaName: "Tapoa Island",
+    firstPerson:
+      /^Lashing out with her claws, a large red kangaroo rakes across your chest\.$/,
+    thirdPerson: false,
+    tags: ["damage", "loki"],
   },
 ];
 
