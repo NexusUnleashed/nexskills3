@@ -224,7 +224,7 @@ const finalizeCheck = (action, type = false) => {
     eventStream.raiseEvent("nexSkillNpcMatch", action);
   } else {
     eventStream.raiseEvent("nexSkillMatch", action);
-    eventStream.raiseEvent(`nexSkillMatch${action.id}`, action);
+    eventStream.raiseEvent(`nexSkillMatch.${action.id}`, action);
   }
   return action;
 };
