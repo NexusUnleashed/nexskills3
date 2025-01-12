@@ -94,7 +94,7 @@ export const weaving = {
       /^(?<user>\w+) ducks low, \w+ blade slicing into your (?<limb>\w+? leg)\.$/,
     //Khaseem stumbles, falling to the ground. //Mangled leg + prone
     thirdPerson:
-      /^(?<user>\w+?) ducks low, \w+ blade slicing into the left leg of (?<target>\w+)\.$/,
+      /^(?<user>\w+?) ducks low, \w+ blade slicing into the (?<limb>\w+? leg) of (?<target>\w+)\.$/,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
