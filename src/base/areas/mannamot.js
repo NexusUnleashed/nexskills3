@@ -1,5 +1,6 @@
 import { checkRandomLimbs, inBlock } from "../utilities";
 const mannamot = [
+  //#region Air
   {
     user: "a greater air elemental",
     areaId: [330],
@@ -44,12 +45,14 @@ const mannamot = [
     firstPerson:
       /^A greater air elemental whirls its spear faster than your eye can follow, creating a whirlwind that sends nearby objects flying and batters everything within its reach\.$/,
     thirdPerson: false,
-    tags: ["damage", "prone", "caloric"],
+    tags: ["damage", "caloric"],
     length: 3.0,
     reaction(args) {
       checkRandomLimbs(args);
     },
   },
+  //#endregion
+  //#region Water
   {
     user: "a greater water elemental",
     areaId: [330],
@@ -93,6 +96,8 @@ const mannamot = [
     tags: ["damage", "paralysis"],
     length: 3.0,
   },
+  //#endregion
+  //#region Earth
   {
     user: "a greater earth elemental",
     areaId: [330],
@@ -126,6 +131,7 @@ const mannamot = [
     tags: ["damage", "heal"],
     length: 3.0,
   },
+  //#endregion
   //#region Fire
   {
     id: "aGreaterFireElemental.1",
