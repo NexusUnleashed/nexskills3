@@ -100,7 +100,7 @@ const mannamot = [
     firstPerson:
       /^A greater earth elemental breaks a large chunk away from its rocky form and hurls it at you, the projectile connecting with stunning force\.$/,
     thirdPerson: false,
-    tags: ["damage"],
+    tags: ["damage", "Stun"],
     length: 3.0,
     reaction(args) {
       checkRandomLimbs(args);
