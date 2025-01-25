@@ -81,7 +81,8 @@ export const dragon = {
     firstPerson:
       /^You summon sparkles of psi energy around (?<target>.+?), causing \w+ to forget \w+ actions as the sparkles distract \w+\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) summons sparkles of psi energy around (?<target>.+?), causing \w+ to forget \w+ actions as the sparkles distract \w+\.$/,
     profession: ["golden dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -97,7 +98,8 @@ export const dragon = {
     firstPerson:
       /^You psychically slam your mind into (?<target>.+?)'s, deadening \w+ reactions\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+?) psychically slams \w+ mind into (?<target>.+?)'s, deadening .+?'s reactions\.$/,
     profession: ["golden dragon"],
     skill: "attainment",
     balance: "battlerage",
