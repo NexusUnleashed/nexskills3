@@ -39,7 +39,7 @@ const artificing = {
   //Even as the wave of cold dissipates, you retain control over the fluid and send it spinning through the air to bind (?<target>.+?) in a watery web.
   //Even as the wave of cold passes over you (?<user>\w+?) twitches \w+ staff, and a web of fluid spins into being to bind you.
   //Even as the freezing wave passes over (?<target>\w+?) (?<user>\w+?) twitches \w+ staff, and a web of water spins into being to bind \w+ in place.
-  horripilation: {
+  lightning: {
     id: "lightning",
     fullName: "Lightning",
     firstPerson:
