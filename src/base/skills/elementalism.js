@@ -24,7 +24,7 @@ const elementalism = {
     profession: ["magi"],
     skill: "elementalism",
     balance: "equilibrium",
-    tags: [],
+    tags: ["pve"],
     affs: [],
     info: false,
     length: 3.0,
