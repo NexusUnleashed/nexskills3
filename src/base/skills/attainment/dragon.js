@@ -36,7 +36,8 @@ export const dragon = {
     firstPerson:
       /^You blast (?<target>.+?) with psychic energy, demolishing \w+ translucent shield\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /(?<user>\w+) blasts (?<target>.+?) with psychic energy, demolishing \w+ translucent shield\.$/,
     profession: ["golden dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -50,7 +51,8 @@ export const dragon = {
     firstPerson:
       /^You level your draconic gaze at (?<target>.+?), assaulting \w+ with psychic waves of force\.$/,
     secondPerson: false,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<user>\w+) levels \w+ draconic gaze at (?<target>.+?), visible waves of psychic force emanating out\.$/,
     profession: ["golden dragon"],
     skill: "attainment",
     balance: "battlerage",
