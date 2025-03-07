@@ -79,11 +79,11 @@ export const tarot = {
     id: "justice",
     fullName: "Justice",
     firstPerson:
-      /^With a prayer to Miramar, the Just, you fling your tarot card at (?<target>\w+)\. A set of scales appears above \w+head and one side of the scale quickly descends\. Justice will be done\.$/,
+      /^With a prayer to Miramar, the Just, you fling your tarot card at (?<target>\w+)\. A set of scales appears above \w+ head and one side of the scale quickly descends\. Justice will be done\.$/,
     secondPerson:
       /^(?<user>\w+) bows \w+ head and mutters something, then flings a tarot card at you\. A set of scales appears above your head and one side of the scale quickly descends\. You have a bad feeling about this\.$/,
     thirdPerson:
-      /^(?<user>\w+) bows \w+ head and mutters something, then flings a tarot card at (?<target>\w+)\. A set of scales appears above \w+head and one side of the scale quickly descends\.$/,
+      /^(?<user>\w+) bows \w+ head and mutters something, then flings a tarot card at (?<target>\w+)\. A set of scales appears above \w+ head and one side of the scale quickly descends\.$/,
     profession: ["occultist", "jester"],
     balance: "balance",
     affs: ["justice"],
