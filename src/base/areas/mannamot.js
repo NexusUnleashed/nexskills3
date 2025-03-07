@@ -45,7 +45,7 @@ const mannamot = [
     firstPerson:
       /^A greater air elemental whirls its spear faster than your eye can follow, creating a whirlwind that sends nearby objects flying and batters everything within its reach\.$/,
     thirdPerson: false,
-    tags: ["damage", "caloric"],
+    tags: ["damage"],
     length: 3.0,
     reaction(args) {
       checkRandomLimbs(args);

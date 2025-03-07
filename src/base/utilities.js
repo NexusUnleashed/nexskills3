@@ -74,7 +74,6 @@ function checkLine(pattern, index = 1) {
 
 export const checkRandomLimbs = (args) => {
   const re = /^Your (\w+) (\w+) breaks with a loud crack\.$/;
-
   for (let i = 1; i < 5; i++) {
     const match = checkLine(re, i);
     if (match) {
