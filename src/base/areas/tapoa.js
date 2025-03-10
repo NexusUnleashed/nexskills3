@@ -194,6 +194,15 @@ const tapoa = [
     thirdPerson: false,
     tags: ["damage", "loki"],
   },
+  {
+    user: "a large red kangaroo",
+    areaId: [162],
+    areaName: "Tapoa Island",
+    firstPerson:
+      /^A large red kangaroo sweeps her tail at your face, heralding a sickening crack as you feel your nose break and blood begin to flow\.$/,
+    thirdPerson: false,
+    tags: ["damage", "nausea", "skullfractures"],
+  },
 ];
 
 export default tapoa;
