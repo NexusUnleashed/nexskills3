@@ -225,6 +225,10 @@ const finalizeCheck = (action, type = false) => {
   } else {
     eventStream.raiseEvent("nexSkillMatch", action);
     eventStream.raiseEvent(`nexSkillMatch.${action.id}`, action);
+    eventStream.raiseEvent(
+      `nexSkillMatch.${action.id}.${action.matchType}`,
+      action
+    );
   }
   return action;
 };
