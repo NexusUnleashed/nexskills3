@@ -1,6 +1,6 @@
 {
   "name": "nexskills",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "nexSkills pattern object Nexus",
   "main": "nexskills.min.js",
   "scripts": {
