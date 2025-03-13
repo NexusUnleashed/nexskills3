@@ -39,7 +39,7 @@ export const magi = {
     length: 16.0,
   },
   firefall: {
-    id: "firefall",
+    id: "firefallFail",
     fullName: "Firefall",
     firstPerson:
       /^You raise your hands dramatically and summon a mighty flaming rock from the sky down at (?<target>.+?), but \w+ dodges aside and is only dealt a glancing blow\.$/,
@@ -50,6 +50,20 @@ export const magi = {
     balance: "battlerage",
     tags: ["pve", "damage"],
     info: "non-combo",
+    length: 16.0,
+  },
+  firefall: {
+    id: "firefall",
+    fullName: "Firefall",
+    firstPerson:
+      /^You raise your hands dramatically and summon a mighty flaming rock from the sky that slams into the \w+ form of (?<target>.+?)\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["magi"],
+    skill: "attainment",
+    balance: "battlerage",
+    tags: ["pve", "damage"],
+    info: "COMBO",
     length: 16.0,
   },
   dilation: {
