@@ -34,9 +34,9 @@ const domination = {
     id: "stormCommand",
     fullName: "Storm Command",
     firstPerson:
-      /^You command your chaos storm to bring down the curse of vertigo upon (?<target>\w+)\.$/,
+      /^You command your chaos storm to bring down the curse of clumsiness upon (?<target>\w+)\.$/,
     secondPerson:
-      /^A lash of energy whips out of the chaos storm to strike you, afflicting you with vertigo\.$/,
+      /^A lash of energy whips out of the chaos storm to strike you, afflicting you with clumsiness\.$/,
     thirdPerson:
       /^A lash of energy whips out of the chaos storm to strike (?<target>\w+), \w+ face going blank for a brief instant on contact\.$/,
     profession: ["occultist"],
@@ -45,7 +45,7 @@ const domination = {
     tags: [],
     length: 2.2,
   },
-  stormCommand: {
+  stormCommand2: {
     id: "stormCommand2",
     fullName: "Storm Command",
     firstPerson: /^A chaos storm disregards your order\.$/,

@@ -38,8 +38,8 @@ export const magi = {
     tags: ["pve", "damage"],
     length: 16.0,
   },
-  firefall: {
-    id: "firefallFail",
+  firefallFail: {
+    id: "firefall",
     fullName: "Firefall",
     firstPerson:
       /^You raise your hands dramatically and summon a mighty flaming rock from the sky down at (?<target>.+?), but \w+ dodges aside and is only dealt a glancing blow\.$/,
