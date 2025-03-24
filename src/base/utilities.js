@@ -63,8 +63,8 @@ export const addAction = (action) => {
 function checkLine(pattern, index = 1) {
   const nextLine =
     nexusclient.current_block[nexusclient.current_line.index + index];
-  const line = nextLine.parsed_line ? nextLine.parsed_line.text() : "";
-  const match = line.match(pattern);
+  const text = nextLine.parsed_line ? nextLine.parsed_line.text() : "";
+  const match = text.match(pattern);
   if (match) {
     return `broken${match[1]}${match[2]}`;
   } else {
@@ -74,7 +74,7 @@ function checkLine(pattern, index = 1) {
 
 export const checkRandomLimbs = (args) => {
   const re = /^Your (\w+) (\w+) breaks with a loud crack\.$/;
-  for (let i = 1; i < 5; i++) {
+  for (let i = 1; i < nexusclient.current_block.length; i++) {
     const match = checkLine(re, i);
     if (match) {
       args.tags.push(match);
