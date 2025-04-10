@@ -288,7 +288,7 @@ const domination = {
     tags: [],
     length: 2.6,
   },
-  firelordCommand: {
+  firelordCommandFail: {
     id: "firelordCommandFail",
     fullName: "Firelord Command",
     firstPerson:
