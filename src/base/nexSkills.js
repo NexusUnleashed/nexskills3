@@ -48,6 +48,7 @@ import battlesite from "./areas/battlesite";
 import grukaiSwamp from "./areas/grukaiSwamp";
 import istarion from "./areas/istarion";
 import judgementMountain from "./areas/judgementMountain";
+import lupineHuntingGrounds from "./areas/lupineHuntingGrounds";
 import mannamot from "./areas/mannamot";
 import nur from "./areas/nur";
 import riagath from "./areas/riagath";
@@ -64,6 +65,7 @@ const npcs = [
   ...grukaiSwamp,
   ...istarion,
   ...judgementMountain,
+  ...lupineHuntingGrounds,
   ...mannamot,
   ...nur,
   ...riagath,
