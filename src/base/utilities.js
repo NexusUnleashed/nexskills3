@@ -83,6 +83,7 @@ export const checkRandomLimbs = (args) => {
     }
   }
 };
+//echo A greater earth elemental breaks a large chunk away from its rocky form and hurls it at you, the projectile connecting with stunning force.|echo Health lost: 424 (physical blunt).|echo Your left leg breaks with a loud crack.|echo Your right leg breaks with a loud crack.
 
 export const checkSensitivity = (args) => {
   const re2 = /^Your hearing is suddenly restored\.$/;
