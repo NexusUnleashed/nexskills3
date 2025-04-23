@@ -93,7 +93,7 @@ const mannamot = [
     firstPerson:
       /^The outermost layer of a greater water elemental's icy coating violently shatters, sending thousands of icy shards in every direction\.$/,
     thirdPerson: false,
-    tags: ["damage", "paralysis"],
+    tags: ["damage", "paralysis", "caloric"],
     length: 3.0,
   },
   //#endregion
