@@ -118,7 +118,7 @@ const mannamot = [
     firstPerson:
       /^A greater earth elemental extends one arm towards you as a mass of writhing vines surge forward, slicing into you with thorns dripping with violet toxins\.$/,
     thirdPerson: false,
-    tags: ["damage", "loki", "loki"],
+    tags: ["damage", "haemophilia", "loki", "loki"],
     length: 3.0,
   },
   {
