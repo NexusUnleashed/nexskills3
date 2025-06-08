@@ -74,15 +74,19 @@ function checkLine(pattern, index = 1) {
 
 export const checkRandomLimbs = (args) => {
   const re = /^Your (\w+) (\w+) breaks with a loud crack\.$/;
+  let matchFound = false;
   for (let i = 1; i < nexusclient.current_block.length; i++) {
     const match = checkLine(re, i);
     if (match) {
       args.tags.push(match);
-    } else {
+      matchFound = true;
+    } else if (matchFound) {
+      // If we found a match, we can stop checking further lines
       break;
     }
   }
 };
+//echo A greater earth elemental breaks a large chunk away from its rocky form and hurls it at you, the projectile connecting with stunning force.|echo Health lost: 424 (physical blunt).|echo Your left leg breaks with a loud crack.|echo Your right leg breaks with a loud crack.
 
 export const checkSensitivity = (args) => {
   const re2 = /^Your hearing is suddenly restored\.$/;

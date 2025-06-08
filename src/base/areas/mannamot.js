@@ -93,7 +93,7 @@ const mannamot = [
     firstPerson:
       /^The outermost layer of a greater water elemental's icy coating violently shatters, sending thousands of icy shards in every direction\.$/,
     thirdPerson: false,
-    tags: ["damage", "paralysis"],
+    tags: ["damage", "paralysis", "caloric"],
     length: 3.0,
   },
   //#endregion
@@ -118,7 +118,7 @@ const mannamot = [
     firstPerson:
       /^A greater earth elemental extends one arm towards you as a mass of writhing vines surge forward, slicing into you with thorns dripping with violet toxins\.$/,
     thirdPerson: false,
-    tags: ["damage", "loki", "loki"],
+    tags: ["damage", "haemophilia", "loki", "loki"],
     length: 3.0,
   },
   {
