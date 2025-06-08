@@ -1,9 +1,10 @@
 // GMCP areaid 417
 
-import { checkSensitivity, checkRandomLimbs } from "../utilities";
+import { checkSensitivity, checkRandomLimbs, nextLine } from "../utilities";
 
 // Crowdmap areaid 490
 const lupineHuntingGrounds = [
+  //#region Wild Centaur
   {
     user: "a wild centaur",
     areaId: [417],
@@ -37,6 +38,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "prone"],
     length: 2.0,
   },
+  //#endregion
+  //#region Centaur Sage
   {
     user: "a centaur sage",
     areaId: [417],
@@ -56,7 +59,7 @@ const lupineHuntingGrounds = [
       /^A centaur sage raises her staff and points it at you, unleashing a blast of magic that sweeps you off your feet and sets you ablaze\.$/,
     thirdPerson:
       /^A centaur sage raises her staff and points it at (?<target>\w+?), unleashing a blast of magic that sweeps \w+ off her feet and sets \w+ ablaze\.$/,
-    tags: ["damage", "burning"],
+    tags: ["damage", "burning", "prone"],
     length: 2.0,
   },
   {
@@ -84,6 +87,8 @@ const lupineHuntingGrounds = [
       checkRandomLimbs(args);
     },
   },
+  //#endregion
+  //#region Elder Centaur
   {
     user: "an elder centaur",
     areaId: [417],
@@ -131,7 +136,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "nausea"],
     length: 2.0,
   },
-
+  //#endregion
+  //#region Centaur Archer
   {
     user: "a centaur archer",
     areaId: [417],
@@ -165,6 +171,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "hamstring", "lethargy", "weariness"],
     length: 2.0,
   },
+  //#endregion
+  //#region Centaur Chieftain
   {
     user: "a centaur chieftain",
     areaId: [417],
@@ -229,6 +237,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "slashedthroat", "parry head"],
     length: 2.0,
   },
+  //#endregion
+  //#region Diamond-Back Rattlesnake
   {
     user: "a diamond-back rattlesnake",
     areaId: [417],
@@ -263,6 +273,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "darkshade", "loki", "loki"],
     length: 2.0,
   },
+  //#endregion
+  //#region Ochre-Necked Oryx
   {
     user: "an ochre-necked oryx",
     areaId: [417],
@@ -302,6 +314,8 @@ const lupineHuntingGrounds = [
       checkRandomLimbs(args);
     },
   },
+  //#endregion
+  //#region Black-Tongued Lizard
   {
     user: "a black-tongued lizard",
     areaId: [417],
@@ -334,6 +348,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "blackout"],
     length: 2.0,
   },
+  //#endregion
+  //#region Slavering Hyena
   {
     user: "a slavering hyena",
     areaId: [417],
@@ -367,6 +383,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "clumsiness"],
     length: 2.0,
   },
+  //#endregion
+  //#region Crimson-Hued Scorpion
   {
     user: "a crimson-hued scorpion",
     areaId: [417],
@@ -416,6 +434,111 @@ const lupineHuntingGrounds = [
     tags: ["damage", "dehydrated/scaled/burning?"],
     length: 2.0,
   },
+  //#endregion
+  //#region Mud-Coated Hippo
+  {
+    user: "a mud-coated hippo",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^With a rumble of displeasure, a mud-coated hippo slams his implacable mass into you\.$/,
+    thirdPerson:
+      /^With a rumble of displeasure, a mud-coated hippo slams his implacable mass into (?<target>\w+?)\.$/,
+    tags: ["damage"],
+    length: 2.0,
+  },
+  {
+    user: "a mud-coated hippo",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A mud-coated hippo ambles towards you, closing his powerful jaws about your skull in a powerful bite\.$/,
+    thirdPerson:
+      /^A mud-coated hippo ambles towards (?<target>\w+?), closing his powerful jaws about \w+ skull in a powerful bite\.$/,
+    tags: ["damage", "concussion", "stupidity"],
+    length: 2.0,
+  },
+  {
+    user: "a mud-coated hippo",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A mud-coated hippo charges forward with an enraged bellow, knocking you prone before trampling over you with his immense bulk\.$/,
+    thirdPerson:
+      /^A mud-coated hippo charges forward with an enraged bellow, knocking (?<target>\w+?) prone before trampling over \w+\.$/,
+    tags: ["damage"],
+    length: 2.0,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
+  },
+  {
+    user: "a mud-coated hippo",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A mud-coated hippo ambles towards you, closing his powerful jaws about your leg and severing it in a single, powerful bite\.$/,
+    thirdPerson: false,
+    tags: ["damage", "parry leg"],
+    length: 2.0,
+  },
+  {
+    user: "a mud-coated hippo",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^His immense bulk rippling, a mud-coated hippo slams his body down, disturbing the air with explosive force\.$/,
+    thirdPerson: false,
+    tags: ["throw", "stun"],
+    length: 2.0,
+  },
+  {
+    user: "a mud-coated hippo",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Opening his immense jaws, a mud-coated hippo bites clean through your magical shield\.$/,
+    thirdPerson: false,
+    tags: ["damage", "raze"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region Wide-Eyed Primate
+  {
+    user: "a wide-eyed primate",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A wide-eyed primate pounces from a nearby branch, landing on you and sinking his dirty teeth into your flesh\.$/,
+    thirdPerson:
+      /^A wide-eyed primate pounces from a nearby branch, landing on (?<target>\w+?) and sinking dirty teeth into \w+ flesh\.$/,
+    tags: ["damage", "loki", "loki"],
+    length: 2.0,
+  },
+  {
+    user: "a wide-eyed primate",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Leaping from a nearby tree, a wide-eyed primate pounces on you and claws ferociously at your face\.$/,
+    thirdPerson:
+      /^Leaping from a nearby tree, a wide-eyed primate pounces on (?<target>\w+?) and claws ferociously at \w+ face\.$/,
+    tags: ["damage", "disloyalty"],
+    length: 2.0,
+  },
+  {
+    user: "a wide-eyed primate",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Howling aloud, a wide-eyed primate flings a handful of fecal matter at you, covering you with the foul substance\.$/,
+    thirdPerson:
+      /^Howling aloud, a wide-eyed primate flings a handful of fecal matter at (?<target>\w+?), covering \w+ with the foul substance\.$/,
+    tags: ["damage", "itching"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region Agitated Jaguar
   {
     user: "an agitated jaguar",
     areaId: [417],
@@ -456,6 +579,8 @@ const lupineHuntingGrounds = [
     length: 2.0,
   },
   //Muscles ripple beneath the coat of an agitated jaguar as he lunges forward, driving his claws clean through (Poxie)'s magical shield. //Raze
+  //#endregion
+  //#region Shaggy Water Buffalo
   {
     user: "a shaggy water buffalo",
     areaId: [417],
@@ -495,6 +620,8 @@ const lupineHuntingGrounds = [
       checkSensitivity(args);
     },
   },
+  //#endregion
+  //#region Scarred Bull Elephant
   {
     user: "a scarred bull elephant",
     areaId: [417],
@@ -544,6 +671,8 @@ const lupineHuntingGrounds = [
       checkRandomLimbs(args);
     },
   },
+  //#endregion
+  //#region Fearsome Lion
   {
     user: "a fearsome lion",
     areaId: [417],
@@ -577,6 +706,8 @@ const lupineHuntingGrounds = [
       checkRandomLimbs(args);
     },
   },
+  //#endregion
+  //#region Shadowy Basilisk
   {
     user: "a shadowy basilisk",
     areaId: [417],
@@ -607,6 +738,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "paralysis"],
     length: 2.0,
   },
+  //#endregion
+  //#region Savage Boar
   {
     user: "a savage boar",
     areaId: [417],
@@ -640,6 +773,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "loki"],
     length: 2.0,
   },
+  //#endregion
+  //#region Irate Mountain Goat
   {
     user: "an irate mountain goat",
     areaId: [417],
@@ -680,6 +815,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "throw"],
     length: 2.0,
   },
+  //#endregion
+  //#region Fierce Black Panther
   {
     user: "a fierce black panther",
     areaId: [417],
@@ -730,6 +867,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "raze"],
     length: 2.0,
   },
+  //#endregion
+  //#region Giant Fire Eel
   {
     user: "a giant fire eel",
     areaId: [417],
@@ -760,6 +899,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "dehydrated", "burning"],
     length: 2.0,
   },
+  //#endregion
+  //#region Ravening Bainligor
   {
     user: "a ravening bainligor",
     areaId: [417],
@@ -810,13 +951,16 @@ const lupineHuntingGrounds = [
     tags: ["raze"],
     length: 2.0,
   },
+  //#endregion
+  //#region Gohlbrorn
   {
     user: "a massive gohlbrorn",
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^With an ear-splitting roar, a massive gohlbrorn knocks you to the ground before stomping upon your chest, collapsing your lungs and shattering ribs with his titanic weight\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^With an ear-splitting roar, a massive gohlbrorn knocks (?<target>\w+?) to the ground before stomping upon \w+ chest, collapsing both lungs and shattering \w+ ribs with titanic force\.$/,
     tags: ["damage", "prone", "crackedribs", "asthma"],
     length: 2.0,
     reaction(args) {
@@ -842,10 +986,248 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Swinging his club-like tail towards your head, a massive gohlbrorn connects in a brutal impact, nearly removing your skull entirely\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Swinging his club-like tail towards (?<target>\w+?)'s head, a massive gohlbrorn connects in a brutal impact, nearly removing \w+ skull entirely\.$/,
     tags: ["damage", "concussion", "stupidity", "impatience", "stun"],
     length: 2.0,
   },
+  //#endregion
+  //#region Silver Spider
+  {
+    user: "a silver spider",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Your throat swells up and your body locks as a silver spider injects you with a potent dose of paralysing venom\.$/,
+    thirdPerson:
+      /^(?<target>\w+?) grasps at \w+ throat before locking in place as a silver spider sinks its fangs into \w+\.$/,
+    tags: ["damage", "paralysis", "asthma"],
+    length: 2.0,
+  },
+  {
+    user: "a silver spider",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A silver spider bites you with sharp fangs, injecting a numbing venom that leaves your muscles tingling\.$/,
+    thirdPerson:
+      /^A silver spider bites (?<target>\w+?) with sharp fangs, injecting \w+ with a numbing venom\.$/,
+    tags: ["damage", "clumsiness", "weariness"],
+    length: 2.0,
+  },
+  {
+    user: "a silver spider",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Pain blossoms behind your eyes as a silver spider sinks its fangs into your body, muddling your thoughts with a potent dose of venom\.$/,
+    thirdPerson:
+      /^(?<target>\w+?) blinks \w+ eyes rapidly as a silver spider sinks its fangs into \w+ body, injecting \w+ with a potent venom\.$/,
+    tags: ["damage", "impatience", "MENTAL??"],
+    length: 2.0,
+  },
+  {
+    user: "a silver spider",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Your skin begins to secrete an irritating, foul oil as a silver spider bites into you with venomous fangs\.$/,
+    thirdPerson:
+      /^(?<target>\w+?) scratches at \w+ skin as a silver spider bites into \w+ with venomous fangs\.$/,
+    tags: ["damage", "itching", "slickness"],
+    length: 2.0,
+  },
+  {
+    user: "a silver spider",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^With a harsh hissing sound, a silver spider sprays a tangle of silvery webbing over your body\.$/,
+    thirdPerson:
+      /^With a harsh hissing sound, a silver spider sprays a tangle of silvery webbing over (?<target>\w+?)\.$/,
+    tags: ["web"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region Silver Spiderling
+  {
+    user: "a silver spiderling",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Skittering up your leg, a silver spiderling pierces your thigh with its fangs, injecting you with a potent dose of nocuous venom\.$/,
+    thirdPerson:
+      /^A silver spiderling skitters up (?<target>\w+?)'s leg, biting \w+ thigh and injecting \w+ with venom\.$/,
+    tags: ["damage", "loki"],
+    length: 2.0,
+  },
+  {
+    user: "a silver spiderling",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A silver spiderling crawls over to you and bites into your flesh, sending toxic venom flooding through your veins\.$/,
+    thirdPerson:
+      /^A silver spiderling crawls over and bites (?<target>\w+?), injecting \w+ with a potent dose of venom\.$/,
+    tags: ["damage", "loki"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region Colossal Silver Spider
+  {
+    user: "a colossal silver spider",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    //A colossal silver spider sinks her fangs into your flesh, injecting a soothing venom that lulls you away from the pain. //peace, indifference
+    //A colossal silver spider sinks her fangs into your flesh, injecting a vicious venom that wracks both mind and body. //manaleech, healthleech
+    //A colossal silver spider sinks her fangs into your flesh, injecting a nocuous venom that burns at your stomach and intestines. //anorexia, loki
+    firstPerson:
+      /^A colossal silver spider sinks her fangs into your flesh, injecting (.+)\.$/,
+    thirdPerson:
+      /^A colossal silver spider sinks her fangs into (?<target>\w+?)'s flesh, injecting \w+ with a potent dose of venom\.$/,
+    tags: ["damage"],
+    length: 2.0,
+    reaction(args) {
+      if (
+        args.args[1] == "a soothing venom that lulls you away from the pain"
+      ) {
+        args.tags.push("peace", "indifference");
+      } else if (
+        args.args[1] == "a vicious venom that wracks both mind and body"
+      ) {
+        args.tags.push("manaleech", "healthleech");
+      } else if (
+        args.args[1] ==
+        "a nocuous venom that burns at your stomach and intestines"
+      ) {
+        args.tags.push("anorexia", "loki");
+      }
+    },
+  },
+  {
+    user: "a colossal silver spider",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A colossal silver spider lunges in your direction, stabbing you through the abdomen with one of her long legs\.$/,
+    thirdPerson: false,
+    tags: ["damage", "impaled", "nausea", "prone"],
+    length: 2.0,
+  },
+  {
+    user: "a colossal silver spider",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^From the spinnerets of a colossal silver spider bursts a webbing of steel-hard silk, entangling you in a sticky mess\.$/,
+    thirdPerson: false,
+    tags: ["damage", "web"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region
+  {
+    user: "a hulking bear",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Lunging forward in a surge of fur and muscle, a hulking cave bear swipes his claws into your leg, tearing apart flesh and bone\.$/,
+    thirdPerson:
+      /^Lunging forward in a surge of fur and muscle, a hulking cave bear swipes his claws into (?<target>\w+?)'s leg, tearing apart flesh and bone\.$/,
+    tags: ["damage", "prone", "parry legs"],
+    length: 2.0,
+  },
+  {
+    user: "a hulking bear",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Rotten effluvia spills from the slavering jaws of a hulking cave bear as he roars and sinks his teeth into your arm, infecting your wounds with foetid saliva\.$/,
+    thirdPerson:
+      /^Rotten effluvia spills from the slavering jaws of a hulking cave bear as he roars and sinks his teeth into (?<target>\w+?)'s arm\.$/,
+    tags: ["damage", "loki", "parry arms"],
+    length: 2.0,
+  },
+  {
+    user: "a hulking bear",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^With a bone-chilling roar, a hulking cave bear stands up tall and wraps its muscled arms around you, constricting you and allowing him to lock its strong jaws around your skull\.$/,
+    thirdPerson: false,
+    tags: ["damage", "damagedhead"],
+    length: 2.0,
+  },
+
+  //A predatory alligator brings his jaws down upon your left arm, bone white teeth digging into your flesh as the predator clamps on with tremendous force.
+  //A predatory alligator moves into a savage death roll with his jaws clamped upon your right leg, wrenching your leg from its socket in a whirling flurry of raw muscle. // limb damage?
+  //Surging forward with savage ferocity, a predatory alligator slams his body into your right side, throwing you aside in a display of raw power. //numbedrightarm
+  //With a dreadful growl, a predatory alligator whips his tail around and into your skull, sending you rolling with the force of the blow. // prone, skullfractures, nausea
+  //With brutal ferocity, a predatory alligator dives beneath the murky lake, dragging you below the stagnant water as he surges away.
+  //A predatory alligator sinks his teeth into your flesh, tearing loose a bloody hunk in a visceral spray of dark red.
+  //#endregion
+  //#region Feral Varkha
+  {
+    user: "a feral varkha",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^ Sinking his teeth into your shoulder, a feral varkha rips out a chunk of flesh, leaving your wounds to fester and tingle\.$/,
+    thirdPerson: false,
+    tags: ["damage", "loki"],
+    length: 2.0,
+  },
+  {
+    user: "a feral varkha",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Lunging forward with a chilling screech, a feral varkha plunges his claws into your abdomen\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
+    reaction(args) {
+      if (
+        nextLine("Your blood gushes freely as he slashes into your spleen.")
+      ) {
+        args.tags.push("haemophilia");
+      } else if (
+        nextLine(
+          "Noxious bile floods your system as he wraps his talons around your liver and crushes."
+        )
+      ) {
+        args.tags.push("nausea");
+      } else if (
+        nextLine(
+          "Gastric acid burns away at your insides as he rips apart stomach and intenstine."
+        )
+      ) {
+        args.tags.push("anorexia");
+      } else if (
+        nextLine(
+          "Driving past your organs, he grips onto your spine and snaps it with a jolt of sharp pain."
+        )
+      ) {
+        args.tags.push("paralysis");
+      }
+      ///^Your blood gushes freely as he slashes into your spleen\.$/, haemophilia
+      //Noxious bile floods your system as he wraps his talons around your liver and crushes. nausea
+      //Gastric acid burns away at your insides as he rips apart stomach and intenstine. anorexia
+      //Driving past your organs, he grips onto your spine and snaps it with a jolt of sharp pain. paralysis
+    },
+  },
+  {
+    user: "a feral varkha",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^ Sinking his teeth into your shoulder, a feral varkha rips out a chunk of flesh, leaving your wounds to fester and tingle\.$/,
+    thirdPerson: false,
+    tags: ["damage", "loki"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region Fungal Toad
   {
     user: "a fungal toad",
     areaId: [417],
@@ -880,6 +1262,8 @@ const lupineHuntingGrounds = [
     tags: ["damage", "asthma", "loki"],
     length: 2.0,
   },
+  //#endregion
+  //#region Massive Swamp Python
   {
     user: "a massive swamp python",
     areaId: [417],
@@ -913,8 +1297,10 @@ const lupineHuntingGrounds = [
     tags: ["damage", "web", "asthma"],
     length: 3.0,
   },
+  //#endregion
+  //#region School of Bloodthirsty Piranha
   {
-    user: "a school of bloodthirst piranha",
+    user: "a school of bloodthirsty piranha",
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
@@ -924,7 +1310,7 @@ const lupineHuntingGrounds = [
     length: 3.0,
   },
   {
-    user: "a school of bloodthirst piranha",
+    user: "a school of bloodthirsty piranha",
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
@@ -934,7 +1320,7 @@ const lupineHuntingGrounds = [
     length: 3.0,
   },
   {
-    user: "a school of bloodthirst piranha",
+    user: "a school of bloodthirsty piranha",
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
@@ -944,7 +1330,7 @@ const lupineHuntingGrounds = [
     length: 1.4,
   },
   {
-    user: "a school of bloodthirst piranha",
+    user: "a school of bloodthirsty piranha",
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
@@ -953,6 +1339,7 @@ const lupineHuntingGrounds = [
     tags: ["damage"],
     length: 3.0,
   },
+  //#endregion
 ];
 
 export default lupineHuntingGrounds;
