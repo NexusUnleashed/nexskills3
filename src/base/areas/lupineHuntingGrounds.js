@@ -32,6 +32,16 @@ const lupineHuntingGrounds = [
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
+      /^Rage in his eyes, a wild centaur gallops in circles around you, drawing his wicked spear across the backs of your legs each time he passes by.\.$/,
+    thirdPerson: false,
+    tags: ["damage", "parry legs"],
+    length: 2.0,
+  },
+  {
+    user: "a wild centaur",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
       /^Rising up, a wild centaur snaps his legs out and kicks you, throwing you to the ground\.$/,
     thirdPerson:
       /^Rising up, a wild centaur snaps his legs out and kicks (?<target>\w+?), throwing \w+ to the ground\.$/,
@@ -404,7 +414,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^With a chittering hiss, a crimson-hued scorpion rushes forward, trampling over you with his immense bulk\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^With a chittering hiss, a crimson-hued scorpion rushes and tramples over (?<target>\w+?), crushing limbs in his wake\.$/,
     tags: ["damage"],
     length: 2.0,
     reaction(args) {
@@ -430,8 +441,9 @@ const lupineHuntingGrounds = [
     //Your skin dries and cracks as a potent venom pulses through your body. // dehydrated
     //Your flesh begins to blister and burn as a potent venom flows through you. //scalded, burning
     //Your veins pulse with a white-hot intensity as a searing venom sets you aflame. // burning
-    thirdPerson: false,
-    tags: ["damage", "dehydrated/scaled/burning?"],
+    thirdPerson:
+      /^A crimson-hued scorpion stings (?<target>\w+?) with the deadly barb of his tail\.$/,
+    tags: ["damage", "dehydrated > scaled/burning? FIX"],
     length: 2.0,
   },
   //#endregion
@@ -679,7 +691,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^A fearsome lion rakes his claws down your face, ripping through flesh and bone with exceptional ease\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^A fearsome lion rakes his claws down (?<target>\w+?)'s face, ripping through flesh and bone with exceptional ease\.$/,
     tags: ["damage", "parry head"],
     length: 2.0,
   },
@@ -699,7 +712,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^A fearsome lion lunges forward and sinks his teeth into your leg, gouging great wounds when he rips his fangs out of your flesh\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^A fearsome lion lunges forward and sinks his teeth into (?<target>\w+?)'s leg, gouging great wounds when he rips his fangs out\.$/,
     tags: ["damage", "prone"],
     length: 2.0,
     reaction(args) {
@@ -724,7 +738,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Your thoughts scatter to the wind as a shadowy basilisk gazes into your mind\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<target>\w+?)'s eyes grow vacant and \w+ begins to sway, influenced by the gaze of a shadowy basilisk\.$/,
     tags: ["damage", "impatience", "mental"],
     length: 2.0,
   },
@@ -734,7 +749,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Your muscles begin to slowly petrify, locking in place as a shadowy basilisk stares into your eyes\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<target>\w+?) stiffens abruptly as a shadowy basilisk stares into \w+ eyes\.$/,
     tags: ["damage", "paralysis"],
     length: 2.0,
   },
@@ -756,7 +772,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Charging forward with primal ferocity, a savage boar tramples over you, breaking bones with his muscled bulk\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Charging forward with primal ferocity, a savage boar tramples over (?<target>\w+?), breaking \w+ bones with a loud 'crack'\.$/,
     tags: ["damage", "prone", "parry head"],
     length: 2.0,
     reaction(args) {
@@ -774,6 +791,73 @@ const lupineHuntingGrounds = [
     length: 2.0,
   },
   //#endregion
+  //#region Enraged Spikehog
+  {
+    user: "an enraged spikehog",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^An enraged spikehog throws his weight into you, tearing apart your flesh as his spikes make contact\.$/,
+    thirdPerson:
+      /^An enraged spikehog throws his weight into (?<target>\w+?), tearing apart \w+ flesh as his spikes make contact\.$/,
+    tags: ["damage", "healthleech"],
+    length: 2.0,
+  },
+  {
+    user: "an enraged spikehog",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Tensing up as he turns to faces you, an enraged spikehog expels a cluster of barbed spines into your abdomen\.$/,
+    thirdPerson:
+      /^Tensing up as he turns to faces (?<target>\w+?), an enraged spikehog expels a cluster of barbed spines into \w+ abdomen\.$/,
+    tags: ["damage", "impale", "prone"],
+    length: 2.0,
+  },
+  {
+    user: "an enraged spikehog",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Shuddering in place, an enraged spikehog expels dozens of deadly spines, each ripping through your flesh in a spray of crimson\.$/,
+    thirdPerson: false,
+    tags: ["damage", "impale", "prone"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region Immense Harpy Eagle
+  {
+    user: "an immense harpy eagle",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^An immense harpy eagle rips into you with his beak, tearing bloody chunks from your flesh\.$/,
+    thirdPerson:
+      /^An immense harpy eagle rips into (?<target>\w+?) with his beak, tearing off bloody chunks of flesh\.$/,
+    tags: ["damage"],
+    length: 2.0,
+  },
+  {
+    user: "an immense harpy eagle",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Your ears begin to run with warm blood as an immense harpy eagle shrieks loudly and slashes at your throat with his poised talons\.$/,
+    thirdPerson: false,
+    tags: ["damage", "slashedthroat", "disrupted"],
+    length: 2.0,
+  },
+  {
+    user: "an immense harpy eagle",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Holding your arm in his vice-like talons, an immense harpy eagle splinters bone with brutal ease\.$/,
+    thirdPerson: false,
+    tags: ["damage", "numbedrightarm?", "parry arms"],
+    length: 2.0,
+  },
+  //#endregion
   //#region Irate Mountain Goat
   {
     user: "an irate mountain goat",
@@ -781,7 +865,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^An irate mountain goat rams into you, knocking you to the ground where your head connects with a loud 'crack'\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^An irate mountain goat rams into (?<target>\w+?), knocking \w+ to the ground where her head connects with a loud 'crack'\.$/,
     tags: ["damage", "prone", "stupidity", "stuttering"],
     length: 2.0,
   },
@@ -791,7 +876,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Spinning around, an irate mountain goat rears up on his front legs and kicks you hard in the stomach\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Spinning around, an irate mountain goat rears up on his front legs and kicks (?<target>\w+?) hard in the stomach\.$/,
     tags: ["damage", "stun"],
     length: 2.0,
   },
@@ -801,7 +887,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Leaning his head down low, an irate mountain goat rushes forward into your leg\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Leaning his head down low, an irate mountain goat rushes forward into (?<target>\w+?)'s leg\.$/,
     tags: ["damage", "prone", "parry legs"],
     length: 2.0,
   },
@@ -833,7 +920,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^With a deep growl, a fierce black panther rakes her razor-sharp claws across your skin\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^With a deep growl, a fierce black panther rakes her razor-sharp claws across (?<target>\w+?)'s skin\.$/,
     tags: ["damage"],
     length: 2.0,
   },
@@ -842,8 +930,9 @@ const lupineHuntingGrounds = [
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
-      /^With a roar of rage, a fierce black panther leaps forward and knocks you to the ground, ripping apart your flesh with his claws\.$/,
-    thirdPerson: false,
+      /^With a roar of rage, a fierce black panther leaps forward and knocks you to the ground, ripping apart your flesh with \w+ claws\.$/,
+    thirdPerson:
+      /^With a roar of rage, a fierce black panther leaps forward and knocks (?<target>\w+?) to the ground, ripping apart \w+ flesh with claws\.$/,
     tags: ["damage", "prone"],
     length: 2.0,
   },
@@ -875,7 +964,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Digging its razor sharp teeth into your flesh, a giant fire eel rips a chunk of flesh from your body, cauterizing the wound with sizzling saliva\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Digging its razor sharp teeth into (?<target>\w+?)'s flesh, a giant fire eel rips a chunk of flesh from \w+ body, cauterizing \w+ wound with sizzling saliva\.$/,
     tags: ["damage", "burning"],
     length: 2.0,
   },
@@ -885,7 +975,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Your breath rushes out of your lungs in a gasp as a giant fire eel coils its red-hot body around you and squeezes\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^(?<target>\w+?) gasps as a giant fire eel coils its red-hot body around \w+ and squeezes\.$/,
     tags: ["damage", "web", "burning"],
     length: 2.0,
   },
@@ -899,6 +990,145 @@ const lupineHuntingGrounds = [
     tags: ["damage", "dehydrated", "burning"],
     length: 2.0,
   },
+  {
+    user: "a giant fire eel",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A giant fire eel glows red-hot before lashing out at the nearby water, sending a torrent of scalding water into your face\.$/,
+    thirdPerson: false,
+    tags: ["damage", "burning"],
+    length: 2.0,
+  },
+  //#region Frost-Rimed Panther
+  {
+    user: "a frost-rimed panther",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Stalking around you, a frost-rimed panther glares with predatory eyes before pouncing, ravaging your flesh in a flurry of ice-cold claws and fangs\.$/,
+    thirdPerson:
+      /^Stalking around (?<target>\w+?), a frost-rimed panther glares with predatory eyes before pouncing, ravaging \w+ flesh in a flurry of ice-cold claws and fangs\.$/,
+    tags: ["damage", "icefisted"],
+    length: 2.0,
+  },
+  {
+    user: "a frost-rimed panther",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^With a deep growl, a frost-rimed panther rakes his razor-sharp claws across your skin\.$/,
+    thirdPerson:
+      /^With a deep growl, a frost-rimed panther rakes his razor-sharp claws across (?<target>\w+?)'s skin\.$/,
+    tags: ["damage"],
+    length: 2.0,
+  },
+  {
+    user: "a frost-rimed panther",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Sinking his teeth into your leg, a frost-rimed panther rips open an artery, spilling great gouts of warm blood\.$/,
+    thirdPerson:
+      /^Sinking his teeth into (?<target>\w+?)'s leg, a frost-rimed panther rips open an artery, spilling great gouts of warm blood\.$/,
+    tags: ["damage", "hypothermia"],
+    length: 2.0,
+  },
+  {
+    user: "a frost-rimed panther",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^His snow-white fur gleaming with the motion, a frost-rimed panther lunges at you and drives his frigid claws into your chest\.$/,
+    thirdPerson:
+      /^His snow-white fur gleaming with the motion, a frost-rimed panther lunges at (?<target>\w+?) before driving frigid claws into \w+ chest\.$/,
+    tags: ["damage", "caloric???"],
+    length: 2.0,
+  },
+  {
+    user: "a frost-rimed panther",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Muscles ripple beneath the coat of a frost-rimed panther as he lunges forward, driving his claws clean through your magical shield\.$/,
+    thirdPerson: false,
+    tags: ["damage", "raze"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region Slate-grey Mountain Hawk
+  {
+    user: "a slate-grey mountain hawk",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Razor-sharp talons carve bloody rents in your chest as a slate-grey mountain hawk descends upon you\.$/,
+    thirdPerson:
+      /^Razor-sharp talons carve bloody rents in (?<target>\w+?)'s chest as a slate-grey mountain hawk descends up \w+\.$/,
+    tags: ["damage", "healthleech"],
+    length: 2.0,
+    id: "slateGreyMountainHawk-healthleech",
+  },
+  {
+    user: "a slate-grey mountain hawk",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^With a shrill shriek, a slate-grey mountain hawk plunges his talons into your throat, slicing it open in a spray of scarlet\.$/,
+    thirdPerson:
+      /^With a shrill shriek, a slate-grey mountain hawk plunges his talons into (?<target>\w+?)'s throat, slicing it open in a spray of scarlet\.$/,
+    tags: ["damage", "slashedthroat"],
+    length: 2.0,
+  },
+  {
+    user: "a slate-grey mountain hawk",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Sweeping down from the skies, a slate-grey mountain hawk rakes his talons across your eyes\.$/,
+    thirdPerson:
+      /^Sweeping down from the skies, a slate-grey mountain hawk rakes his talons across (?<target>\w+?)'s eyes\.$/,
+    tags: ["damage", "blackout"],
+    length: 2.0,
+  },
+  //#endregion
+  //#region Ice-Fanged Snow Leopard
+  {
+    user: "an ice-fanged snow leopard",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^White fur glistens like fresh-fallen snow as an ice-fanged snow leopard pounces across the terrain, ravaging your flesh in a flurry of claws and scarlet blood\.$/,
+    thirdPerson:
+      /^Sweeping down from the skies, a slate-grey mountain hawk rakes his talons across (?<target>\w+?)'s eyes\.$/,
+    tags: ["damage", "haemophilia"],
+    length: 2.0,
+    reaction(args) {
+      checkSensitivity(args);
+    },
+  },
+  {
+    user: "an ice-fanged snow leopard",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Pouncing on you from behind, an ice-fanged snow leopard sinks his teeth into your back, snapping the bone of your spine with an audible crack\.$/,
+    thirdPerson:
+      /^Sweeping down from the skies, a slate-grey mountain hawk rakes his talons across (?<target>\w+?)'s eyes\.$/,
+    tags: ["damage", "paralysis", "lethargy", "weariness"],
+    length: 2.0,
+  },
+  {
+    user: "an ice-fanged snow leopard",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Rearing up on his hind legs, an ice-fanged snow leopard roars ferociously before sinking his frigid teeth into your throat\.$/,
+    thirdPerson:
+      /^Sweeping down from the skies, a slate-grey mountain hawk rakes his talons across (?<target>\w+?)'s eyes\.$/,
+    tags: ["damage", "haemophilia", "asthma"],
+    length: 2.0,
+  },
   //#endregion
   //#region Ravening Bainligor
   {
@@ -907,7 +1137,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Bloody rents open in your flesh as a ravening bainligor rakes you with his sharp claws\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Bloody rents open in (?<target>\w+?)'s flesh as a ravening bainligor rakes \w+ with sharp claws\.$/,
     tags: ["damage"],
     length: 2.0,
   },
@@ -917,7 +1148,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Hellish screeches echo from a ravening bainligor before he sinks his jaws into your neck, ripping out your throat in a bloody mess\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Hellish screeches echo from a ravening bainligor before he sinks his jaws into (?<target>\w+?)'s neck, ripping out \w+ throat in a bloody mess\.$/,
     tags: ["damage", "slashedthroat"],
     length: 2.0,
   },
@@ -927,7 +1159,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Rushing wildly towards you, a ravening bainligor tears apart flesh and muscle with his sharp claws\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Rushing wildly towards (?<target>\w+?), a ravening bainligor tears apart \w+ flesh and muscle with sharp claws\.$/,
     tags: ["damage"],
     length: 2.0,
   },
@@ -973,7 +1206,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Rumbling the ground with his colossal bulk, a massive gohlbrorn tramples over you\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Rumbling the ground with his colossal bulk, a massive gohlbrorn tramples over (?<target>\w+?)\.$/,
     tags: ["damage"],
     length: 2.0,
     reaction(args) {
@@ -1172,7 +1406,7 @@ const lupineHuntingGrounds = [
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
-      /^ Sinking his teeth into your shoulder, a feral varkha rips out a chunk of flesh, leaving your wounds to fester and tingle\.$/,
+      /^Sinking his teeth into your shoulder, a feral varkha rips out a chunk of flesh, leaving your wounds to fester and tingle\.$/,
     thirdPerson: false,
     tags: ["damage", "loki"],
     length: 2.0,
@@ -1183,7 +1417,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Lunging forward with a chilling screech, a feral varkha plunges his claws into your abdomen\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Lunging forward with a chilling screech, a feral varkha plunges his claws into (?<target>\w+?)'s abdomen\.$/,
     tags: ["damage"],
     length: 2.0,
     reaction(args) {
@@ -1220,8 +1455,7 @@ const lupineHuntingGrounds = [
     user: "a feral varkha",
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
-    firstPerson:
-      /^ Sinking his teeth into your shoulder, a feral varkha rips out a chunk of flesh, leaving your wounds to fester and tingle\.$/,
+    firstPerson: false,
     thirdPerson: false,
     tags: ["damage", "loki"],
     length: 2.0,
@@ -1244,7 +1478,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Leaping with her muscled hindlegs, a fungal toad slams her bulk into you\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Leaping with her muscled hindlegs, a fungal toad slams her bulk into (?<target>\w+?)\.$/,
     tags: ["damage"],
     length: 2.0,
     reaction(args) {
@@ -1258,7 +1493,8 @@ const lupineHuntingGrounds = [
     firstPerson:
       /^With a resonant croak, a fungal toad spews a breath of nocuous spores in your direction\.$/,
     //You double over as the spores invade your lungs, retching up blood and bile.
-    thirdPerson: false,
+    thirdPerson:
+      /^With a resonant croak, a fungal toad spews a breath of nocuous spores in (?<target>\w+?)'s direction, causing \w+ to retch up blood and bile\.$/,
     tags: ["damage", "asthma", "loki"],
     length: 2.0,
   },
@@ -1270,7 +1506,8 @@ const lupineHuntingGrounds = [
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
       /^Coiling around your leg and dragging you down, a massive swamp python crushes bone with her muscled bulk\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Coiling around (?<target>\w+?)'s leg and dragging \w+ down, a massive swamp python crushes bone with muscled force\.$/,
     tags: ["damage", "prone"],
     length: 3.0,
     reaction(args) {
