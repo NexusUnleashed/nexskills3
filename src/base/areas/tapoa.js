@@ -12,7 +12,8 @@ const tapoa = [
     //A dark fin sinks below the ocean's surface, followed by an eerie silence.
     firstPerson:
       /^Slowly, the water below you begins to shift and without warning, a blackfin shark lunges towards you, biting into your flesh as you shriek in pain\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Slowly, the water below begins to shift and without warning, a blackfin shark lunges towards (?<target>\w+?), biting into \w+ flesh as \w+ shrieks in pain$/,
     tags: ["damage"],
   },
   {

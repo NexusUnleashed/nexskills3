@@ -5,13 +5,15 @@ import {
 } from "../utilities";
 
 const underworld = [
+  //#region Lich
   {
     user: "a lich of Nemuritoaure",
     areaId: [163],
     areaName: "the Underworld",
     firstPerson:
       /^A lich of Nemuritoaure turns its eyeless gaze upon you, shrieking maniacally such that all your thoughts are turned to dread horror\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^A lich of Nemuritoaure turns its eyeless gaze upon (?<target>\w+?), who wilts beneath the onslaught of some malign power\.$/,
     tags: ["damage", "confusion", "stupidity", "epilepsy", "fear"],
     length: 2.0,
   },
@@ -29,15 +31,20 @@ const underworld = [
     user: "a lich of Nemuritoaure",
     areaId: [163],
     areaName: "the Underworld",
+    //Shrieking with the fury of the grave, a lich of Nemuritoaure hovers determinedly as it readies another attack.
+    //A sickly rattling noise drowns out all else as a lich of Nemuritoaure raises a rotten hand, sending a wave of merciless cold to assault you.
     firstPerson:
       /^A sickly rattling noise drowns out all else as a lich of Nemuritoaure raises a rotten hand, sending a wave of merciless cold to assault you\.$/,
     thirdPerson: false,
-    tags: ["damage", "AGUE AGUE AGUE?"],
+    tags: ["damage", "AGUE AGUE AGUE?", "AOE"],
     length: 2.0,
     reaction(args) {
+      // 1 limb
       checkRandomLimbs(args);
     },
   },
+  //#endregion
+  //#region Vampire
   {
     user: "a nascent vampire",
     areaId: [163],
@@ -68,6 +75,8 @@ const underworld = [
     tags: ["damage", "haemophilia", "heal"],
     length: 3.0,
   },
+  //#endregion
+  //#region Scorpion
   {
     user: "a deadly obsidian scorpion",
     areaId: [163],
@@ -117,6 +126,8 @@ const underworld = [
       checkSensitivity(args);
     },
   },
+  //#endregion
+  //#region Soldier
   {
     user: "a soldier of Osterrych",
     areaId: [163],
@@ -125,6 +136,9 @@ const underworld = [
     firstPerson:
       /^In response to a soldier of Osterrych's whistled tune, a skeletal bird starts fluttering about you, distracting you long enough for her to skewer you with a ghostly rapier coalesced in her hand\.$/,
     thirdPerson: false,
+    //Falling into silence for a fraction of a second, a soldier of Osterrych's gaze falls upon (Poxie) with ominous intent.
+    //Leaping back and turning her attention to her instrument, a soldier of Osterrych strums an enchantingly foreign melody.
+    //A soldier of Osterrych attempts to transfix (Poxie), but succeeds only in curing her blindness.
     tags: ["damage", "paralysis"],
     length: 2.5,
     reaction(args) {
@@ -150,13 +164,16 @@ const underworld = [
     areaName: "the Underworld",
     firstPerson:
       /^Grabbing her spectral mandolin by the neck, a soldier of Osterrych runs up to you, crouching moments before delivering a terrible upswing that sends you flying upward\.$/,
-    thirdPerson: false,
+    thirdPerson:
+      /^Grabbing her spectral mandolin by the neck, a soldier of Osterrych runs up to (?<target>\w+?), crouching moments before delivering a terrible upswing that sends \w+ flying upwar\.$/,
     tags: ["damage", "prone"],
     length: 2.5,
     reaction(args) {
       checkRandomLimbs(args);
     },
   },
+  //#endregion
+  //#region Colonel
   {
     user: "an undead colonel",
     areaId: [163],
@@ -190,6 +207,9 @@ const underworld = [
       checkSensitivity(args);
     },
   },
+  //#endregion
+  //#region Death Knight
+  //Foregoing one of her monstrous blades, a veteran Death Knight commander's gauntleted hand swiftly closes about (Poxie)'s skull with a vice-like grip, holding her in place while she brutally and repeatedly skewers her, before finally hurling her away.
   {
     user: "a steel-encased Death Knight",
     areaId: [163],
@@ -247,6 +267,7 @@ const underworld = [
       checkRandomLimbs(args);
     },
   },
+  //#endregion
 ];
 
 export default underworld;
