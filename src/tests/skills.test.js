@@ -53,7 +53,7 @@ describe("Basic 1st 2nd 3rd Person", () => {
     expect(result.id).toBe("interlink");
     expect(result.target).toBe("Argwin");
     expect(result.user).toBe("self");
-    expect(result.match).toBe("firstPerson");
+    expect(result.matchType).toBe("firstPerson");
   });
   test("Second Person", () => {
     const text =
@@ -63,7 +63,7 @@ describe("Basic 1st 2nd 3rd Person", () => {
     expect(result.id).toBe("whisperingmadness");
     expect(result.target).toBe("self");
     expect(result.user).toBe("Argwin");
-    expect(result.match).toBe("secondPerson");
+    expect(result.matchType).toBe("secondPerson");
   });
   test("Third Person", () => {
     const text =
@@ -73,7 +73,7 @@ describe("Basic 1st 2nd 3rd Person", () => {
     expect(result.id).toBe("warp");
     expect(result.target).toBe("Argwin");
     expect(result.user).toBe("Khaseem");
-    expect(result.match).toBe("thirdPerson");
+    expect(result.matchType).toBe("thirdPerson");
   });
   test("Seared Glyph", () => {
     const text =
@@ -83,7 +83,7 @@ describe("Basic 1st 2nd 3rd Person", () => {
     expect(result.id).toBe("searedglyph");
     expect(result.target).toBe("an angel spearbearer");
     expect(result.user).toBe("self");
-    expect(result.match).toBe("firstPerson");
+    expect(result.matchType).toBe("firstPerson");
   });
 });
 
@@ -146,6 +146,6 @@ describe("Advanced Patterns", () => {
     expect(result.id).toBe("multiline");
     expect(result.target).toBe("Argwin");
     expect(result.user).toBe("self");
-    expect(result.match).toBe("firstPerson");
+    expect(result.matchType).toBe("firstPerson");
   });
 });

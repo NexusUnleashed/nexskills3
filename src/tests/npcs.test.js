@@ -16,6 +16,28 @@ beforeEach(() => {
       return;
     },
   };
+
+  window.nexusclient = {
+    current_block: [
+      {
+        parsed_line: {
+          text() {
+            return "You touch Argwin's left arm, and it multiline test shrivels away.";
+          },
+        },
+      },
+      {
+        parsed_line: {
+          text() {
+            return "You make a sharp gesture toward Argwin, disrupting his aura with the paralysis affliction.";
+          },
+        },
+      },
+    ],
+    current_line: {
+      index: 0,
+    },
+  };
 });
 describe("NPC Actions", () => {
   test("First Person", () => {

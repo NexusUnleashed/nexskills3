@@ -92,7 +92,7 @@ npcs.forEach((npc) => {
     });
   }
 });
-console.log(npcsMap);
+//console.log(npcsMap);
 
 const actions = [
   //Attainment
@@ -183,14 +183,20 @@ const processMatch = (
     action.limb = groups?.limb || false;
     action.originalLine = result[0];
     action.args = result;
-    return true;
+    return action;
   } else {
     return false;
   }
 };
 
-const evaluateText = (action, text, matchType, defaultUser, defaultTarget) => {
-  const patterns = action[matchType];
+const evaluateText = (
+  baseAction,
+  text,
+  matchType,
+  defaultUser,
+  defaultTarget
+) => {
+  const patterns = baseAction[matchType];
   if (!patterns) {
     return false;
   }
@@ -208,6 +214,17 @@ const evaluateText = (action, text, matchType, defaultUser, defaultTarget) => {
   } else {
     result = text.match(patterns);
   }
+
+  if (!result) {
+    return false;
+  }
+
+  // Clone only when a match is found to avoid unnecessary allocations
+  const action = {
+    ...baseAction,
+    affs: baseAction.affs ? [...baseAction.affs] : [],
+    tags: baseAction.tags ? [...baseAction.tags] : [],
+  };
 
   return processMatch(result, action, matchType, defaultUser, defaultTarget);
 };
@@ -239,30 +256,42 @@ const checkSkills = (text) => {
   const profession = GMCP.Char.Status.class.toLowerCase();
 
   for (let i = 0; i < actions.length; i++) {
-    const action = {
-      ...actions[i], //shallow copy
-      affs: actions[i].affs ? [...actions[i].affs] : [], //deep copy
-      tags: [...actions[i].tags], //deep copy
-    };
+    const baseAction = actions[i];
 
     if (
-      action.profession?.includes(profession) ||
-      action.profession?.includes("general")
+      baseAction.profession?.includes(profession) ||
+      baseAction.profession?.includes("general")
     ) {
-      if (evaluateText(action, text, "firstPerson", "self", "")) {
-        if (action.target.toLowerCase() === "you") {
-          action.target = "self";
+      const firstMatch = evaluateText(
+        baseAction,
+        text,
+        "firstPerson",
+        "self",
+        ""
+      );
+      if (firstMatch) {
+        console.log(firstMatch);
+        if (firstMatch.target.toLowerCase() === "you") {
+          firstMatch.target = "self";
         }
-        return finalizeCheck(action);
+        return finalizeCheck(firstMatch);
       }
     }
 
-    if (evaluateText(action, text, "secondPerson", "", "self")) {
-      return finalizeCheck(action);
+    const secondMatch = evaluateText(
+      baseAction,
+      text,
+      "secondPerson",
+      "",
+      "self"
+    );
+    if (secondMatch) {
+      return finalizeCheck(secondMatch);
     }
 
-    if (evaluateText(action, text, "thirdPerson", "", "")) {
-      return finalizeCheck(action);
+    const thirdMatch = evaluateText(baseAction, text, "thirdPerson", "", "");
+    if (thirdMatch) {
+      return finalizeCheck(thirdMatch);
     }
   }
 
@@ -277,16 +306,27 @@ const checkNpcs = (text) => {
   const areaNpcs = npcsMap.get(areaid) ?? npcsMap.get(area) ?? [];
 
   for (let i = 0; i < areaNpcs.length; i++) {
-    const action = {
-      ...areaNpcs[i],
-      tags: [...areaNpcs[i].tags], //deep copy
-    };
+    const baseNpc = areaNpcs[i];
 
-    if (evaluateText(action, text, "firstPerson", action.user, "self")) {
-      return finalizeCheck(action, "npc");
+    const firstMatch = evaluateText(
+      baseNpc,
+      text,
+      "firstPerson",
+      baseNpc.user,
+      "self"
+    );
+    if (firstMatch) {
+      return finalizeCheck(firstMatch, "npc");
     }
-    if (evaluateText(action, text, "thirdPerson", action.user, "self")) {
-      return finalizeCheck(action, "npc");
+    const thirdMatch = evaluateText(
+      baseNpc,
+      text,
+      "thirdPerson",
+      baseNpc.user,
+      "self"
+    );
+    if (thirdMatch) {
+      return finalizeCheck(thirdMatch, "npc");
     }
   }
 
