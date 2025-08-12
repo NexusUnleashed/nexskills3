@@ -270,7 +270,6 @@ const checkSkills = (text) => {
         ""
       );
       if (firstMatch) {
-        console.log(firstMatch);
         if (firstMatch.target.toLowerCase() === "you") {
           firstMatch.target = "self";
         }
