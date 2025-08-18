@@ -57,11 +57,15 @@ import tirMurann from "./areas/tirMurann";
 import tuar from "./areas/tuar";
 import underworld from "./areas/underworld";
 import yggdrasil from "./areas/yggdrasil";
+import emberveil from "./areas/emberveil";
+import crust from "./areas/crust";
 
 const npcs = [
   ...ageiro,
   ...barrow,
   ...battlesite,
+  ...crust,
+  ...emberveil,
   ...grukaiSwamp,
   ...istarion,
   ...judgementMountain,
