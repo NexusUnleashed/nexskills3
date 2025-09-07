@@ -240,7 +240,59 @@ const underworld = [
     },
   },
   //#endregion
-  //#region Death Knight
+  //#region Veteran Death Knight commander
+  {
+    user: "a veteran Death Knight commander",
+    areaId: [163, 281, 166, 323, 320],
+    areaName: "the Underworld",
+    firstPerson:
+      /^Stepping in close, a veteran Death Knight commander weaves around your defences with an agility that belies her size. Missing not a moment, her gauntleted fists find their mark, each bone-crunching blow threatening to grind your innards to paste\.$/,
+    thirdPerson: false,
+    tags: ["damage", "crackedribs"],
+    length: 0,
+    reaction(args) {
+      checkRandomLimbs(args);
+      checkSensitivity(args);
+    },
+  },
+  {
+    user: "a veteran Death Knight commander",
+    areaId: [163, 281, 166, 323, 320],
+    areaName: "the Underworld",
+    firstPerson:
+      /^Striding towards you with a monstrous claymore in each hand, a veteran Death Knight commander delivers an unforgiving series of devastating slashes with a consummate, inescapable swiftness\.$/,
+    thirdPerson: false,
+    tags: ["damage", "paralysis", "dizziness"],
+    length: 0,
+    reaction(args) {
+      checkSensitivity(args);
+    },
+  },
+  {
+    user: "a veteran Death Knight commander",
+    areaId: [163, 281, 166, 323, 320],
+    areaName: "the Underworld",
+    firstPerson:
+      /^Foregoing one of her monstrous blades, a veteran Death Knight commander's gauntleted hand swiftly closes about your skull with a vice-like grip, holding you in place while she brutally and repeatedly skewers you, before finally hurling you away\.$/,
+    thirdPerson: false,
+    tags: ["damage", "Parry Head", "prone"],
+    length: 0,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
+  },
+  {
+    user: "a veteran Death Knight commander",
+    areaId: [163, 281, 166, 323, 320],
+    areaName: "the Underworld",
+    firstPerson:
+      /^A massive, translucent hammer rises out of a veteran Death Knight commander's tattoo and smashes your magical shield\.$/,
+    thirdPerson: false,
+    tags: ["damage", "RAZE"],
+    length: 0,
+  },
+  //#endregion
+  //#region Steel-encased Death Knight
   //Foregoing one of her monstrous blades, a veteran Death Knight commander's gauntleted hand swiftly closes about (Poxie)'s skull with a vice-like grip, holding her in place while she brutally and repeatedly skewers her, before finally hurling her away.
   {
     user: "a steel-encased Death Knight",
