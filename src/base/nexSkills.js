@@ -341,6 +341,7 @@ const checkNpcs = (text) => {
 export const nexSkills = {
   actions,
   npcs,
+  npcsMap,
 
   checkSkills,
   checkNpcs,
