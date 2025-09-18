@@ -19,6 +19,7 @@ import domination from "./skills/domination";
 import dragoncraft from "./skills/dragoncraft";
 import elementalism from "./skills/elementalism";
 import emulation from "./skills/emulation";
+import evileye from "./skills/evileye";
 import ignition from "./skills/ignition";
 import memorium from "./skills/memorium";
 import occultism from "./skills/occultism";
