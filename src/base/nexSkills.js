@@ -57,6 +57,7 @@ import tirMurann from "./areas/tirMurann";
 import tuar from "./areas/tuar";
 import underworld from "./areas/underworld";
 import yggdrasil from "./areas/yggdrasil";
+import evileye from "./skills/evileye";
 
 const npcs = [
   ...ageiro,
@@ -114,6 +115,7 @@ const actions = [
   ...dragoncraft,
   ...elementalism,
   ...emulation,
+  ...evileye,
   ...ignition,
   ...knights,
   ...memorium,

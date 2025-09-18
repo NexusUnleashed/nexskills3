@@ -38,6 +38,19 @@ export const general = {
     tags: [],
     length: 4.0,
   },
+  curseward: {
+    id: "curseward",
+    fullName: "Curseward",
+    firstPerson:
+      /^You bring a curseward into being to protect you from harm\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["general"],
+    skill: "defense",
+    balance: "equilibrium",
+    tags: [],
+    length: 4.0,
+  },
 };
 
 //Atalkez raises his hands dramatically and summons an icewall to the in.
