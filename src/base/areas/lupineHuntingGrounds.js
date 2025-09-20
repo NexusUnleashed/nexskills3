@@ -1359,9 +1359,9 @@ const lupineHuntingGrounds = [
     length: 2.0,
   },
   //#endregion
-  //#region
+  //#region Hulking Cave bear
   {
-    user: "a hulking bear",
+    user: "a hulking cave bear",
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
@@ -1372,7 +1372,7 @@ const lupineHuntingGrounds = [
     length: 2.0,
   },
   {
-    user: "a hulking bear",
+    user: "a hulking cave bear",
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
@@ -1383,7 +1383,7 @@ const lupineHuntingGrounds = [
     length: 2.0,
   },
   {
-    user: "a hulking bear",
+    user: "a hulking cave bear",
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
