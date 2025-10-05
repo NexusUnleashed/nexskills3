@@ -1376,7 +1376,7 @@ const lupineHuntingGrounds = [
     areaId: [417],
     areaName: "the Lupine Hunting Grounds",
     firstPerson:
-      /^Rotten effluvia spills from the slavering jaws of a hulking cave bear as he roars and sinks his teeth into your arm, infecting your wounds with foetid saliva\.$/,
+      /^Rotten effluvia spills from the slavering jaws of a hulking cave bear as he roars and sinks his teeth into your arm, infecting your wounds with foetid saliva$/,
     thirdPerson:
       /^Rotten effluvia spills from the slavering jaws of a hulking cave bear as he roars and sinks his teeth into (?<target>\w+?)'s arm\.$/,
     tags: ["damage", "loki", "parry arms"],
@@ -1392,13 +1392,74 @@ const lupineHuntingGrounds = [
     tags: ["damage", "damagedhead"],
     length: 2.0,
   },
+  //#region Predatory Alligator
+  {
+    user: "a predatory alligator",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A predatory alligator brings his jaws down upon your (?<limb>.+?), bone white teeth digging into your flesh as the predator clamps on with tremendous force\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
+    reaction(action) {
+      action.info = action.limb;
+    },
+  },
+  {
+    user: "a predatory alligator",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A predatory alligator moves into a savage death roll with his jaws clamped upon your (?<limb>.+?), wrenching your arm from its socket in a whirling flurry of raw muscle\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
+    reaction(action) {
+      action.tags = ["damage", "prone", `damaged${action.limb}`];
+    },
+  },
+  {
+    user: "a predatory alligator",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^With a dreadful growl, a predatory alligator whips his tail around and into your skull, sending you rolling with the force of the blow\.$/,
+    thirdPerson: false,
+    tags: ["damage", "prone", "nausea", "skullfractures"],
+    length: 2.0,
+  },
+  {
+    user: "a predatory alligator",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A predatory alligator sinks his teeth into your flesh, tearing loose a bloody hunk in a visceral spray of dark red\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
+  },
+  {
+    user: "a predatory alligator",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Surging forward with savage ferocity, a predatory alligator slams his body into your right side, throwing you aside in a display of raw power\.$/,
+    thirdPerson: false,
+    tags: ["damage", "numbedrightarm"],
+    length: 2.0,
+  },
+  {
+    user: "a predatory alligator",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^With brutal ferocity, a predatory alligator dives beneath the murky lake, dragging you below the stagnant water as he surges away\.$/,
+    thirdPerson: false,
+    tags: ["damage"],
+    length: 2.0,
+  },
 
-  //A predatory alligator brings his jaws down upon your left arm, bone white teeth digging into your flesh as the predator clamps on with tremendous force.
-  //A predatory alligator moves into a savage death roll with his jaws clamped upon your right leg, wrenching your leg from its socket in a whirling flurry of raw muscle. // limb damage?
-  //Surging forward with savage ferocity, a predatory alligator slams his body into your right side, throwing you aside in a display of raw power. //numbedrightarm
-  //With a dreadful growl, a predatory alligator whips his tail around and into your skull, sending you rolling with the force of the blow. // prone, skullfractures, nausea
-  //With brutal ferocity, a predatory alligator dives beneath the murky lake, dragging you below the stagnant water as he surges away.
-  //A predatory alligator sinks his teeth into your flesh, tearing loose a bloody hunk in a visceral spray of dark red.
   //#endregion
   //#region Feral Varkha
   {
@@ -1575,6 +1636,60 @@ const lupineHuntingGrounds = [
     thirdPerson: false,
     tags: ["damage"],
     length: 3.0,
+  },
+  //#endregion
+
+  //#region The White Wolf
+  {
+    user: "the White Wolf",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Agony erupts as the White Wolf's claws slash into your (?<limb>.+?), cleaving through flesh and bone as you fall to the ground\.$/,
+    thirdPerson: false,
+    tags: ["damage", "prone", "haemophilia"],
+    length: 2.5,
+    reaction(action) {
+      action.info = action.limb;
+    },
+  },
+  {
+    user: "the White Wolf",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^The White Wolf snarls and lunges onto you, ripping open your throat with his blackened claws\.$/,
+    thirdPerson: false,
+    tags: ["damage", "slashedthroat"],
+    length: 2.5,
+  },
+  {
+    user: "the White Wolf",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^A predatory growl resounds within the throat of the White Wolf as he pounces upon you, his wicked claws tearing bloody gouges in your torso\.$/,
+    thirdPerson: false,
+    tags: ["damage", "crackedribs"],
+    info: "torso",
+    length: 2.5,
+    reaction(action) {
+      checkSensitivity(action);
+    },
+  },
+  {
+    user: "the White Wolf",
+    areaId: [417],
+    areaName: "the Lupine Hunting Grounds",
+    firstPerson:
+      /^Claws and fang work in horrible unison as the White Wolf descends upon your prone form, tearing apart flesh and bone in a flurry of primordial wrath\.$/,
+    thirdPerson: false,
+    tags: ["damage", "damagedhead"],
+    info: "torso",
+    length: 2.5,
+    reaction(action) {
+      checkRandomLimbs(action);
+    },
   },
   //#endregion
 ];

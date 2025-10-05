@@ -28,8 +28,8 @@ export const occultism = {
     length: 2.5,
     affs: [],
     reaction(action) {
-      if (action.args.groups?.info) {
-        action.affs = [action.args.groups.info];
+      if (action.info) {
+        action.affs = [action.info];
       }
     },
   },

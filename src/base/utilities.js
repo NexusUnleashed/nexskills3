@@ -6,7 +6,7 @@ export const nextLine = (txt) => {
   const nextLine =
     nexusclient.current_block[nexusclient.current_line.index + 1];
   const line = nextLine.parsed_line ? nextLine.parsed_line.text() : "";
-  return line.includees(txt);
+  return line.includes(txt);
 };
 
 export const inBlock = (txt) => {
@@ -39,7 +39,7 @@ export const prevLine = (txt) => {
       nexusclient.current_block.indexOf(nexusclient.current_line) - num
     ];
   const line = prevLine.parsed_line ? prevLine.parsed_line.text() : "";
-  return line.includees(txt);
+  return line.includes(txt);
 };
 
 export const addAction = (action) => {

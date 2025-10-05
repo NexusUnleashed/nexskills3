@@ -190,7 +190,7 @@ const processMatch = (
     action.info = groups?.info || action.info;
     action.limb = groups?.limb || false;
     action.originalLine = result[0];
-    action.args = result;
+    action.match = result;
     return action;
   } else {
     return false;
