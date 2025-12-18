@@ -181,7 +181,7 @@ export const occultism = {
     profession: ["occultist"],
     skill: "occultism",
     balance: "equilibrium",
-    tags: [],
+    tags: ["pve", "damage"],
     length: 2.5,
   },
   unnamableSpeak: {
@@ -287,7 +287,7 @@ export const occultism = {
     skill: "occultism",
     balance: "equilibrium",
     affs: ["fear"],
-    tags: ["aff"],
+    tags: ["aff", "pve"],
     length: 2.3,
     //fail: The energy flickers and fades with no visible change.
     //success: A look of sudden concern flits across the visage of Pamxen.

@@ -30,6 +30,19 @@ const domination = {
     tags: [],
     length: 2.2,
   },
+  houndCommandPve: {
+    id: "houndCommandPve",
+    fullName: "Hound Command",
+    firstPerson:
+      /^You command your hound to rend the flesh of (?<target>.+)\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "equilibrium",
+    tags: ["pve", "damage"],
+    length: 2.2,
+  },
   stormCommand: {
     id: "stormCommand",
     fullName: "Storm Command",
