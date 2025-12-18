@@ -171,6 +171,19 @@ export const occultism = {
     tags: [],
     length: 2.5,
   },
+  attendPve: {
+    id: "attendPve",
+    fullName: "Attend",
+    firstPerson:
+      /^Focusing your will, you exert your aura at (?<target>.+) and snap your fingers, forcing \w+ mind open in a flash of indigo-violet light\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    tags: [],
+    length: 2.5,
+  },
   unnamableSpeak: {
     id: "unnamableSpeak",
     fullName: "Unnamable Speak",
@@ -265,11 +278,11 @@ export const occultism = {
     id: "cleanseaura",
     fullName: "Cleanseaura",
     firstPerson:
-      /^Reaching out with your own aura, you touch the aura of (?<target>\w+), attempting to strip away its natural defences\.$/,
+      /^Reaching out with your own aura, you touch the aura of (?<target>.+), attempting to strip away its natural defences\.$/,
     secondPerson:
       /^(?<user>\w+) sends a shimmering strand of indigo fire at you, which wraps around you and bathes you in a briskly cold wave of light\.$/,
     thirdPerson:
-      /^(?<user>\w+) sends a shimmering strand of indigo fire at (?<target>\w+), which wraps around \w+ and bathes \w+ in a briskly cold wave of light\.$/,
+      /^(?<user>\w+) sends a shimmering strand of indigo fire at (?<target>.+), which wraps around \w+ and bathes \w+ in a briskly cold wave of light\.$/,
     profession: ["occultist"],
     skill: "occultism",
     balance: "equilibrium",
