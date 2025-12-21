@@ -10,7 +10,7 @@ export const psionics = {
     profession: ["psion"],
     skill: "psionics",
     balance: "equilibrium",
-    tags: [],
+    tags: ["raze"],
     affs: [],
     length: 2,
     info: "raze",

@@ -107,7 +107,7 @@ const elementalism = {
     profession: ["magi"],
     skill: "elementalism",
     balance: "free",
-    tags: [],
+    tags: ["raze"],
     affs: [],
     info: "raze",
     length: 5,

@@ -43,6 +43,20 @@ const domination = {
     tags: ["pve", "damage"],
     length: 2.2,
   },
+  houndCommandPveRaze: {
+    id: "houndCommandPveRaze",
+    fullName: "Hound Command",
+    firstPerson:
+      /^With a baying howl a chaos hound leaps upon (?<target>.+), ripping the magical shield surrounding \w+ to tatters with its claws\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["occultist"],
+    skill: "domination",
+    balance: "equilibrium",
+    info: "raze",
+    tags: ["pve", "damage", "raze"],
+    length: 2.2,
+  },
   stormCommand: {
     id: "stormCommand",
     fullName: "Storm Command",
@@ -281,8 +295,8 @@ const domination = {
     profession: ["occultist"],
     skill: "domination",
     balance: "equilibrium",
-    info: "Razed",
-    tags: [],
+    info: "raze",
+    tags: ["raze"],
     length: 2.75,
   },
   firelordCommand: {
