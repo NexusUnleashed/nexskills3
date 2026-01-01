@@ -1,5 +1,6 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 const knights = {
-  engage: {
+  engage: new SkillDefinition({
     id: "engage",
     fullName: "Engaged",
     firstPerson: /^You move in to engage (?<target>\w+)\.$/,
@@ -10,12 +11,10 @@ const knights = {
     balance: "equilibrium",
     tags: [],
     length: 2.5,
-  },
-  engageHit: {
+  }),
+  engageHit: new SkillDefinition({
     id: "engageHit",
     fullName: "Engage Hit",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) lashes out at (?<target>\w+) as he turns to flee\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
@@ -23,7 +22,7 @@ const knights = {
     balance: "equilibrium",
     tags: [],
     length: 2.5,
-  },
+  }),
 };
 
 export default Object.values(knights);

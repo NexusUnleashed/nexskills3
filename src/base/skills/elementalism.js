@@ -1,10 +1,10 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 const elementalism = {
-  light: {
+  light: new SkillDefinition({
     id: "light",
     fullName: "Light",
     firstPerson:
       /^You chant a brief spell and a flash of revealing light floods the room\.$/,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) chants a brief spell and a flash of revealing light floods the room\.$/,
     profession: ["magi"],
@@ -14,8 +14,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 3.0,
-  },
-  erode: {
+  }),
+  erode: new SkillDefinition({
     id: "erode",
     fullName: "Erode",
     firstPerson: /^You cast a spell of erosion at (?<target>.+?)\.$/,
@@ -28,13 +28,12 @@ const elementalism = {
     affs: [],
     info: false,
     length: 3.0,
-  },
-  deepfreeze: {
+  }),
+  deepfreeze: new SkillDefinition({
     id: "deepfreeze",
     fullName: "Deepfreeze",
     firstPerson:
       /^You drain the heat from the air around your enemies, causing them to experience the cold of the abyss itself\.$/,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) gestures grandly, and causes a deepfreeze to settle over \w+ enemies\.$/,
     profession: ["magi"],
@@ -44,12 +43,10 @@ const elementalism = {
     affs: [],
     info: false,
     length: 3.0,
-  },
-  holocaust: {
+  }),
+  holocaust: new SkillDefinition({
     id: "holocaust",
     fullName: "Holocaust",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) fashions a holocaust globe out of pure elemental fire and arms it\.$/,
     profession: ["magi"],
@@ -59,14 +56,12 @@ const elementalism = {
     affs: [],
     info: false,
     length: 6.0,
-  },
-  shalestorm: {
+  }),
+  shalestorm: new SkillDefinition({
     id: "shalestorm",
     fullName: "Shalestorm",
-    firstPerson: false,
     secondPerson:
       /^The powers of Elemental Earth conform to the will of (?<user>\w+), and with a thunderous roar boulders begin materialising from the air itself to hammer relentlessly at your body\.$/,
-    thirdPerson: false,
     profession: ["magi"],
     skill: "elementalism",
     balance: "equilibrium",
@@ -74,16 +69,14 @@ const elementalism = {
     affs: [],
     info: false,
     length: 2.4,
-  },
-  shalestormTick: {
+  }),
+  shalestormTick: new SkillDefinition({
     id: "shalestormTick",
     fullName: "Shalestorm Tick",
-    firstPerson: false,
     secondPerson: [
       /^Huge boulders relentlessly hammer at you as they materialise from the very air\.$/,
       /^One of the boulders smashes into your (?<limb>.+?) with a sickening crack\.$/,
     ],
-    thirdPerson: false,
     profession: ["magi"],
     skill: "elementalism",
     balance: "free",
@@ -95,11 +88,10 @@ const elementalism = {
       action.info = action.limb;
       action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
-  },
-  shalestormRaze: {
+  }),
+  shalestormRaze: new SkillDefinition({
     id: "shalestormRaze",
     fullName: "Shalestorm Tick",
-    firstPerson: false,
     secondPerson:
       /^Huge boulders hammer at the magical shield surrounding you, shattering it into a spray of translucent shards\.$/,
     thirdPerson:
@@ -111,8 +103,8 @@ const elementalism = {
     affs: [],
     info: "raze",
     length: 5,
-  },
-  gust: {
+  }),
+  gust: new SkillDefinition({
     id: "gust",
     fullName: "Gust",
     firstPerson:
@@ -128,8 +120,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 3.0,
-  },
-  firelashLOS: {
+  }),
+  firelashLOS: new SkillDefinition({
     id: "firelashLOS",
     fullName: "Firelash LOS",
     firstPerson:
@@ -145,8 +137,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 2.4,
-  },
-  firelash: {
+  }),
+  firelash: new SkillDefinition({
     id: "firelash",
     fullName: "Firelash",
     firstPerson:
@@ -162,7 +154,7 @@ const elementalism = {
     affs: [],
     info: false,
     length: 2.4,
-  },
+  }),
   /*
   freeze: {
     id: "freeze",
@@ -182,14 +174,13 @@ const elementalism = {
     length: 3.0,
   },
   */
-  freeze: {
+  freeze: new SkillDefinition({
     id: "freeze",
     fullName: "Freeze",
     firstPerson:
       /^You raise a hand towards (?<target>\w+) and blast \w+ with cold, frigid air\.$/,
     secondPerson:
       /^Khaseem raises a hand towards you and blasts you with cold, frigid air\.$/,
-    thirdPerson: false,
     profession: ["magi"],
     skill: "elementalism",
     balance: "equilibrium",
@@ -197,11 +188,10 @@ const elementalism = {
     affs: [],
     info: false,
     length: 2.2,
-  },
-  geyser: {
+  }),
+  geyser: new SkillDefinition({
     id: "geyser",
     fullName: "Geyser",
-    firstPerson: false,
     secondPerson: [
       /^The earth suddenly splits open, and a mighty geyser soars skywards\.$/,
       /^The geyser strikes you full-on, and you tumble to the ground helplessly\.$/,
@@ -217,8 +207,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 3.0,
-  },
-  dehydrate: {
+  }),
+  dehydrate: new SkillDefinition({
     id: "dehydrate",
     fullName: "Dehydrate",
     firstPerson:
@@ -234,8 +224,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 2.3,
-  },
-  fulminate: {
+  }),
+  fulminate: new SkillDefinition({
     id: "fulminate",
     fullName: "Fulminate",
     firstPerson:
@@ -251,8 +241,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 2.3,
-  },
-  bombard: {
+  }),
+  bombard: new SkillDefinition({
     id: "bombard",
     fullName: "Bombard",
     firstPerson:
@@ -268,8 +258,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 2.3,
-  },
-  mudslide: {
+  }),
+  mudslide: new SkillDefinition({
     id: "mudslide",
     fullName: "Mudslide",
     firstPerson:
@@ -285,8 +275,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 2.3,
-  },
-  magma: {
+  }),
+  magma: new SkillDefinition({
     id: "magma",
     fullName: "Magma",
     firstPerson:
@@ -302,11 +292,10 @@ const elementalism = {
     affs: [],
     info: false,
     length: 2.3,
-  },
-  resonanceAirMinor: {
+  }),
+  resonanceAirMinor: new SkillDefinition({
     id: "resonanceAirMinor",
     fullName: "Air - Minor",
-    firstPerson: false,
     secondPerson:
       /^You clutch at your throat as an invisible noose snaps close about your neck\.$/,
     thirdPerson:
@@ -318,11 +307,10 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceAirModerate: {
+  }),
+  resonanceAirModerate: new SkillDefinition({
     id: "resonanceAirModerate",
     fullName: "Air - Moderate",
-    firstPerson: false,
     secondPerson:
       /^A vicious wind rises, slashing air and grit flaying at your body and leaving you sensitive and raw\.$/,
     thirdPerson:
@@ -334,11 +322,10 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceAirMajor: {
+  }),
+  resonanceAirMajor: new SkillDefinition({
     id: "resonanceAirMajor",
     fullName: "Air - Major",
-    firstPerson: false,
     secondPerson:
       /^Breath stutters in your breast, and weakness crawls into every limb\.$/,
     thirdPerson:
@@ -350,8 +337,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceWaterMinor: {
+  }),
+  resonanceWaterMinor: new SkillDefinition({
     id: "resonanceWaterMinor",
     fullName: "Water - Minor",
     firstPerson:
@@ -367,8 +354,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceWaterModerate: {
+  }),
+  resonanceWaterModerate: new SkillDefinition({
     id: "resonanceWaterModerate",
     fullName: "Water - Moderate",
     firstPerson:
@@ -384,8 +371,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceWaterMajor: {
+  }),
+  resonanceWaterMajor: new SkillDefinition({
     id: "resonanceWaterMajor",
     fullName: "Water - Major",
     firstPerson:
@@ -401,11 +388,10 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceEarthMinor: {
+  }),
+  resonanceEarthMinor: new SkillDefinition({
     id: "resonanceEarthMinor",
     fullName: "Earth - Minor",
-    firstPerson: false,
     secondPerson:
       /^A lance of pain radiates from your (?<limb>.+?) as it snaps beneath the ravages of some arcane force\.$/,
     thirdPerson:
@@ -421,8 +407,8 @@ const elementalism = {
       action.info = action.limb;
       action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
-  },
-  resonanceEarthModerate: {
+  }),
+  resonanceEarthModerate: new SkillDefinition({
     id: "resonanceEarthModerate",
     fullName: "Earth - Moderate",
     firstPerson:
@@ -437,8 +423,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceEarthMajor: {
+  }),
+  resonanceEarthMajor: new SkillDefinition({
     id: "resonanceEarthMajor",
     fullName: "Earth - Major",
     firstPerson:
@@ -454,8 +440,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceFireMinor: {
+  }),
+  resonanceFireMinor: new SkillDefinition({
     id: "resonanceFireMinor",
     fullName: "Fire - Minor",
     firstPerson: /^You send a spray of sparks to assault (?<target>\w+)\.$/,
@@ -470,15 +456,14 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceFireMinor: {
+  }),
+  resonanceFireMinor: new SkillDefinition({
     id: "resonanceFireMinor",
     fullName: "Fire - Minor",
     firstPerson:
       /^You direct your will against the temperance elixir which protects (?<target>\w+) and it burns away\.$/,
     secondPerson:
       /^The temperance defence which protects you burns away at the will of (?<user>\w+)\.$/,
-    thirdPerson: false,
     profession: ["magi"],
     skill: "elementalism",
     balance: "free",
@@ -486,9 +471,9 @@ const elementalism = {
     affs: [],
     info: "Temperance",
     length: 0,
-  },
+  }),
 
-  resonanceFireModerate: {
+  resonanceFireModerate: new SkillDefinition({
     id: "resonanceFireModerate",
     fullName: "Fire - Moderate",
     firstPerson: /^You will that (?<target>\w+) should burn, and so he does\.$/,
@@ -503,8 +488,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  resonanceFireMajor: {
+  }),
+  resonanceFireMajor: new SkillDefinition({
     id: "resonanceFireMajor",
     fullName: "Fire - Major",
     firstPerson:
@@ -520,8 +505,8 @@ const elementalism = {
     affs: [],
     info: false,
     length: 0,
-  },
-  emanationFire: {
+  }),
+  emanationFire: new SkillDefinition({
     id: "emanationFire",
     fullName: "Emanation",
     firstPerson:
@@ -537,8 +522,8 @@ const elementalism = {
     affs: [],
     info: "Fire",
     length: 2.4,
-  },
-  emanationAir: {
+  }),
+  emanationAir: new SkillDefinition({
     id: "emanationAir",
     fullName: "Emanation",
     firstPerson:
@@ -554,8 +539,8 @@ const elementalism = {
     affs: [],
     info: "Air",
     length: 2.4,
-  },
-  emanationEarth: {
+  }),
+  emanationEarth: new SkillDefinition({
     id: "emanationEarth",
     fullName: "Emanation",
     firstPerson:
@@ -571,8 +556,8 @@ const elementalism = {
     affs: [],
     info: "Earth",
     length: 2.4,
-  },
-  emanationWater: {
+  }),
+  emanationWater: new SkillDefinition({
     id: "emanationWater",
     fullName: "Emanation",
     firstPerson:
@@ -588,7 +573,7 @@ const elementalism = {
     affs: [],
     info: "Water",
     length: 2.4,
-  },
+  }),
   //stormhammer: With Sylvan
 };
 

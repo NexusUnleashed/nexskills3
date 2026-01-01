@@ -1,43 +1,38 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 export const gear = {
-  gearDamageOnStrike: {
+  gearDamageOnStrike: new SkillDefinition({
     id: "gearDamageOnStrike",
     fullName: "Gear Strike",
     firstPerson:
       /^Your gear enhances your strike with additional (\w+) damage\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["general"],
     skill: "gear",
     balance: "free",
     tags: ["damage", "pve"],
     length: 0,
-  },
-  gearDamageOnInterval: {
+  }),
+  gearDamageOnInterval: new SkillDefinition({
     id: "gearDamageOnInterval",
     fullName: "Gear Burst",
     firstPerson:
       /^\w+ force tears at (.+?), ravaging \w+ mind in violent tremors\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["general"],
     skill: "gear",
     balance: "free",
     tags: ["damage", "pve"],
     length: 0,
-  },
-  firePlaneBonus: {
+  }),
+  firePlaneBonus: new SkillDefinition({
     id: "firePlaneBonus",
     fullName: "Fire Plane",
     firstPerson:
       /^Terrible flames continue to ravage (.+?), the wrath of Kkractle unabating\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["general"],
     skill: "gear",
     balance: "free",
     tags: ["damage", "pve"],
     length: 0,
-  },
+  }),
 };
 
 export default Object.values(gear);

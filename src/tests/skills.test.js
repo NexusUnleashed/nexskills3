@@ -1,4 +1,5 @@
 import { nexSkills } from "../base/nexSkills";
+import { SkillDefinition } from "../base/models/SkillDefinition";
 beforeEach(() => {
   window.GMCP = {
     Location: {
@@ -124,21 +125,21 @@ describe("Advanced Patterns", () => {
         index: 1,
       },
     };
-    nexSkills.actions.push({
+    nexSkills.actions.push(
+      new SkillDefinition({
       id: "multiline",
       fullName: "Warp",
       firstPerson: [
         /^You touch (?<target>\w+)'s (?<limb>.+?), and it multiline test shrivels away\.$/,
         /^You make a sharp gesture toward (?<target>\w+), disrupting \w+ aura with the (?<info>\w+) affliction\.$/,
       ],
-      secondPerson: false,
-      thirdPerson: false,
       profession: ["occultist"],
       skill: "occultism",
       balance: "equilibrium",
       tags: ["pve", "damage"],
       length: 3.0,
-    });
+      })
+    );
     const text =
       "This doesn't matter because multi line uses the current_line indexes.";
     const result = nexSkills.checkSkills(text);

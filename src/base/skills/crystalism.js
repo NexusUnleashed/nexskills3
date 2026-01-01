@@ -1,10 +1,10 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 export const crystalism = {
-  destabilise: {
+  destabilise: new SkillDefinition({
     id: "destabilise",
     fullName: "Destabilise",
     firstPerson:
       /^Turning your attention to a (?<info>\w+) vibration, you observe the crystal resonance for a moment before producing a single, piercing note to destabilise its frequency\.$/,
-    secondPerson: false,
     thirdPerson:
       /^A single, piercing note emanates from (?<user>\w+), a sound to set teeth on edge and glass to shattering.$/,
     profession: ["magi"],
@@ -76,7 +76,7 @@ export const crystalism = {
         ].gag = true;
       }
     },
-  },
+  }),
 };
 
 export default Object.values(crystalism);

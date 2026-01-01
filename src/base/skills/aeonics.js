@@ -1,12 +1,12 @@
 import { inBlock } from "../utilities";
+import { SkillDefinition } from "../models/SkillDefinition";
 
 const aeonics = {
-  accelerate: {
+  accelerate: new SkillDefinition({
     id: "accelerate",
     fullName: "Accelerate",
     firstPerson:
       /^You accelerate your body's ability to purge afflictions a thousandfold\.$/,
-    secondPerson: false,
     thirdPerson:
       /^A look of relief comes over (?<target>\w+) as \w+ grows less pale\.$/,
     profession: ["depthswalker"],
@@ -20,8 +20,8 @@ const aeonics = {
         action.info = "Boosted";
       }
     },
-  },
-  chronoAeonStrip: {
+  }),
+  chronoAeonStrip: new SkillDefinition({
     id: "chronoAeonStrip",
     fullName: "Chrono Aeon Strip",
     firstPerson:
@@ -37,8 +37,8 @@ const aeonics = {
     tags: [],
     info: "Speed strip",
     length: 3.75,
-  },
-  chronoAeon: {
+  }),
+  chronoAeon: new SkillDefinition({
     id: "chronoAeon",
     fullName: "Chrono Aeon",
     firstPerson:
@@ -54,14 +54,12 @@ const aeonics = {
     tags: ["aff"],
     info: false,
     length: 3.75,
-  },
+  }),
   //chrono loop
   //Bending your will upon a scythe of shadows, you corrupt the weapon's timestream.
-  timeloop: {
+  timeloop: new SkillDefinition({
     id: "timeloop",
     fullName: "Timeloop",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^Grey fog begins to rise from the suddenly panicked-looking (?<target>\w+)\.$/,
     profession: ["depthswalker"],
@@ -70,12 +68,10 @@ const aeonics = {
     affs: ["timeloop"],
     tags: ["aff"],
     length: 0,
-  },
-  timeloopProc: {
+  }),
+  timeloopProc: new SkillDefinition({
     id: "timeloopProc",
     fullName: "Timeloop Proc",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson: /^A grey miasma flares around (?<target>\w+)\.$/,
     profession: ["depthswalker"],
     skill: "aeonics",
@@ -83,6 +79,6 @@ const aeonics = {
     affs: [],
     tags: ["aff"],
     length: 0,
-  },
+  }),
 };
 export default Object.values(aeonics);

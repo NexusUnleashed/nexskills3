@@ -1,9 +1,8 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 export const devotion = {
-  inquisition: {
+  inquisition: new SkillDefinition({
     id: "inquisition",
     fullName: "Inquisition",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^Pointing at \w+ with a single raised finger, (?<user>\w+) recites a list of (?<target>.+?)'s transgressions, condemning \w+ actions and words\. A blaze of holy fire surges about \w+ as he dictates \w+'s sentence\.$/,
     profession: ["priest"],
@@ -12,12 +11,10 @@ export const devotion = {
     tags: ["aff"],
     affs: ["inquisition"],
     length: 3.5,
-  },
-  dazzle: {
+  }),
+  dazzle: new SkillDefinition({
     id: "dazzle",
     fullName: "Dazzle",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) directs a dazzling ray of light at (?<target>.+?)\.$/,
     profession: ["priest"],
@@ -26,7 +23,7 @@ export const devotion = {
     tags: ["aff"],
     affs: ["stupidity"],
     length: 2.5,
-  },
+  }),
 };
 
 export default Object.values(devotion);

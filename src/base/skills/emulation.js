@@ -1,10 +1,10 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 const emulation = {
-  wavesurge: {
+  wavesurge: new SkillDefinition({
     id: "wavesurge",
     fullName: "Wavesurge",
     firstPerson:
       /^You summon up the might of the waves, a great surge of water lifting you up and hurling you away\.$/,
-    secondPerson: false,
     thirdPerson:
       /^Mystic waters rise about (?<user>\w+?), the frothing crest of a surging wave carrying \w+ away to the (?<info>\w+?)\.$/,
     profession: ["psion"],
@@ -14,8 +14,8 @@ const emulation = {
     affs: ["lightbind"],
     length: 2.8,
     info: false,
-  },
-  destruction: {
+  }),
+  destruction: new SkillDefinition({
     id: "destruction",
     fullName: "Destruction",
     firstPerson:
@@ -40,13 +40,12 @@ const emulation = {
     affs: [],
     length: 3.5,
     info: false,
-  },
-  rupture: {
+  }),
+  rupture: new SkillDefinition({
     id: "rupture",
     fullName: "Rupture",
     firstPerson:
       /^Your vision sharpens, allowing you to perceive the locations of every vein and artery that lies beneath the skin\.$/,
-    secondPerson: false,
     thirdPerson: /^The eyes of (?<user>\w+?) flash with a golden glow\.$/,
     profession: ["psion"],
     skill: "emulation",
@@ -55,14 +54,12 @@ const emulation = {
     affs: [],
     length: 2.3,
     info: false,
-  },
-  clarity: {
+  }),
+  clarity: new SkillDefinition({
     id: "clarity",
     fullName: "Clarity",
     firstPerson:
       /^A total focus overcomes you; the mundanity of everyday distractions unable to penetrate your clarity\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["psion"],
     skill: "emulation",
     balance: "equilibrium",
@@ -70,8 +67,8 @@ const emulation = {
     affs: [],
     length: 2.3,
     info: false,
-  },
-  painshiftStart: {
+  }),
+  painshiftStart: new SkillDefinition({
     id: "painshiftStart",
     fullName: "Painshift",
     firstPerson:
@@ -87,8 +84,8 @@ const emulation = {
     affs: [],
     length: 2.3,
     info: "Start",
-  },
-  painshiftActive: {
+  }),
+  painshiftActive: new SkillDefinition({
     id: "painshiftActive",
     fullName: "Painshift",
     firstPerson:
@@ -104,8 +101,8 @@ const emulation = {
     affs: [],
     length: 2.3,
     info: "Active",
-  },
-  lightbind: {
+  }),
+  lightbind: new SkillDefinition({
     id: "lightbind",
     fullName: "Lightbind",
     firstPerson:
@@ -122,7 +119,7 @@ const emulation = {
     affs: ["lightbind"],
     length: 2.8,
     info: false,
-  },
+  }),
 };
 
 export default Object.values(emulation);

@@ -1,5 +1,6 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 export const tarot = {
-  emperor: {
+  emperor: new SkillDefinition({
     id: "emperor",
     fullName: "Emperor",
     firstPerson:
@@ -13,8 +14,8 @@ export const tarot = {
     balance: "balance",
     tags: [],
     length: 3.0,
-  },
-  magician: {
+  }),
+  magician: new SkillDefinition({
     id: "magician",
     fullName: "Magician",
     firstPerson:
@@ -28,8 +29,8 @@ export const tarot = {
     balance: "balance",
     tags: [],
     length: 3.0,
-  },
-  priestess: {
+  }),
+  priestess: new SkillDefinition({
     id: "priestess",
     fullName: "Priestess",
     firstPerson:
@@ -43,8 +44,8 @@ export const tarot = {
     balance: "balance",
     tags: ["heal"],
     length: 3.0,
-  },
-  lovers: {
+  }),
+  lovers: new SkillDefinition({
     id: "lovers",
     fullName: "Lovers",
     firstPerson:
@@ -59,8 +60,8 @@ export const tarot = {
     skill: "tarot",
     tags: ["aff"],
     length: 3.0,
-  },
-  hangedman: {
+  }),
+  hangedman: new SkillDefinition({
     id: "hangedman",
     fullName: "Hangedman",
     firstPerson:
@@ -74,8 +75,8 @@ export const tarot = {
     balance: "balance",
     tags: [],
     length: 2.2,
-  },
-  justice: {
+  }),
+  justice: new SkillDefinition({
     id: "justice",
     fullName: "Justice",
     firstPerson:
@@ -90,8 +91,8 @@ export const tarot = {
     skill: "tarot",
     tags: ["aff"],
     length: 3.0,
-  },
-  aeonStrip: {
+  }),
+  aeonStrip: new SkillDefinition({
     id: "aeonStrip",
     fullName: "Aeon",
     firstPerson:
@@ -106,8 +107,8 @@ export const tarot = {
     tags: [],
     info: "Speed strip",
     length: 3.7,
-  },
-  aeon: {
+  }),
+  aeon: new SkillDefinition({
     id: "aeon",
     fullName: "Aeon",
     firstPerson:
@@ -122,8 +123,8 @@ export const tarot = {
     tags: [],
     info: false,
     length: 3.7,
-  },
-  moon: {
+  }),
+  moon: new SkillDefinition({
     id: "moon",
     fullName: "Moon",
     firstPerson:
@@ -138,8 +139,8 @@ export const tarot = {
     tags: [],
     info: false,
     length: 2.2,
-  },
-  fool: {
+  }),
+  fool: new SkillDefinition({
     id: "fool",
     fullName: "Fool",
     firstPerson:
@@ -153,8 +154,8 @@ export const tarot = {
     balance: "balance",
     tags: ["cure"],
     length: 3.0,
-  },
-  deathRub: {
+  }),
+  deathRub: new SkillDefinition({
     id: "deathRub",
     fullName: "Death Rub",
     firstPerson:
@@ -168,8 +169,8 @@ export const tarot = {
     balance: "balance",
     tags: ["cure"],
     length: 3.2,
-  },
-  ruinateLovers: {
+  }),
+  ruinateLovers: new SkillDefinition({
     id: "ruinateLovers",
     fullName: "Ruinate Lovers",
     firstPerson:
@@ -184,8 +185,8 @@ export const tarot = {
     tags: ["aff"],
     affs: ["manaleech"],
     length: 3.0,
-  },
-  ruinateJustice: {
+  }),
+  ruinateJustice: new SkillDefinition({
     id: "ruinateJustice",
     fullName: "Ruinate Justice",
     firstPerson:
@@ -200,9 +201,9 @@ export const tarot = {
     tags: ["aff"],
     affs: [],
     length: 3.0,
-  },
+  }),
 
-  heretic: {
+  heretic: new SkillDefinition({
     id: "heretic",
     fullName: "Heretic",
     firstPerson:
@@ -217,7 +218,7 @@ export const tarot = {
     tags: [],
     affs: [],
     length: 3.0,
-  },
+  }),
 };
 
 export default Object.values(tarot);

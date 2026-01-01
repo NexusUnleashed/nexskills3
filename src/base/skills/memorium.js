@@ -1,11 +1,10 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 /*global GMCP */
 export const memorium = {
   //#region Pariah
-  fissure: {
+  fissure: new SkillDefinition({
     id: "fissure",
     fullName: "Epitaph Fissure",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^Crimson fire trails the knife of (?<user>\w+) as \w+ slashes \w+ knife through the air before (?<target>.+?), a jagged logograph hanging in its passing\.$/,
     //There is a sharp cracking sound from the air directly in front of Tabethys, but nothing else seems to happen.
@@ -16,12 +15,10 @@ export const memorium = {
     tags: ["raze"],
     length: 2.2,
     reaction() {},
-  },
-  serpent: {
+  }),
+  serpent: new SkillDefinition({
     id: "serpent",
     fullName: "Epitaph Serpent",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) traces a writhing logograph in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     profession: ["pariah"],
@@ -30,12 +27,10 @@ export const memorium = {
     tags: ["aff"],
     affs: ["paralysis"], //Gives voyria when following scorpion. How to account?
     length: 2.2,
-  },
-  skein: {
+  }),
+  skein: new SkillDefinition({
     id: "skein",
     fullName: "Epitaph Skein",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) traces a logograph shaped like a skein in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     profession: ["pariah"],
@@ -43,12 +38,10 @@ export const memorium = {
     balance: "balance",
     tags: [],
     length: 2.2,
-  },
-  sun: {
+  }),
+  sun: new SkillDefinition({
     id: "sun",
     fullName: "Epitaph Sun",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) traces a logograph shaped like a sunburst in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     profession: ["pariah"],
@@ -57,12 +50,10 @@ export const memorium = {
     tags: ["aff"],
     affs: ["epilepsy"],
     length: 2.2,
-  },
-  jackal: {
+  }),
+  jackal: new SkillDefinition({
     id: "jackal",
     fullName: "Epitaph Jackal",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) traces a logograph depicting a leaping jackal in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     //As the logograph becomes fully formed it leaps for Amranu, sinking into his skin just below his throat.
@@ -72,12 +63,10 @@ export const memorium = {
     tags: ["aff"],
     affs: ["asthma"],
     length: 2.2,
-  },
-  scales: {
+  }),
+  scales: new SkillDefinition({
     id: "scales",
     fullName: "Epitaph Scales",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) traces a logograph shaped like a set of scales in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     //As the logograph becomes fully formed it suddenly shatters, Amranu staggering drunkenly backwards.
@@ -87,11 +76,10 @@ export const memorium = {
     tags: ["aff"],
     affs: ["clumsiness"],
     length: 2.2,
-  },
-  scorpion: {
+  }),
+  scorpion: new SkillDefinition({
     id: "scorpion",
     fullName: "Epitaph Scorpion",
-    firstPerson: false,
     secondPerson:
       /^(?<user>\w+) traces a logograph depicting a striking scorpion in the air before you, the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     //The logograph leaps from the air to you, and you feel a terrible pain in the side of your neck before an icy cold rushes through you.
@@ -105,12 +93,10 @@ export const memorium = {
     tags: ["aff"],
     affs: ["scytherus"],
     length: 2.2,
-  },
-  bear: {
+  }),
+  bear: new SkillDefinition({
     id: "bear",
     fullName: "Epitaph Bear",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) traces a logograph depicting a lunging bear in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     //Even as the logograph becomes fully formed it leaps from the air to Amranu, ephemeral claws plunging into his chest.
@@ -120,12 +106,10 @@ export const memorium = {
     tags: ["aff"],
     affs: ["haemophilia", "bleeding"],
     length: 2.2,
-  },
-  nest: {
+  }),
+  nest: new SkillDefinition({
     id: "nest",
     fullName: "Epitaph Nest",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) traces a logograph that is all twisted lines and angles in the air before (?<target>.+?), the blood upon \w+ knife bursting into arcane flame as it hangs in the wake of the blade's passage\.$/,
     //Amranu suddenly sways, his eyes drooping as he sags.
@@ -135,7 +119,7 @@ export const memorium = {
     tags: ["aff"],
     affs: ["weariness"],
     length: 2.2,
-  },
+  }),
   //#endregion
 };
 

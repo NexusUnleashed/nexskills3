@@ -33,6 +33,41 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
 
   useEffect(() => {
     const connect = async () => {
+      const normalizePattern = (value) => {
+        if (!value) {
+          return false;
+        }
+        if (Array.isArray(value)) {
+          const res = value
+            .map((entry) => normalizePattern(entry))
+            .filter(Boolean);
+          return res.length ? res : false;
+        }
+        if (value instanceof RegExp) {
+          return value;
+        }
+        if (typeof value === "string") {
+          return new RegExp(value);
+        }
+        if (value.pattern) {
+          return new RegExp(value.pattern);
+        }
+        return false;
+      };
+
+      const normalizePatterns = (entry) => {
+        const source = entry.patterns ?? {
+          firstPerson: entry.firstPerson,
+          secondPerson: entry.secondPerson,
+          thirdPerson: entry.thirdPerson,
+        };
+        return {
+          firstPerson: normalizePattern(source.firstPerson),
+          secondPerson: normalizePattern(source.secondPerson),
+          thirdPerson: normalizePattern(source.thirdPerson),
+        };
+      };
+
       let db = {};
       if (db?.databaseName === "nexAction") {
         return;
@@ -40,14 +75,13 @@ const Dashboard = ({ theme, debugSkills, classList }) => {
       db = await startUp();
       setDb(db);
       let tempSkills = await db.find({});
-      tempSkills = tempSkills.map((e) => ({
-        ...e,
-        firstPerson: e.firstPerson ? new RegExp(e.firstPerson.pattern) : false,
-        secondPerson: e.secondPerson
-          ? new RegExp(e.secondPerson.pattern)
-          : false,
-        thirdPerson: e.thirdPerson ? new RegExp(e.thirdPerson.pattern) : false,
-      }));
+      tempSkills = tempSkills.map((e) => {
+        const { firstPerson, secondPerson, thirdPerson, ...rest } = e;
+        return {
+          ...rest,
+          patterns: normalizePatterns(e),
+        };
+      });
       setSkills([...tempSkills]);
       setLoaded(true);
     };

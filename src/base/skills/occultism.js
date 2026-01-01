@@ -1,5 +1,6 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 export const occultism = {
-  warp: {
+  warp: new SkillDefinition({
     id: "warp",
     fullName: "Warp",
     firstPerson:
@@ -13,8 +14,8 @@ export const occultism = {
     balance: "equilibrium",
     tags: ["pve", "damage"],
     length: 3.0,
-  },
-  instill: {
+  }),
+  instill: new SkillDefinition({
     id: "instill",
     fullName: "Instill",
     firstPerson:
@@ -32,8 +33,8 @@ export const occultism = {
         action.affs = [action.info];
       }
     },
-  },
-  enervate: {
+  }),
+  enervate: new SkillDefinition({
     id: "enervate",
     fullName: "Enervate",
     firstPerson:
@@ -47,8 +48,8 @@ export const occultism = {
     balance: "equilibrium",
     tags: [],
     length: 2.9,
-  },
-  ague: {
+  }),
+  ague: new SkillDefinition({
     id: "ague",
     fullName: "Ague",
     firstPerson:
@@ -63,8 +64,8 @@ export const occultism = {
     affs: [],
     tags: ["aff"],
     length: 2.2,
-  },
-  shrivelTargeted: {
+  }),
+  shrivelTargeted: new SkillDefinition({
     id: "shrivelTargeted",
     fullName: "Shrivel Targeted",
     firstPerson:
@@ -84,8 +85,8 @@ export const occultism = {
       action.info = action.limb;
       action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
-  },
-  shrivelArms: {
+  }),
+  shrivelArms: new SkillDefinition({
     id: "shrivelArms",
     fullName: "Shrivel Arms",
     firstPerson:
@@ -101,8 +102,8 @@ export const occultism = {
     info: false,
     tags: ["aff"],
     length: 2.1,
-  },
-  shrivelLegs: {
+  }),
+  shrivelLegs: new SkillDefinition({
     id: "shrivelLegs",
     fullName: "Shrivel Legs",
     firstPerson:
@@ -118,8 +119,8 @@ export const occultism = {
     info: false,
     tags: ["aff"],
     length: 2.1,
-  },
-  shrivelRehit: {
+  }),
+  shrivelRehit: new SkillDefinition({
     id: "shrivelRehit",
     fullName: "Shrivel",
     firstPerson:
@@ -138,8 +139,8 @@ export const occultism = {
     reaction(action) {
       action.info = `Hit broken ${action.limb}`;
     },
-  },
-  pinchaura: {
+  }),
+  pinchaura: new SkillDefinition({
     id: "pinchaura",
     fullName: "Pinchaura",
     firstPerson:
@@ -155,8 +156,8 @@ export const occultism = {
     info: false,
     tags: [],
     length: 4.0,
-  },
-  attend: {
+  }),
+  attend: new SkillDefinition({
     id: "attend",
     fullName: "Attend",
     firstPerson:
@@ -170,49 +171,45 @@ export const occultism = {
     balance: "equilibrium",
     tags: [],
     length: 2.5,
-  },
-  attendPve: {
+  }),
+  attendPve: new SkillDefinition({
     id: "attendPve",
     fullName: "Attend",
     firstPerson:
       /^Focusing your will, you exert your aura at (?<target>.+) and snap your fingers, forcing \w+ mind open in a flash of indigo-violet light\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "occultism",
     balance: "equilibrium",
     tags: ["pve", "damage"],
     length: 2.5,
-  },
-  unnamableSpeak: {
+  }),
+  unnamableSpeak: new SkillDefinition({
     id: "unnamableSpeak",
     fullName: "Unnamable Speak",
     firstPerson:
       /^Hardening your mind against the impossible, you speak the name of the Unnamable\. Even to your ears, the utterance sounds twisted and unearthly\.$/,
     secondPerson:
       /^(?<user>\w+) speaks something in an unknown and impossible language\. Unable to process the alien images these words induce, your thoughts become jumbled\.$/,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "occultism",
     balance: "equilibrium",
     tags: [],
     length: 3.2,
-  },
-  unnamableVision: {
+  }),
+  unnamableVision: new SkillDefinition({
     id: "unnamableVision",
     fullName: "Unnamable Vision",
     firstPerson:
       /^Hardening your mind against the impossible, you conjure a vision of the Unnamable\. Even to your eyes, the manifestation appears twisted and unearthly\.$/,
     secondPerson:
       /^(?<user>\w+) lowers \w+ eyes and an unearthly image appears before you\. Unable to accept what this vision means, your thoughts become jumbled\.$/,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "occultism",
     balance: "equilibrium",
     tags: [],
     length: 3.2,
-  },
-  whisperingmadnessMiss: {
+  }),
+  whisperingmadnessMiss: new SkillDefinition({
     id: "whisperingmadnessMiss",
     fullName: "Whisperingmadness",
     firstPerson:
@@ -227,8 +224,8 @@ export const occultism = {
     info: "Miss",
     tags: ["info"],
     length: 2.3,
-  },
-  whisperingmadness: {
+  }),
+  whisperingmadness: new SkillDefinition({
     id: "whisperingmadness",
     fullName: "Whisperingmadness",
     firstPerson:
@@ -242,8 +239,8 @@ export const occultism = {
     balance: "equilibrium",
     tags: [],
     length: 2.3,
-  },
-  devolve: {
+  }),
+  devolve: new SkillDefinition({
     id: "devolve",
     fullName: "Devolve",
     firstPerson:
@@ -258,13 +255,12 @@ export const occultism = {
     affs: ["disloyalty", "shyness"],
     tags: ["aff"],
     length: 2.4,
-  },
-  bodywarp: {
+  }),
+  bodywarp: new SkillDefinition({
     id: "bodywarp",
     fullName: "Bodywarp",
     firstPerson:
       /^Taking a deep breath, you summon up images of your own primal fears, finally channeling them through your aura and into your body\. You feel your face and form twist and turn\.$/,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) takes a deep breath and breathes out\. \w+ face and body seem to melt and then twist and churn into something unspeakable\.$/,
     profession: ["occultist"],
@@ -273,8 +269,8 @@ export const occultism = {
     affs: ["fear"],
     tags: ["aff"],
     length: 2.3,
-  },
-  cleanseaura: {
+  }),
+  cleanseaura: new SkillDefinition({
     id: "cleanseaura",
     fullName: "Cleanseaura",
     firstPerson:
@@ -291,8 +287,8 @@ export const occultism = {
     length: 2.3,
     //fail: The energy flickers and fades with no visible change.
     //success: A look of sudden concern flits across the visage of Pamxen.
-  },
-  interlink: {
+  }),
+  interlink: new SkillDefinition({
     id: "interlink",
     fullName: "Interlink",
     firstPerson:
@@ -312,8 +308,8 @@ export const occultism = {
       action.info = action.limb;
       action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
-  },
-  regress: {
+  }),
+  regress: new SkillDefinition({
     id: "regress",
     fullName: "Regress",
     firstPerson:
@@ -329,8 +325,8 @@ export const occultism = {
     length: 2.5,
     //The legs of Pamxen snap out from under \w+.
     //The face of Pamxen turns a particularly vibrant shade of green.
-  },
-  compelDiscord: {
+  }),
+  compelDiscord: new SkillDefinition({
     id: "compelDiscord",
     fullName: "Compel Discord",
     firstPerson:
@@ -353,7 +349,7 @@ export const occultism = {
         compelId.charAt(0).toUpperCase() + compelId.slice(1)
       }`;
     },
-  },
+  }),
 };
 
 export default Object.values(occultism);

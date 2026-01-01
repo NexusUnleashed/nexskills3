@@ -1,9 +1,8 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 export const tekura = {
-  sdk: {
+  sdk: new SkillDefinition({
     id: "sdk",
     fullName: "Sidekick",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) pumps out at (?<target>.+?) with a powerful side kick\.$/,
     profession: ["monk"],
@@ -11,12 +10,10 @@ export const tekura = {
     balance: "balance",
     tags: ["pve", "damage"],
     length: 4.0,
-  },
-  upc: {
+  }),
+  upc: new SkillDefinition({
     id: "upc",
     fullName: "Uppercut",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) launches a powerful uppercut at (?<target>.+?)\.$/,
     profession: ["monk"],
@@ -24,7 +21,7 @@ export const tekura = {
     balance: "balance",
     tags: ["pve", "damage"],
     length: 4.0,
-  },
+  }),
 };
 
 export default Object.values(tekura);
