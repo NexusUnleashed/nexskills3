@@ -4,7 +4,7 @@ export const gear = {
     id: "gearDamageOnStrike",
     fullName: "Gear Strike",
     firstPerson:
-      /^Your gear enhances your strike with additional (\w+) damage\.$/,
+      /^Your gear enhances your strike with additional (.+) damage\.$/,
     profession: ["general"],
     skill: "gear",
     balance: "free",
