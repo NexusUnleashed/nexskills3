@@ -96,7 +96,7 @@ const grukaiSwamp = [
     areaName: "Grukai Swamp",
     firstPerson:
       /^Wrapping his tentacles around your legs, a tentacled polyp causes you to come crashing to the floor, your legs entangled with his bizarre appendages\.$/,
-    tags: ["damage", "prone", "webbed"],
+    tags: ["damage", "prone", "web"],
     length: 11.0,
   }),
 ];

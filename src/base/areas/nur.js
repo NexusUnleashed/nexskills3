@@ -124,7 +124,7 @@ const nur = [
     areaName: "First Circle of Nur",
     firstPerson:
       /^With force and precision, an angel spearbearer drives his spear into your torso, impaling you frightfully\.$/,
-    tags: ["damage", "webbed"],
+    tags: ["damage", "web"],
     length: 2,
   }),
   new NpcDefinition({
