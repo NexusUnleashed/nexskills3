@@ -17,7 +17,7 @@ const knights = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^(?<user>\w+) lashes out at (?<target>\w+) as he turns to flee\.$/,
+      /^(?<user>\w+) lashes out at (?<target>\w+) as \w+ turns to flee\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "equilibrium",

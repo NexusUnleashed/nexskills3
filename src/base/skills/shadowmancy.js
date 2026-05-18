@@ -156,7 +156,7 @@ export const shadowmancy = {
     secondPerson:
       /^As the weapon strikes you, you feel your sanity slipping away\.$/,
     thirdPerson:
-      /^As the weapon strikes (?<target>\w+), \w+ face grows vacant and he begins to tremble\.$/,
+      /^As the weapon strikes (?<target>\w+), \w+ face grows vacant and \w+ begins to tremble\.$/,
     profession: ["depthswalker"],
     skill: "shadowmancy",
     balance: "free",

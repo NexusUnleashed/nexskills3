@@ -5,7 +5,7 @@ export const devotion = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^Pointing at \w+ with a single raised finger, (?<user>\w+) recites a list of (?<target>.+?)'s transgressions, condemning \w+ actions and words\. A blaze of holy fire surges about \w+ as he dictates \w+'s sentence\.$/,
+      /^Pointing at \w+ with a single raised finger, (?<user>\w+) recites a list of (?<target>.+?)'s transgressions, condemning \w+ actions and words\. A blaze of holy fire surges about \w+ as \w+ dictates \w+'s sentence\.$/,
     profession: ["priest"],
     skill: "devotion",
     balance: "equilibrium",

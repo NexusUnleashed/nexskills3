@@ -148,7 +148,7 @@ export const weaponmastery = {
     firstPerson: false,
     secondPerson: false,
     thirdPerson:
-      /^The blade of (?<user>\w+) is a blur as he moves forward, slicing into (?<target>\w+)\.$/,
+      /^The blade of (?<user>\w+) is a blur as \w+ moves forward, slicing into (?<target>\w+)\.$/,
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery", // Not weaponmastery. Actually in each knight's chivalry replacement skillset.
     balance: "balance",
