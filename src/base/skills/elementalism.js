@@ -299,7 +299,7 @@ const elementalism = {
     secondPerson:
       /^You clutch at your throat as an invisible noose snaps close about your neck\.$/,
     thirdPerson:
-      /^(?<target>\w+) clutches at \w+ throat as he gasps for breath\.$/,
+      /^(?<target>\w+) clutches at \w+ throat as \w+ gasps for breath\.$/,
     profession: ["magi"],
     skill: "elementalism",
     balance: "free",
@@ -476,7 +476,8 @@ const elementalism = {
   resonanceFireModerate: new SkillDefinition({
     id: "resonanceFireModerate",
     fullName: "Fire - Moderate",
-    firstPerson: /^You will that (?<target>\w+) should burn, and so he does\.$/,
+    firstPerson:
+      /^You will that (?<target>\w+) should burn, and so \w+ does\.$/,
     secondPerson:
       /^A wave of heat rolls over you from the direction of (?<user>\w+), and flames ignite upon your skin\.$/,
     thirdPerson:

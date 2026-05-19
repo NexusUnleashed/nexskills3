@@ -336,7 +336,7 @@ const domination = {
     secondPerson:
       /^The gremlin races between and around your legs, its eratic movement setting your head to spinning\.$/,
     thirdPerson:
-      /^The gremlin races around and between the legs of (?<target>\w+), \w+ eyes tracking it as he sways unsteadily\.$/,
+      /^The gremlin races around and between the legs of (?<target>\w+), \w+ eyes tracking it as \w+ sways unsteadily\.$/,
     profession: ["occultist"],
     skill: "domination",
     balance: "free",

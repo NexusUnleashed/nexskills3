@@ -4,7 +4,7 @@ export const psion = {
     id: "pulverize",
     fullName: "Pulverize",
     thirdPerson:
-      /^A warhammer comes into being in (?<user>\w+)'s hands, and with an almighty overhand swing he annihilates the magical shield surrounding (?<target>.+?)\.$/,
+      /^A warhammer comes into being in (?<user>\w+)'s hands, and with an almighty overhand swing \w+ annihilates the magical shield surrounding (?<target>.+?)\.$/,
     profession: ["bard"],
     skill: "attainment",
     balance: "battlerage",
