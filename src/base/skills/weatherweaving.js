@@ -25,8 +25,10 @@ export const weatherweaving = {
   stormhammer3: new SkillDefinition({
     id: "stormhammer3",
     fullName: "Stormhammer x3",
-    firstPerson:
-      /^The sky above grows dark as you call upon powerful magics\. Raising your hands balefully, you cause lightning bolts, the hammer of the storm, to shoot from your hands and slam into (?<target>[^\.]+?)\. The bolts ricochet off and slam into (?<target2>[^\.]+?)\. The bolts ricochet off and slam into (?<target3>.+?)\.$/,
+    firstPerson: [
+      /^The sky above grows dark as you call upon powerful magics\. Raising your hands balefully, you cause lightning bolts, the hammer of the storm, to shoot from your hands and slam into (?<target>[^\.]+?)\. The bolts ricochet off and slam into (?<target2>[^\.]+?)\.$/,
+      /^The bolts ricochet off and slam into (?<target3>.+?)\.$/,
+    ],
     profession: ["sylvan", "magi"],
     skill: "weatherweaving",
     balance: "equilibrium",
