@@ -109,6 +109,21 @@ export const psionics = {
     length: 3,
     info: "Fail",
   },
+  shatter: {
+    id: "shatter",
+    fullName: "Shatter",
+    firstPerson:
+      /^You reach out with grim intent, seeking to shatter the psyche of (?<target>.+?)\.$/,
+    secondPerson: false,
+    thirdPerson: false,
+    profession: ["psion"],
+    skill: "psionics",
+    balance: "equilibrium",
+    tags: ["pve", "damage"],
+    affs: [],
+    length: 3.1,
+    info: false,
+  },
 };
 
 export default Object.values(psionics);
