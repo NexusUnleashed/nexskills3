@@ -27,6 +27,18 @@ export const ignition = {
     tags: ["pve", "raze"],
     length: 2.0,
   }),
+  vapourizeFail: new SkillDefinition({
+    id: "vapourizeFail",
+    fullName: "Vapourize",
+    firstPerson:
+      /^You find no magical shield surrounding (.+), and your power is unable to take hold\.$/,
+    profession: ["fire elemental lord"],
+    skill: "ignition",
+    balance: "balance",
+    info: "failed",
+    tags: ["pve", "raze"],
+    length: 2.0,
+  }),
   wires: new SkillDefinition({
     id: "wires",
     fullName: "Wires",

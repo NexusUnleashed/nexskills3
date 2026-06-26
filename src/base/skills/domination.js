@@ -268,7 +268,7 @@ const domination = {
     skill: "domination",
     balance: "equilibrium",
     info: "No shield",
-    tags: [],
+    tags: ["pve", "raze"],
     length: 2.75,
   }),
   gremlinCommand: new SkillDefinition({
@@ -284,7 +284,7 @@ const domination = {
     skill: "domination",
     balance: "equilibrium",
     info: "raze",
-    tags: ["raze"],
+    tags: ["pve", "raze"],
     length: 2.75,
   }),
   firelordCommand: new SkillDefinition({

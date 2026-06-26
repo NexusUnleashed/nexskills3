@@ -126,6 +126,25 @@ export const dragoncraft = {
     tags: ["pve", "raze"],
     length: 2.0,
   }),
+  tailsmashFail: new SkillDefinition({
+    id: "tailsmashFail",
+    fullName: "Tailsmash",
+    firstPerson:
+      /^You prepare yourself to flick your tail at(\s.+?) before realising that doing so would not actually do anything\.$/,
+    profession: [
+      "red dragon",
+      "green dragon",
+      "black dragon",
+      "blue dragon",
+      "golden dragon",
+      "silver dragon",
+    ],
+    skill: "dragoncraft",
+    balance: "balance",
+    info: "no shield",
+    tags: ["pve", "raze"],
+    length: 2.0,
+  }),
   dragonheal: new SkillDefinition({
     id: "dragonheal",
     fullName: "Dragonheal",
