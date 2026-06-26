@@ -1,3 +1,5 @@
+import { SkillDefinition } from "./models/SkillDefinition";
+
 export const nextLine = (txt) => {
   /*const nextLine =
     nexusclient.current_block[
@@ -43,21 +45,16 @@ export const prevLine = (txt) => {
 };
 
 export const addAction = (action) => {
-  const res = {
+  return new SkillDefinition({
     id: "",
     fullName: "",
-    firstPerson: false,
-    secondPerson: false,
-    thirdPerson: false,
     profession: [],
     skill: "",
-    balance: "",
     tags: [],
     length: 0,
     reaction() {},
-  };
-  res = { ...res, ...action };
-  return res;
+    ...action,
+  });
 };
 
 function checkLine(pattern, index = 1) {

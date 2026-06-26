@@ -1,9 +1,8 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 export const pranks = {
-  bop: {
+  bop: new SkillDefinition({
     id: "bop",
     fullName: "Bop",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) gives (?<target>.+?)'s head a sound thumping with a blackjack\.$/,
     profession: ["jester"],
@@ -11,12 +10,10 @@ export const pranks = {
     balance: "balance",
     tags: ["pve", "damage"],
     length: 3.0,
-  },
-  bop2: {
+  }),
+  bop2: new SkillDefinition({
     id: "bop2",
     fullName: "Bop",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) reaches out and bops (?<target>.+?)'s head with a blackjack\.$/,
     profession: ["jester"],
@@ -24,7 +21,7 @@ export const pranks = {
     balance: "balance",
     tags: ["pve", "damage"],
     length: 3.0,
-  },
+  }),
 };
 
 //Archaeon viciously mangles the right leg of a puppet of Antoninus.

@@ -1,11 +1,11 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 export const dragoncraft = {
   //#region Dragoncraft
-  gut: {
+  gut: new SkillDefinition({
     id: "gut",
     fullName: "Gut",
     firstPerson:
       /^You rip into (?<target>.+?) with your massive, deadly claws\.$/,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) rips into (?<target>.+?) with \w+ massive, deadly claws\.$/,
     profession: [
@@ -20,13 +20,12 @@ export const dragoncraft = {
     balance: "balance",
     tags: ["pve", "damage"],
     length: 3.0,
-  },
-  incantation: {
+  }),
+  incantation: new SkillDefinition({
     id: "incantation",
     fullName: "Incantation",
     firstPerson:
       /^Drawing from the well of your puissance, you invoke a dramatic chant in the dragon tongue\. Your voice resonates with each word, culminating in a wave of magical energy that you bend to your will and thrust towards (?<target>.+?), bombarding \w+ with the ancient power\.$/,
-    secondPerson: false,
     thirdPerson:
       /^A resonant vibration emanates from (?<user>\w+) as \w+ invokes a rumbling, sonorous chant in the dragon tongue\. As the sound increases, (?<target>.+?) jerks violently, \w+ body wracked by an unseen force\.$/,
     profession: [
@@ -41,12 +40,10 @@ export const dragoncraft = {
     balance: "equilibrium",
     tags: ["pve", "damage"],
     length: 3.0,
-  },
-  dragoncurse: {
+  }),
+  dragoncurse: new SkillDefinition({
     id: "dragoncurse",
     fullName: "Dragoncurse",
-    firstPerson: false,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) draws \w+ up to \w+ full height, staring imperiously down at (?<target>.+?)\.$/,
     profession: [
@@ -61,8 +58,8 @@ export const dragoncraft = {
     balance: "equilibrium",
     tags: [],
     length: 4.0,
-  },
-  rendUntargeted: {
+  }),
+  rendUntargeted: new SkillDefinition({
     id: "rendUntargeted",
     fullName: "Rend",
     firstPerson:
@@ -83,8 +80,8 @@ export const dragoncraft = {
     balance: "balance",
     tags: [],
     length: 2.0,
-  },
-  rendTargeted: {
+  }),
+  rendTargeted: new SkillDefinition({
     id: "rendTargeted",
     fullName: "Rend",
     firstPerson:
@@ -109,14 +106,12 @@ export const dragoncraft = {
     reaction(action) {
       action.info = action.limb;
     },
-  },
-  tailsmash: {
+  }),
+  tailsmash: new SkillDefinition({
     id: "tailsmash",
     fullName: "Tailsmash",
     firstPerson:
       /^You flick your tail at (?<target>.+?), dismissively brushing aside the paltry shield protecting \w+\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: [
       "red dragon",
       "green dragon",
@@ -130,13 +125,12 @@ export const dragoncraft = {
     info: "raze",
     tags: ["pve", "raze"],
     length: 2.0,
-  },
-  dragonheal: {
+  }),
+  dragonheal: new SkillDefinition({
     id: "dragonheal",
     fullName: "Dragonheal",
     firstPerson:
       /^You let out a great keening, and cast the impurities from your form\.$/,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) lets out a great keening, casting the impurities from \w+ form\.$/,
     profession: [
@@ -152,14 +146,12 @@ export const dragoncraft = {
     info: false,
     tags: ["cure"],
     length: 2.5,
-  },
-  tailsweep: {
+  }),
+  tailsweep: new SkillDefinition({
     id: "tailsweep",
     fullName: "Tailsweep",
     firstPerson:
       /^You whip your huge, sinuous tail in a circle, knocking your enemies off their feet\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: [
       "red dragon",
       "green dragon",
@@ -174,8 +166,8 @@ export const dragoncraft = {
     affs: [],
     tags: [],
     length: 4.0,
-  },
-  tailsweepHit: {
+  }),
+  tailsweepHit: new SkillDefinition({
     id: "tailsweepHit",
     fullName: "Tailsweep",
     firstPerson:
@@ -198,8 +190,8 @@ export const dragoncraft = {
     affs: ["prone"],
     tags: ["aff"],
     length: 0,
-  },
-  bite: {
+  }),
+  bite: new SkillDefinition({
     id: "bite",
     fullName: "Bite",
     firstPerson:
@@ -221,8 +213,8 @@ export const dragoncraft = {
     info: false,
     tags: [],
     length: 3.5,
-  },
-  biteProne: {
+  }),
+  biteProne: new SkillDefinition({
     id: "biteProne",
     fullName: "Bite - Prone",
     firstPerson:
@@ -245,8 +237,8 @@ export const dragoncraft = {
     affs: [],
     tags: [],
     length: 3.5,
-  },
-  enmesh: {
+  }),
+  enmesh: new SkillDefinition({
     id: "enmesh",
     fullName: "Enmesh",
     firstPerson:
@@ -269,11 +261,10 @@ export const dragoncraft = {
     affs: ["enmesh"],
     tags: ["aff"],
     length: 3.0,
-  },
-  enmeshHit1: {
+  }),
+  enmeshHit1: new SkillDefinition({
     id: "enmeshHit1",
     fullName: "Enmesh",
-    firstPerson: false,
     secondPerson:
       /^As the keening ceases, ethereal tendrils burst forth from your chest to ensnare you, although you manage to evade many of the lashing ropes\.$/,
     thirdPerson:
@@ -292,11 +283,10 @@ export const dragoncraft = {
     affs: ["enmesh"],
     tags: ["aff"],
     length: 0,
-  },
-  enmeshHit2: {
+  }),
+  enmeshHit2: new SkillDefinition({
     id: "enmeshHit2",
     fullName: "Enmesh",
-    firstPerson: false,
     secondPerson:
       /^As the keening ceases, you are jolted by a burst of vaporous rope-like tendrils that flow from your chest and encircle your body\.$/,
     thirdPerson:
@@ -315,8 +305,8 @@ export const dragoncraft = {
     affs: ["entangled"],
     tags: ["aff"],
     length: 0,
-  },
-  dragonroar: {
+  }),
+  dragonroar: new SkillDefinition({
     id: "dragonroar",
     fullName: "Dragonroar",
     firstPerson:
@@ -340,8 +330,8 @@ export const dragoncraft = {
     affs: ["undeaf"],
     tags: ["pve", "damage", "aff"],
     length: 4.0,
-  },
-  gust: {
+  }),
+  gust: new SkillDefinition({
     id: "gust",
     fullName: "Gust",
     firstPerson:
@@ -364,8 +354,8 @@ export const dragoncraft = {
     affs: ["prone"],
     tags: ["aff"],
     length: 2.5,
-  },
-  blastRed: {
+  }),
+  blastRed: new SkillDefinition({
     id: "blastRed",
     fullName: "Blast",
     firstPerson:
@@ -380,8 +370,8 @@ export const dragoncraft = {
     tags: ["pve", "damage", "raze"],
     info: "Red",
     length: 4.0,
-  },
-  blastGreen: {
+  }),
+  blastGreen: new SkillDefinition({
     id: "blastGreen",
     fullName: "Blast",
     firstPerson:
@@ -396,8 +386,8 @@ export const dragoncraft = {
     tags: ["pve", "damage", "raze"],
     info: "Green",
     length: 4.0,
-  },
-  blastBlue: {
+  }),
+  blastBlue: new SkillDefinition({
     id: "blastBlue",
     fullName: "Blast",
     firstPerson:
@@ -412,8 +402,8 @@ export const dragoncraft = {
     tags: ["pve", "damage", "raze"],
     info: "Blue",
     length: 4.0,
-  },
-  blastBlack: {
+  }),
+  blastBlack: new SkillDefinition({
     id: "blastBlack",
     fullName: "Blast",
     firstPerson:
@@ -428,8 +418,8 @@ export const dragoncraft = {
     tags: ["pve", "damage", "raze"],
     info: "Black",
     length: 4.0,
-  },
-  blastGold: {
+  }),
+  blastGold: new SkillDefinition({
     id: "blastGold",
     fullName: "Blast",
     firstPerson:
@@ -444,8 +434,8 @@ export const dragoncraft = {
     tags: ["pve", "damage", "raze"],
     info: "Gold",
     length: 4.0,
-  },
-  blastSilver: {
+  }),
+  blastSilver: new SkillDefinition({
     id: "blastSilver",
     fullName: "Blast",
     firstPerson:
@@ -460,7 +450,7 @@ export const dragoncraft = {
     tags: ["pve", "damage", "raze"],
     info: "Silver",
     length: 4.0,
-  },
+  }),
   //Red
   //TODO enmesh
   //#endregion

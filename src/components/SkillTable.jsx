@@ -12,16 +12,25 @@ const SkillTable = ({ skill }) => {
   const emptySkill = {
     id: "",
     fullName: "",
-    firstPerson: "",
-    secondPerson: "",
-    thirdPerson: "",
+    patterns: {
+      firstPerson: "",
+      secondPerson: "",
+      thirdPerson: "",
+    },
     profession: "",
     skill: "",
     balance: "",
     afflictions: "",
     length: "",
   };
-  const displaySkill = skill !== null ? { ...skill } : { ...emptySkill };
+  const baseSkill = skill !== null ? { ...skill } : { ...emptySkill };
+  const displaySkill = { ...baseSkill };
+  if (displaySkill.patterns) {
+    displaySkill.firstPerson = displaySkill.patterns.firstPerson || "";
+    displaySkill.secondPerson = displaySkill.patterns.secondPerson || "";
+    displaySkill.thirdPerson = displaySkill.patterns.thirdPerson || "";
+    delete displaySkill.patterns;
+  }
   //console.log(displaySkill);
   //console.log(displaySkill.firstPerson.pattern);
   //console.log(new RegExp(displaySkill.firstPerson.pattern));

@@ -1,6 +1,7 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 const domination = {
   //#region COMMANDS
-  humbugCommand: {
+  humbugCommand: new SkillDefinition({
     id: "humbugCommand",
     fullName: "Humbug Command",
     firstPerson:
@@ -14,8 +15,8 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.5,
-  },
-  houndCommand: {
+  }),
+  houndCommand: new SkillDefinition({
     id: "houndCommand",
     fullName: "Hound Command",
     firstPerson:
@@ -29,35 +30,31 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.2,
-  },
-  houndCommandPve: {
+  }),
+  houndCommandPve: new SkillDefinition({
     id: "houndCommandPve",
     fullName: "Hound Command",
     firstPerson:
       /^You command your hound to rend the flesh of (?<target>.+)\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
     balance: "equilibrium",
     tags: ["pve", "damage"],
     length: 2.2,
-  },
-  houndCommandPveRaze: {
+  }),
+  houndCommandPveRaze: new SkillDefinition({
     id: "houndCommandPveRaze",
     fullName: "Hound Command",
     firstPerson:
       /^With a baying howl a chaos hound leaps upon (?<target>.+), ripping the magical shield surrounding \w+ to tatters with its claws\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
     balance: "equilibrium",
     info: "raze",
     tags: ["pve", "damage", "raze"],
     length: 2.2,
-  },
-  stormCommand: {
+  }),
+  stormCommand: new SkillDefinition({
     id: "stormCommand",
     fullName: "Storm Command",
     firstPerson:
@@ -71,21 +68,19 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.2,
-  },
-  stormCommand2: {
+  }),
+  stormCommand2: new SkillDefinition({
     id: "stormCommand2",
     fullName: "Storm Command",
     firstPerson: /^A chaos storm disregards your order\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
     balance: "tertiary",
     info: "failed",
     tags: [],
     length: 0.5,
-  },
-  bloodleechCommand: {
+  }),
+  bloodleechCommand: new SkillDefinition({
     id: "bloodleechCommand",
     fullName: "Bloodleech Command",
     firstPerson:
@@ -99,8 +94,8 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.2,
-  },
-  sycophantCommand: {
+  }),
+  sycophantCommand: new SkillDefinition({
     id: "sycophantCommand",
     fullName: "Sycophant Command",
     firstPerson:
@@ -114,8 +109,8 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2,
-  },
-  slimeCommand: {
+  }),
+  slimeCommand: new SkillDefinition({
     id: "slimeCommand",
     fullName: "Slime Command",
     firstPerson: /^You command your slime to envelop (?<target>\w+)\.$/,
@@ -128,21 +123,19 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.6,
-  },
-  slimeCommand2: {
+  }),
+  slimeCommand2: new SkillDefinition({
     id: "slimeCommand",
     fullName: "Slime Command",
-    firstPerson: false,
     secondPerson:
       /^Despite your best efforts some of the slime slips into your mouth and down your throat, your body struggling to breathe but receiving only virilant sludge\.$/,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
     balance: "tertiary",
     tags: [],
     length: 2.6,
-  },
-  chimeraCommandDeaf: {
+  }),
+  chimeraCommandDeaf: new SkillDefinition({
     id: "chimeraCommandDeaf",
     fullName: "Chimera Command",
     firstPerson: [
@@ -159,8 +152,8 @@ const domination = {
     tags: [],
     info: "Deaf",
     length: 2.6,
-  },
-  chimeraCommand: {
+  }),
+  chimeraCommand: new SkillDefinition({
     id: "chimeraCommand",
     fullName: "Chimera Command",
     firstPerson: [
@@ -175,11 +168,10 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.6,
-  },
-  bubonisComand: {
+  }),
+  bubonisComand: new SkillDefinition({
     id: "bubonisCommand",
     fullName: "Bubonis Command",
-    firstPerson: false,
     secondPerson:
       /^A bubonis reaches out and strokes the side of your face, and you feel your entire body suffer. Boils form and rupture and you feel your lungs burn as they fill with fluid\.$/,
     thirdPerson:
@@ -189,8 +181,8 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.4,
-  },
-  wormCommand: {
+  }),
+  wormCommand: new SkillDefinition({
     id: "wormCommand",
     fullName: "Worm Command",
     firstPerson:
@@ -204,11 +196,11 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.2,
-  },
-  wormTick: {
+  }),
+  wormTick: new SkillDefinition({
     id: "wormTick",
     fullName: "Worm Tick",
-    firstPerson: false, // same message as third person
+    // same message as third person
     secondPerson:
       /^The maggots of Palpatar continue to feed upon your flesh, leeching away your vitality\.$/,
     thirdPerson:
@@ -218,8 +210,8 @@ const domination = {
     balance: "tertiary",
     tags: [],
     length: 2.2,
-  },
-  croneCommand: {
+  }),
+  croneCommand: new SkillDefinition({
     id: "croneCommand",
     fullName: "Crone Command",
     firstPerson:
@@ -238,8 +230,8 @@ const domination = {
       action.info = action.limb;
       action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
-  },
-  abominationCommand: {
+  }),
+  abominationCommand: new SkillDefinition({
     id: "abominationCommand",
     fullName: "Abomination Command",
     firstPerson:
@@ -254,36 +246,32 @@ const domination = {
     info: "truename",
     tags: [],
     length: 2.6,
-  },
-  abominationCommandFail: {
+  }),
+  abominationCommandFail: new SkillDefinition({
     id: "abominationCommandFail",
     fullName: "Abomination Command",
     firstPerson:
       /^An eldritch abomination cannot discern anything through the natural defences of (?<target>\w+)\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
     balance: "tertiary",
     info: "Fail",
     tags: [],
     length: 2.6,
-  },
-  gremlinCommandFail: {
+  }),
+  gremlinCommandFail: new SkillDefinition({
     id: "gremlinCommandFail",
     fullName: "Gremlin",
     firstPerson:
       /^(?<target>\w+) has no shield for your gremlin to shatter, occultist\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
     balance: "equilibrium",
     info: "No shield",
     tags: [],
     length: 2.75,
-  },
-  gremlinCommand: {
+  }),
+  gremlinCommand: new SkillDefinition({
     id: "gremlinCommand",
     fullName: "Gremlin Command",
     firstPerson:
@@ -298,8 +286,8 @@ const domination = {
     info: "raze",
     tags: ["raze"],
     length: 2.75,
-  },
-  firelordCommand: {
+  }),
+  firelordCommand: new SkillDefinition({
     id: "firelordCommand",
     fullName: "Firelord Command",
     firstPerson:
@@ -314,27 +302,24 @@ const domination = {
     info: false,
     tags: [],
     length: 2.6,
-  },
-  firelordCommandFail: {
+  }),
+  firelordCommandFail: new SkillDefinition({
     id: "firelordCommandFail",
     fullName: "Firelord Command",
     firstPerson:
       /^(?<target>\w+) does not labour under any afflictions that Pyradius may warp\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
     balance: "equilibrium",
     info: "Fail",
     tags: [],
     length: 2.6,
-  },
+  }),
   //#endregion
   //#region PRIMEBONDS
-  wormPrimebond: {
+  wormPrimebond: new SkillDefinition({
     id: "wormPrimebond",
     fullName: "Worm Primebond",
-    firstPerson: false,
     secondPerson:
       /^The worm which is burrowed into your guts writhes and undulates, and you feel bile rising in the back of your throat\.$/,
     thirdPerson:
@@ -344,11 +329,10 @@ const domination = {
     balance: "free",
     tags: [],
     length: 8.0,
-  },
-  gremlinPrimebond: {
+  }),
+  gremlinPrimebond: new SkillDefinition({
     id: "gremlinPrimebond",
     fullName: "Gremlin Primebond",
-    firstPerson: false,
     secondPerson:
       /^The gremlin races between and around your legs, its eratic movement setting your head to spinning\.$/,
     thirdPerson:
@@ -359,11 +343,10 @@ const domination = {
     affs: ["dizziness"],
     tags: ["affs"],
     length: 11.0,
-  },
-  gremlinPrimebond2: {
+  }),
+  gremlinPrimebond2: new SkillDefinition({
     id: "gremlinPrimebond2",
     fullName: "Gremlin Primebond",
-    firstPerson: false,
     secondPerson:
       /^The gremlin races between your legs, throwing you off-balance\.$/,
     thirdPerson: /^The gremlin races between the legs of (?<target>\w+)\.$/,
@@ -374,11 +357,10 @@ const domination = {
     affs: ["dizziness", "balance"],
     tags: ["affs"],
     length: 11.0,
-  },
-  humbugPrimebond: {
+  }),
+  humbugPrimebond: new SkillDefinition({
     id: "humbugPrimebond",
     fullName: "Humbug Primebond",
-    firstPerson: false,
     secondPerson:
       /^You feel the humbug sucking horribly against your skin, drawing away your very will to fight\.$/,
     thirdPerson:
@@ -388,11 +370,10 @@ const domination = {
     balance: "free",
     tags: [],
     length: 5.0,
-  },
-  bloodleechPrimebond: {
+  }),
+  bloodleechPrimebond: new SkillDefinition({
     id: "bloodleechPrimebond",
     fullName: "Bloodleech Primebond",
-    firstPerson: false,
     secondPerson:
       /^The tentacles of the bloodleech burrow into your skin, seeking the veins and fresh sources of life-giving fluid\.$/,
     thirdPerson:
@@ -402,37 +383,32 @@ const domination = {
     balance: "free",
     tags: [],
     length: 5.0,
-  },
-  slimePrimebond: {
+  }),
+  slimePrimebond: new SkillDefinition({
     id: "slimePrimebond",
     fullName: "Slime Primebond",
-    firstPerson: false,
     secondPerson:
       /^You feel the slime attacking your physical well-being with its foul presence\.$/,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
     balance: "free",
     tags: [],
     length: 10.0,
-  },
-  bubonisPrimebond: {
+  }),
+  bubonisPrimebond: new SkillDefinition({
     id: "bubonisPrimebond",
     fullName: "Bubonis Primebond",
     firstPerson:
       /^You sense the malignant glee of your bubonis as it infests (?<target>\w+)\.$/,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["occultist"],
     skill: "domination",
     balance: "free",
     tags: [],
     length: 11.0,
-  },
-  chimeraPrimebondGas: {
+  }),
+  chimeraPrimebondGas: new SkillDefinition({
     id: "chimeraPrimebondGas",
     fullName: "Chimera Primebond",
-    firstPerson: false,
     secondPerson:
       /^The chimera's dragon head exhales a cloud of gas at you, and you feel sleepy\.$/,
     thirdPerson:
@@ -443,11 +419,10 @@ const domination = {
     tags: [],
     info: "sleep gas",
     length: 8.0,
-  },
-  chimeraPrimebondRam: {
+  }),
+  chimeraPrimebondRam: new SkillDefinition({
     id: "chimeraPrimebondRam",
     fullName: "Chimera Primebond",
-    firstPerson: false,
     secondPerson:
       /^The chimera's goat head rams into you and knocks you sprawling\.$/,
     thirdPerson:
@@ -458,11 +433,10 @@ const domination = {
     tags: [],
     info: "ram",
     length: 8.0,
-  },
-  chimeraPrimebondRoar: {
+  }),
+  chimeraPrimebondRoar: new SkillDefinition({
     id: "chimeraPrimebondRoar",
     fullName: "Chimera Primebond",
-    firstPerson: false,
     secondPerson:
       /^The lion head on the chimera roars at you, stunning you with its power\.$/,
     thirdPerson:
@@ -473,11 +447,10 @@ const domination = {
     tags: [],
     info: "roar",
     length: 8.0,
-  },
-  chimeraPrimebondUndeaf: {
+  }),
+  chimeraPrimebondUndeaf: new SkillDefinition({
     id: "chimeraPrimebondUndeaf",
     fullName: "Chimera Primebond",
-    firstPerson: false,
     secondPerson:
       /^The lion head on the chimera roars at you, restoring your hearing\.$/,
     thirdPerson:
@@ -488,11 +461,10 @@ const domination = {
     tags: [],
     info: "undeaf",
     length: 8.0,
-  },
-  cronePrimebond: {
+  }),
+  cronePrimebond: new SkillDefinition({
     id: "cronePrimebond",
     fullName: "Crone Primebond",
-    firstPerson: false,
     secondPerson:
       /^The crone strokes your (?<limb>.+?) gently, withering it into uselessness\.$/,
     thirdPerson:
@@ -508,7 +480,7 @@ const domination = {
       action.info = action.limb;
       action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
-  },
+  }),
   //#endregion
 };
 

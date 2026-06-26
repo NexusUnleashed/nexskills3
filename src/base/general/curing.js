@@ -1,3 +1,4 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 const eddibles = [
   //minerals
   "a dolomite grain",
@@ -50,11 +51,10 @@ const curativeMsgs = {
 };
 
 export const curing = {
-  eat: {
+  eat: new SkillDefinition({
     id: "eat",
     fullName: "Eat",
     firstPerson: /^You eat (?<info>.+?)\.$/,
-    secondPerson: false,
     thirdPerson: /^(?<user>\w+) eats (?<info>.+?)\.$/,
     profession: ["general"],
     skill: "curing",
@@ -66,13 +66,12 @@ export const curing = {
         action.matchType = false;
       }
     },
-  },
-  apply: {
+  }),
+  apply: new SkillDefinition({
     id: "apply",
     fullName: "Apply",
     firstPerson:
       /^You take out some salve and quickly rub it on your (?<info>.+?)\.$/,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) takes some salve from a vial and rubs it on \w+ (?<info>.+?)\.$/,
     profession: ["general"],
@@ -80,13 +79,12 @@ export const curing = {
     balance: "salve",
     tags: [],
     length: 1,
-  },
-  health: {
+  }),
+  health: new SkillDefinition({
     id: "health",
     fullName: "Health",
     firstPerson:
       /^You take some elixir from .+? and rub it into your (?<info>.+?)\.$/,
-    secondPerson: false,
     thirdPerson:
       /^(?<user>\w+) takes some elixir from .+? and rubs it into \w+ (?<info>.+?)\.$/,
     profession: ["general"],
@@ -94,44 +92,41 @@ export const curing = {
     balance: "sip",
     tags: [],
     length: 1.6,
-  },
-  smoke: {
+  }),
+  smoke: new SkillDefinition({
     id: "smoke",
     fullName: "Smoke",
     firstPerson: /^You take a long drag of (?<info>\w+) off your pipe\.$/,
-    secondPerson: false,
     thirdPerson: /^(?<user>\w+) takes a long drag off \w+ (?<info>.+?)\.$/,
     profession: ["general"],
     skill: "curing",
     balance: "smoke",
     tags: [],
     length: 1.6,
-  },
-  sip: {
+  }),
+  sip: new SkillDefinition({
     id: "sip",
     fullName: "Sip",
     firstPerson: /^You take a drink from (?:a|an) (?<info>.+?)\.$/,
-    secondPerson: false,
     thirdPerson: /^(?<user>\w+) takes a drink from (?:a|an) (?<info>.+?)\.$/,
     profession: ["general"],
     skill: "curing",
     balance: "sip",
     tags: [],
     length: 1.6,
-  },
-  focus: {
+  }),
+  focus: new SkillDefinition({
     id: "focus",
     fullName: "Focus",
     firstPerson:
       /^You focus your mind intently on curing your mental maladies\.$/,
-    secondPerson: false,
     thirdPerson: /^A look of extreme focus crosses the face of (?<user>\w+)\.$/,
     profession: ["general"],
     skill: "curing",
     balance: "focus",
     tags: [],
     length: 2.5,
-  },
+  }),
 };
 
 export default Object.values(curing);

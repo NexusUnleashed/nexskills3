@@ -1,5 +1,6 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 const artificing = {
-  scintilla: {
+  scintilla: new SkillDefinition({
     id: "scintilla",
     fullName: "Scintilla",
     firstPerson:
@@ -15,11 +16,11 @@ const artificing = {
     affs: [],
     info: false,
     length: 2.0,
-  },
+  }),
   //false
   //A raging heat ignites within your chest, and flames burst into being all over your body.
   //Flames ignite all over the body of (?<target>\w+?), fanned to intensity in an instant.
-  horripilation: {
+  horripilation: new SkillDefinition({
     id: "horripilation",
     fullName: "Horripilation",
     firstPerson:
@@ -35,11 +36,11 @@ const artificing = {
     affs: [],
     info: false,
     length: 2.0,
-  },
+  }),
   //Even as the wave of cold dissipates, you retain control over the fluid and send it spinning through the air to bind (?<target>.+?) in a watery web.
   //Even as the wave of cold passes over you (?<user>\w+?) twitches \w+ staff, and a web of fluid spins into being to bind you.
   //Even as the freezing wave passes over (?<target>\w+?) (?<user>\w+?) twitches \w+ staff, and a web of water spins into being to bind \w+ in place.
-  lightning: {
+  lightning: new SkillDefinition({
     id: "lightning",
     fullName: "Lightning",
     firstPerson:
@@ -55,11 +56,11 @@ const artificing = {
     affs: [],
     info: false,
     length: 2.0,
-  },
+  }),
   //false
   //As the lightning courses over and through you, your thoughts scatter and the world descends into a sluggish haze.
   //As the lightning bolt courses through (?<target>\w+?), a strangely blank expression descends over \w+ features.
-  dissolution: {
+  dissolution: new SkillDefinition({
     id: "dissolution",
     fullName: "Dissolution",
     firstPerson:
@@ -75,12 +76,11 @@ const artificing = {
     affs: [],
     info: false,
     length: 2.0,
-  },
+  }),
 
-  efreeti: {
+  efreeti: new SkillDefinition({
     id: "efreeti",
     fullName: "Efreeti",
-    firstPerson: false,
     secondPerson:
       /^A fiery efreeti spins into you, causing you to burst into flame\.$/,
     thirdPerson:
@@ -92,11 +92,10 @@ const artificing = {
     affs: [],
     info: "burning",
     length: 5.0,
-  },
-  stoneback: {
+  }),
+  stoneback: new SkillDefinition({
     id: "stoneback",
     fullName: "Stoneback",
-    firstPerson: false,
     secondPerson:
       /^A hulking stoneback makes a deep rumbling sound from within itself, and a magical shield flares into being to surround you\.$/,
     thirdPerson:
@@ -108,7 +107,7 @@ const artificing = {
     affs: [],
     info: "shield",
     length: 5.0,
-  },
+  }),
 };
 
 export default Object.values(artificing);

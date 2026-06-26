@@ -1,6 +1,7 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 const bladedance = {
   //raze miss
-  punctuate: {
+  punctuate: new SkillDefinition({
     id: "punctuate",
     fullName: "Punctuate",
     //Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (Laorir).
@@ -19,9 +20,9 @@ const bladedance = {
     affs: [],
     info: "Nothing",
     length: 2.0,
-  },
+  }),
   //raze hit
-  punctuateRaze: {
+  punctuateRaze: new SkillDefinition({
     id: "punctuate",
     fullName: "Punctuate",
     //Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (Laorir).
@@ -34,7 +35,6 @@ const bladedance = {
     //The anti-weapon field surrounding you shatters under the flurry of strikes.
     secondPerson:
       /^The anti-weapon field surrounding you shatters under the flurry of strikes\.$/,
-    thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -42,13 +42,10 @@ const bladedance = {
     affs: [],
     info: "raze Rebounding",
     length: 2.0,
-  },
-  hound: {
+  }),
+  hound: new SkillDefinition({
     id: "hound",
     fullName: "Hound",
-    firstPerson: false,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -56,8 +53,8 @@ const bladedance = {
     affs: [],
     info: false,
     length: 3.0,
-  },
-  jab: {
+  }),
+  jab: new SkillDefinition({
     id: "jab",
     fullName: "Jab",
     //You dart out an etched, Vashnari rapier in a lightning-fast jab to the left arm of (Laorir).
@@ -82,8 +79,8 @@ const bladedance = {
     //FRONT-TORSO: (Myrddin) looks queasy as the blade of (Dunn) slides home and clear in a flawless strike and withdraw.
     //SIDE-TORSO: Your blade slides between the ribs of Mornath before you swiftly withdraw.
     //SIDE-TORSO: The blade of (Dunn) slips into the body of (Myrddin) as breath rushes from his mouth in a silent gasp.
-  },
-  flick: {
+  }),
+  flick: new SkillDefinition({
     id: "flick",
     fullName: "Flick",
     //You flick out with the point of an etched, Vashnari rapier, song blessed steel singing a keening note towards (Laorir).
@@ -105,15 +102,14 @@ const bladedance = {
     //SIDE: A hum on the edge of hearing emanates from your blade as it finds the flesh of Mornath.
     //SIDE: A hum on the edge of hearing emanates from the blade of (Dunn) as it finds the flesh of (Keturah).
     //BACK: A grim note knells from your blade as it finds the flesh of Mornath.
-  },
-  flourish: {
+  }),
+  flourish: new SkillDefinition({
     id: "flourish",
     fullName: "Flourish",
     firstPerson:
       /^You weave .+? through the air in a dazzling display, the music of your bladesong sweeping forth to wash over (?<target>.+?) while your feet shift to a new stance\.$/, //line in-game: You weave an etched, Vashnari rapier through the air in a dazzling display, the music of your bladesong sweeping forth to wash over (Laorir) while your feet shift to a new stance.
     secondPerson:
       /^(?<user>\w+) weaves .+? through the air in a dazzling display, and in the moment of your distraction \w+ is no longer where \w+ was\.$/, //line in-game: Dzak weaves an etched, Vashnari rapier through the air in a dazzling display, and in the moment of your distraction he is no longer where he was.
-    thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -121,8 +117,8 @@ const bladedance = {
     affs: [],
     info: false,
     length: 2.3,
-  },
-  highsun: {
+  }),
+  highsun: new SkillDefinition({
     id: "highsun",
     fullName: "Highsun",
     //With a flourish of an etched, Vashnari rapier you step smoothly into (Laorir), your blade slicing at his head.
@@ -144,8 +140,8 @@ const bladedance = {
     reaction(action) {
       action.info = action.limb;
     },
-  },
-  heelsnap: {
+  }),
+  heelsnap: new SkillDefinition({
     id: "heelsnap",
     fullName: "Heelsnap",
     //An etched, Vashnari rapier sings with a metallic song as you direct a deep cut toward (Laorir)'s left leg.
@@ -163,13 +159,10 @@ const bladedance = {
     affs: [], // From front: breaks leg. From side at left leg: healthleech. From side at right leg: sensitivity. From back: hamstrung and dismount.
     info: false,
     length: 2.3,
-  },
-  sunrise: {
+  }),
+  sunrise: new SkillDefinition({
     id: "sunrise",
     fullName: "Sunrise",
-    firstPerson: false,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -177,13 +170,10 @@ const bladedance = {
     affs: [],
     info: false,
     length: 2.3,
-  },
-  sunset: {
+  }),
+  sunset: new SkillDefinition({
     id: "sunset",
     fullName: "Sunset",
-    firstPerson: false,
-    secondPerson: false,
-    thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -191,8 +181,8 @@ const bladedance = {
     affs: [],
     info: false,
     length: 2.3,
-  },
-  deathfrombelow: {
+  }),
+  deathfrombelow: new SkillDefinition({
     id: "deathfrombelow",
     fullName: "Deathfrombelow",
     //You drop into a crouch, knees bent in perfect synchronicity as one foot sweeps out in a wide arc before tucking in close and tight. The power of a coiled spring surges within as muscle and bone and nerve contract and expand, and with an ululating shout you launch yourself like a living missile from ground to sky, your warcry ringing forth to herald your coming!
@@ -202,7 +192,6 @@ const bladedance = {
     //An ululating cry rings out from below, but you have nary a moment to even react as like a living missile Dzak launches himself upward, his blade piercing your flesh while he shouts, "DEATH FROM BELOW!"
     secondPerson:
       /^An ululating cry rings out from below, but you have nary a moment to even react as like a living missile (?<user>\w+) launches \w+ upward, \w+ blade piercing your flesh while \w+ shouts, .+$/,
-    thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
@@ -210,8 +199,8 @@ const bladedance = {
     affs: [],
     info: false,
     length: 3,
-  },
-  footwork: {
+  }),
+  footwork: new SkillDefinition({
     id: "footwork",
     fullName: "Footwork",
     //On feet as light as snow, you begin to circle (Laorir), your partner in this most deadly dance.
@@ -229,8 +218,8 @@ const bladedance = {
     affs: [],
     info: false,
     length: false,
-  },
-  footworkFront: {
+  }),
+  footworkFront: new SkillDefinition({
     id: "footworkFront",
     fullName: "Footwork",
     firstPerson:
@@ -238,7 +227,6 @@ const bladedance = {
     //Dzak circles back to your front, rapier languidly swaying with the hypnotic grace of his dance.
     secondPerson:
       /^(?<user>\w+?) circles back to your front, rapier languidly swaying with the hypnotic grace of \w+ dance\.$/,
-    thirdPerson: false,
     profession: ["bard"],
     skill: "bladedance",
     balance: false, //passive positioning.
@@ -246,8 +234,8 @@ const bladedance = {
     affs: [],
     info: "front",
     length: false,
-  },
-  footworkSide: {
+  }),
+  footworkSide: new SkillDefinition({
     id: "footworkSide",
     fullName: "Footwork",
     //You continue to circle (Laorir), your deadly dance carrying you around to his flank.
@@ -265,8 +253,8 @@ const bladedance = {
     affs: [],
     info: "side",
     length: false,
-  },
-  footworkBack: {
+  }),
+  footworkBack: new SkillDefinition({
     id: "footworkBack",
     fullName: "Footwork",
     //Your deadly dance carries you with lethal promise to the blindspot of (Laorir).
@@ -284,7 +272,7 @@ const bladedance = {
     affs: [],
     info: "back",
     length: false,
-  },
+  }),
 };
 
 export default Object.values(bladedance);

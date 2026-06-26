@@ -1,9 +1,10 @@
+import { SkillDefinition } from "../models/SkillDefinition";
 export const weaving = {
   /** 
     The weaving of the weapon in the hand is to change the weapon.
     Repeated use of the same skill will not have the weaving message.
   */
-  charge: {
+  charge: new SkillDefinition({
     id: "charge",
     fullName: "Charge",
     firstPerson:
@@ -20,8 +21,8 @@ export const weaving = {
     tags: [], //20 bleed
     info: false,
     length: 2.3,
-  },
-  cleaveMiss: {
+  }),
+  cleaveMiss: new SkillDefinition({
     id: "cleaveMiss",
     fullName: "Cleave",
     firstPerson:
@@ -42,8 +43,8 @@ export const weaving = {
     tags: [],
     info: false,
     length: 2.3,
-  },
-  cleaveHit: {
+  }),
+  cleaveHit: new SkillDefinition({
     id: "cleaveHit",
     fullName: "Cleave",
     firstPerson:
@@ -64,8 +65,8 @@ export const weaving = {
     tags: [],
     info: false,
     length: 2.3,
-  },
-  overhand: {
+  }),
+  overhand: new SkillDefinition({
     id: "overhand",
     fullName: "Overhand",
     firstPerson:
@@ -81,8 +82,8 @@ export const weaving = {
     balance: "balance",
     tags: ["aff"], //stupidity + prone OR impatience if already prone
     length: 2.2,
-  },
-  hamstring: {
+  }),
+  hamstring: new SkillDefinition({
     id: "hamstring",
     fullName: "Hamstring",
     firstPerson:
@@ -104,8 +105,8 @@ export const weaving = {
       action.info = action.limb;
       action.affs = [`broken${action.limb.replace(" ", "")}`];
     },
-  },
-  entwineProne: {
+  }),
+  entwineProne: new SkillDefinition({
     id: "entwineProne",
     fullName: "Entwine",
     firstPerson:
@@ -123,8 +124,8 @@ export const weaving = {
     affs: ["prone"],
     length: 2.3,
     info: "prone",
-  },
-  entwineEntangle: {
+  }),
+  entwineEntangle: new SkillDefinition({
     id: "entwineEntangle",
     fullName: "Entwine",
     firstPerson:
@@ -142,15 +143,14 @@ export const weaving = {
     affs: ["entangled"],
     length: 2.3,
     info: "entangled",
-  },
-  disruption: {
+  }),
+  disruption: new SkillDefinition({
     id: "disruption",
     fullName: "Disruption",
     firstPerson:
       /^Lightning explodes from your blade as you hack into (?<target>\w+), \w+ body locking up as the current rips through \w+\.$/,
     secondPerson:
       /^Your body locks up as lightning explodes from the blade as it hacks into you\.$/,
-    thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -158,15 +158,14 @@ export const weaving = {
     affs: ["paralysis"],
     length: 0,
     info: false,
-  },
-  disruption2: {
+  }),
+  disruption2: new SkillDefinition({
     id: "disruption2",
     fullName: "Disruption",
     firstPerson:
       /^Lightning explodes from your weapon as it smashes into (?<target>\w+), \w+ body locking up in agony as it rips through \w+\.$/,
     secondPerson:
       /^Lightning explodes from the \w+ as it smashes into you, your body locking in agony as the current rips through your body\.$/,
-    thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -174,15 +173,14 @@ export const weaving = {
     affs: ["paralysis"],
     length: 0,
     info: false,
-  },
-  laceration: {
+  }),
+  laceration: new SkillDefinition({
     id: "laceration",
     fullName: "Laceration",
     firstPerson:
       /^Your blade tears into (?<target>\w+), a spray of crimson exploding from the wound as your weapon strikes bone\.$/,
     secondPerson:
       /^Blood sprays from your wounds as the blade tears into you, cleaving to the bone\.$/,
-    thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -190,15 +188,14 @@ export const weaving = {
     affs: ["haemophilia"],
     length: 0,
     info: false,
-  },
-  laceration2: {
+  }),
+  laceration2: new SkillDefinition({
     id: "laceration2",
     fullName: "Laceration",
     firstPerson:
       /^The spikes adorning your (mace|lash) tear bloody furrows in the flesh of (?<target>\w+)\.$/,
     secondPerson:
       /^The spikes adorning the (mace|lash) rip into your flesh, tearing bloody furrows\.$/,
-    thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -206,15 +203,14 @@ export const weaving = {
     affs: ["haemophilia"],
     length: 0,
     info: false,
-  },
-  dazzle: {
+  }),
+  dazzle: new SkillDefinition({
     id: "dazzle",
     fullName: "Dazzle",
     firstPerson:
       /^As your weapon strikes (?<target>\w+) a brilliant flash of light explodes forth\.$/,
     secondPerson:
       /^As the weapon strikes you, an incandescent burst of light explodes forth, dazing you\.$/,
-    thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -222,15 +218,14 @@ export const weaving = {
     affs: ["clumsiness"],
     length: 0,
     info: false,
-  },
-  rattle: {
+  }),
+  rattle: new SkillDefinition({
     id: "rattle",
     fullName: "Rattle",
     firstPerson:
       /^As your weapon strikes (?<target>\w+), power blasts outward in a concussive wave\.$/,
     secondPerson:
       /^As the weapon strikes you, a concussive wave lashes out and slams into you with brain-rattling force\.$/,
-    thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -238,15 +233,14 @@ export const weaving = {
     affs: ["epilepsy"],
     length: 0,
     info: false,
-  },
-  vapours: {
+  }),
+  vapours: new SkillDefinition({
     id: "vapours",
     fullName: "Vapours",
     firstPerson:
       /^As your weapon strikes (?<target>\w+) a wave of cloying vapours rolls over \w+\.$/,
     secondPerson:
       /^As the weapon strikes you, a wave of cloying vapour rolls over you, slithering into your lungs and causing your breath to falter\.$/,
-    thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -254,8 +248,8 @@ export const weaving = {
     affs: ["asthma"],
     length: 0,
     info: false,
-  },
-  lightsteal: {
+  }),
+  lightsteal: new SkillDefinition({
     id: "lightsteal",
     fullName: "Lightsteal",
     firstPerson:
@@ -270,8 +264,8 @@ export const weaving = {
     tags: [],
     affs: ["trueblind"], //5s trueblind. +blackout if prone
     length: 2.3,
-  },
-  puncture: {
+  }),
+  puncture: new SkillDefinition({
     id: "puncture",
     fullName: "Puncture",
     firstPerson:
@@ -286,8 +280,8 @@ export const weaving = {
     tags: [],
     length: 2.3,
     affs: ["weariness"],
-  },
-  sever: {
+  }),
+  sever: new SkillDefinition({
     id: "sever",
     fullName: "Sever",
     firstPerson:
@@ -305,11 +299,11 @@ export const weaving = {
       action.info = action.limb;
       action.affs = ["clumsiness"];
     },
-  },
+  }),
 
   //TODO Launch
 
-  unweave: {
+  unweave: new SkillDefinition({
     id: "unweave",
     fullName: "Unweave",
     firstPerson:
@@ -324,8 +318,8 @@ export const weaving = {
     tags: ["aff"],
     affs: [],
     length: 2.2,
-  },
-  deathblow: {
+  }),
+  deathblow: new SkillDefinition({
     id: "deathblow",
     fullName: "Deathblow",
     firstPerson:
@@ -340,8 +334,8 @@ export const weaving = {
     tags: ["pve", "damage", "aff"],
     affs: ["asthma"],
     length: 2.2,
-  },
-  backhand: {
+  }),
+  backhand: new SkillDefinition({
     id: "backhand",
     fullName: "Backhand",
     firstPerson:
@@ -356,23 +350,22 @@ export const weaving = {
     tags: ["aff"],
     affs: ["asthma"],
     length: 2.2,
-  },
-  invert: {
+  }),
+  invert: new SkillDefinition({
     id: "invert",
     fullName: "Invert",
     firstPerson:
       /^You pluck at the weave of (?<target>\w+?), swapping the states of \w+ (?<old>\w+?) and (?<new>\w+?)\.$/,
     secondPerson:
       /^(?<user>\w+?) plucks at invisible threads in the air before \w+, and you feel a sudden nausea as your fundamental essence shifts\.$/,
-    thirdPerson: false,
     profession: ["psion"],
     skill: "weaving",
     balance: "balance",
     tags: [],
     affs: [],
     length: 2.3,
-  },
-  exsanguinate: {
+  }),
+  exsanguinate: new SkillDefinition({
     id: "exsanguinate",
     fullName: "Exsanguinate",
     firstPerson:
@@ -387,8 +380,8 @@ export const weaving = {
     tags: ["aff"],
     affs: ["nausea"], // bleeding 150+ gives anorexia also
     length: 2.3,
-  },
-  flurry: {
+  }),
+  flurry: new SkillDefinition({
     id: "flurry",
     fullName: "Flurry",
     firstPerson:
@@ -403,7 +396,7 @@ export const weaving = {
     tags: [],
     affs: [],
     length: 2.3,
-  },
+  }),
 };
 //charge
 //You weave a translucent spear into being, its ethereal form firming to corporeality in your hands.
