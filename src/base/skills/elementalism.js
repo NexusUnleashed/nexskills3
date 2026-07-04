@@ -156,15 +156,15 @@ const elementalism = {
     id: "firelash",
     fullName: "Firelash",
     firstPerson:
-      /^You form a lash of fire, and send it to scorch the flesh of (?<target>\w+)\.$/,
+      /^You form a lash of fire, and send it to scorch the flesh of (?<target>.+)\.$/,
     secondPerson:
       /^(?<user>\w+) forms a lash of fire, and sends it to painfully scorch your flesh\.$/,
     thirdPerson:
-      /^(?<user>\w+) forms a lash of fire, and sends it to scorch the flesh of (?<target>\w+)\.$/,
+      /^(?<user>\w+) forms a lash of fire, and sends it to scorch the flesh of (?<target>.+)\.$/,
     profession: ["magi"],
     skill: "elementalism",
     balance: "equilibrium",
-    tags: [],
+    tags: ["pve", "damage"],
     affs: [],
     info: false,
     length: 2.4,
