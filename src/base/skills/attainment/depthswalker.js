@@ -45,6 +45,8 @@ export const depthswalker = {
     tags: ["pve", "raze"],
     length: 3.0,
   }),
+  //Erasure
+  //Boinad
 };
 
 export default Object.values(depthswalker);

@@ -103,7 +103,7 @@ const artificing = {
     profession: ["magi"],
     skill: "artificing",
     balance: "free",
-    tags: ["pve", "damage"],
+    tags: [],
     affs: [],
     info: "shield",
     length: 5.0,
