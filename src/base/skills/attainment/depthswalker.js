@@ -45,7 +45,18 @@ export const depthswalker = {
     tags: ["pve", "raze"],
     length: 3.0,
   }),
-  //Erasure
+  erasure: new SkillDefinition({
+    id: "erasure",
+    fullName: "Erasure",
+    firstPerson:
+      /^You viciously eradicate parts of the concept of (?<target>.+?) from the timestream\.$/,
+    profession: ["depthswalker"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: false,
+    tags: ["pve", "damage"],
+    length: 3.0,
+  }),
   //Boinad
 };
 
