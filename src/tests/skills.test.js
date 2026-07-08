@@ -12,9 +12,10 @@ beforeEach(() => {
     },
   };
 
+  window.raisedEvents = [];
   window.eventStream = {
-    raiseEvent() {
-      return;
+    raiseEvent(name, action) {
+      window.raisedEvents.push({ name, action });
     },
   };
   window.nexusclient = {
@@ -56,6 +57,18 @@ describe("Basic 1st 2nd 3rd Person", () => {
     expect(result.user).toBe("self");
     expect(result.matchType).toBe("firstPerson");
   });
+  test("Skill match events", () => {
+    const text =
+      "You seize upon the aura of Argwin, and violently twist his left arm out of alignment with the planar norm.";
+    const result = nexSkills.checkSkills(text);
+
+    expect(result).toBeTruthy();
+    expect(window.raisedEvents.map(({ name }) => name)).toEqual([
+      "nexskill.match",
+      "nexskill.match.skill.occultism",
+      "nexskill.match.skill.occultism.interlink",
+    ]);
+  });
   test("Second Person", () => {
     const text =
       "Argwin passes his hand in front of you. You feel an invisible claw brush the back of your skull..";
@@ -85,6 +98,25 @@ describe("Basic 1st 2nd 3rd Person", () => {
     expect(result.target).toBe("an angel spearbearer");
     expect(result.user).toBe("self");
     expect(result.matchType).toBe("firstPerson");
+  });
+});
+
+describe("Event route segments", () => {
+  test("Skill ids and groups are valid event route segments", () => {
+    const invalidSegments = nexSkills.actions.flatMap((action) =>
+      [
+        ["skill", action.skill],
+        ["id", action.id],
+      ]
+        .filter(([, value]) => !/^[a-z0-9]+$/.test(value))
+        .map(([field, value]) => ({
+          field,
+          value,
+          fullName: action.fullName,
+        }))
+    );
+
+    expect(invalidSegments).toEqual([]);
   });
 });
 

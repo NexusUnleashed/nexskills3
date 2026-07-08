@@ -1,0 +1,82 @@
+This package depends on nexSkills eventStream events. nexSkills has made a breaking event namespace refactor, and this package must fully adopt the new format. Do not preserve legacy event names. Do not add compatibility shims, aliases, fallback listeners, dual registration, migration adapters, or support for the old namespace.
+
+Old events to remove completely:
+
+Skill matches:
+- nexSkillMatch
+- nexSkillMatch.<id>
+- nexSkillMatch.<id>.<matchType>
+
+NPC matches:
+- nexSkillNpcMatch
+
+New emitted events:
+
+Skill matches:
+- nexskill.match
+- nexskill.match.skill.<skill>
+- nexskill.match.skill.<skill>.<id>
+
+NPC matches:
+- nexskill.match
+- nexskill.match.npc
+
+Rules:
+- All references to `nexSkillMatch` and `nexSkillNpcMatch` must be removed.
+- `nexskill.match` fires for both skill and NPC matches.
+- There is no emitted `nexskill.match.skill` event.
+- There is no emitted `.<matchType>` event.
+- Use `action.matchType` inside handlers when first/second/third-person behavior matters.
+- Skill-specific routing must include both `<skill>` and `<id>`.
+- Event route segments are raw nexSkills `action.skill` and `action.id` values. Do not normalize or slugify.
+- If an id/skill is invalid, ambiguous, or missing, stop and ask for clarification.
+
+Migration blueprint:
+
+1. Search the full package for:
+   - `nexSkillMatch`
+   - `nexSkillNpcMatch`
+   - `nexskill.match`
+   - `eventStream`
+   - subscription helpers such as `register`, `on`, `addEventListener`, `raiseEvent`
+
+2. Replace NPC subscriptions:
+   - `nexSkillNpcMatch` -> `nexskill.match.npc`
+
+3. Replace skill action subscriptions:
+   - `nexSkillMatch.<id>` -> `nexskill.match.skill.<skill>.<id>`
+   - Determine `<skill>` from nexSkills metadata, local handler intent, fixtures, tests, or docs.
+   - Do not guess across ambiguous ids.
+
+4. Replace matchType-specific subscriptions:
+   - `nexSkillMatch.<id>.<matchType>` -> `nexskill.match.skill.<skill>.<id>`
+   - Add handler guard:
+     `if (action.matchType !== "<matchType>") return;`
+
+5. Replace generic skill subscriptions:
+   - Old `nexSkillMatch` meant skill matches only.
+   - New `nexskill.match` means skill and NPC matches.
+   - If the handler wants all matches, use `nexskill.match`.
+   - If the handler wants only skill matches, use `nexskill.match` with:
+     `if (!action.skill) return;`
+   - If the handler wants a group/action, prefer:
+     `nexskill.match.skill.<skill>`
+     or
+     `nexskill.match.skill.<skill>.<id>`
+
+6. Update tests, mocks, fixtures, snapshots, docs, and examples.
+   - Remove old event names everywhere.
+   - Add coverage for the new event names where practical.
+
+7. Run validation:
+   - tests
+   - lint/typecheck if available
+   - build if available
+
+8. Final report must include:
+   - old event references found and removed
+   - new event names adopted
+   - any assumptions or ambiguous mappings
+   - validation commands and results
+
+Goal: full adoption of the new nexSkills event direction with zero legacy compatibility.

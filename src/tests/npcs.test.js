@@ -11,9 +11,10 @@ beforeEach(() => {
     },
   };
 
+  window.raisedEvents = [];
   window.eventStream = {
-    raiseEvent() {
-      return;
+    raiseEvent(name, action) {
+      window.raisedEvents.push({ name, action });
     },
   };
 
@@ -48,6 +49,17 @@ describe("NPC Actions", () => {
     expect(result.target).toBe("self");
     expect(result.user).toBe("a vanguard angel");
     //expect(result.match).toBe("firstPerson");
+  });
+  test("NPC match events", () => {
+    const text =
+      "The form of a vanguard angel shifts abruptly to an incorporeal mist which passes through your body, leaving abject terror and searing agony in his wake, before regaining physicality on the other side.";
+    const result = nexSkills.checkSkills(text);
+
+    expect(result).toBeTruthy();
+    expect(window.raisedEvents.map(({ name }) => name)).toEqual([
+      "nexskill.match",
+      "nexskill.match.npc",
+    ]);
   });
   test("Third Person", () => {
     const text =

@@ -1,7 +1,7 @@
 import { SkillDefinition } from "../models/SkillDefinition";
 export const weatherweaving = {
   stormhammer: new SkillDefinition({
-    id: "stormhammer x1",
+    id: "stormhammer1",
     fullName: "Stormhammer",
     firstPerson:
       /^The sky above grows dark as you call upon powerful magics\. Raising your hands balefully, you cause lightning bolts, the hammer of the storm, to shoot from your hands and slam into (?<target>[^\.]+?)\.$/,

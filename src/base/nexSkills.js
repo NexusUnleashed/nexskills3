@@ -238,13 +238,14 @@ const finalizeCheck = (action, type = false) => {
     return false;
   }
 
+  eventStream.raiseEvent("nexskill.match", action);
+
   if (type === "npc") {
-    eventStream.raiseEvent("nexSkillNpcMatch", action);
+    eventStream.raiseEvent("nexskill.match.npc", action);
   } else {
-    eventStream.raiseEvent("nexSkillMatch", action);
-    eventStream.raiseEvent(`nexSkillMatch.${action.id}`, action);
+    eventStream.raiseEvent(`nexskill.match.skill.${action.skill}`, action);
     eventStream.raiseEvent(
-      `nexSkillMatch.${action.id}.${action.matchType}`,
+      `nexskill.match.skill.${action.skill}.${action.id}`,
       action
     );
   }
