@@ -57,7 +57,18 @@ export const depthswalker = {
     tags: ["pve", "damage"],
     length: 3.0,
   }),
-  //Boinad
+  boinad: new SkillDefinition({
+    id: "boinad",
+    fullName: "Boinad",
+    firstPerson:
+      /^Locking your gaze to that of (?<target>.+?), you intone, 'Boinad'\.$/,
+    profession: ["depthswalker"],
+    skill: "attainment",
+    balance: "battlerage",
+    info: "Charm",
+    tags: ["pve"],
+    length: 3.0,
+  }),
 };
 
 export default Object.values(depthswalker);
