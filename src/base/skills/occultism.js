@@ -183,6 +183,18 @@ export const occultism = {
     tags: ["pve", "damage"],
     length: 2.5,
   }),
+  attendPveFail: new SkillDefinition({
+    id: "attendPveFail",
+    fullName: "Attend",
+    firstPerson:
+      /^Focusing your will, you exert your aura at (?<target>.+) and snap your fingers with a flash of indigo-violet light, but \w+ remains unchanged\.$/,
+    profession: ["occultist"],
+    skill: "occultism",
+    balance: "equilibrium",
+    info: "Fail",
+    tags: ["pve"],
+    length: 2.5,
+  }),
   unnamableSpeak: new SkillDefinition({
     id: "unnamableSpeak",
     fullName: "Unnamable Speak",
