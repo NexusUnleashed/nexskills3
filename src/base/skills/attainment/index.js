@@ -6,3 +6,4 @@ export { default as occultist } from "./occultist";
 export { default as psion } from "./psion";
 export { default as runewarden } from "./runewarden";
 export { default as sylvan } from "./sylvan";
+export { default as unnamable } from "./unnamable";
