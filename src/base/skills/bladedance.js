@@ -6,27 +6,95 @@ const bladedance = {
     fullName: "Punctuate",
     //Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (Laorir).
     //Your rapier strikes only air in front of (Laorir).
-    firstPerson: /^Your rapier strikes only air in front of (?<target>\w+)\.$/,
+    firstPerson:
+      /^Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (?<target>\w+)\.$/,
     secondPerson:
-      /^(?<user>\w+) strikes only air with \w+ flurry of blows, the tip of \w+ rapier flickering before your face\.$/, //line in-game: Dzak strikes only air with his flurry of blows, the tip of his rapier flickering before your face.   note: 2 lines for this as well, the first being generic and is: The staccato song of an etched, Vashnari rapier punctuates a flurry of blows as Dzak's blade pursues you relentlessly.
-    thirdPerson: [
+      /^The staccato song of .+? punctuates a flurry of blows as (?<user>\w+)'s blade pursues you relentlessly\.$/,
+    //line in-game: Dzak strikes only air with his flurry of blows, the tip of his rapier flickering before your face.
+    // note: 2 lines for this as well, the first being generic and is: The staccato song of an etched, Vashnari rapier punctuates a flurry of blows as Dzak's blade pursues you relentlessly.
+    thirdPerson:
       /^(?<user>\w+)'s movement yields to a flurry of blows upon (?<target>\w+), the staccato song of .+? accompaniment\.$/,
-      /^(?<user>\w+) strikes only air in front of (?<target>\w+) with \w+ flurry of blows.$/,
-    ],
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",
     tags: ["raze"],
     affs: [],
-    info: "Nothing",
+    info: false,
     length: 2.0,
+    reaction(action) {
+      const lineVariations = [
+        {
+          re: /^Your rapier strikes only air in front of (?<target>.+?)\.$/,
+          info: "nothing",
+          id: "punctuate",
+        },
+        {
+          re: /^(?<user>\w+) strikes only air with \w+ flurry of blows, the tip of \w+ rapier flickering before your face\.$/,
+          info: "nothing",
+          id: "punctuate",
+        },
+        {
+          re: /^(?<user>\w+) strikes only air in front of (?<target>.+?) with \w+ flurry of blows.$/,
+          info: "nothing",
+          id: "punctuate",
+        },
+        {
+          re: /^The anti-weapon field surrounding (?<target>.+?) shatters under the point of your rapier\.$/,
+          info: "rebounding",
+          id: "punctuate",
+        },
+        {
+          re: /^The anti-weapon field surrounding you shatters under the flurry of strikes\.$/,
+          info: "rebounding",
+          id: "punctuate",
+        },
+        {
+          re: /^The anti-weapon field surrounding (?<target>.+?) shatters under the flurry of strikes\.$/,
+          info: "rebounding",
+          id: "punctuate",
+        },
+        {
+          re: /^The magical shield surrounding (?<target>.+?) shatters under the point of your rapier\.$/,
+          info: "shield",
+          id: "punctuate",
+        },
+        {
+          re: /^The magical shield surrounding you shatters under the flurry of strikes\.$/,
+          info: "shield",
+          id: "punctuate",
+        },
+        {
+          re: /^The magical shield surrounding (?<target>.+?) shatters under the flurry of strikes\.$/,
+          info: "shield",
+          id: "punctuate",
+        },
+      ];
+      const match = lineVariations.find((variation) =>
+        variation.re.test(
+          nexusclient.current_block[
+            nexusclient.current_line.index + 1
+          ].parsed_line.text(),
+        ),
+      );
+      if (match) {
+        action.info = match.info;
+        action.id = match.id;
+      }
+
+      if (action.info) {
+        nexusclient.current_block[nexusclient.current_line.index + 1].gag =
+          true;
+      }
+    },
   }),
   //raze hit
   punctuateRaze: new SkillDefinition({
     id: "punctuate",
     fullName: "Punctuate",
     //Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (Laorir).
-    //The anti-weapon field surrounding (Laorir) shatters under the point of your rapier.
+    //(rebounding) The anti-weapon field surrounding Laorir shatters under the point of your rapier.
+    //(shield) The magical shield surrounding Anan, Priest of Mysia shatters under the point of your rapier.
+    //(nothing) Your rapier strikes only air in front of Grimbold, the dwarf cook.
     firstPerson: [
       /^Your blade's song punctuates every jab as your movements become a flurry of blows aimed at (?<target>\w+)\.$/,
       /^The anti-weapon field surrounding (?<target>\w+) shatters under the point of your rapier\.$/,

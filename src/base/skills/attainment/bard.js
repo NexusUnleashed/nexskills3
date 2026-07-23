@@ -28,7 +28,7 @@ export const bard = {
     id: "resonance",
     fullName: "Resonance",
     firstPerson:
-      /^You let loose a steady stream of cold air around (?<target>.+?), who begins to shiver uncontrollably\.$/,
+      /^You hum a low note at (?<target>.+?), causing \w+ translucent shield to shatter as it resonates with the power of your voice\.$/,
     profession: ["bard"],
     skill: "attainment",
     balance: "battlerage",
