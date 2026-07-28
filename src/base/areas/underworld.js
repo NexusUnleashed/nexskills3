@@ -262,15 +262,6 @@ const underworld = [
       checkRandomLimbs(args);
     },
   }),
-  new NpcDefinition({
-    user: "a veteran Death Knight commander",
-    areaId: [163, 281, 166, 323, 320],
-    areaName: "the Underworld",
-    firstPerson:
-      /^A massive, translucent hammer rises out of a veteran Death Knight commander's tattoo and smashes your magical shield\.$/,
-    tags: ["damage", "RAZE"],
-    length: 0,
-  }),
   //#endregion
   //#region Steel-encased Death Knight
   //Foregoing one of her monstrous blades, a veteran Death Knight commander's gauntleted hand swiftly closes about (Poxie)'s skull with a vice-like grip, holding her in place while she brutally and repeatedly skewers her, before finally hurling her away.

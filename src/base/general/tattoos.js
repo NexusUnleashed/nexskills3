@@ -37,6 +37,16 @@ export const tattoos = {
     tags: [],
     length: 0,
   }),
+  hammer: new SkillDefinition({
+    id: "hammer",
+    fullName: "Hammer",
+    firstPerson:
+      /^You touch your tattoo and a massive, translucent hammer rises up and shatters the magical shield surrounding (?<target>.+?)\.$/,
+    secondPerson:
+      /^A massive, translucent hammer rises out of (?<user>.+?)'s tattoo and smashes your magical shield\.$/,
+    thirdPerson:
+      /^A massive, translucent hammer rises out of (?<user>.+?)'s tattoo and smashes (?<target>.+?)'s magical shield\.$/,
+  }),
 };
 
 export default Object.values(tattoos);
