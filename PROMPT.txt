@@ -14,6 +14,7 @@ New emitted events:
 
 Skill matches:
 - nexskill.match
+- nexskill.match.skill
 - nexskill.match.skill.<skill>
 - nexskill.match.skill.<skill>.<id>
 
@@ -21,15 +22,35 @@ NPC matches:
 - nexskill.match
 - nexskill.match.npc
 
+Suppressed matches:
+- nexskill.match.voided
+
+Diagnostics:
+- nexskill.error.reaction
+
+Area transitions:
+- nexskill.area.changed
+
 Rules:
 - All references to `nexSkillMatch` and `nexSkillNpcMatch` must be removed.
 - `nexskill.match` fires for both skill and NPC matches.
-- There is no emitted `nexskill.match.skill` event.
+- `nexskill.match.skill` fires for every skill match, including definitions with
+  a missing `skill` field. It is the skill-side counterpart to `nexskill.match.npc`.
+- `nexskill.match.skill.<skill>` and `.<id>` are skipped when the definition has
+  no `skill`/`id`, so those names never contain an empty segment.
 - There is no emitted `.<matchType>` event.
 - Use `action.matchType` inside handlers when first/second/third-person behavior matters.
 - Skill-specific routing must include both `<skill>` and `<id>`.
 - Event route segments are raw nexSkills `action.skill` and `action.id` values. Do not normalize or slugify.
 - If an id/skill is invalid, ambiguous, or missing, stop and ask for clarification.
+
+Non-match event payloads:
+- `nexskill.match.voided` receives the action whose reaction cleared `matchType`.
+  The match is suppressed, so no `nexskill.match` fires for it.
+- `nexskill.error.reaction` receives `{ action, error }`, not a bare action.
+- `nexskill.area.changed` receives `{ area, previous, npcs }`. It is resolved
+  lazily on the first line that reaches NPC matching after a transition, so it
+  reports the area nexSkills is matching against, not the moment of the move.
 
 Migration blueprint:
 

@@ -65,6 +65,7 @@ describe("Basic 1st 2nd 3rd Person", () => {
     expect(result).toBeTruthy();
     expect(window.raisedEvents.map(({ name }) => name)).toEqual([
       "nexskill.match",
+      "nexskill.match.skill",
       "nexskill.match.skill.occultism",
       "nexskill.match.skill.occultism.interlink",
     ]);
@@ -98,6 +99,124 @@ describe("Basic 1st 2nd 3rd Person", () => {
     expect(result.target).toBe("an angel spearbearer");
     expect(result.user).toBe("self");
     expect(result.matchType).toBe("firstPerson");
+  });
+});
+
+describe("finalizeCheck event routing", () => {
+  const fixtures = [];
+
+  const register = (options) => {
+    // Definitions without a skill warn on construction; that path is asserted
+    // separately, so keep it out of the test output here.
+    const warn = jest.spyOn(console, "warn").mockImplementation(() => {});
+    const definition = new SkillDefinition(options);
+    warn.mockRestore();
+
+    nexSkills.actions.push(definition);
+    fixtures.push(definition);
+    return definition;
+  };
+
+  afterEach(() => {
+    fixtures.splice(0).forEach((definition) => {
+      const index = nexSkills.actions.indexOf(definition);
+      if (index !== -1) {
+        nexSkills.actions.splice(index, 1);
+      }
+    });
+    jest.restoreAllMocks();
+  });
+
+  test("A throwing reaction is contained and the match still routes", () => {
+    const error = jest.spyOn(console, "error").mockImplementation(() => {});
+    register({
+      id: "throwingfixture",
+      fullName: "Throwing Fixture",
+      firstPerson: /^You test the throwing fixture\.$/,
+      profession: ["general"],
+      skill: "fixtures",
+      reaction() {
+        throw new TypeError("reaction blew up");
+      },
+    });
+
+    const result = nexSkills.checkSkills("You test the throwing fixture.");
+
+    expect(result).toBeTruthy();
+    expect(result.id).toBe("throwingfixture");
+    expect(error).toHaveBeenCalled();
+    expect(window.raisedEvents.map(({ name }) => name)).toEqual([
+      "nexskill.error.reaction",
+      "nexskill.match",
+      "nexskill.match.skill",
+      "nexskill.match.skill.fixtures",
+      "nexskill.match.skill.fixtures.throwingfixture",
+    ]);
+
+    const [reported] = window.raisedEvents;
+    expect(reported.action.error).toBeInstanceOf(TypeError);
+    expect(reported.action.action.id).toBe("throwingfixture");
+  });
+
+  test("A reaction that rewrites the id routes to the new id", () => {
+    register({
+      id: "renamefixture",
+      fullName: "Rename Fixture",
+      firstPerson: /^You test the rename fixture\.$/,
+      profession: ["general"],
+      skill: "fixtures",
+      reaction(action) {
+        action.id = "renamed";
+      },
+    });
+
+    const result = nexSkills.checkSkills("You test the rename fixture.");
+
+    expect(result.id).toBe("renamed");
+    expect(window.raisedEvents.map(({ name }) => name)).toEqual([
+      "nexskill.match",
+      "nexskill.match.skill",
+      "nexskill.match.skill.fixtures",
+      "nexskill.match.skill.fixtures.renamed",
+    ]);
+  });
+
+  test("A reaction that clears matchType voids the match", () => {
+    register({
+      id: "voidfixture",
+      fullName: "Void Fixture",
+      firstPerson: /^You test the void fixture\.$/,
+      profession: ["general"],
+      skill: "fixtures",
+      reaction(action) {
+        action.matchType = false;
+      },
+    });
+
+    const result = nexSkills.checkSkills("You test the void fixture.");
+
+    expect(result).toBe(false);
+    expect(window.raisedEvents.map(({ name }) => name)).toEqual([
+      "nexskill.match.voided",
+    ]);
+    expect(window.raisedEvents[0].action.id).toBe("voidfixture");
+  });
+
+  test("A definition missing its skill raises no empty-segment events", () => {
+    register({
+      id: "orphanfixture",
+      fullName: "Orphan Fixture",
+      firstPerson: /^You test the orphan fixture\.$/,
+      profession: ["general"],
+    });
+
+    const result = nexSkills.checkSkills("You test the orphan fixture.");
+
+    expect(result).toBeTruthy();
+    expect(window.raisedEvents.map(({ name }) => name)).toEqual([
+      "nexskill.match",
+      "nexskill.match.skill",
+    ]);
   });
 });
 

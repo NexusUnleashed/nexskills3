@@ -56,10 +56,50 @@ describe("NPC Actions", () => {
     const result = nexSkills.checkSkills(text);
 
     expect(result).toBeTruthy();
-    expect(window.raisedEvents.map(({ name }) => name)).toEqual([
-      "nexskill.match",
-      "nexskill.match.npc",
-    ]);
+    // Filtered because nexskill.area.changed fires from module-level state and
+    // would otherwise appear only in whichever test happens to run first.
+    expect(
+      window.raisedEvents
+        .map(({ name }) => name)
+        .filter((name) => name.startsWith("nexskill.match"))
+    ).toEqual(["nexskill.match", "nexskill.match.npc"]);
+  });
+
+  test("Area change events", () => {
+    const unmatched = "Nothing whatsoever in this line resembles a pattern.";
+
+    window.GMCP.Location = { areaid: 401 };
+    nexSkills.checkSkills(unmatched);
+    window.raisedEvents.length = 0;
+
+    window.GMCP.Location = { areaid: 51, area: "Eleusis" };
+    expect(nexSkills.checkSkills(unmatched)).toBe(false);
+
+    const areaEvents = window.raisedEvents.filter(
+      ({ name }) => name === "nexskill.area.changed"
+    );
+    expect(areaEvents).toHaveLength(1);
+    expect(areaEvents[0].action).toEqual({
+      area: "Eleusis",
+      previous: 401,
+      npcs: [],
+    });
+  });
+
+  test("An unchanged area does not re-raise", () => {
+    const unmatched = "Nothing whatsoever in this line resembles a pattern.";
+
+    window.GMCP.Location = { areaid: 401 };
+    nexSkills.checkSkills(unmatched);
+    window.raisedEvents.length = 0;
+
+    nexSkills.checkSkills(unmatched);
+
+    expect(
+      window.raisedEvents.filter(
+        ({ name }) => name === "nexskill.area.changed"
+      )
+    ).toHaveLength(0);
   });
   test("Third Person", () => {
     const text =

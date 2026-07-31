@@ -46,6 +46,9 @@ export const tattoos = {
       /^A massive, translucent hammer rises out of (?<user>.+?)'s tattoo and smashes your magical shield\.$/,
     thirdPerson:
       /^A massive, translucent hammer rises out of (?<user>.+?)'s tattoo and smashes (?<target>.+?)'s magical shield\.$/,
+    profession: ["general"],
+    skill: "tattoos",
+    tags: [],
   }),
 };
 

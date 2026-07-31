@@ -230,11 +230,26 @@ const evaluateText = (
 
 const finalizeCheck = (action, type = false) => {
   if (action.reaction) {
-    action.reaction(action);
+    // A throwing reaction must not take the match down with it. eventStream
+    // guards listener callbacks the same way, but this runs before any raise.
+    try {
+      action.reaction(action);
+    } catch (error) {
+      console.error(
+        "nexSkills reaction error:\nskill: %s\nid: %s\nline: %s\nerror: %o",
+        action.skill,
+        action.id,
+        action.originalLine,
+        error
+      );
+      eventStream.raiseEvent("nexskill.error.reaction", { action, error });
+    }
   }
 
   // This check allows some action.reactions to void the match
   if (!action.matchType) {
+    // Suppression is deliberate, but silent suppression is undebuggable.
+    eventStream.raiseEvent("nexskill.match.voided", action);
     return false;
   }
 
@@ -242,13 +257,31 @@ const finalizeCheck = (action, type = false) => {
 
   if (type === "npc") {
     eventStream.raiseEvent("nexskill.match.npc", action);
-  } else {
-    eventStream.raiseEvent(`nexskill.match.skill.${action.skill}`, action);
-    eventStream.raiseEvent(
-      `nexskill.match.skill.${action.skill}.${action.id}`,
-      action
-    );
+    return action;
   }
+
+  // Raised before the skill guard below: the match is a skill match by virtue
+  // of the code path, whether or not the definition populated its skill field.
+  eventStream.raiseEvent("nexskill.match.skill", action);
+
+  // Empty skill/id would produce a name with an empty segment, which registers
+  // and dispatches silently. Skip those levels instead.
+  if (!action.eventSkill) {
+    return action;
+  }
+
+  eventStream.raiseEvent(action.eventSkill, action);
+
+  // Precomputed unless a reaction rewrote the id (bladedance, occultism compel).
+  const eventAction =
+    action.id === action.eventActionId
+      ? action.eventAction
+      : `${action.eventSkill}.${action.id}`;
+
+  if (eventAction) {
+    eventStream.raiseEvent(eventAction, action);
+  }
+
   return action;
 };
 
@@ -299,10 +332,37 @@ const checkSkills = (text) => {
   //return false;
 };
 
-const checkNpcs = (text) => {
-  const { areaid, area } = GMCP.Location;
+// The active NPC set is resolved lazily, so nexskill.area.changed means "the
+// area nexSkills is matching against changed" - it is observed on the first
+// line to reach checkNpcs after a transition, not at the moment of the move.
+// Caching it also drops the two npcsMap lookups from every unmatched line.
+let activeAreaKey;
+let activeAreaNpcs = [];
 
-  const areaNpcs = npcsMap.get(areaid) ?? npcsMap.get(area) ?? [];
+const resolveAreaNpcs = () => {
+  const { areaid, area } = GMCP.Location;
+  // Preserves the original areaid-then-area resolution order.
+  const key = npcsMap.has(areaid) ? areaid : area;
+
+  if (key === activeAreaKey) {
+    return activeAreaNpcs;
+  }
+
+  const previous = activeAreaKey;
+  activeAreaKey = key;
+  activeAreaNpcs = npcsMap.get(key) ?? [];
+
+  eventStream.raiseEvent("nexskill.area.changed", {
+    area: key,
+    previous,
+    npcs: activeAreaNpcs,
+  });
+
+  return activeAreaNpcs;
+};
+
+const checkNpcs = (text) => {
+  const areaNpcs = resolveAreaNpcs();
 
   for (let i = 0; i < areaNpcs.length; i++) {
     const baseNpc = areaNpcs[i];
