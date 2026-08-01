@@ -46,6 +46,16 @@ export const general = {
     tags: [],
     length: 4.0,
   }),
+  block: new SkillDefinition({
+    id: "block",
+    fullName: "Block",
+    firstPerson: /^(?<user>\w+) moves over to block the (?<info>\w+) exit\.$/,
+    profession: ["general"],
+    skill: "defense",
+    balance: "equilibrium",
+    tags: [],
+    length: 0,
+  }),
 };
 
 //Atalkez raises his hands dramatically and summons an icewall to the in.
