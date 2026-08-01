@@ -9,7 +9,7 @@ const underworld = [
   //#region Lich
   new NpcDefinition({
     user: "a lich of Nemuritoaure",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^A lich of Nemuritoaure turns its eyeless gaze upon you, shrieking maniacally such that all your thoughts are turned to dread horror\.$/,
@@ -20,7 +20,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a lich of Nemuritoaure",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Robes billowing wide as it rises, a lich of Nemuritoaure hisses a sibilant incantation and instantly your flesh warps and withers beyond recognition\.$/,
@@ -29,7 +29,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a lich of Nemuritoaure",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     //Shrieking with the fury of the grave, a lich of Nemuritoaure hovers determinedly as it readies another attack.
     //A sickly rattling noise drowns out all else as a lich of Nemuritoaure raises a rotten hand, sending a wave of merciless cold to assault you.
@@ -46,7 +46,7 @@ const underworld = [
   //#region Vampire
   new NpcDefinition({
     user: "a nascent vampire",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Shadow and blood entwine about the hand of a nascent vampire, giving shape to a fearsome ethereal scythe moments before its wicked blade descends upon you, rending your mind and setting fire to your skull even as it passes harmlessly through the rest of your body\.$/,
@@ -55,7 +55,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a nascent vampire",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Scythe and dagger coalesce in a nascent vampire's hands as he hurls himself forward, your every motion and manoeuvre utterly preempted by an unnatural swiftness as his cuts and slashes send spasms of agony through your body\.$/,
@@ -64,7 +64,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a nascent vampire",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Doubling over with frame-wracking spasms, the light of reason abruptly vanishes from a nascent vampire's eyes\. A moment later, he madly charges you, headbutting you with such force as to knock the breath off your chest and your feet off the ground before desperately sinking his fangs into you and feeding on your blood\.$/,
@@ -75,7 +75,7 @@ const underworld = [
   //#region Scorpion
   new NpcDefinition({
     user: "a deadly obsidian scorpion",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Hissing in anger, a deadly obsidian scorpion vomits a stream of acid onto you, and your skin begins to melt under the substance\.$/,
@@ -87,7 +87,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a deadly obsidian scorpion",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^A deadly obsidian scorpion stampedes over you, knocking you to the ground and crushing your legs underneath his bulk\.$/,
@@ -99,7 +99,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a deadly obsidian scorpion",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^The massive tail of a deadly obsidian scorpion swipes down in a blur, plunging deep into your stomach and injecting you with poison\. A moment later, a second, soulbleed-formed stinger slams into place alongside the first\.$/,
@@ -108,7 +108,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a deadly obsidian scorpion",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^A deadly obsidian scorpion whirls around and slams his tail into your torso, and ribs crack from the impact\.$/,
@@ -122,7 +122,7 @@ const underworld = [
   //#region Soldier of Osterrych
   new NpcDefinition({
     user: "a soldier of Osterrych",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     //Falling into silence for a fraction of a second, a soldier of Osterrych's gaze falls upon you with ominous intent.
     firstPerson:
@@ -138,7 +138,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a soldier of Osterrych",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Leaping back and turning her attention to her instrument, a soldier of Osterrych strums an enchantingly foreign melody\.$/,
@@ -150,7 +150,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a soldier of Osterrych",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Grabbing her spectral mandolin by the neck, a soldier of Osterrych runs up to you, crouching moments before delivering a terrible upswing that sends you flying upward\.$/,
@@ -166,7 +166,7 @@ const underworld = [
   //#region Soldier of Nemuritoaure
   new NpcDefinition({
     user: "a soldier of Nemuritoaure",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Tearing a half-buried spear from his body with the sickening, scraping sound of steel on bone, a soldier of Nemuritoaure immediately lashes out and skewers you with it\.$/,
@@ -175,7 +175,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a soldier of Nemuritoaure",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^A soldier of Nemuritoaure looses a shrill, unpleasant cry that is promptly answered by others in the vicinity\.$/,
@@ -184,7 +184,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a soldier of Nemuritoaure",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^First bashing you with his splintered shield, a soldier of Nemuritoaure thrusts his weathered longsword between the cracks of your armour and deep into the unguarded softness beneath\.$/,
@@ -195,7 +195,7 @@ const underworld = [
   //#region Colonel
   new NpcDefinition({
     user: "an undead colonel",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Feinting with the tip of his spear, an undead colonel closes in on you and rams his knee against your mid-section before bringing his staff crashing down against the side of your head\.$/,
@@ -204,7 +204,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "an undead colonel",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Combining unarmed and spear techniques, an undead colonel swiftly alternates between jabs and kicks aimed at your weak points, using the motions of your own body against you before finally catching you off-balance and impaling you\.$/,
@@ -213,7 +213,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "an undead colonel",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^In a demonstration of breathtaking speed, an undead colonel thrusts his spear faster than the eye can follow, cutting and slicing you numerous times before you can clear out of his reach\.$/,
@@ -227,7 +227,7 @@ const underworld = [
   //#region Veteran Death Knight commander
   new NpcDefinition({
     user: "a veteran Death Knight commander",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Stepping in close, a veteran Death Knight commander weaves around your defences with an agility that belies her size. Missing not a moment, her gauntleted fists find their mark, each bone-crunching blow threatening to grind your innards to paste\.$/,
@@ -240,7 +240,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a veteran Death Knight commander",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Striding towards you with a monstrous claymore in each hand, a veteran Death Knight commander delivers an unforgiving series of devastating slashes with a consummate, inescapable swiftness\.$/,
@@ -252,7 +252,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a veteran Death Knight commander",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Foregoing one of her monstrous blades, a veteran Death Knight commander's gauntleted hand swiftly closes about your skull with a vice-like grip, holding you in place while she brutally and repeatedly skewers you, before finally hurling you away\.$/,
@@ -267,7 +267,7 @@ const underworld = [
   //Foregoing one of her monstrous blades, a veteran Death Knight commander's gauntleted hand swiftly closes about (Poxie)'s skull with a vice-like grip, holding her in place while she brutally and repeatedly skewers her, before finally hurling her away.
   new NpcDefinition({
     user: "a steel-encased Death Knight",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Rearing back and unleashing a roar, a steel-encased Death Knight slams his gauntlet into your arm, crushing the bone painfully into your ribs and sending you to the ground\.$/,
@@ -280,7 +280,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a steel-encased Death Knight",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^A torrent of soulbleed abruptly forms into a blade in a steel-encased Death Knight's hands, and he violently slashes it along your throat\.$/,
@@ -289,7 +289,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a steel-encased Death Knight",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^A steel-encased Death Knight abruptly disappears in a flash of red, and a powerful grip wraps around your forehead and slams the back of your head into the ground\.$/,
@@ -298,7 +298,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a steel-encased Death Knight",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^A steel-encased Death Knight punches a fist toward you, and a concussive blast of soulbleed knocks you off your feet\. Within moments, he looms over you, and crushes your torso with a savage stomp\.$/,
@@ -307,7 +307,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a steel-encased Death Knight",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Raising an armour-encased boot, a steel-encased Death Knight slams it down at an angle against the side of your knee, snapping it easily\.$/,
@@ -321,7 +321,7 @@ const underworld = [
   //#region Nautilus
   new NpcDefinition({
     user: "an undead nautilus",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^An eerily calming noise emanates from inside the shell of an undead nautilus, and your mind becomes transfixed by the soothing melody\. However, not all feels quite right\.\.\.$/,
@@ -333,7 +333,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "an undead nautilus",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Colours explode along the intricate linings of an undead nautilus's shell, and the transfixing sight overloads your mind\.$/,
@@ -345,7 +345,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "an undead nautilus",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^An undead nautilus's attention focusses upon you, and an incredible psychic power surges through your thoughts, battering your mind mercilessly\.$/,
@@ -354,7 +354,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "an undead nautilus",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^The swirls of an undead nautilus's shell sway hypnotically, transfixing your mind. The patterns abruptly turn diabolical, and madness overtakes your mind\.$/,
@@ -365,7 +365,7 @@ const underworld = [
   //#region Undead Squire
   new NpcDefinition({
     user: "an undead squire",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Wielding his staff in both hands, an undead squire takes advantage of its superior reach to punish you with a series of powerful, bone-shattering blows\.$/,
@@ -378,7 +378,7 @@ const underworld = [
   //^Standing stock-still for a moment, an undead squire approaches you with his pennon held defensively before himself\.$/,
   new NpcDefinition({
     user: "an undead squire",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Noticing a momentary lapse in your guard, an undead squire puts his training to test, jamming his rusty shortsword between your ribs and carving you up\.$/,
@@ -390,7 +390,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "an undead squire",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Taking a clattering step back, an undead squire shifts his grip on his staff, holding it as if it were a spear\. Evincing a surprising amount of coordination, the undead takes impulse, aiming it squarely at your chest before delivering a throw of such swiftness and strength as to knock you flat and nearly impale you upon the ground\.$/,
@@ -401,7 +401,7 @@ const underworld = [
   //#region Grotesque Experiment
   new NpcDefinition({
     user: "a grotesque experiment",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^With a guttural roar rumbling from deep within, a grotesque experiment's arms lash wildly from all angles with swords wielded as if they were clubs, the numerous blows threatening to overwhelm you\.$/,
@@ -410,7 +410,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a grotesque experiment",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Scuttling at an impressive speed towards you, a grotesque experiment bashes you with its disgusting, sac-like head, dousing you with a disgusting, oozing fluid that sets your skin and blood alike alight\.$/,
@@ -419,7 +419,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a grotesque experiment",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Tossing you upon the ground with a backhand swing from one of its numerous arms, a grotesque experiment moves wildly about you, the many blades raining upon you with deadly intent, very nearly slicing you to ribbons\.$/,
@@ -430,7 +430,7 @@ const underworld = [
   //#region Disfigured Ghost
   new NpcDefinition({
     user: "a disfigured ghost",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^With a startlingly icy grip, a disfigured ghost latches onto you, screaming for help with nearly mindless horror as it once more relives its monstrous torture\.$/,
@@ -439,7 +439,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a disfigured ghost",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^An otherwordly chill ripples up and down your spine as a disfigured ghost flows into your body and attempts to take control of it\.$/,
@@ -448,7 +448,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a disfigured ghost",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^You feel yourself sinking into the black, endless pits of a disfigured ghost's eyeless sockets, momentarily reliving in your own flesh the anguish of its suffering\.$/,
@@ -462,7 +462,7 @@ const underworld = [
   //#region Cowled resarcher
   new NpcDefinition({
     user: "a cowled researcher",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Holding his hand out palm up, a cowled researcher blows a fine powder onto you, and your skin begins to burn\.$/,
@@ -471,7 +471,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a cowled researcher",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Grabbing a needle from within his cowl, a cowled researcher jabs it quickly into a vein in your arm, and your body grows weak and hungry\.$/,
@@ -480,7 +480,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a cowled researcher",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^Recognising your lethargy, a cowled researcher approaches you with scalpel in hand and begins carving into your stomach, inducing heavy bleeding\.$/,
@@ -489,7 +489,7 @@ const underworld = [
   }),
   new NpcDefinition({
     user: "a cowled researcher",
-    areaId: [163, 281, 166, 323, 320],
+    areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
       /^With a loud fizzing noise, green smoke rises from the ground to envelop you, wracking your body with agony\.$/,
