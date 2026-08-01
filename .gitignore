@@ -9,8 +9,10 @@
 # testing
 /coverage
 
-# production
+# site build output (only dist/nexskills.min.js is checked in)
 /build
+/dist/nexskills.js
+.vite
 
 # misc
 .DS_Store

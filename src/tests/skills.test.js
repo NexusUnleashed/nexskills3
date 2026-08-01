@@ -108,7 +108,7 @@ describe("finalizeCheck event routing", () => {
   const register = (options) => {
     // Definitions without a skill warn on construction; that path is asserted
     // separately, so keep it out of the test output here.
-    const warn = jest.spyOn(console, "warn").mockImplementation(() => {});
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
     const definition = new SkillDefinition(options);
     warn.mockRestore();
 
@@ -124,11 +124,11 @@ describe("finalizeCheck event routing", () => {
         nexSkills.actions.splice(index, 1);
       }
     });
-    jest.restoreAllMocks();
+    vi.restoreAllMocks();
   });
 
   test("A throwing reaction is contained and the match still routes", () => {
-    const error = jest.spyOn(console, "error").mockImplementation(() => {});
+    const error = vi.spyOn(console, "error").mockImplementation(() => {});
     register({
       id: "throwingfixture",
       fullName: "Throwing Fixture",
