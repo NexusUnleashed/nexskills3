@@ -14,7 +14,18 @@ export const subterfuge = {
   doublestab: new SkillDefinition({
     id: "doublestab",
     fullName: "Double Stab",
-    firstPerson: /^(?<user>\w+) quickly pricks you with \w+ dirk\.$/,
+    secondPerson: /^(?<user>\w+) quickly pricks you with \w+ dirk\.$/,
+    profession: ["serpent"],
+    skill: "subterfuge",
+    balance: "balance",
+    tags: [],
+    length: 2.8,
+  }),
+  doublestab2: new SkillDefinition({
+    id: "doublestab2",
+    fullName: "Double Stab",
+    secondPerson:
+      /^Striking like a snake, (?<user>\w+) follows the first attack with another\.$/,
     profession: ["serpent"],
     skill: "subterfuge",
     balance: "balance",
@@ -24,8 +35,19 @@ export const subterfuge = {
   flay: new SkillDefinition({
     id: "flay",
     fullName: "Flay",
-    firstPerson:
+    secondPerson:
       /^With fluid grace, (?<user>\w+) snaps \w+ wrist, bringing .+? back to crack viciously into you\.$/,
+    profession: ["serpent"],
+    skill: "subterfuge",
+    balance: "balance",
+    tags: [],
+    length: 2.0,
+  }),
+  pinshot: new SkillDefinition({
+    id: "pinshot",
+    fullName: "Pinshot",
+    secondPerson:
+      /^Your left foot explodes in white hot pain as an arrow slams into it\.$/,
     profession: ["serpent"],
     skill: "subterfuge",
     balance: "balance",
@@ -35,7 +57,7 @@ export const subterfuge = {
   lightwall: new SkillDefinition({
     id: "lightwall",
     fullName: "Lightwall",
-    firstPerson:
+    secondPerson:
       /^(?<user>\w+) forms a ball of light in \w+ palm and hurls it (?<dir>\w+)\.$/,
     profession: ["serpent"],
     skill: "subterfuge",
