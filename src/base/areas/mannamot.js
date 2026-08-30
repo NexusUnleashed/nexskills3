@@ -7,7 +7,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater air elemental gestures as the air about and within you thickens, slowing your movements and leaving you gasping for air\.$/,
+      "A greater air elemental gestures as the air about and within you thickens, slowing your movements and leaving you gasping for air.",
     tags: ["damage"],
     length: 3.0,
     reaction(args) {
@@ -23,7 +23,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater air elemental slices at you with its spear, sending a lash of hardened air slicing into you\.$/,
+      "A greater air elemental slices at you with its spear, sending a lash of hardened air slicing into you.",
     tags: ["damage"],
     length: 3.0,
   }),
@@ -32,7 +32,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater air elemental stabs its spear into your gut, sending electricity coursing through your body\.$/,
+      "A greater air elemental stabs its spear into your gut, sending electricity coursing through your body.",
     tags: ["damage", "loki", "epilepsy"],
     length: 3.0,
   }),
@@ -41,7 +41,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater air elemental whirls its spear faster than your eye can follow, creating a whirlwind that sends nearby objects flying and batters everything within its reach\.$/,
+      "A greater air elemental whirls its spear faster than your eye can follow, creating a whirlwind that sends nearby objects flying and batters everything within its reach.",
     tags: ["damage"],
     length: 3.0,
     reaction(args) {
@@ -55,7 +55,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater water elemental rears back and slams into you with its massive frozen fists\.$/,
+      "A greater water elemental rears back and slams into you with its massive frozen fists.",
     tags: ["damage", "caloric"],
     length: 3.0,
     reaction(args) {
@@ -67,7 +67,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^The torso of a greater water elemental bursts open to reveal several vicious piranhas, flying at you with jaws open to bite and tear with vicious abandon\.$/,
+      "The torso of a greater water elemental bursts open to reveal several vicious piranhas, flying at you with jaws open to bite and tear with vicious abandon.",
     tags: ["damage"],
     length: 3.0,
   }),
@@ -76,7 +76,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^Raising its arm towards you, a greater water elemental sends a torrent of freezing water to batter your body\.$/,
+      "Raising its arm towards you, a greater water elemental sends a torrent of freezing water to batter your body.",
     tags: ["damage", "lethargy", "caloric"],
     length: 3.0,
   }),
@@ -85,7 +85,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^The outermost layer of a greater water elemental's icy coating violently shatters, sending thousands of icy shards in every direction\.$/,
+      "The outermost layer of a greater water elemental's icy coating violently shatters, sending thousands of icy shards in every direction.",
     tags: ["damage", "paralysis", "caloric"],
     length: 3.0,
   }),
@@ -96,7 +96,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater earth elemental breaks a large chunk away from its rocky form and hurls it at you, the projectile connecting with stunning force\.$/,
+      "A greater earth elemental breaks a large chunk away from its rocky form and hurls it at you, the projectile connecting with stunning force.",
     tags: ["damage", "Stun"],
     length: 3.0,
     reaction(args) {
@@ -108,7 +108,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater earth elemental extends one arm towards you as a mass of writhing vines surge forward, slicing into you with thorns dripping with violet toxins\.$/,
+      "A greater earth elemental extends one arm towards you as a mass of writhing vines surge forward, slicing into you with thorns dripping with violet toxins.",
     tags: ["damage", "haemophilia", "loki", "loki"],
     length: 3.0,
   }),
@@ -117,7 +117,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^As a greater earth elemental wraps a massive hand around your torso and squeezes you tightly, you feel it draining away your will to live\.$/,
+      "As a greater earth elemental wraps a massive hand around your torso and squeezes you tightly, you feel it draining away your will to live.",
     tags: ["damage", "heal"],
     length: 3.0,
   }),
@@ -129,7 +129,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater fire elemental claws at you with its spindly arms, burning wounds deep into your torso\.$/,
+      "A greater fire elemental claws at you with its spindly arms, burning wounds deep into your torso.",
     tags: ["damage", "burnx2"],
     length: 3.0,
   }),
@@ -139,7 +139,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater fire elemental flares brightly as it emits a pulse of flame, scorching everything within reach\.$/,
+      "A greater fire elemental flares brightly as it emits a pulse of flame, scorching everything within reach.",
     tags: ["damage", "burnx2"],
     length: 3.0,
   }),
@@ -149,7 +149,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater fire elemental makes a winding gesture in your direction, igniting a fiery pain in your stomach\.$/,
+      "A greater fire elemental makes a winding gesture in your direction, igniting a fiery pain in your stomach.",
     tags: ["damage", "nausea"],
     length: 3.0,
   }),
@@ -159,7 +159,7 @@ const mannamot = [
     areaId: [330],
     areaName: "the fathomless expanse of the World Tree",
     firstPerson:
-      /^A greater fire elemental reaches up and removes its mask, the pure brightness and heat causing your face to burn and your vision to fade\.$/,
+      "A greater fire elemental reaches up and removes its mask, the pure brightness and heat causing your face to burn and your vision to fade.",
     tags: ["damage", "tenderskin", "blackout"],
     length: 3.0,
   }),

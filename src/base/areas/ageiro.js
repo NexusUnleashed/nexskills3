@@ -11,7 +11,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^A nickel snake opens a gash in your arm with a skilful blow\.$/,
+      "A nickel snake opens a gash in your arm with a skilful blow.",
     tags: ["damage"],
   }),
   new NpcDefinition({
@@ -19,7 +19,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^Grabbing up a shovel, a copper malagma jams the blade into your throat\. Blood oozes from the gash as you struggle to regain your breath\.$/,
+      "Grabbing up a shovel, a copper malagma jams the blade into your throat. Blood oozes from the gash as you struggle to regain your breath.",
     tags: ["damage"],
   }),
   new NpcDefinition({
@@ -35,7 +35,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^A copper malagma rips a decaying board from an overturned ore cart and beats you with it\.$/,
+      "A copper malagma rips a decaying board from an overturned ore cart and beats you with it.",
     tags: ["damage"],
   }),
   new NpcDefinition({
@@ -62,7 +62,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^Grabbing a pick from the floor of the mine, an iron malagma swings sharply and embeds the rusted head into your arm\.$/,
+      "Grabbing a pick from the floor of the mine, an iron malagma swings sharply and embeds the rusted head into your arm.",
     tags: ["damage"],
     reaction(args) {
       checkRandomLimbs(args);
@@ -81,7 +81,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^Grabbing two shovels from the ground, a golden malagma brings them crashing into your head from both sides\.$/,
+      "Grabbing two shovels from the ground, a golden malagma brings them crashing into your head from both sides.",
     tags: ["damage", "stun"],
   }),
   new NpcDefinition({
@@ -89,8 +89,8 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson: [
-      /^Though a golden malagma's mouth moves in rapid animation, no sound escapes the metallic being\.$/,
-      /^A cold stiffness overtakes your limbs, which seem as heavy as if they were made of lead\.$/,
+      "Though a golden malagma's mouth moves in rapid animation, no sound escapes the metallic being.",
+      "A cold stiffness overtakes your limbs, which seem as heavy as if they were made of lead.",
     ],
     tags: ["damage", "paralysis"],
   }),
@@ -107,7 +107,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^A hand drill flies into your face, thrown by a silver malagma\.$/,
+      "A hand drill flies into your face, thrown by a silver malagma.",
     tags: ["damage"],
   }),
   new NpcDefinition({
@@ -115,7 +115,7 @@ const ageiro = [
     areaId: [209],
     areaName: "the Isle of Ageiro",
     firstPerson:
-      /^A silver malagma bashes you over the head with a loose rock, flecks of ore embedding themselves in your skin from the impact\.$/,
+      "A silver malagma bashes you over the head with a loose rock, flecks of ore embedding themselves in your skin from the impact.",
     tags: ["damage"],
   }),
   new NpcDefinition({

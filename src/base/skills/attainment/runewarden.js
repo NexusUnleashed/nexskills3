@@ -26,7 +26,7 @@ export const runewarden = {
     id: "bulwark",
     fullName: "Bulwark",
     firstPerson:
-      /^The runes on your armour flare brightly as you adopt a defensive stance\.$/,
+      "The runes on your armour flare brightly as you adopt a defensive stance.",
     profession: ["runewarden"],
     skill: "attainment",
     balance: "battlerage",

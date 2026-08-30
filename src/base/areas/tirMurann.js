@@ -32,7 +32,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A House Tsez air mage clasps her hands in front her face, and in response you find yourself gasping for air, unable to breathe\.$/,
+      "A House Tsez air mage clasps her hands in front her face, and in response you find yourself gasping for air, unable to breathe.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -41,7 +41,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A House Tsez air mage gives a dismissive wave of her hand at you, and you feel a tremendous blast of biting wind that threatens to knock you down\.$/,
+      "A House Tsez air mage gives a dismissive wave of her hand at you, and you feel a tremendous blast of biting wind that threatens to knock you down.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -50,7 +50,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A Vertani guard sideswipes your ankle with the blunt end of his weapon, the force of the blow causing you to tumble to the ground\.$/,
+      "A Vertani guard sideswipes your ankle with the blunt end of his weapon, the force of the blow causing you to tumble to the ground.",
     tags: ["damage", "prone"],
     length: 2.5,
   }),
@@ -59,8 +59,8 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson: [
-      /^A Vertani guard vaults towards you with surprising speed, bringing the bladed side of his weapon bearing down on you\.$/,
-      /^The accompanying slash carves deeply through your flesh from your shoulder blade diagonally across to the waist\.$/,
+      "A Vertani guard vaults towards you with surprising speed, bringing the bladed side of his weapon bearing down on you.",
+      "The accompanying slash carves deeply through your flesh from your shoulder blade diagonally across to the waist.",
     ],
     tags: ["damage"],
     length: 2.5,
@@ -70,7 +70,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A Vertani guard jabs forward with a powerful blow, skewering through your ribs\.$/,
+      "A Vertani guard jabs forward with a powerful blow, skewering through your ribs.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -79,7 +79,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A Vertani guard sideswipes your ankle with the blunt end of his weapon, the force of the blow causing you to tumble to the ground\.$/,
+      "A Vertani guard sideswipes your ankle with the blunt end of his weapon, the force of the blow causing you to tumble to the ground.",
     tags: ["damage", "prone"],
     length: 2.5,
   }),
@@ -88,7 +88,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A Vertani guard vaults towards you with surprising speed, bringing the bladed side of his weapon bearing down on you\.$/,
+      "A Vertani guard vaults towards you with surprising speed, bringing the bladed side of his weapon bearing down on you.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -97,7 +97,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A Vertani guard jabs forward with a powerful blow, skewering through your ribs\.$/,
+      "A Vertani guard jabs forward with a powerful blow, skewering through your ribs.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -106,7 +106,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^You gnash your teeth as a scimitar-wielding Vertani soldier brings the butt of his scimitar down on your head, splitting your skull\.$/,
+      "You gnash your teeth as a scimitar-wielding Vertani soldier brings the butt of his scimitar down on your head, splitting your skull.",
     tags: ["damage", "stun"],
     length: 2.5,
   }),
@@ -124,7 +124,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^You are nearly bisected as a scimitar-wielding Vertani soldier grunts and slashes into you with a huge scimitar\.$/,
+      "You are nearly bisected as a scimitar-wielding Vertani soldier grunts and slashes into you with a huge scimitar.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -133,7 +133,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^Dynas, the gour trainer flicks his staff at your face, connecting square on the nose, which begins to gush blood\.$/,
+      "Dynas, the gour trainer flicks his staff at your face, connecting square on the nose, which begins to gush blood.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -142,7 +142,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^Dynas, the gour trainer brings his staff crashing down onto your head\.$/,
+      "Dynas, the gour trainer brings his staff crashing down onto your head.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -151,7 +151,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A drunken Vertani throws a wide haymaker punch at you, connecting against your jaw\.$/,
+      "A drunken Vertani throws a wide haymaker punch at you, connecting against your jaw.",
     tags: ["damage"],
     length: 3.0,
   }),
@@ -160,7 +160,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A drunken Vertani unsheathes the dagger from his belt and slashes wildly into you with it\.$/,
+      "A drunken Vertani unsheathes the dagger from his belt and slashes wildly into you with it.",
     tags: ["damage"],
     length: 3.0,
   }),
@@ -169,7 +169,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^A drunken Vertani wraps his huge hands around your throat and throttles you violently\.$/,
+      "A drunken Vertani wraps his huge hands around your throat and throttles you violently.",
     tags: ["damage"],
     length: 3.0,
   }),
@@ -178,7 +178,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^Ohmut, the Vertan craftswoman quickly scoops up a jagged rock from the ground before pelting you with it painfully\.$/,
+      "Ohmut, the Vertan craftswoman quickly scoops up a jagged rock from the ground before pelting you with it painfully.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -187,7 +187,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^Ohmut, the Vertan craftswoman swings her pick horizontally, puncturing the side of your torso\.$/,
+      "Ohmut, the Vertan craftswoman swings her pick horizontally, puncturing the side of your torso.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -196,7 +196,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^Rohase, Captain of the Guard jabs forward with a powerful blow, skewering through your ribs\.$/,
+      "Rohase, Captain of the Guard jabs forward with a powerful blow, skewering through your ribs.",
     tags: ["damage"],
     length: 2.0,
   }),
@@ -205,7 +205,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^Rohase, Captain of the Guard vaults towards you with surprising speed, bringing the bladed side of her weapon bearing down on you\.$/,
+      "Rohase, Captain of the Guard vaults towards you with surprising speed, bringing the bladed side of her weapon bearing down on you.",
     tags: ["damage"],
     length: 2.0,
   }),
@@ -214,7 +214,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^In one quick motion, Rakrr, the Vertani swordsmaster flicks his cloak towards you as a distraction\.$/,
+      "In one quick motion, Rakrr, the Vertani swordsmaster flicks his cloak towards you as a distraction.",
     tags: ["damage"],
     length: 2.0,
   }),
@@ -223,7 +223,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^Rakrr, the Vertani swordsmaster lunges forward, viciously plunging his sword into your chest, missing your heart by mere inches\.$/,
+      "Rakrr, the Vertani swordsmaster lunges forward, viciously plunging his sword into your chest, missing your heart by mere inches.",
     tags: ["damage"],
     length: 2.0,
   }),
@@ -232,7 +232,7 @@ const tirMuran = [
     areaId: [145, 146],
     areaName: "Tir Murann",
     firstPerson:
-      /^Rakrr, the Vertani swordsmaster quickly swings his twin swords into your gut, raining a flurry of merciless slashes at you\.$/,
+      "Rakrr, the Vertani swordsmaster quickly swings his twin swords into your gut, raining a flurry of merciless slashes at you.",
     tags: ["damage"],
     length: 2.0,
   }),

@@ -83,7 +83,7 @@ export const shadowmancy = {
     id: "degeneration",
     fullName: "Degeneration",
     secondPerson:
-      /^As the weapon strikes you, unnatural green flame ignites upon the blade\.$/,
+      "As the weapon strikes you, unnatural green flame ignites upon the blade.",
     thirdPerson:
       /^As the weapon strikes (?<target>\w+), the contact area begins to rot before your eyes\.$/,
     profession: ["depthswalker"],
@@ -95,7 +95,7 @@ export const shadowmancy = {
   degenerationFull: new SkillDefinition({
     id: "degenerationFull",
     fullName: "Degeneration",
-    secondPerson: /^Your body is wracked by the degenerative power\.$/,
+    secondPerson: "Your body is wracked by the degenerative power.",
     thirdPerson: /^The face of (?<target>\w+) contorts in pain\.$/,
     profession: ["depthswalker"],
     skill: "shadowmancy",
@@ -108,7 +108,7 @@ export const shadowmancy = {
     id: "depression",
     fullName: "Depression",
     secondPerson:
-      /^As the weapon strikes you, it burns with a sickly yellow light\.$/,
+      "As the weapon strikes you, it burns with a sickly yellow light.",
     thirdPerson:
       /^As the weapon strikes (?<target>\w+), it burns with a sickly yellow glow\.$/,
     profession: ["depthswalker"],
@@ -121,7 +121,7 @@ export const shadowmancy = {
     id: "depressionFull",
     fullName: "Depression",
     secondPerson:
-      /^Nothing will ever be right again - there can be no salvation\.$/,
+      "Nothing will ever be right again - there can be no salvation.",
     thirdPerson:
       /^A look of total despair crosses the face of (?<target>\w+)\.$/,
     profession: ["depthswalker"],
@@ -135,7 +135,7 @@ export const shadowmancy = {
     id: "retribution",
     fullName: "Retribution",
     secondPerson:
-      /^As the weapon strikes you, the blade flashes an incandescent white\.$/,
+      "As the weapon strikes you, the blade flashes an incandescent white.",
     thirdPerson:
       /^As the weapon strikes (?<target>\w+), it blazes with incandescent white flame\.$/,
     profession: ["depthswalker"],
@@ -148,7 +148,7 @@ export const shadowmancy = {
     id: "retributionFull",
     fullName: "Retribution",
     secondPerson:
-      /^The white flame leaps from the scythe to you, blazing brilliantly as it uses your mental might for fuel\.$/,
+      "The white flame leaps from the scythe to you, blazing brilliantly as it uses your mental might for fuel.",
     thirdPerson:
       /^The white flame leaps from the scythe to (?<target>\w+), blazing with a terrible intensity before guttering out\.$/,
     profession: ["depthswalker"],
@@ -162,7 +162,7 @@ export const shadowmancy = {
     id: "madness",
     fullName: "Madness",
     secondPerson:
-      /^As the weapon strikes you, you feel your sanity slipping away\.$/,
+      "As the weapon strikes you, you feel your sanity slipping away.",
     thirdPerson:
       /^As the weapon strikes (?<target>\w+), \w+ face grows vacant and \w+ begins to tremble\.$/,
     profession: ["depthswalker"],
@@ -175,7 +175,7 @@ export const shadowmancy = {
     id: "madnessFull",
     fullName: "Madness",
     secondPerson:
-      /^The voices plaguing you reach a deafening crescendo, stunning you with their intensity\.$/,
+      "The voices plaguing you reach a deafening crescendo, stunning you with their intensity.",
     thirdPerson:
       /^The head of (?<target>\w+) snaps back as if struck and \w+ eyes roll madly\.$/,
     profession: ["depthswalker"],
@@ -189,7 +189,7 @@ export const shadowmancy = {
     id: "leach",
     fullName: "Leach",
     secondPerson:
-      /^As the weapon strikes you, you feel your strength being leeched away\.$/,
+      "As the weapon strikes you, you feel your strength being leeched away.",
     thirdPerson:
       /^As the weapon strikes (?<target>\w+), \w+ seems greatly diminished\.$/,
     profession: ["depthswalker"],
@@ -204,7 +204,7 @@ export const shadowmancy = {
     firstPerson:
       /^As the scythe comes away, the writhing shadow of (?<target>\w+) clings to the weapon\.$/,
     secondPerson:
-      /^As the scythe comes away, the writhing figure of your shadow clings to the blade\.$/,
+      "As the scythe comes away, the writhing figure of your shadow clings to the blade.",
     profession: ["depthswalker"],
     skill: "shadowmancy",
     balance: "free",
@@ -233,7 +233,7 @@ export const shadowmancy = {
       /^Reaching out to the shadow of (?<target>\w+), you plunge .+? into it and attune it to the directive of (?<info>\w+)\.$/,
     secondPerson: [
       /^(?<user>\w+) reaches past you, plunging .+? into your shadow\.$/,
-      /^A sudden sense of foreboding comes over you\.$/,
+      "A sudden sense of foreboding comes over you.",
     ],
     profession: ["depthswalker"],
     skill: "shadowmancy",
@@ -248,7 +248,7 @@ export const shadowmancy = {
     firstPerson:
       /^Drawing the shadow of (?<user>\w+) from a bone phylactery, you plunge .+? savagely into the ephemeral mass\.$/,
     secondPerson:
-      /^You feel a deep, piercing agony, that radiates outward from the centre of your chest and claws with icy fingers at your insides\. The metallic taste of salt fills your mouth and the dampness on your cheeks can only be blood$/,
+      "You feel a deep, piercing agony, that radiates outward from the centre of your chest and claws with icy fingers at your insides. The metallic taste of salt fills your mouth and the dampness on your cheeks can only be blood",
     profession: ["depthswalker"],
     skill: "shadowmancy",
     balance: "balance",

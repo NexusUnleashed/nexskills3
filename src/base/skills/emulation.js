@@ -4,7 +4,7 @@ const emulation = {
     id: "wavesurge",
     fullName: "Wavesurge",
     firstPerson:
-      /^You summon up the might of the waves, a great surge of water lifting you up and hurling you away\.$/,
+      "You summon up the might of the waves, a great surge of water lifting you up and hurling you away.",
     thirdPerson:
       /^Mystic waters rise about (?<user>\w+?), the frothing crest of a surging wave carrying \w+ away to the (?<info>\w+?)\.$/,
     profession: ["psion"],
@@ -45,7 +45,7 @@ const emulation = {
     id: "rupture",
     fullName: "Rupture",
     firstPerson:
-      /^Your vision sharpens, allowing you to perceive the locations of every vein and artery that lies beneath the skin\.$/,
+      "Your vision sharpens, allowing you to perceive the locations of every vein and artery that lies beneath the skin.",
     thirdPerson: /^The eyes of (?<user>\w+?) flash with a golden glow\.$/,
     profession: ["psion"],
     skill: "emulation",
@@ -59,7 +59,7 @@ const emulation = {
     id: "clarity",
     fullName: "Clarity",
     firstPerson:
-      /^A total focus overcomes you; the mundanity of everyday distractions unable to penetrate your clarity\.$/,
+      "A total focus overcomes you; the mundanity of everyday distractions unable to penetrate your clarity.",
     profession: ["psion"],
     skill: "emulation",
     balance: "equilibrium",
@@ -91,7 +91,7 @@ const emulation = {
     firstPerson:
       /^The sympathetic bond snaps into place, and you know with undeniable certainty that your suffering shall befall (?<target>\w+?)\.$/,
     secondPerson:
-      /^You feel a sudden unease, the knowledge that something has shifted undeniably but the exact nature escaping you\.$/,
+      "You feel a sudden unease, the knowledge that something has shifted undeniably but the exact nature escaping you.",
     thirdPerson:
       /^A rope of light lashes out from (?<user>\w+?), binding \w+? to (?<target>\w+?)\.$/,
     profession: ["psion"],

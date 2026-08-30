@@ -7,7 +7,7 @@ const domination = {
     firstPerson:
       /^You command your humbug to instill a ravenous hunger in (?<target>\w+)\.$/,
     secondPerson:
-      /^A humbug latches onto your throat, and your guts feel like they're devouring themselves as an unnatural hunger comes over you\.$/,
+      "A humbug latches onto your throat, and your guts feel like they're devouring themselves as an unnatural hunger comes over you.",
     thirdPerson:
       /^A humbug clutches to the throat of (?<target>\w+), its grotesque body undulating\.$/,
     profession: ["occultist"],
@@ -22,7 +22,7 @@ const domination = {
     firstPerson:
       /^You command your hound to erode the will of (?<target>\w+)\.$/,
     secondPerson:
-      /^A Chaos hound produces a baying howl, and you feel your will to resist slipping away\.\.\.$/,
+      "A Chaos hound produces a baying howl, and you feel your will to resist slipping away...",
     thirdPerson:
       /^A Chaos hound produces a baying howl, and (?<target>\w+) slumps with a sigh\.$/,
     profession: ["occultist"],
@@ -60,7 +60,7 @@ const domination = {
     firstPerson:
       /^You command your chaos storm to bring down the curse of clumsiness upon (?<target>\w+)\.$/,
     secondPerson:
-      /^A lash of energy whips out of the chaos storm to strike you, afflicting you with clumsiness\.$/,
+      "A lash of energy whips out of the chaos storm to strike you, afflicting you with clumsiness.",
     thirdPerson:
       /^A lash of energy whips out of the chaos storm to strike (?<target>\w+), \w+ face going blank for a brief instant on contact\.$/,
     profession: ["occultist"],
@@ -72,7 +72,7 @@ const domination = {
   stormCommand2: new SkillDefinition({
     id: "stormCommand2",
     fullName: "Storm Command",
-    firstPerson: /^A chaos storm disregards your order\.$/,
+    firstPerson: "A chaos storm disregards your order.",
     profession: ["occultist"],
     skill: "domination",
     balance: "tertiary",
@@ -86,7 +86,7 @@ const domination = {
     firstPerson:
       /^You command your bloodleech to corrupt the blood of (?<target>\w+)\.$/,
     secondPerson:
-      /^A bloodleech scuttles over your skin, tentacle-like appendages scratching and scraping\. Something is very wrong\.\.\.$/,
+      "A bloodleech scuttles over your skin, tentacle-like appendages scratching and scraping. Something is very wrong...",
     thirdPerson:
       /^A bloodleech scuttles over the skin of (?<target>\w+), its tentacle-like appendages scratching and scraping\.$/,
     profession: ["occultist"],
@@ -101,7 +101,7 @@ const domination = {
     firstPerson:
       /^You command your sycophant to weaken the mind of (?<target>\w+)\.$/,
     secondPerson:
-      /^The muttering emanating from the sycophant increases to a sudden crescendo, and your head begins to spin\.$/,
+      "The muttering emanating from the sycophant increases to a sudden crescendo, and your head begins to spin.",
     thirdPerson:
       /^The sycophant of (?<user>\w+) hunches forward and begins muttering incessantly at (?<target>\w+), who sways unsteadily\.$/,
     profession: ["occultist"],
@@ -128,7 +128,7 @@ const domination = {
     id: "slimeCommand",
     fullName: "Slime Command",
     secondPerson:
-      /^Despite your best efforts some of the slime slips into your mouth and down your throat, your body struggling to breathe but receiving only virilant sludge\.$/,
+      "Despite your best efforts some of the slime slips into your mouth and down your throat, your body struggling to breathe but receiving only virilant sludge.",
     profession: ["occultist"],
     skill: "domination",
     balance: "tertiary",
@@ -143,7 +143,7 @@ const domination = {
       /^A chimera throws forward all three of its heads and roars at (?<target>\w+), but \w+ seems completely unphased\.$/,
     ],
     secondPerson:
-      /^A chimera throws all three of its heads forward and opens its mouth, but you hear only the slightest whisper of sound\.$/,
+      "A chimera throws all three of its heads forward and opens its mouth, but you hear only the slightest whisper of sound.",
     thirdPerson:
       /^A chimera throws forward all three of its heads and roars at (?<target>\w+), but \w+ seems completely unphased\.$/,
     profession: ["occultist"],
@@ -161,7 +161,7 @@ const domination = {
       /^A chimera lets out a concussive roar at (?<target>\w+)\.$/,
     ],
     secondPerson:
-      /^A chimera lets out a concussive roar, all three of the creatures heads thrown forward toward you\.$/,
+      "A chimera lets out a concussive roar, all three of the creatures heads thrown forward toward you.",
     thirdPerson: /^A chimera lets out a concussive roar at (?<target>\w+)\.$/,
     profession: ["occultist"],
     skill: "domination",
@@ -188,7 +188,7 @@ const domination = {
     firstPerson:
       /^You command your worm to infest (?<target>\w+) with maggots\.$/,
     secondPerson:
-      /^A worm spews a stream of maggots at you, and they begin burrowing into your flesh\.$/,
+      "A worm spews a stream of maggots at you, and they begin burrowing into your flesh.",
     thirdPerson:
       /^A worm spews a writhing mass of maggots at (?<target>\w+)\.$/,
     profession: ["occultist"],
@@ -202,7 +202,7 @@ const domination = {
     fullName: "Worm Tick",
     // same message as third person
     secondPerson:
-      /^The maggots of Palpatar continue to feed upon your flesh, leeching away your vitality\.$/,
+      "The maggots of Palpatar continue to feed upon your flesh, leeching away your vitality.",
     thirdPerson:
       /^Many somethings writhe beneath the skin of (?<target>\w+), and the sickening sound of chewing can be heard\.$/,
     profession: ["occultist"],
@@ -277,7 +277,7 @@ const domination = {
     firstPerson:
       /^You command your gremlin to shatter the defences surrounding (?<target>.+?)\.$/,
     secondPerson:
-      /^With a mad cackle, a gremlin leaps at you and batters your shield with a flurry of blows, fracturing it in moments\.$/,
+      "With a mad cackle, a gremlin leaps at you and batters your shield with a flurry of blows, fracturing it in moments.",
     thirdPerson:
       /^A gremlin leaps at (?<target>\w+), cackling madly as it delivers blow after blow against \w+ magical shield\.$/,
     profession: ["occultist"],
@@ -321,7 +321,7 @@ const domination = {
     id: "wormPrimebond",
     fullName: "Worm Primebond",
     secondPerson:
-      /^The worm which is burrowed into your guts writhes and undulates, and you feel bile rising in the back of your throat\.$/,
+      "The worm which is burrowed into your guts writhes and undulates, and you feel bile rising in the back of your throat.",
     thirdPerson:
       /^The worm burrowing into (?<target>\w+) writhes and undulates\.$/,
     profession: ["occultist"],
@@ -334,7 +334,7 @@ const domination = {
     id: "gremlinPrimebond",
     fullName: "Gremlin Primebond",
     secondPerson:
-      /^The gremlin races between and around your legs, its eratic movement setting your head to spinning\.$/,
+      "The gremlin races between and around your legs, its eratic movement setting your head to spinning.",
     thirdPerson:
       /^The gremlin races around and between the legs of (?<target>\w+), \w+ eyes tracking it as \w+ sways unsteadily\.$/,
     profession: ["occultist"],
@@ -348,7 +348,7 @@ const domination = {
     id: "gremlinPrimebond2",
     fullName: "Gremlin Primebond",
     secondPerson:
-      /^The gremlin races between your legs, throwing you off-balance\.$/,
+      "The gremlin races between your legs, throwing you off-balance.",
     thirdPerson: /^The gremlin races between the legs of (?<target>\w+)\.$/,
     profession: ["occultist"],
     skill: "domination",
@@ -362,7 +362,7 @@ const domination = {
     id: "humbugPrimebond",
     fullName: "Humbug Primebond",
     secondPerson:
-      /^You feel the humbug sucking horribly against your skin, drawing away your very will to fight\.$/,
+      "You feel the humbug sucking horribly against your skin, drawing away your very will to fight.",
     thirdPerson:
       /^The humbug clinging to the throat of (?<target>\w+) expands with a squelching sound\.$/,
     profession: ["occultist"],
@@ -375,7 +375,7 @@ const domination = {
     id: "bloodleechPrimebond",
     fullName: "Bloodleech Primebond",
     secondPerson:
-      /^The tentacles of the bloodleech burrow into your skin, seeking the veins and fresh sources of life-giving fluid\.$/,
+      "The tentacles of the bloodleech burrow into your skin, seeking the veins and fresh sources of life-giving fluid.",
     thirdPerson:
       /^The bloodleech clinging to (?<target>\w+) expands and contracts with a sickening sound\.$/,
     profession: ["occultist"],
@@ -388,7 +388,7 @@ const domination = {
     id: "slimePrimebond",
     fullName: "Slime Primebond",
     secondPerson:
-      /^You feel the slime attacking your physical well-being with its foul presence\.$/,
+      "You feel the slime attacking your physical well-being with its foul presence.",
     profession: ["occultist"],
     skill: "domination",
     balance: "free",
@@ -410,7 +410,7 @@ const domination = {
     id: "chimeraPrimebondGas",
     fullName: "Chimera Primebond",
     secondPerson:
-      /^The chimera's dragon head exhales a cloud of gas at you, and you feel sleepy\.$/,
+      "The chimera's dragon head exhales a cloud of gas at you, and you feel sleepy.",
     thirdPerson:
       /^The chimera's dragon head exhales a cloud of gas at (?<target>\w+)\.$/,
     profession: ["occultist"],
@@ -424,7 +424,7 @@ const domination = {
     id: "chimeraPrimebondRam",
     fullName: "Chimera Primebond",
     secondPerson:
-      /^The chimera's goat head rams into you and knocks you sprawling\.$/,
+      "The chimera's goat head rams into you and knocks you sprawling.",
     thirdPerson:
       /^The chimera's goat head rams into (?<target>\w+) and knocks \w+ sprawling\.$/,
     profession: ["occultist"],
@@ -438,7 +438,7 @@ const domination = {
     id: "chimeraPrimebondRoar",
     fullName: "Chimera Primebond",
     secondPerson:
-      /^The lion head on the chimera roars at you, stunning you with its power\.$/,
+      "The lion head on the chimera roars at you, stunning you with its power.",
     thirdPerson:
       /^(?<target>\w+) is stunned by the roaring of the chimera's lion head\.$/,
     profession: ["occultist"],
@@ -452,7 +452,7 @@ const domination = {
     id: "chimeraPrimebondUndeaf",
     fullName: "Chimera Primebond",
     secondPerson:
-      /^The lion head on the chimera roars at you, restoring your hearing\.$/,
+      "The lion head on the chimera roars at you, restoring your hearing.",
     thirdPerson:
       /^(?<target>\w+) is startled to attention by the roaring of the chimera's lion head\.$/,
     profession: ["occultist"],

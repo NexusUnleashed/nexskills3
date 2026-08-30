@@ -47,7 +47,7 @@ export const subterfuge = {
     id: "pinshot",
     fullName: "Pinshot",
     secondPerson:
-      /^Your left foot explodes in white hot pain as an arrow slams into it\.$/,
+      "Your left foot explodes in white hot pain as an arrow slams into it.",
     profession: ["serpent"],
     skill: "subterfuge",
     balance: "balance",

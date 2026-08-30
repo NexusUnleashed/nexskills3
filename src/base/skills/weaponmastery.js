@@ -109,7 +109,7 @@ export const weaponmastery = {
     id: "battlefuryFocus",
     fullName: "Battlefury Focus",
     firstPerson:
-      /^Channeling the fury of battle, you prepare to unleash a brutally swift stroke against your foe\.$/,
+      "Channeling the fury of battle, you prepare to unleash a brutally swift stroke against your foe.",
     profession: ["runewarden", "paladin", "infernal", "unnamable"],
     skill: "weaponmastery",
     balance: "free",

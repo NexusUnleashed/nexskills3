@@ -6,7 +6,7 @@ const aeonics = {
     id: "accelerate",
     fullName: "Accelerate",
     firstPerson:
-      /^You accelerate your body's ability to purge afflictions a thousandfold\.$/,
+      "You accelerate your body's ability to purge afflictions a thousandfold.",
     thirdPerson:
       /^A look of relief comes over (?<target>\w+) as \w+ grows less pale\.$/,
     profession: ["depthswalker"],

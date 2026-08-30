@@ -199,7 +199,7 @@ export const occultism = {
     id: "unnamableSpeak",
     fullName: "Unnamable Speak",
     firstPerson:
-      /^Hardening your mind against the impossible, you speak the name of the Unnamable\. Even to your ears, the utterance sounds twisted and unearthly\.$/,
+      "Hardening your mind against the impossible, you speak the name of the Unnamable. Even to your ears, the utterance sounds twisted and unearthly.",
     secondPerson:
       /^(?<user>\w+) speaks something in an unknown and impossible language\. Unable to process the alien images these words induce, your thoughts become jumbled\.$/,
     profession: ["occultist"],
@@ -212,7 +212,7 @@ export const occultism = {
     id: "unnamableVision",
     fullName: "Unnamable Vision",
     firstPerson:
-      /^Hardening your mind against the impossible, you conjure a vision of the Unnamable\. Even to your eyes, the manifestation appears twisted and unearthly\.$/,
+      "Hardening your mind against the impossible, you conjure a vision of the Unnamable. Even to your eyes, the manifestation appears twisted and unearthly.",
     secondPerson:
       /^(?<user>\w+) lowers \w+ eyes and an unearthly image appears before you\. Unable to accept what this vision means, your thoughts become jumbled\.$/,
     profession: ["occultist"],
@@ -272,7 +272,7 @@ export const occultism = {
     id: "bodywarp",
     fullName: "Bodywarp",
     firstPerson:
-      /^Taking a deep breath, you summon up images of your own primal fears, finally channeling them through your aura and into your body\. You feel your face and form twist and turn\.$/,
+      "Taking a deep breath, you summon up images of your own primal fears, finally channeling them through your aura and into your body. You feel your face and form twist and turn.",
     thirdPerson:
       /^(?<user>\w+) takes a deep breath and breathes out\. \w+ face and body seem to melt and then twist and churn into something unspeakable\.$/,
     profession: ["occultist"],

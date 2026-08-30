@@ -102,7 +102,7 @@ const bladedance = {
     //The staccato song of an etched, Vashnari rapier punctuates a flurry of blows as Dzak's blade pursues you relentlessly.
     //The anti-weapon field surrounding you shatters under the flurry of strikes.
     secondPerson:
-      /^The anti-weapon field surrounding you shatters under the flurry of strikes\.$/,
+      "The anti-weapon field surrounding you shatters under the flurry of strikes.",
     profession: ["bard"],
     skill: "bladedance",
     balance: "balance",

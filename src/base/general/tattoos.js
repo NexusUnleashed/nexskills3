@@ -5,7 +5,7 @@ export const tattoos = {
     id: "shield",
     fullName: "Shield",
     firstPerson:
-      /^You touch the tattoo and a nearly invisible magical shield forms around you\.$/,
+      "You touch the tattoo and a nearly invisible magical shield forms around you.",
     thirdPerson:
       /^A nearly invisible magical shield forms around (?<user>.+?)\.$/,
     profession: ["general"],
@@ -17,7 +17,7 @@ export const tattoos = {
   tree: new SkillDefinition({
     id: "tree",
     fullName: "Tree",
-    firstPerson: /^You touch the tree of life tattoo\.$/,
+    firstPerson: "You touch the tree of life tattoo.",
     thirdPerson: /^(?<user>\w+) touches a tree of life tattoo\.$/,
     profession: ["general"],
     skill: "tattoos",
@@ -29,7 +29,7 @@ export const tattoos = {
     id: "cloak",
     fullName: "Cloak",
     firstPerson:
-      /^You caress the tattoo and immediately you feel a cloak of protection surround you\.$/,
+      "You caress the tattoo and immediately you feel a cloak of protection surround you.",
     thirdPerson: /^(?<user>\w+) touches a cloak tattoo\.$/,
     profession: ["general"],
     skill: "tattoos",

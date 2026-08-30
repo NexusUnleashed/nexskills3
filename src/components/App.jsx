@@ -69,7 +69,7 @@ const darkTheme = createTheme({
   },
 });
 
-let sortedSkills = nexSkills.actions.sort((a, b) => {
+let sortedSkills = [...nexSkills.actions].sort((a, b) => {
   if (a.profession > b.profession) {
     return -1;
   }

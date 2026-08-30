@@ -17,7 +17,7 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^With a howl like the wind, razor-sharp ribbons of air burst from an air elemental guard to assail your flesh, gleaming like folded diamond\. Rippling across your vision in a dizzying array of transfixing, refractive hues, the streams consume your senses in a twisting mosaic of colour\.$/,
+      "With a howl like the wind, razor-sharp ribbons of air burst from an air elemental guard to assail your flesh, gleaming like folded diamond. Rippling across your vision in a dizzying array of transfixing, refractive hues, the streams consume your senses in a twisting mosaic of colour.",
     tags: ["damage", "AOE"],
     length: 3.0,
     reaction(args) {
@@ -41,7 +41,7 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^An earth elemental guard rumbles and roars, kicking up a great cloud of dust and sand that scourges your flesh, leaving you bleeding and vulnerable\.$/,
+      "An earth elemental guard rumbles and roars, kicking up a great cloud of dust and sand that scourges your flesh, leaving you bleeding and vulnerable.",
     tags: ["damage", "undeaf?", "strip(2)"],
     length: 3.0,
   }),
@@ -50,7 +50,7 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^An earth elemental guard brings the pommel of its sword crashing into your head, leaving you stunned and dizzy$/,
+      "An earth elemental guard brings the pommel of its sword crashing into your head, leaving you stunned and dizzy",
     thirdPerson:
       /^An earth elemental guard assaults the head of (?<target>\w+?) with the pommel of its sword, leaving \w+ stunned and dizzy\.$/,
     tags: ["damage", "skullfracture", "nausea", "dizziness"],
@@ -61,8 +61,8 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson: [
-      /^Calling on the powers of the earth, an earth elemental guard summons sticky vines that lash at you, tearing into muscle and bone alike as they flense the skin from your body\.$/,
-      /^Belching soporific spores from opening flowers upon their length, you feel a peculiar lassitude overcoming your mind\.$/,
+      "Calling on the powers of the earth, an earth elemental guard summons sticky vines that lash at you, tearing into muscle and bone alike as they flense the skin from your body.",
+      "Belching soporific spores from opening flowers upon their length, you feel a peculiar lassitude overcoming your mind.",
     ],
     thirdPerson: [
       /^Calling on the powers of the earth, an earth elemental guard summons sticky vines that lash at (?<target>\w+?), tearing into muscle and bone alike as they flense the skin from \w+ body\.$/,
@@ -85,7 +85,7 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^At the command of a fire elemental guard, pillars of white-hot flame erupt beneath your feet, scorching your skin as the world vanishes behind a sheet of fire\.$/,
+      "At the command of a fire elemental guard, pillars of white-hot flame erupt beneath your feet, scorching your skin as the world vanishes behind a sheet of fire.",
     tags: ["damage", "burning(2)", "AOE"],
     length: 3.0,
   }),
@@ -114,7 +114,7 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^Undulating wildly, a water elemental guard transforms into an icy squall, battering you with gelid rains and frozen hail\.$/,
+      "Undulating wildly, a water elemental guard transforms into an icy squall, battering you with gelid rains and frozen hail.",
     tags: ["damage", "frozen", "AOE"],
     length: 3.0,
   }),
@@ -123,7 +123,7 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^Mist and foam spray outward from a water elemental guard as its form ripples and shifts, twisting into a confusing mirage of hazy images that overwhelms your mind\.$/,
+      "Mist and foam spray outward from a water elemental guard as its form ripples and shifts, twisting into a confusing mirage of hazy images that overwhelms your mind.",
     tags: ["damage", "disrupted", "claustrophobia", "fear", "AOE"],
     length: 3.0,
   }),
@@ -132,7 +132,7 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^An immense geyser of icy-cold water bursts from within a water elemental guard's form, sending you flying across the ground\.$/,
+      "An immense geyser of icy-cold water bursts from within a water elemental guard's form, sending you flying across the ground.",
     thirdPerson:
       /^An immense geyser of icy-cold water bursts from within a water elemental guard's form, sending (?<target>\w+?) flying across the ground\.$/,
     tags: ["damage", "prone", "damagedrightleg"],
@@ -168,8 +168,8 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson: [
-      /^Chellen, the administrator calls for aid from the Air Ambassador, raising her arms over her head\.$/,
-      /^In response to the administrator's plea, forks of jagged lightning appear from nowhere, striking relentlessly at your body\.$/,
+      "Chellen, the administrator calls for aid from the Air Ambassador, raising her arms over her head.",
+      "In response to the administrator's plea, forks of jagged lightning appear from nowhere, striking relentlessly at your body.",
     ],
     tags: ["damage", "burning"],
     length: 3.0,

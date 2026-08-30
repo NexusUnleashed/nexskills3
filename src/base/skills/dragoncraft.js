@@ -149,7 +149,7 @@ export const dragoncraft = {
     id: "dragonheal",
     fullName: "Dragonheal",
     firstPerson:
-      /^You let out a great keening, and cast the impurities from your form\.$/,
+      "You let out a great keening, and cast the impurities from your form.",
     thirdPerson:
       /^(?<user>\w+) lets out a great keening, casting the impurities from \w+ form\.$/,
     profession: [
@@ -170,7 +170,7 @@ export const dragoncraft = {
     id: "tailsweep",
     fullName: "Tailsweep",
     firstPerson:
-      /^You whip your huge, sinuous tail in a circle, knocking your enemies off their feet\.$/,
+      "You whip your huge, sinuous tail in a circle, knocking your enemies off their feet.",
     profession: [
       "red dragon",
       "green dragon",
@@ -285,7 +285,7 @@ export const dragoncraft = {
     id: "enmeshHit1",
     fullName: "Enmesh",
     secondPerson:
-      /^As the keening ceases, ethereal tendrils burst forth from your chest to ensnare you, although you manage to evade many of the lashing ropes\.$/,
+      "As the keening ceases, ethereal tendrils burst forth from your chest to ensnare you, although you manage to evade many of the lashing ropes.",
     thirdPerson:
       /^As the keening ceases, a burst of ethereal tendrils flow from the chest of (?<target>\w+), but \w+ manages to avoid many of them\.$/,
     profession: [
@@ -307,7 +307,7 @@ export const dragoncraft = {
     id: "enmeshHit2",
     fullName: "Enmesh",
     secondPerson:
-      /^As the keening ceases, you are jolted by a burst of vaporous rope-like tendrils that flow from your chest and encircle your body\.$/,
+      "As the keening ceases, you are jolted by a burst of vaporous rope-like tendrils that flow from your chest and encircle your body.",
     thirdPerson:
       /^Abruptly the keening ends, and a blossom of ethereal tendrils bursts from (?<target>\w+)'s chest, ensnaring \w+ in a web of undulating bonds\.$/,
     profession: [

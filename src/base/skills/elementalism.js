@@ -4,7 +4,7 @@ const elementalism = {
     id: "light",
     fullName: "Light",
     firstPerson:
-      /^You chant a brief spell and a flash of revealing light floods the room\.$/,
+      "You chant a brief spell and a flash of revealing light floods the room.",
     thirdPerson:
       /^(?<user>\w+) chants a brief spell and a flash of revealing light floods the room\.$/,
     profession: ["magi"],
@@ -47,7 +47,7 @@ const elementalism = {
     id: "deepfreeze",
     fullName: "Deepfreeze",
     firstPerson:
-      /^You drain the heat from the air around your enemies, causing them to experience the cold of the abyss itself\.$/,
+      "You drain the heat from the air around your enemies, causing them to experience the cold of the abyss itself.",
     thirdPerson:
       /^(?<user>\w+) gestures grandly, and causes a deepfreeze to settle over \w+ enemies\.$/,
     profession: ["magi"],
@@ -88,7 +88,7 @@ const elementalism = {
     id: "shalestormTick",
     fullName: "Shalestorm Tick",
     secondPerson: [
-      /^Huge boulders relentlessly hammer at you as they materialise from the very air\.$/,
+      "Huge boulders relentlessly hammer at you as they materialise from the very air.",
       /^One of the boulders smashes into your (?<limb>.+?) with a sickening crack\.$/,
     ],
     profession: ["magi"],
@@ -107,7 +107,7 @@ const elementalism = {
     id: "shalestormRaze",
     fullName: "Shalestorm Tick",
     secondPerson:
-      /^Huge boulders hammer at the magical shield surrounding you, shattering it into a spray of translucent shards\.$/,
+      "Huge boulders hammer at the magical shield surrounding you, shattering it into a spray of translucent shards.",
     thirdPerson:
       /^Huge boulders hammer at the magical shield surrounding (?<target>\w+), shattering it in a spray of translucent shards\.$/,
     profession: ["magi"],
@@ -194,7 +194,7 @@ const elementalism = {
     firstPerson:
       /^You raise a hand towards (?<target>\w+) and blast \w+ with cold, frigid air\.$/,
     secondPerson:
-      /^Khaseem raises a hand towards you and blasts you with cold, frigid air\.$/,
+      "Khaseem raises a hand towards you and blasts you with cold, frigid air.",
     profession: ["magi"],
     skill: "elementalism",
     balance: "equilibrium",
@@ -207,11 +207,11 @@ const elementalism = {
     id: "geyser",
     fullName: "Geyser",
     secondPerson: [
-      /^The earth suddenly splits open, and a mighty geyser soars skywards\.$/,
-      /^The geyser strikes you full-on, and you tumble to the ground helplessly\.$/,
+      "The earth suddenly splits open, and a mighty geyser soars skywards.",
+      "The geyser strikes you full-on, and you tumble to the ground helplessly.",
     ],
     thirdPerson: [
-      /^The earth suddenly splits open, and a mighty geyser soars skywards\.$/,
+      "The earth suddenly splits open, and a mighty geyser soars skywards.",
       /^The geyser strikes (?<target>\w+) full-on, and \w+ tumbles to the ground helplessly\.$/,
     ],
     profession: ["magi"],
@@ -311,7 +311,7 @@ const elementalism = {
     id: "resonanceAirMinor",
     fullName: "Air - Minor",
     secondPerson:
-      /^You clutch at your throat as an invisible noose snaps close about your neck\.$/,
+      "You clutch at your throat as an invisible noose snaps close about your neck.",
     thirdPerson:
       /^(?<target>\w+) clutches at \w+ throat as \w+ gasps for breath\.$/,
     profession: ["magi"],
@@ -326,7 +326,7 @@ const elementalism = {
     id: "resonanceAirModerate",
     fullName: "Air - Moderate",
     secondPerson:
-      /^A vicious wind rises, slashing air and grit flaying at your body and leaving you sensitive and raw\.$/,
+      "A vicious wind rises, slashing air and grit flaying at your body and leaving you sensitive and raw.",
     thirdPerson:
       /^A vicious wind rises, lashing and flaying at the body of (?<target>\w+) to leave \w+ sensitive and raw\.$/,
     profession: ["magi"],
@@ -341,7 +341,7 @@ const elementalism = {
     id: "resonanceAirMajor",
     fullName: "Air - Major",
     secondPerson:
-      /^Breath stutters in your breast, and weakness crawls into every limb\.$/,
+      "Breath stutters in your breast, and weakness crawls into every limb.",
     thirdPerson:
       /^A dreadful pallor overcomes the features of (?<target>\w+)\.$/,
     profession: ["magi"],
@@ -358,7 +358,7 @@ const elementalism = {
     firstPerson:
       /^As you begin to tap your connection with the Elemental Plane of Water, you summon up a freezing wave to deluge (?<target>\w+)\.$/,
     secondPerson:
-      /^A wave of freezing water materialises as if from nothing, crashing down on you\.$/,
+      "A wave of freezing water materialises as if from nothing, crashing down on you.",
     thirdPerson:
       /^A freezing wave of water materialises as if from nothing, crashing down upon (?<target>\w+)\.$/,
     profession: ["magi"],
@@ -375,7 +375,7 @@ const elementalism = {
     firstPerson:
       /^You summon up a flurry of icicles to slash at (?<target>\w+) in a shower of freezing daggers\.$/,
     secondPerson:
-      /^A flurry of icicles materialise to slice at you in a hail of freezing daggers\.$/,
+      "A flurry of icicles materialise to slice at you in a hail of freezing daggers.",
     thirdPerson:
       /^A flurry of freezing icicles materialise to slash at (?<target>\w+) in a shower of freezing daggers\.$/,
     profession: ["magi"],
@@ -428,7 +428,7 @@ const elementalism = {
     firstPerson:
       /^You bleed off residual power from your connection with the Elemental Plane of Earth, directing it in an unfocussed blast of arcane might at (?<target>\w+)\.$/,
     secondPerson:
-      /^A wave of arcane force slams into you, your bones shuddering and your vision swimming\.$/,
+      "A wave of arcane force slams into you, your bones shuddering and your vision swimming.",
     thirdPerson: /^(?<target>\w+) buckles under an unseen blow\.$/,
     profession: ["magi"],
     skill: "elementalism",
@@ -444,7 +444,7 @@ const elementalism = {
     firstPerson:
       /^The might of Elemental Earth coursing through you, you smite (?<target>\w+) with the full force of your directed will\.$/,
     secondPerson:
-      /^Your ribs give way under the force of a terrible invisible blow\.$/,
+      "Your ribs give way under the force of a terrible invisible blow.",
     thirdPerson:
       /^(?<target>\w+) hacks and coughs as a series of unpleasant cracks sound in grim staccato from \w+ chest\.$/,
     profession: ["magi"],
@@ -510,7 +510,7 @@ const elementalism = {
     firstPerson:
       /^The incandescent might of Elemental Fire filling you, you command (?<target>\w+) to burn from within\.$/,
     secondPerson:
-      /^A searing spark ignites within your chest, the insidious heat spreading like wildfire and causing your skin to bubble and blister\.$/,
+      "A searing spark ignites within your chest, the insidious heat spreading like wildfire and causing your skin to bubble and blister.",
     thirdPerson:
       /^Blisters burst open across the body of (?<target>\w+) as \w+ skin glows as if lit from within\.$/,
     profession: ["magi"],

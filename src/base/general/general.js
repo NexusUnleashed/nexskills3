@@ -13,7 +13,7 @@ export const general = {
   rebounding: new SkillDefinition({
     id: "rebounding",
     fullName: "Rebounding",
-    firstPerson: /^You feel an aura of rebounding surround you\.$/,
+    firstPerson: "You feel an aura of rebounding surround you.",
     thirdPerson:
       /^You suddenly perceive the vague outline of an aura of rebounding around (?<user>\w+)\.$/,
     profession: ["general"],
@@ -39,7 +39,7 @@ export const general = {
     id: "curseward",
     fullName: "Curseward",
     firstPerson:
-      /^You bring a curseward into being to protect you from harm\.$/,
+      "You bring a curseward into being to protect you from harm.",
     profession: ["general"],
     skill: "defense",
     balance: "equilibrium",

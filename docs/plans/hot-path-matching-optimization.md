@@ -1,7 +1,7 @@
 # Hot-path matching optimization
 
-Status: ready for implementation
-Date: 2026-08-29
+Status: implemented and verified
+Date: 2026-08-29; implemented 2026-08-30
 Scope: `checkSkills` / `checkNpcs` and definition matching in
 [`src/base/nexSkills.js`](../../src/base/nexSkills.js)
 
@@ -18,9 +18,10 @@ Implement the optimization around these decisions:
 1. **Make pattern intent explicit.** A string is an exact literal; a `RegExp`
    is a regex; an array is an ordered multi-line sequence whose elements are
    independently compiled.
-2. **Convert every provably exact regex at the definition source.** The current
-   registered corpus contains 492 lossless regex-to-string conversions. Together
-   with 29 existing strings, it has 521 exact-literal candidates.
+2. **Convert every provably exact regex at the definition source.** The finalized
+   registered corpus contained 511 lossless regex-to-string conversions. Together
+   with 50 existing strings, it now has 561 exact-literal elements. One additional
+   exact regex in an unregistered draft module was also converted.
 3. **Finalize an immutable registry.** Definitions are static after module
    startup. Compile once, freeze the matching inputs, and remove public mutation
    as an index-invalidation problem.
@@ -100,7 +101,11 @@ safe first-element gating.
 
 ---
 
-## Current implementation and measured work
+## Pre-implementation matcher and measured work
+
+The counts in this subsection describe the original matcher and registration
+set retained by the checked-in legacy snapshot. Final corpus counts after
+resolving omitted modules are recorded in the next section.
 
 [`checkSkills`](../../src/base/nexSkills.js#L288-L330) linearly walks all 354
 registered actions. For each definition it may evaluate `firstPerson`, then
@@ -127,7 +132,7 @@ Other repeated costs:
 - `resolveAreaNpcs` avoids rebuilding the active array, but still calls
   `npcsMap.has(areaid)` on every unmatched line before checking the cached key.
 - The nested definition/pattern property lookup is repeated for every visit.
-- The 29 existing string patterns are passed to `String.prototype.match`, so
+- The original string patterns are passed to `String.prototype.match`, so
   JavaScript recompiles/interprets them as regex source rather than comparing
   them as literals.
 
@@ -140,81 +145,77 @@ The existing code already does two useful things that must remain:
 
 ## Corpus snapshot
 
-These counts were independently reproduced from the current registered source
-corpus. A "pattern" in the 1,250 total is one `(definition, matchType)` slot; the
-17 array slots contain 34 individual elements.
+These are the final registered-corpus counts produced by
+`npm run audit:corpus`. A "pattern" is one `(definition, matchType)` slot. The
+21 array slots contain 42 individual elements.
 
-| Property                                       | Value                       |
-| ---------------------------------------------- | --------------------------- |
-| Action definitions                             | 354                         |
-| NPC definitions                                | 469                         |
-| NPC map keys                                   | 28                          |
-| Pattern slots                                  | 1,250 (682 action, 568 NPC) |
-| Individual regex elements                      | 1,238                       |
-| Existing string elements                       | 29                          |
-| Multi-line array slots/elements                 | 17 / 34                     |
-| `^`-anchored single-pattern regex slots         | 1,201 (96%)                 |
-| Case-insensitive regexes                        | 0                           |
-| Fully literal single-line `^...$` regexes       | 477                         |
-| Fully literal regex elements inside arrays      | 15                          |
-| **Lossless regex-to-string conversions**        | **492**                     |
-| **Total exact-literal candidates after review** | **521**                     |
-| Usable prefix gates (`>= 5` characters)         | 964                         |
-| Capture-initial patterns without a prefix       | 236                         |
-| Those with a usable required substring          | 228                         |
+| Property                                  | Value                       |
+| ----------------------------------------- | --------------------------- |
+| Action definitions                        | 373                         |
+| NPC definitions                           | 505                         |
+| NPC map keys                              | 29                          |
+| Pattern slots                             | 1,314 (707 action, 607 NPC) |
+| Individual pattern elements               | 1,335                       |
+| Regex/string elements after migration     | 774 / 561                   |
+| Multi-line array slots/elements            | 21 / 42                     |
+| Fully literal regexes after migration      | 0                           |
+| **Registered regex-to-string conversions** | **511**                     |
+| **Registered exact-literal elements**      | **561**                     |
+| Compiled exact-index entries               | 550                         |
+| Compiled prefix-gated entries              | 519                         |
+| Compiled required-substring entries        | 237                         |
+| Compiled completely ungated regex entries  | 8                           |
 
 Lossless conversion breakdown:
 
 | Scope   | Single-line exact regexes | Exact array elements | Existing strings |
 | ------- | ------------------------- | -------------------- | ---------------- |
-| Actions | 73                        | 7                    | 0                |
-| NPCs    | 404                       | 8                    | 29               |
+| Actions | 81                        | 7                    | 0                |
+| NPCs    | 411                       | 12                   | 50               |
 
-Prefix lengths across the anchored corpus:
+Compiled prefix-gate lengths (capped at 30 characters):
 
 | Percentile | Literal prefix length |
 | ---------- | --------------------- |
-| p25        | 20                    |
-| median     | 62                    |
-| p75        | 107                   |
-| p90        | 138                   |
-| max        | 333                   |
+| p25        | 28                    |
+| median     | 30                    |
+| p75        | 30                    |
+| p90        | 30                    |
+| max        | 30                    |
 
 The corpus is a near-best case for exact lookup and conservative gating: almost
 everything is case-sensitive and anchored, while the capture-initial family has
 long required text later in the expression.
 
-The 964 prefix-gated entries span 24 first-character buckets, but the
-distribution is skewed:
+The 528 prefix-gated regex elements span 20 first-character buckets. Compiled
+entries use 519 of those gates because only element zero can gate a sequence.
+The element distribution remains skewed:
 
 ```text
-A:320  Y:190  T:74  W:73  S:49  R:46  L:35  H:25  O:22  D:19  C:19
-F:17  G:14  B:12  M:11  I:9  ":9  P:7  V:6  N:2  E:2  K:1  J:1  U:1
+Y:165  A:130  T:52  W:35  R:21  L:20  S:20  O:18  D:10  ":9
+B:8  C:8  F:7  H:7  G:5  I:3  M:3  P:3  V:3  U:1
 ```
 
-`A` contains 33.2% and `Y` 19.7% of these entries. Bucketing therefore prunes
-less than the full prefix gate, but the prototype still measured approximately
-1.5x between the bucketed and unbucketed gated paths.
+`Y` and `A` remain the dominant buckets. Bucketing prunes candidates before the
+full `startsWith` gate, while the full-text exact map handles literal entries.
 
-Of the 236 capture-initial entries without a prefix, 228 have a conservatively
-extractable required substring of at least eight characters. Their median
-required substring is 52 characters and the maximum is 181. This substring
-family is the highest-value addition not already present in nexAction.
+The finalized element corpus has 238 conservatively extractable required
+substrings (237 compiled entry gates). Their median required substring is 52
+characters and the maximum is 181. The gate-witness test positively exercises
+every one.
 
 ### Corpus-integrity prerequisite
 
-The counts above cover what `nexSkills.js` currently registers, not every module
-exported by the indexes. Before freezing the registry and recording final
-benchmarks, explicitly resolve these exported-but-unregistered modules:
+Before freezing the registry and recording final benchmarks, the implementation
+resolved these exported-but-unregistered modules:
 
 - areas: `dustsongSpire`, `elementalEmbassy`;
 - skills: `crystalism`, `psionics`;
 - attainment: `psion`, `unnamable`.
 
-Register modules that are valid. If a module is intentionally incomplete, mark
-it as such and remove it from the public index until it is ready. Re-run the
-corpus audit and replace all counts in this document after that decision; index
-design and thresholds must not rely on the present totals remaining fixed.
+All six modules are valid and are now registered. The Psion attainment
+`pulverize` definition's erroneous Bard profession was corrected to Psion. The
+final counts above include them.
 
 ---
 
@@ -314,11 +315,12 @@ An array means all elements must match consecutive lines in order.
 - A sequence may be indexed by a provable gate on its first element. Later
   elements cannot gate whether the sequence is considered for the current line.
 
-### Existing 29 strings
+### Existing 50 strings
 
-The 29 strings currently reside in NPC definitions and look like complete game
-lines. Today their punctuation is interpreted as regex syntax and the patterns
-can match substrings. Under the new contract they become exact.
+The 50 strings reside in Dustsong Spire NPC definitions and are complete game
+lines. Before this implementation their punctuation was interpreted as regex
+syntax and the patterns could match substrings. Under the new contract they are
+exact.
 
 Review them during migration:
 
@@ -632,9 +634,9 @@ baseline and corpus report from documented commands.
 
 1. Add the pattern compiler and `createLiteralMatch` with focused unit tests.
 2. Change string evaluation from `String.match` to exact equality.
-3. Review the 29 existing strings; make any intended regex explicit.
-4. Mechanically convert all currently provable exact regexes—477 direct patterns
-   and 15 array elements in the present corpus—to strings. Serialize the decoded
+3. Review the 50 existing strings; make any intended regex explicit.
+4. Mechanically convert all currently provable exact regexes—492 direct patterns
+   and 19 array elements in the final corpus—to strings. Serialize the decoded
    `exactText` as a valid JavaScript string; do not transform source by merely
    slicing `^`, `$`, or backslashes from regex text.
 5. Compile array elements independently and formalize `text` as element 0.
@@ -751,7 +753,7 @@ Existing behavior:
 - For every emitted prefix/substring gate, require the witness to satisfy the
   gate. This positively exercises the capture-initial substring family.
 - Include every exact string as a positive line and add prefix/suffix/punctuation
-  near misses for the 29 migrated strings.
+  near misses for the 50 retained strings.
 - Include complete blocks for every multi-line sequence.
 
 The deterministic witness generator is test tooling, not production code. It
@@ -775,7 +777,7 @@ Compare more than `(id, matchType)`:
 - `match[0]`, `match.index`, `match.input`, and named groups;
 - raised event names and order for representative finalized matches.
 
-The intentional semantic tightening of the 29 old string patterns and the
+The intentional semantic tightening of the 50 old string patterns and the
 formal multiline-input contract must be asserted directly rather than hidden as
 generic differential exceptions.
 
@@ -840,21 +842,79 @@ invariant to recover the number.
 
 ---
 
+## Final implementation evidence
+
+Reproduction commands:
+
+```sh
+npm ci
+npm run verify
+npm run benchmark
+npm run benchmark:browser
+```
+
+`npm run verify` passes with 56 Vitest tests, a zero-exact-regex corpus audit,
+1,370 legacy differential comparisons with zero disagreements, and all three
+production/development/reference-site builds. The corpus witness generator
+validates every remaining regex and every emitted gate. It also builds complete
+blocks for all 21 multi-line sequences. The differential comparison covers the
+25 registered profession tokens plus an unknown class, all 29 area keys plus an
+absent area, selected definition identity, captures/defaults, final-element
+multi-line semantics, and observable match-array fields.
+
+### Node benchmark
+
+Environment: Node 22.17.0, Windows 11 Pro 10.0.26200 x64, 13th Gen Intel
+Core i7-13700K. Each corpus used a 10,000-line warmup and seven 30,000-line
+samples. Values are microseconds per line; the baseline is the checked-in
+pre-migration pattern snapshot evaluated with the legacy scan.
+
+| Corpus             | Legacy median / p95 | Optimized median / p95 | Speedup |
+| ------------------ | ------------------- | ---------------------- | ------- |
+| 0% unmatched       | 153.21 / 155.53     | 8.63 / 8.81            | 17.76x  |
+| 5% eligible match  | 153.52 / 155.51     | 9.04 / 9.15            | 16.99x  |
+| 100% exact hit     | 144.37 / 147.65     | 19.65 / 19.82          | 7.35x   |
+| 100% regex hit     | 103.52 / 105.39     | 9.35 / 9.74            | 11.08x  |
+| 1,000-line replay  | 153.16 / 287.86     | 9.04 / 9.60            | 16.94x  |
+
+The unmatched profile executes 8 regexes per line after optimization versus
+545 in the legacy harness, below the target of 25. A direct 5,000,000-iteration
+ablation measured equality at 0.75 ns/match and the equivalent regex at
+18.34 ns/match. The exact-index end-to-end ablation kept the full-text map: it
+was about 11% faster on unmatched input and 5% faster on exact hits than scanning
+the corresponding first-character exact bucket. The direct lookup microbenchmark
+measured 4.90 ns for `Map.has` versus 69.91 ns for the bucket traversal. The
+production minified bundle in Node measured 9.13/9.40 us for unmatched input,
+9.64/9.78 us for the 5% corpus, and 9.98/10.31 us per replay line.
+
+### Production browser benchmark and trace
+
+The minified IIFE was evaluated directly in headless Microsoft Edge
+152.0.4191.53 (V8 15.2.23.6), with the same 10,000-line warmup and seven
+30,000-line samples. The unmatched median/p95 was 6.68/6.73 us per line; the 5%
+eligible corpus was 6.84/6.93 us per line. A separately timed 1,000-line 5%
+burst completed in 8.8 ms with 50 matches. The DevTools trace captured 59,578
+bytes using the `devtools.timeline,v8.execute` categories. This measures the
+production bundle in the browser engine with host events stubbed; it does not
+include Nexus rendering or network work.
+
+---
+
 ## Completion checklist
 
-- [ ] Exported-but-unregistered modules have an explicit disposition.
-- [ ] Corpus and benchmark harnesses are checked in and reproducible.
-- [ ] Strings have exact semantics; intended regexes are explicit `RegExp`s.
-- [ ] All provably exact regex definitions and array elements are source strings.
-- [ ] Registry and compiled matching inputs are immutable after finalization.
-- [ ] UI/tests no longer mutate the global action list.
-- [ ] Class and location normalization/lookups are absent from the unchanged
+- [x] Exported-but-unregistered modules have an explicit disposition.
+- [x] Corpus and benchmark harnesses are checked in and reproducible.
+- [x] Strings have exact semantics; intended regexes are explicit `RegExp`s.
+- [x] All provably exact regex definitions and array elements are source strings.
+- [x] Registry and compiled matching inputs are immutable after finalization.
+- [x] UI/tests no longer mutate the global action list.
+- [x] Class and location normalization/lookups are absent from the unchanged
       per-line path.
-- [ ] Exact maps, prefix buckets, substring gates, and ordered merge are active.
-- [ ] Multi-line element 0 uses the supplied current-line text and bounds are
+- [x] Exact maps, prefix buckets, substring gates, and ordered merge are active.
+- [x] Multi-line element 0 uses the supplied current-line text and bounds are
       safe.
-- [ ] Match object, reactions, events, and lazy area behavior are preserved.
-- [ ] Corpus gate witnesses and the full differential matrix report zero unsafe
+- [x] Match object, reactions, events, and lazy area behavior are preserved.
+- [x] Corpus gate witnesses and the full differential matrix report zero unsafe
       disagreements.
-- [ ] `npm run verify` passes.
-- [ ] Final Node and Nexus/browser benchmark results are recorded here.
+- [x] `npm run verify` passes.
+- [x] Final Node and browser benchmark results are recorded here.

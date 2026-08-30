@@ -6,7 +6,7 @@ export const psionics = {
     firstPerson:
       /^You drive a spike of psychic force straight through the shield surrounding (?<target>\w+?), causing it to explode into translucent shards\.$/,
     secondPerson:
-      /^The magical shield surrounding you explodes into translucent shards without visible cause or reason\.$/,
+      "The magical shield surrounding you explodes into translucent shards without visible cause or reason.",
     profession: ["psion"],
     skill: "psionics",
     balance: "equilibrium",
@@ -19,7 +19,7 @@ export const psionics = {
     id: "splinterMiss",
     fullName: "Splinter",
     firstPerson:
-      /^You prepare to lash out with your mind, then realise that there is no shield protecting your target to shatter\.$/,
+      "You prepare to lash out with your mind, then realise that there is no shield protecting your target to shatter.",
     profession: ["psion"],
     skill: "psionics",
     balance: "equilibrium",
@@ -32,7 +32,7 @@ export const psionics = {
     id: "expand",
     fullName: "Expand",
     firstPerson:
-      /^Your mind's potential expands as you focus inward, bolstering your mental might\.$/,
+      "Your mind's potential expands as you focus inward, bolstering your mental might.",
     thirdPerson:
       /^An expression of determined focus overcomes (?<user>\w+?)\.$/,
     profession: ["psion"],
@@ -49,7 +49,7 @@ export const psionics = {
     firstPerson:
       /^You direct your will into the blood that freely flows from the wounds of (?<target>\w+?), setting it aflame with a surge of psionic energy\.$/,
     secondPerson:
-      /^The blood that flows from your wounds spontaneously bursts aflame, your skin bubbling and charring beneath its unnatural heat\.$/,
+      "The blood that flows from your wounds spontaneously bursts aflame, your skin bubbling and charring beneath its unnatural heat.",
     profession: ["psion"],
     skill: "psionics",
     balance: "equilibrium",
@@ -62,7 +62,7 @@ export const psionics = {
     id: "combustionMiss",
     fullName: "Combustion",
     firstPerson:
-      /^There is not a sufficient medium for you to direct your will through\.$/,
+      "There is not a sufficient medium for you to direct your will through.",
     profession: ["psion"],
     skill: "psionics",
     balance: "equilibrium",
@@ -77,7 +77,7 @@ export const psionics = {
     firstPerson:
       /^You summon up your psionic might but the mind of (?<target>\w+?) is not yet weak enough to be ravaged\.$/,
     secondPerson:
-      /^You feel a psionic force assault your mind, but fight off the effects without much trouble\.$/,
+      "You feel a psionic force assault your mind, but fight off the effects without much trouble.",
     profession: ["psion"],
     skill: "psionics",
     balance: "equilibrium",
@@ -91,7 +91,7 @@ export const psionics = {
     id: "breakthrough",
     fullName: "Breakthrough",
     firstPerson:
-      /^A sharp pain behind your eyes is the precursor to an abrupt expansion of consciousness, your mental processes speeding to unnatural levels\.$/,
+      "A sharp pain behind your eyes is the precursor to an abrupt expansion of consciousness, your mental processes speeding to unnatural levels.",
     thirdPerson: /^A vein on the temple of (?<user>\w+?) pulses ominously\.$/,
     profession: ["psion"],
     skill: "psionics",

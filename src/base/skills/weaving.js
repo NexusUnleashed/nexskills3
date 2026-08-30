@@ -30,7 +30,7 @@ export const weaving = {
       /^Your blow scythes through the air in front of (?<target>.+?), missing entirely\.$/,
     secondPerson: [
       /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon you\.$/,
-      /^The blow scythes through the air in front of you, missing entirely\.$/,
+      "The blow scythes through the air in front of you, missing entirely.",
     ],
     //MISS. No shield
     thirdPerson: [
@@ -52,7 +52,7 @@ export const weaving = {
       /^Your blow cleaves through the magical shield surrounding (?<target>.+?), continuing on to drive \w+ from \w+ feet\.$/,
     secondPerson: [
       /^(?<user>\w+) brings a translucent battleaxe down in a powerful overhanded blow upon you\.$/,
-      /^The blow cleaves through your magical shield, shattering it and knocking you from your feet!$/,
+      "The blow cleaves through your magical shield, shattering it and knocking you from your feet!",
     ],
     //HIT. Prone
     thirdPerson: [
@@ -150,7 +150,7 @@ export const weaving = {
     firstPerson:
       /^Lightning explodes from your blade as you hack into (?<target>\w+), \w+ body locking up as the current rips through \w+\.$/,
     secondPerson:
-      /^Your body locks up as lightning explodes from the blade as it hacks into you\.$/,
+      "Your body locks up as lightning explodes from the blade as it hacks into you.",
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -180,7 +180,7 @@ export const weaving = {
     firstPerson:
       /^Your blade tears into (?<target>\w+), a spray of crimson exploding from the wound as your weapon strikes bone\.$/,
     secondPerson:
-      /^Blood sprays from your wounds as the blade tears into you, cleaving to the bone\.$/,
+      "Blood sprays from your wounds as the blade tears into you, cleaving to the bone.",
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -210,7 +210,7 @@ export const weaving = {
     firstPerson:
       /^As your weapon strikes (?<target>\w+) a brilliant flash of light explodes forth\.$/,
     secondPerson:
-      /^As the weapon strikes you, an incandescent burst of light explodes forth, dazing you\.$/,
+      "As the weapon strikes you, an incandescent burst of light explodes forth, dazing you.",
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -225,7 +225,7 @@ export const weaving = {
     firstPerson:
       /^As your weapon strikes (?<target>\w+), power blasts outward in a concussive wave\.$/,
     secondPerson:
-      /^As the weapon strikes you, a concussive wave lashes out and slams into you with brain-rattling force\.$/,
+      "As the weapon strikes you, a concussive wave lashes out and slams into you with brain-rattling force.",
     profession: ["psion"],
     skill: "weaving",
     balance: "free",
@@ -240,7 +240,7 @@ export const weaving = {
     firstPerson:
       /^As your weapon strikes (?<target>\w+) a wave of cloying vapours rolls over \w+\.$/,
     secondPerson:
-      /^As the weapon strikes you, a wave of cloying vapour rolls over you, slithering into your lungs and causing your breath to falter\.$/,
+      "As the weapon strikes you, a wave of cloying vapour rolls over you, slithering into your lungs and causing your breath to falter.",
     profession: ["psion"],
     skill: "weaving",
     balance: "free",

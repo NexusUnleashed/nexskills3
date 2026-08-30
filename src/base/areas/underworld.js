@@ -12,7 +12,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^A lich of Nemuritoaure turns its eyeless gaze upon you, shrieking maniacally such that all your thoughts are turned to dread horror\.$/,
+      "A lich of Nemuritoaure turns its eyeless gaze upon you, shrieking maniacally such that all your thoughts are turned to dread horror.",
     thirdPerson:
       /^A lich of Nemuritoaure turns its eyeless gaze upon (?<target>\w+?), who wilts beneath the onslaught of some malign power\.$/,
     tags: ["damage", "confusion", "stupidity", "epilepsy", "fear"],
@@ -23,7 +23,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Robes billowing wide as it rises, a lich of Nemuritoaure hisses a sibilant incantation and instantly your flesh warps and withers beyond recognition\.$/,
+      "Robes billowing wide as it rises, a lich of Nemuritoaure hisses a sibilant incantation and instantly your flesh warps and withers beyond recognition.",
     tags: ["damage", "paralysis", "slickness", "clumsiness"],
     length: 2.0,
   }),
@@ -34,7 +34,7 @@ const underworld = [
     //Shrieking with the fury of the grave, a lich of Nemuritoaure hovers determinedly as it readies another attack.
     //A sickly rattling noise drowns out all else as a lich of Nemuritoaure raises a rotten hand, sending a wave of merciless cold to assault you.
     firstPerson:
-      /^A sickly rattling noise drowns out all else as a lich of Nemuritoaure raises a rotten hand, sending a wave of merciless cold to assault you\.$/,
+      "A sickly rattling noise drowns out all else as a lich of Nemuritoaure raises a rotten hand, sending a wave of merciless cold to assault you.",
     tags: ["damage", "AGUE AGUE AGUE?", "AOE"],
     length: 2.0,
     reaction(args) {
@@ -49,7 +49,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Shadow and blood entwine about the hand of a nascent vampire, giving shape to a fearsome ethereal scythe moments before its wicked blade descends upon you, rending your mind and setting fire to your skull even as it passes harmlessly through the rest of your body\.$/,
+      "Shadow and blood entwine about the hand of a nascent vampire, giving shape to a fearsome ethereal scythe moments before its wicked blade descends upon you, rending your mind and setting fire to your skull even as it passes harmlessly through the rest of your body.",
     tags: ["damage", "impatience", "stupidity"],
     length: 3.0,
   }),
@@ -58,7 +58,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Scythe and dagger coalesce in a nascent vampire's hands as he hurls himself forward, your every motion and manoeuvre utterly preempted by an unnatural swiftness as his cuts and slashes send spasms of agony through your body\.$/,
+      "Scythe and dagger coalesce in a nascent vampire's hands as he hurls himself forward, your every motion and manoeuvre utterly preempted by an unnatural swiftness as his cuts and slashes send spasms of agony through your body.",
     tags: ["damage", "paralysis"],
     length: 3.0,
   }),
@@ -67,7 +67,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Doubling over with frame-wracking spasms, the light of reason abruptly vanishes from a nascent vampire's eyes\. A moment later, he madly charges you, headbutting you with such force as to knock the breath off your chest and your feet off the ground before desperately sinking his fangs into you and feeding on your blood\.$/,
+      "Doubling over with frame-wracking spasms, the light of reason abruptly vanishes from a nascent vampire's eyes. A moment later, he madly charges you, headbutting you with such force as to knock the breath off your chest and your feet off the ground before desperately sinking his fangs into you and feeding on your blood.",
     tags: ["damage", "haemophilia", "heal"],
     length: 3.0,
   }),
@@ -78,7 +78,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Hissing in anger, a deadly obsidian scorpion vomits a stream of acid onto you, and your skin begins to melt under the substance\.$/,
+      "Hissing in anger, a deadly obsidian scorpion vomits a stream of acid onto you, and your skin begins to melt under the substance.",
     tags: ["damage", "slickness"],
     length: 3.5,
     reaction(args) {
@@ -90,7 +90,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^A deadly obsidian scorpion stampedes over you, knocking you to the ground and crushing your legs underneath his bulk\.$/,
+      "A deadly obsidian scorpion stampedes over you, knocking you to the ground and crushing your legs underneath his bulk.",
     tags: ["damage", "prone"],
     length: 3.5,
     reaction(args) {
@@ -102,7 +102,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^The massive tail of a deadly obsidian scorpion swipes down in a blur, plunging deep into your stomach and injecting you with poison\. A moment later, a second, soulbleed-formed stinger slams into place alongside the first\.$/,
+      "The massive tail of a deadly obsidian scorpion swipes down in a blur, plunging deep into your stomach and injecting you with poison. A moment later, a second, soulbleed-formed stinger slams into place alongside the first.",
     tags: ["damage", "loki", "loki"],
     length: 3.5,
   }),
@@ -111,7 +111,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^A deadly obsidian scorpion whirls around and slams his tail into your torso, and ribs crack from the impact\.$/,
+      "A deadly obsidian scorpion whirls around and slams his tail into your torso, and ribs crack from the impact.",
     tags: ["damage", "crackedribs"],
     length: 3.5,
     reaction(args) {
@@ -126,7 +126,7 @@ const underworld = [
     areaName: "the Underworld",
     //Falling into silence for a fraction of a second, a soldier of Osterrych's gaze falls upon you with ominous intent.
     firstPerson:
-      /^In response to a soldier of Osterrych's whistled tune, a skeletal bird starts fluttering about you, distracting you long enough for her to skewer you with a ghostly rapier coalesced in her hand\.$/,
+      "In response to a soldier of Osterrych's whistled tune, a skeletal bird starts fluttering about you, distracting you long enough for her to skewer you with a ghostly rapier coalesced in her hand.",
     //Falling into silence for a fraction of a second, a soldier of Osterrych's gaze falls upon (Poxie) with ominous intent.
     //Leaping back and turning her attention to her instrument, a soldier of Osterrych strums an enchantingly foreign melody.
     //A soldier of Osterrych attempts to transfix (Poxie), but succeeds only in curing her blindness.
@@ -141,7 +141,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Leaping back and turning her attention to her instrument, a soldier of Osterrych strums an enchantingly foreign melody\.$/,
+      "Leaping back and turning her attention to her instrument, a soldier of Osterrych strums an enchantingly foreign melody.",
     tags: ["damage", "loki"],
     length: 2.5,
     reaction(args) {
@@ -153,7 +153,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Grabbing her spectral mandolin by the neck, a soldier of Osterrych runs up to you, crouching moments before delivering a terrible upswing that sends you flying upward\.$/,
+      "Grabbing her spectral mandolin by the neck, a soldier of Osterrych runs up to you, crouching moments before delivering a terrible upswing that sends you flying upward.",
     thirdPerson:
       /^Grabbing her spectral mandolin by the neck, a soldier of Osterrych runs up to (?<target>\w+?), crouching moments before delivering a terrible upswing that sends \w+ flying upwar\.$/,
     tags: ["damage", "prone"],
@@ -169,7 +169,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Tearing a half-buried spear from his body with the sickening, scraping sound of steel on bone, a soldier of Nemuritoaure immediately lashes out and skewers you with it\.$/,
+      "Tearing a half-buried spear from his body with the sickening, scraping sound of steel on bone, a soldier of Nemuritoaure immediately lashes out and skewers you with it.",
     tags: ["damage", "paralysis", "loki"],
     length: 2.0,
   }),
@@ -178,7 +178,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^A soldier of Nemuritoaure looses a shrill, unpleasant cry that is promptly answered by others in the vicinity\.$/,
+      "A soldier of Nemuritoaure looses a shrill, unpleasant cry that is promptly answered by others in the vicinity.",
     tags: ["damage", "blackout"],
     length: 2.0,
   }),
@@ -187,7 +187,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^First bashing you with his splintered shield, a soldier of Nemuritoaure thrusts his weathered longsword between the cracks of your armour and deep into the unguarded softness beneath\.$/,
+      "First bashing you with his splintered shield, a soldier of Nemuritoaure thrusts his weathered longsword between the cracks of your armour and deep into the unguarded softness beneath.",
     tags: ["damage", "undeaf", "sensitivity", "STUN"],
     length: 2.0,
   }),
@@ -198,7 +198,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Feinting with the tip of his spear, an undead colonel closes in on you and rams his knee against your mid-section before bringing his staff crashing down against the side of your head\.$/,
+      "Feinting with the tip of his spear, an undead colonel closes in on you and rams his knee against your mid-section before bringing his staff crashing down against the side of your head.",
     tags: ["damage", "stupidity", "nausea"],
     length: 2.5,
   }),
@@ -207,7 +207,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Combining unarmed and spear techniques, an undead colonel swiftly alternates between jabs and kicks aimed at your weak points, using the motions of your own body against you before finally catching you off-balance and impaling you\.$/,
+      "Combining unarmed and spear techniques, an undead colonel swiftly alternates between jabs and kicks aimed at your weak points, using the motions of your own body against you before finally catching you off-balance and impaling you.",
     tags: ["damage", "confusion", "weariness", "dizziness"],
     length: 0,
   }),
@@ -216,7 +216,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^In a demonstration of breathtaking speed, an undead colonel thrusts his spear faster than the eye can follow, cutting and slicing you numerous times before you can clear out of his reach\.$/,
+      "In a demonstration of breathtaking speed, an undead colonel thrusts his spear faster than the eye can follow, cutting and slicing you numerous times before you can clear out of his reach.",
     tags: ["damage", "fear"],
     length: 0,
     reaction(args) {
@@ -243,7 +243,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Striding towards you with a monstrous claymore in each hand, a veteran Death Knight commander delivers an unforgiving series of devastating slashes with a consummate, inescapable swiftness\.$/,
+      "Striding towards you with a monstrous claymore in each hand, a veteran Death Knight commander delivers an unforgiving series of devastating slashes with a consummate, inescapable swiftness.",
     tags: ["damage", "paralysis", "dizziness"],
     length: 0,
     reaction(args) {
@@ -255,7 +255,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Foregoing one of her monstrous blades, a veteran Death Knight commander's gauntleted hand swiftly closes about your skull with a vice-like grip, holding you in place while she brutally and repeatedly skewers you, before finally hurling you away\.$/,
+      "Foregoing one of her monstrous blades, a veteran Death Knight commander's gauntleted hand swiftly closes about your skull with a vice-like grip, holding you in place while she brutally and repeatedly skewers you, before finally hurling you away.",
     tags: ["damage", "Parry Head", "prone"],
     length: 0,
     reaction(args) {
@@ -270,7 +270,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Rearing back and unleashing a roar, a steel-encased Death Knight slams his gauntlet into your arm, crushing the bone painfully into your ribs and sending you to the ground\.$/,
+      "Rearing back and unleashing a roar, a steel-encased Death Knight slams his gauntlet into your arm, crushing the bone painfully into your ribs and sending you to the ground.",
     tags: ["damage", "crackedribs", "prone"],
     length: 0,
     reaction(args) {
@@ -283,7 +283,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^A torrent of soulbleed abruptly forms into a blade in a steel-encased Death Knight's hands, and he violently slashes it along your throat\.$/,
+      "A torrent of soulbleed abruptly forms into a blade in a steel-encased Death Knight's hands, and he violently slashes it along your throat.",
     tags: ["damage", "lasceratedthroat"],
     length: 0,
   }),
@@ -292,7 +292,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^A steel-encased Death Knight abruptly disappears in a flash of red, and a powerful grip wraps around your forehead and slams the back of your head into the ground\.$/,
+      "A steel-encased Death Knight abruptly disappears in a flash of red, and a powerful grip wraps around your forehead and slams the back of your head into the ground.",
     tags: ["damage", "damagedhead", "prone"],
     length: 0,
   }),
@@ -301,7 +301,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^A steel-encased Death Knight punches a fist toward you, and a concussive blast of soulbleed knocks you off your feet\. Within moments, he looms over you, and crushes your torso with a savage stomp\.$/,
+      "A steel-encased Death Knight punches a fist toward you, and a concussive blast of soulbleed knocks you off your feet. Within moments, he looms over you, and crushes your torso with a savage stomp.",
     tags: ["damage", "crackedribs", "prone"],
     length: 0,
   }),
@@ -310,7 +310,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Raising an armour-encased boot, a steel-encased Death Knight slams it down at an angle against the side of your knee, snapping it easily\.$/,
+      "Raising an armour-encased boot, a steel-encased Death Knight slams it down at an angle against the side of your knee, snapping it easily.",
     tags: ["damage"],
     length: 0,
     reaction(args) {
@@ -324,7 +324,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^An eerily calming noise emanates from inside the shell of an undead nautilus, and your mind becomes transfixed by the soothing melody\. However, not all feels quite right\.\.\.$/,
+      "An eerily calming noise emanates from inside the shell of an undead nautilus, and your mind becomes transfixed by the soothing melody. However, not all feels quite right...",
     tags: ["damage", "hypochondria", "dizziness"],
     length: 2.0,
     reaction(args) {
@@ -336,7 +336,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Colours explode along the intricate linings of an undead nautilus's shell, and the transfixing sight overloads your mind\.$/,
+      "Colours explode along the intricate linings of an undead nautilus's shell, and the transfixing sight overloads your mind.",
     tags: ["damage", "stupidity", "epilepsy"],
     length: 2.0,
     reaction(args) {
@@ -348,7 +348,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^An undead nautilus's attention focusses upon you, and an incredible psychic power surges through your thoughts, battering your mind mercilessly\.$/,
+      "An undead nautilus's attention focusses upon you, and an incredible psychic power surges through your thoughts, battering your mind mercilessly.",
     tags: ["damage", "epilepsy", "stupidity", "impatience"],
     length: 2.0,
   }),
@@ -368,7 +368,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Wielding his staff in both hands, an undead squire takes advantage of its superior reach to punish you with a series of powerful, bone-shattering blows\.$/,
+      "Wielding his staff in both hands, an undead squire takes advantage of its superior reach to punish you with a series of powerful, bone-shattering blows.",
     tags: ["damage"],
     length: 2.0,
     reaction(args) {
@@ -381,7 +381,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Noticing a momentary lapse in your guard, an undead squire puts his training to test, jamming his rusty shortsword between your ribs and carving you up\.$/,
+      "Noticing a momentary lapse in your guard, an undead squire puts his training to test, jamming his rusty shortsword between your ribs and carving you up.",
     tags: ["damage", "paralysis", "crackedribs"],
     length: 2.0,
     reaction(args) {
@@ -393,7 +393,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Taking a clattering step back, an undead squire shifts his grip on his staff, holding it as if it were a spear\. Evincing a surprising amount of coordination, the undead takes impulse, aiming it squarely at your chest before delivering a throw of such swiftness and strength as to knock you flat and nearly impale you upon the ground\.$/,
+      "Taking a clattering step back, an undead squire shifts his grip on his staff, holding it as if it were a spear. Evincing a surprising amount of coordination, the undead takes impulse, aiming it squarely at your chest before delivering a throw of such swiftness and strength as to knock you flat and nearly impale you upon the ground.",
     tags: ["damage", "nausea", "concussion", "prone"],
     length: 2.0,
   }),
@@ -404,7 +404,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^With a guttural roar rumbling from deep within, a grotesque experiment's arms lash wildly from all angles with swords wielded as if they were clubs, the numerous blows threatening to overwhelm you\.$/,
+      "With a guttural roar rumbling from deep within, a grotesque experiment's arms lash wildly from all angles with swords wielded as if they were clubs, the numerous blows threatening to overwhelm you.",
     tags: ["damage"],
     length: 2.0,
   }),
@@ -413,7 +413,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Scuttling at an impressive speed towards you, a grotesque experiment bashes you with its disgusting, sac-like head, dousing you with a disgusting, oozing fluid that sets your skin and blood alike alight\.$/,
+      "Scuttling at an impressive speed towards you, a grotesque experiment bashes you with its disgusting, sac-like head, dousing you with a disgusting, oozing fluid that sets your skin and blood alike alight.",
     tags: ["damage", "blackout", "loki"],
     length: 2.0,
   }),
@@ -422,7 +422,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Tossing you upon the ground with a backhand swing from one of its numerous arms, a grotesque experiment moves wildly about you, the many blades raining upon you with deadly intent, very nearly slicing you to ribbons\.$/,
+      "Tossing you upon the ground with a backhand swing from one of its numerous arms, a grotesque experiment moves wildly about you, the many blades raining upon you with deadly intent, very nearly slicing you to ribbons.",
     tags: ["damage", "prone", "Parry Leg"],
     length: 2.0,
   }),
@@ -433,7 +433,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^With a startlingly icy grip, a disfigured ghost latches onto you, screaming for help with nearly mindless horror as it once more relives its monstrous torture\.$/,
+      "With a startlingly icy grip, a disfigured ghost latches onto you, screaming for help with nearly mindless horror as it once more relives its monstrous torture.",
     tags: ["damage", "fear", "AGUE AGUE AGUE?"],
     length: 2.0,
   }),
@@ -442,7 +442,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^An otherwordly chill ripples up and down your spine as a disfigured ghost flows into your body and attempts to take control of it\.$/,
+      "An otherwordly chill ripples up and down your spine as a disfigured ghost flows into your body and attempts to take control of it.",
     tags: ["damage", "recklessness"],
     length: 2.0,
   }),
@@ -451,7 +451,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^You feel yourself sinking into the black, endless pits of a disfigured ghost's eyeless sockets, momentarily reliving in your own flesh the anguish of its suffering\.$/,
+      "You feel yourself sinking into the black, endless pits of a disfigured ghost's eyeless sockets, momentarily reliving in your own flesh the anguish of its suffering.",
     tags: ["damage", "nausea", "masochism"],
     length: 2.0,
     reaction(args) {
@@ -465,7 +465,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Holding his hand out palm up, a cowled researcher blows a fine powder onto you, and your skin begins to burn\.$/,
+      "Holding his hand out palm up, a cowled researcher blows a fine powder onto you, and your skin begins to burn.",
     tags: ["damage", "darkshade", "nausea", "slickness"],
     length: 2.0,
   }),
@@ -474,7 +474,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Grabbing a needle from within his cowl, a cowled researcher jabs it quickly into a vein in your arm, and your body grows weak and hungry\.$/,
+      "Grabbing a needle from within his cowl, a cowled researcher jabs it quickly into a vein in your arm, and your body grows weak and hungry.",
     tags: ["damage", "addiction", "lethargy"],
     length: 2.0,
   }),
@@ -483,7 +483,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^Recognising your lethargy, a cowled researcher approaches you with scalpel in hand and begins carving into your stomach, inducing heavy bleeding\.$/,
+      "Recognising your lethargy, a cowled researcher approaches you with scalpel in hand and begins carving into your stomach, inducing heavy bleeding.",
     tags: ["damage", "haemophilia", "brokentorso"],
     length: 2.0,
   }),
@@ -492,7 +492,7 @@ const underworld = [
     areaId: [163, 166, 323, 322, 321, 320],
     areaName: "the Underworld",
     firstPerson:
-      /^With a loud fizzing noise, green smoke rises from the ground to envelop you, wracking your body with agony\.$/,
+      "With a loud fizzing noise, green smoke rises from the ground to envelop you, wracking your body with agony.",
     tags: ["damage", "asthma", "loki"], //loki, undeaf, asthma
     length: 2.0,
     reaction(args) {

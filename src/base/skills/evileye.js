@@ -14,7 +14,7 @@ export const evileye = {
   breach: new SkillDefinition({
     id: "breach",
     fullName: "Breach",
-    firstPerson: /^Your curseward has been breached\!$/,
+    firstPerson: "Your curseward has been breached!",
     profession: ["apostate"],
     skill: "evileye",
     balance: "balance",

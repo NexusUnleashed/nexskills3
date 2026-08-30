@@ -5,7 +5,7 @@ const battlesite = [
     areaId: [343],
     areaName: "Battlesite of Mourning Pass",
     firstPerson:
-      /^Rearing back on his hind legs, a heavily armoured warrior sylphid beetle lifts his head and spits a glob of saliva at your face\.$/,
+      "Rearing back on his hind legs, a heavily armoured warrior sylphid beetle lifts his head and spits a glob of saliva at your face.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -14,7 +14,7 @@ const battlesite = [
     areaId: [343],
     areaName: "Battlesite of Mourning Pass",
     firstPerson:
-      /^A heavily armoured warrior sylphid beetle snaps at you with his serrated pincers, tearing off chunks of bloody flesh\.$/,
+      "A heavily armoured warrior sylphid beetle snaps at you with his serrated pincers, tearing off chunks of bloody flesh.",
     tags: ["damage"],
     length: 2.5,
   }),
@@ -23,7 +23,7 @@ const battlesite = [
     areaId: [343],
     areaName: "Battlesite of Mourning Pass",
     firstPerson:
-      /^Raising and extending the spines on her quiff, a queen sylphid beetle smacks them into your body, piercing your skin\.$/,
+      "Raising and extending the spines on her quiff, a queen sylphid beetle smacks them into your body, piercing your skin.",
     tags: ["damage", "voyria"],
     length: 2.5,
   }),

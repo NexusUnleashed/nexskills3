@@ -82,7 +82,7 @@ const artificing = {
     id: "efreeti",
     fullName: "Efreeti",
     secondPerson:
-      /^A fiery efreeti spins into you, causing you to burst into flame\.$/,
+      "A fiery efreeti spins into you, causing you to burst into flame.",
     thirdPerson:
       /^(?<target>\w+) bursts into flame as a fiery efreeti spins into \w+\.$/,
     profession: ["magi"],
@@ -97,7 +97,7 @@ const artificing = {
     id: "stoneback",
     fullName: "Stoneback",
     secondPerson:
-      /^A hulking stoneback makes a deep rumbling sound from within itself, and a magical shield flares into being to surround you\.$/,
+      "A hulking stoneback makes a deep rumbling sound from within itself, and a magical shield flares into being to surround you.",
     thirdPerson:
       /^A hulking stoneback makes a deep rumbling sound from deep within itself, and a magical shield flares into being surrounding (?<target>\w+)\.$/,
     profession: ["magi"],

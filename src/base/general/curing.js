@@ -119,7 +119,7 @@ export const curing = {
     id: "focus",
     fullName: "Focus",
     firstPerson:
-      /^You focus your mind intently on curing your mental maladies\.$/,
+      "You focus your mind intently on curing your mental maladies.",
     thirdPerson: /^A look of extreme focus crosses the face of (?<user>\w+)\.$/,
     profession: ["general"],
     skill: "curing",
