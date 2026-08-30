@@ -109,6 +109,8 @@ export const dragon = {
     fullName: "Glaciate",
     firstPerson:
       /^You breathe a column of icy air at (?<target>.+?)'s head, stunning \w+\.$/,
+    thirdPerson:
+      /^(?<user>\w+?) breathes a column of icy air at (?<target>.+?)'s head, stunning \w+\.$/,
     profession: ["blue dragon"],
     skill: "attainment",
     balance: "battlerage",
@@ -176,11 +178,13 @@ export const dragon = {
     fullName: "Dragonsting",
     firstPerson:
       /^You swing your mighty tail around, stabbing (?<target>.+?) with an acid-covered spine\.$/,
+    thirdPerson:
+      /^(?<user>\w+?) swings \w+ mighty tail around and stabs (?<target>.+?) with an acid-covered spine\.$/,
     profession: ["black dragon"],
     skill: "attainment",
     balance: "battlerage",
     info: "Sensitivity",
-    tags: ["pve", "damage", "sensitivity"],
+    tags: ["pve", "sensitivity"],
     length: 3.0,
   }),
   dragonspit: new SkillDefinition({

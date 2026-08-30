@@ -16,3 +16,4 @@ export { default as tirMurann } from "./tirMurann";
 export { default as tuar } from "./tuar";
 export { default as underworld } from "./underworld";
 export { default as yggdrasil } from "./yggdrasil";
+export { default as elementalEmbassy } from "./elementalEmbassy";
