@@ -6,10 +6,18 @@ const elementalEmbassy = [
     user: "an air elemental guard",
     areaId: [335],
     areaName: "The Elemental Embassy",
-    firstPerson: false,
+    firstPerson:
+      /^An air elemental guard gestures before you, choking the breath from your lungs as the air seems to grow sluggish, your muscles unresponsive\.$/,
     thirdPerson:
       /^Using a lasso of air, an air elemental guard wraps the gossamer torso around (?<target>\w+?), pulling \w+ to the ground\.$/,
     tags: ["damage"],
+    reaction(args) {
+      if (inBlock("Your sense of time returns to normal.")) {
+        args.tags.push("speed stripped");
+      } else {
+        args.tags.push("AEON");
+      }
+    },
     length: 3.0,
   }),
   new NpcDefinition({
