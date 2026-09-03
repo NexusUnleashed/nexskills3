@@ -172,6 +172,10 @@ const domination = {
   bubonisComand: new SkillDefinition({
     id: "bubonisCommand",
     fullName: "Bubonis Command",
+    firstPerson: [
+      /^You command your bubonis to bring the plague to \w+\.$/,
+      /^A bubonis reaches out and strokes the side of (?<target>\w+)'s face, and boils form and rupture in an instant as \w+ begins hacking up black fluid\.$/,
+    ],
     secondPerson:
       /^A bubonis reaches out and strokes the side of your face, and you feel your entire body suffer. Boils form and rupture and you feel your lungs burn as they fill with fluid\.$/,
     thirdPerson:
