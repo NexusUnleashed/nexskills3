@@ -7,10 +7,10 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^An air elemental guard gestures before you, choking the breath from your lungs as the air seems to grow sluggish, your muscles unresponsive\.$/,
+      "Using a lasso of air, an air elemental guard wraps the gossamer cord around your torso, pulling you to the ground as your chest tightens.",
     thirdPerson:
       /^Using a lasso of air, an air elemental guard wraps the gossamer torso around (?<target>\w+?), pulling \w+ to the ground\.$/,
-    tags: ["damage"],
+    tags: ["damage", "HEAL"],
     reaction(args) {
       if (inBlock("Your sense of time returns to normal.")) {
         args.tags.push("speed stripped");
@@ -36,13 +36,15 @@ const elementalEmbassy = [
     user: "an air elemental guard",
     areaId: [335],
     areaName: "The Elemental Embassy",
-    firstPerson: false,
+    firstPerson:
+      "An air elemental guard gestures before you, choking the breath from your lungs as the air seems to grow sluggish, your muscles unresponsive.",
     thirdPerson:
       /^An air elemental guard gestures before (?<target>\w+?), choking the breath from \w+ lungs as the surrounding air thickens\.$/,
     tags: ["damage"],
     length: 3.0,
   }),
   //#endregion
+
   //#region Earth
   new NpcDefinition({
     user: "an earth elemental guard",
@@ -58,7 +60,7 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      "An earth elemental guard brings the pommel of its sword crashing into your head, leaving you stunned and dizzy",
+      "An earth elemental guard brings the pommel of its sword crashing into your head, leaving you stunned and dizzy.",
     thirdPerson:
       /^An earth elemental guard assaults the head of (?<target>\w+?) with the pommel of its sword, leaving \w+ stunned and dizzy\.$/,
     tags: ["damage", "skullfracture", "nausea", "dizziness"],
@@ -87,6 +89,7 @@ const elementalEmbassy = [
     length: 3.0,
   }),
   //#endregion
+
   //#region Fire
   new NpcDefinition({
     user: "a fire elemental guard",
@@ -102,7 +105,7 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^A fire elemental guard glows white hot, exploding in a shower of ashes and cinders. You feel your vitality drain away as it reforms once more, perfectly whole\.$/,
+      "A fire elemental guard glows white hot, exploding in a shower of ashes and cinders. You feel your vitality drain away as it reforms once more, perfectly whole.",
     tags: ["damage", "AOE"], //dehydration, conflagration?
     length: 3.0,
   }),
@@ -111,11 +114,26 @@ const elementalEmbassy = [
     areaId: [335],
     areaName: "The Elemental Embassy",
     firstPerson:
-      /^A fire elemental guard glows white hot, exploding in a shower of ashes and cinders. You feel your vitality drain away as it reforms once more, perfectly whole\.$/,
+      "A fire elemental guard glows white hot, exploding in a shower of ashes and cinders. You feel your vitality drain away as it reforms once more, perfectly whole.",
     tags: ["damage", "burning(2)", "conflagration", "dehydration", "AOE"],
     length: 3.0,
   }),
+  new NpcDefinition({
+    user: "a fire elemental guard",
+    areaId: [335],
+    areaName: "The Elemental Embassy",
+    firstPerson:
+      "A fire elemental guard clasps your body in a fiery embrace, melting away skin and bone alike wheresoever its touch falls.",
+    thirdPerson:
+      /^A fire elemental guard clasps (?<target>\w+?) in a fiery embrace, melting away skin and bone alike wheresoever its$/,
+    tags: ["damage", "burning(2)", "conflagration", "dehydration"],
+    length: 3.0,
+    reaction(args) {
+      checkRandomLimbs(args);
+    },
+  }),
   //#endregion
+
   //#region Water
   new NpcDefinition({
     user: "a water elemental guard",
@@ -150,6 +168,7 @@ const elementalEmbassy = [
     },
   }),
   //#endregion
+
   //#region Chellen
   new NpcDefinition({
     user: "Chellen, the administrator",

@@ -270,6 +270,8 @@ export const dragon = {
     fullName: "Scorch",
     firstPerson:
       /^You blacken (?<target>.+?)'s flesh with a quick blast of flame, slowing \w+ healing process\.$/,
+    thirdPerson:
+      /^(?<user>\w+?) blackens (?<target>.+?)'s flesh with a quick blast of flame, slowing \w+ healing process\.$/,
     profession: ["red dragon"],
     skill: "attainment",
     balance: "battlerage",
