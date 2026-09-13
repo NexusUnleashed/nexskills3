@@ -118,14 +118,35 @@ export const curing = {
   focus: new SkillDefinition({
     id: "focus",
     fullName: "Focus",
-    firstPerson:
-      "You focus your mind intently on curing your mental maladies.",
+    firstPerson: "You focus your mind intently on curing your mental maladies.",
     thirdPerson: /^A look of extreme focus crosses the face of (?<user>\w+)\.$/,
     profession: ["general"],
     skill: "curing",
     balance: "focus",
     tags: [],
     length: 2.5,
+  }),
+  fitness: new SkillDefinition({
+    id: "fitness",
+    fullName: "Fitness",
+    firstPerson:
+      "You inhale deeply, purging yourself of your asthmatic condition.",
+    thirdPerson: /^(?<user>\w+) draws a deep, measured breath\.$/,
+    profession: [
+      "blademaster",
+      "druid",
+      "infernal",
+      "monk",
+      "paladin",
+      "runewarden",
+      "sentinel",
+      "shikudo",
+      "unnamable",
+    ],
+    skill: "curing", // Not weaponmastery. Actually in a few different skillsets.
+    balance: "balance",
+    tags: [],
+    length: 3.0,
   }),
 };
 

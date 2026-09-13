@@ -23,28 +23,6 @@ const knights = {
     tags: [],
     length: 2.5,
   }),
-  fitness: new SkillDefinition({
-    id: "fitness",
-    fullName: "Fitness",
-    firstPerson:
-      "You inhale deeply, purging yourself of your asthmatic condition.",
-    thirdPerson: /^(?<user>\w+)draws a deep, measured breath\.$/,
-    profession: [
-      "blademaster",
-      "druid",
-      "infernal",
-      "monk",
-      "paladin",
-      "runewarden",
-      "sentinel",
-      "shikudo",
-      "unnamable",
-    ],
-    skill: "weaponmastery", // Not weaponmastery. Actually in a few different skillsets.
-    balance: "balance",
-    tags: [],
-    length: 3.0,
-  }),
 };
 
 export default Object.values(knights);
